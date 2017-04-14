@@ -19,7 +19,7 @@ public class Main extends Application{
 
         UI ui = UIFactory.getUI(UIName.DASHBOARD);
         Parent parent = ui.getParent();
-        Scene scene = new Scene(parent, 1200, 600);
+        Scene scene = new Scene(parent, 1300, 680);
 
         primaryStage.setTitle(Session.APP_CONFIG.getStageTitle());
         primaryStage.setScene(scene);
