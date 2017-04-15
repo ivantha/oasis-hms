@@ -1,0 +1,15 @@
+* It was assumed that the scope of the system stop from taking attendance. And payroll is not a part of the system.
+
+* Every employee must have a telephone number and an address. 
+
+* It was assumed that the entities could have multiple telephone numbers and addresses because geerally it is the case. So the database was designed with leaving the space for future extensions. 
+
+* Janitor can have a supervisor.
+
+* The nic field of the employee table was not made unique because the same nic could appear if the employee leave and rejoin the institute.
+
+* A doctor can specialize in only one branch
+
+* It was assumed that the full payment would be made by the patient when discharging.
+
+* 
