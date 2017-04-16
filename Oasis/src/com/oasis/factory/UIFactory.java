@@ -1,6 +1,7 @@
 package com.oasis.factory;
 
 import com.oasis.controller.Controller;
+import com.oasis.controller.DashboardController;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import javafx.fxml.FXMLLoader;
@@ -33,5 +34,11 @@ public class UIFactory {
         UI ui = new UI(parent, controller);
         UIFactory.UI_HASH_MAP.put(uiName, ui);
         return ui;
+    }
+
+    public static void launchUI(UIName uiName){
+        Parent parent = UIFactory.getUI(uiName).getParent();
+        DashboardController dashboardController = ((DashboardController)(UIFactory.getUI(UIName.DASHBOARD).getController()));
+        dashboardController.setWorkspace(parent);
     }
 }

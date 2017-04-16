@@ -1,0 +1,57 @@
+Administration
+	# Employee management
+		New employee
+		Edit employee
+
+	# Speciality management
+		New speciality
+		Edit speciality
+
+	# Ward management
+		New ward
+		Edit ward
+
+	# External physician managment 
+		New external physican
+		Edit external physician
+
+	# Attendance
+
+
+Clinical
+	# Test management
+		New test
+		Edit test
+
+
+Patient
+	# Patient management
+		New patient
+		Edit patient
+	
+	# Race management
+		New race
+		Edit race
+	
+	# Ethnity management
+		New ethnicity
+		Edit ethnicity
+
+
+Admission
+	# Admission management
+		New admission
+		Edit admission
+
+//	# Treatment management
+//		New treatment
+//		Edit treatment
+
+	# Payment management
+		New payment
+		Edit payment
+
+
+Statistics
+
+Settings

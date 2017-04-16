@@ -1,0 +1,76 @@
+@font-face {
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+#backgroundAnchorPane{
+    -fx-background-color: #18252f;
+    -fx-opacity: 95%;
+}
+
+.launcherTabAnchorPane{
+    -fx-background-color: #1c2b36;
+    /*-fx-border-width: 1px;*/
+    -fx-border-color: #18252f;
+}
+
+.launcherTabTitleLabel{
+    -fx-font-family: 'Calibri';
+    -fx-text-fill: #b4b4b4;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+
+.largeTabBox{
+    -fx-background-color: transparent;
+}
+
+.largeTabBox .label{
+    -fx-text-fill: #b4b4b4;
+    -fx-font-size: 13;
+    -fx-wrap-text: true;
+    -fx-alignment: top-center;
+    /*-fx-text-alignment: center;*/
+}
+
+.largeTabBox .boxImage{
+    -fx-background-size: 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50% 50%;
+}
+
+.largeTabBox:hover{
+    -fx-background-color: #18252f;
+}
+
+.largeTabBox:hover .label{
+    -fx-text-fill: #ffffff;
+}
+
+#newEmployeeBox .boxImage{
+    -fx-background-image: url("../icons/new_employee_dark.png");
+}
+#newEmployeeBox:hover .boxImage{
+    -fx-background-image: url("../icons/new_employee_light.png");
+}
+
+#employeeManagementBox .boxImage{
+    -fx-background-image: url("../icons/employee_management_dark.png");
+}
+#employeeManagementBox:hover .boxImage{
+    -fx-background-image: url("../icons/employee_management_light.png");
+}
+
+#newPhysicianBox .boxImage{
+    -fx-background-image: url("../icons/new_physician_dark.png");
+}
+#newPhysicianBox:hover .boxImage{
+    -fx-background-image: url("../icons/new_physician_light.png");
+}
+
+#physicianManagementBox .boxImage{
+    -fx-background-image: url("../icons/physician_management_dark.png");
+}
+
+#physicianManagementBox:hover .boxImage{
+    -fx-background-image: url("../icons/physician_management_light.png");
+}

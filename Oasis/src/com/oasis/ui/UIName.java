@@ -3,7 +3,8 @@ package com.oasis.ui;
 import org.jetbrains.annotations.Contract;
 
 public enum UIName {
-    DASHBOARD("/com/oasis/ui/view/Dashboard.fxml");
+    DASHBOARD("/com/oasis/ui/view/Dashboard.fxml"),
+    LAUNCHER("/com/oasis/ui/view/Launcher.fxml");
 
     private final String location;
 
