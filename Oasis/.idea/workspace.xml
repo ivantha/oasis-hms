@@ -2,34 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/annotations_java8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jna.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/platform.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/LauncherController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/utils/KeyHook.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" afterPath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/DashboardController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/DashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/UIFactory.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/UIFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/Main.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Problem statement/Take_Home_Assignment2017.pdf" afterPath="$PROJECT_DIR$/../Problem statement/Take_Home_Assignment2017.pdf" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/employee_management_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/employee_management_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/new_employee_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/new_employee_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/new_physician_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/new_physician_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/physician_management_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/physician_management_light.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../GUI designs/Menu categories.txt" afterPath="$PROJECT_DIR$/../GUI designs/Menu categories.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Oasis.iml" afterPath="$PROJECT_DIR$/Oasis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Dashboard.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/Controller.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" afterPath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/main/Main.java" afterPath="$PROJECT_DIR$/src/com/oasis/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/Dashboard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/Dashboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/launcher.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/launcher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,10 +77,16 @@
       <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="408">
               <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#867#868#0" expanded="false" />
+                <element signature="e#904#905#0" expanded="false" />
+                <element signature="e#1117#1118#0" expanded="false" />
+                <element signature="e#1157#1158#0" expanded="false" />
+                <element signature="e#1220#1221#0" expanded="false" />
+                <element signature="e#1271#1272#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -103,8 +95,8 @@
       <file leaf-file-name="launcher.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+            <state relative-caret-position="204">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,23 +108,11 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+            <state relative-caret-position="68">
+              <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
               <folding>
-                <marker date="1492369689260" expanded="true" signature="9593:9924" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:9962" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10001" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10039" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10072" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10098" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10125" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10151" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10172" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10186" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10201" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9593:10215" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9597:9879" ph="..." />
-                <marker date="1492369689260" expanded="true" signature="9647:9829" ph="..." />
+                <marker date="1492685856713" expanded="true" signature="6681:6708" ph="..." />
+                <marker date="1492685856713" expanded="true" signature="6681:6734" ph="..." />
               </folding>
             </state>
           </provider>
@@ -141,8 +121,8 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -151,7 +131,7 @@
       <file leaf-file-name="sidebar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
+            <state relative-caret-position="136">
               <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
@@ -535,6 +515,35 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -585,35 +594,6 @@
             <PATH_ELEMENT USER_OBJECT="controller">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1176,11 +1156,18 @@
       <workItem from="1492179087205" duration="597000" />
       <workItem from="1492245303628" duration="20097000" />
       <workItem from="1492307329026" duration="35320000" />
+      <workItem from="1492428152348" duration="2530000" />
+      <workItem from="1492486012074" duration="637000" />
+      <workItem from="1492543058082" duration="645000" />
+      <workItem from="1492594387525" duration="1198000" />
+      <workItem from="1492620467677" duration="2023000" />
+      <workItem from="1492652650129" duration="755000" />
+      <workItem from="1492671974972" duration="5524000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67875000" />
+    <option name="totallyTimeSpent" value="81187000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1203,7 +1190,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1220,6 +1206,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1241,12 +1228,164 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <marker date="1492685856713" expanded="true" signature="6681:6708" ph="..." />
+            <marker date="1492685856713" expanded="true" signature="6681:6734" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="35" lean-forward="true" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1157#1158#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <marker date="1492685856713" expanded="true" signature="6681:6708" ph="..." />
+            <marker date="1492685856713" expanded="true" signature="6681:6734" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1157#1158#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <marker date="1492685856713" expanded="true" signature="6681:6708" ph="..." />
+            <marker date="1492685856713" expanded="true" signature="6681:6734" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1157#1158#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1306,7 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1330,7 +1466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="49" lean-forward="false" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1374,9 +1508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1384,7 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="41" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,7 +1533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="622" column="22" lean-forward="false" selection-start-line="622" selection-start-column="22" selection-end-line="622" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1411,59 +1540,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="381" column="22" lean-forward="false" selection-start-line="381" selection-start-column="22" selection-end-line="381" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/font/resources.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/font/resources.properties" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/KeyHook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-148">
           <caret line="25" column="38" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/font/FontLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/font/FontLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DashboardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="408">
           <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#1117#1118#0" expanded="false" />
+            <element signature="e#1157#1158#0" expanded="false" />
+            <element signature="e#1220#1221#0" expanded="false" />
+            <element signature="e#1271#1272#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1471,6 +1579,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1480,39 +1595,27 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="9" column="53" lean-forward="false" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+        <state relative-caret-position="68">
+          <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
           <folding>
-            <marker date="1492369689260" expanded="true" signature="9593:9924" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:9962" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10001" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10039" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10072" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10098" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10125" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10151" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10172" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10186" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10201" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9593:10215" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9597:9879" ph="..." />
-            <marker date="1492369689260" expanded="true" signature="9647:9829" ph="..." />
+            <marker date="1492685856713" expanded="true" signature="6681:6708" ph="..." />
+            <marker date="1492685856713" expanded="true" signature="6681:6734" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        <state relative-caret-position="204">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -3,14 +3,14 @@
 }
 
 #backgroundAnchorPane{
-    -fx-background-color: #18252f;
-    -fx-opacity: 95%;
+    -fx-background-color: #1c2b36;
+    /*-fx-opacity: 90%;*/
 }
 
 .launcherTabAnchorPane{
     -fx-background-color: #1c2b36;
     /*-fx-border-width: 1px;*/
-    -fx-border-color: #18252f;
+    -fx-border-color: #ffffff;
 }
 
 .launcherTabTitleLabel{
@@ -20,11 +20,11 @@
     -fx-font-weight: bold;
 }
 
-.largeTabBox{
+.launcherTile{
     -fx-background-color: transparent;
 }
 
-.largeTabBox .label{
+.launcherTile .label{
     -fx-text-fill: #b4b4b4;
     -fx-font-size: 13;
     -fx-wrap-text: true;
@@ -32,45 +32,79 @@
     /*-fx-text-alignment: center;*/
 }
 
-.largeTabBox .boxImage{
-    -fx-background-size: 40px;
+.launcherTile .boxImage{
+    -fx-background-size: 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: 50% 50%;
 }
 
-.largeTabBox:hover{
-    -fx-background-color: #18252f;
+.launcherTile:hover{
+    -fx-background-color: #16232c;
 }
 
 .largeTabBox:hover .label{
     -fx-text-fill: #ffffff;
 }
 
-#newEmployeeBox .boxImage{
-    -fx-background-image: url("../icons/new_employee_dark.png");
+#employeeTile .boxImage{
+    -fx-background-image: url("../icons/employee_dark.png");
 }
-#newEmployeeBox:hover .boxImage{
-    -fx-background-image: url("../icons/new_employee_light.png");
-}
-
-#employeeManagementBox .boxImage{
-    -fx-background-image: url("../icons/employee_management_dark.png");
-}
-#employeeManagementBox:hover .boxImage{
-    -fx-background-image: url("../icons/employee_management_light.png");
+#employeeTile:hover .boxImage{
+    -fx-background-image: url("../icons/employee_light.png");
 }
 
-#newPhysicianBox .boxImage{
-    -fx-background-image: url("../icons/new_physician_dark.png");
+#physicianTile .boxImage{
+    -fx-background-image: url("../icons/physician_dark.png");
 }
-#newPhysicianBox:hover .boxImage{
-    -fx-background-image: url("../icons/new_physician_light.png");
-}
-
-#physicianManagementBox .boxImage{
-    -fx-background-image: url("../icons/physician_management_dark.png");
+#physicianTile:hover .boxImage{
+    -fx-background-image: url("../icons/physician_light.png");
 }
 
-#physicianManagementBox:hover .boxImage{
-    -fx-background-image: url("../icons/physician_management_light.png");
+#patientTile .boxImage{
+    -fx-background-image: url("../icons/patient_dark.png");
+}
+#patientTile:hover .boxImage{
+    -fx-background-image: url("../icons/patient_light.png");
+}
+
+#admissionTile .boxImage{
+    -fx-background-image: url("../icons/admission_dark.png");
+}
+#admissionTile:hover .boxImage{
+    -fx-background-image: url("../icons/admission_light.png");
+}
+
+#paymentTile .boxImage{
+    -fx-background-image: url("../icons/payment_dark.png");
+}
+#paymentTile:hover .boxImage{
+    -fx-background-image: url("../icons/payment_light.png");
+}
+
+#medicalTile .boxImage{
+    -fx-background-image: url("../icons/medical_dark.png");
+}
+#medicalTile:hover .boxImage{
+    -fx-background-image: url("../icons/medical_light.png");
+}
+
+#administrationTile .boxImage{
+    -fx-background-image: url("../icons/administration_dark.png");
+}
+#administrationTile:hover .boxImage{
+    -fx-background-image: url("../icons/administration_light.png");
+}
+
+#reportsTile .boxImage{
+    -fx-background-image: url("../icons/reports_dark.png");
+}
+#reportsTile:hover .boxImage{
+    -fx-background-image: url("../icons/reports_light.png");
+}
+
+#optionsTile .boxImage{
+    -fx-background-image: url("../icons/options_dark.png");
+}
+#optionsTile:hover .boxImage{
+    -fx-background-image: url("../icons/options_light.png");
 }
