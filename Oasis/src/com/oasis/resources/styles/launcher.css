@@ -4,7 +4,7 @@
 
 #backgroundAnchorPane{
     -fx-background-color: #1c2b36;
-    /*-fx-opacity: 90%;*/
+    /*-fx-opacity: 95%;*/
 }
 
 .launcherTabAnchorPane{
@@ -38,13 +38,9 @@
     -fx-background-position: 50% 50%;
 }
 
-.launcherTile:hover{
-    -fx-background-color: #16232c;
-}
-
-.largeTabBox:hover .label{
-    -fx-text-fill: #ffffff;
-}
+/*.launcherTile:hover{*/
+    /*-fx-background-color: #16232c;*/
+/*}*/
 
 #employeeTile .boxImage{
     -fx-background-image: url("../icons/employee_dark.png");
@@ -102,9 +98,9 @@
     -fx-background-image: url("../icons/reports_light.png");
 }
 
-#optionsTile .boxImage{
+#settingsTile .boxImage{
     -fx-background-image: url("../icons/options_dark.png");
 }
-#optionsTile:hover .boxImage{
+#settingsTile:hover .boxImage{
     -fx-background-image: url("../icons/options_light.png");
 }

@@ -3,7 +3,7 @@ package com.oasis.utils;
 import com.oasis.common.Session;
 import com.oasis.configuration.ConfigurationFile;
 import com.oasis.configuration.ConfigurationHandler;
-import com.oasis.controller.DashboardController;
+import com.oasis.controller.main.DashboardController;
 import com.oasis.factory.UIFactory;
 import com.oasis.ui.UIName;
 import javafx.application.Platform;
