@@ -37,7 +37,6 @@ public class UIFactory {
     }
 
     private static UI loadUI(UIName uiName, String location) throws IOException {
-        System.out.println("Loading UI : " + uiName.name());
         FXMLLoader fxmlLoader = new FXMLLoader(UIFactory.class.getResource(location));
         Parent parent = fxmlLoader.load();
         Controller controller = fxmlLoader.getController();

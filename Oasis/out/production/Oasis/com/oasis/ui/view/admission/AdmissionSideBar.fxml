@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="600.0" prefWidth="300.0" styleClass="sideBarPane" stylesheets="@../../../resources/styles/launcher_sidebar.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.AdmissionSideBarController">
+    <children>
+        <VBox layoutX="130.0" layoutY="126.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button fx:id="newAdmissionButton" mnemonicParsing="false" onAction="#newAdmissionButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="New admission" />
+                <Button fx:id="admissionManagementButton" mnemonicParsing="false" onAction="#admissionManagementButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="Admission management" />
+            </children>
+        </VBox>
+        <AnchorPane layoutY="400.0" prefHeight="200.0" prefWidth="300.0" styleClass="launcherSideDetailsPanel" />
+    </children>
+</AnchorPane>

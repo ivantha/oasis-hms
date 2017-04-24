@@ -2,130 +2,164 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/AdministrationSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/AdmissionSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/EmployeeSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/MedicalSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/PatientSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/PaymentSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/PhysicianSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/ReportsSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/A/SettingsSideBarController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/EditWard.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/NewWard.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/EditAdmission.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/NewAdmission.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EditEmployee.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EditSpeciality.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEmployee.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewSpeciality.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/EditTest.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/NewTest.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditEthnicity.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditPatient.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditTreatment.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEthnicity.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewPatient.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewTreatment.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/RaceManagement.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/TreatmentManagement.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/EditPayment.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPayment.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/EmployeeSideBar.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/MedicalSideBar.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PatientSideBar.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PaymentSideBar.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/ReportsSideBar.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/SettingsSideBar.fxml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/SettingsController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/AdmissionManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditAdmission.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditEthnicity.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditExternalPhysician.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditPatient.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditSpeciality.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditTreatment.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EthnicityManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/ExternalPhysicianManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewEthnicity.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewExternalPhysician.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewSpeciality.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewTreatment.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/PatientManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/PaymentManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/RaceManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/Settings.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/SpecialityManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/TestManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/TreatmentManagement.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/WardManagement.fxml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/LauncherController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/LauncherController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/administration/AdministrationSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/medical/MedicalSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/controller/physician/PhysicianSideBarController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeSideBar.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientSideBar.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianSideBar.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/AdministrationSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/AdmissionSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/EmployeeSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/MedicalSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/PatientSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/PaymentSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/PhysicianSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/ReportsSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/A/sidebar/SettingsSideBarController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/administration.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/admission.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/medical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/options.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/options_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/options_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/patient.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/payment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/physician.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/reports.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/administration/EditWard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/administration/NewWard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/EditAdmission.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/NewAdmission.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/EditEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/EditSpeciality.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewSpeciality.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/medical/EditTest.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/medical/NewTest.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EditEthnicity.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EditPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EditRace.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EditTreatment.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewEthnicity.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewRace.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewTreatment.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/RaceManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/TreatmentManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/EditPayment.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/NewPayment.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/physician/EditExternalPhysician.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/physician/ExternalPhysicianManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/physician/NewExternalPhysician.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/AdministrationSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/AdmissionSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/EmployeeSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/MedicalSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/PatientSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/PaymentSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/PhysicianSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/ReportsSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/sidebar/SettingsSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/administration.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/admission.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/medical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/options.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/options_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/options_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/patient.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/payment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/physician.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/reports.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/AdministrationSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/AdmissionSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/EmployeeSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/MedicalSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/PatientSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/PaymentSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/A/sidebar/PhysicianSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/administration.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/admission.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/medical.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/options.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/options_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/options_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/patient.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/payment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/physician.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/reports.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/EmployeeSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PatientSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PhysicianSideBar.fxml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LauncherController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LauncherController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/UIFactory.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/UIFactory.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Dashboard.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Launcher.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/Launcher.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher_sidebar.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/launcher_sidebar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/launcher.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/launcher.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/LauncherController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/LauncherController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/launcher_sidebar.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/launcher_sidebar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" afterPath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/AdmissionManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/AdmissionManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditAdmissionController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditAdmissionController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditEmployeeController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditEmployeeController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditEthnicityController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditEthnicityController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditExternalPhysicianController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditExternalPhysicianController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditPatientController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditPatientController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditPaymentController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditPaymentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditRaceController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditRaceController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditSpecialityController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditSpecialityController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditTestController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditTestController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditTreatmentController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditTreatmentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EditWardConrtoller.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EditWardConrtoller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EmployeeManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EmployeeManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/EthnicityManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/EthnicityManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/ExternalPhysicianManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/ExternalPhysicianManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewAdmissionController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewAdmissionController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewEmployeeController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewEmployeeController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewEthnicityController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewEthnicityController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewExternalPhysicianController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewExternalPhysicianController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewPatientController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewPatientController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewPaymentController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewPaymentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewRaceController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewRaceController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewSpecialityController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewSpecialityController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewTestController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewTestController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewTreatmentController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewTreatmentController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/NewWardController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/NewWardController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/PatientManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/PatientManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/PaymentManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/PaymentManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/RaceManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/RaceManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/SpecialityManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/SpecialityManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/TestManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/TestManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/TreatmentManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/TreatmentManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/WardManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/A/WardManagementController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/sidebar.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/main_sidebar.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/Dashboard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditEmployee.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/AdministrationSideBar.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditPayment.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditRace.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditRace.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditTest.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EditWard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/EmployeeManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/ExternalPhysicianManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Launcher.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewAdmission.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/EditExternalPhysician.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewEmployee.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/NewExternalPhysician.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewPatient.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewPayment.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewRace.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewRace.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewTest.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/AdmissionSideBar.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/NewWard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PhysicianSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/A/sidebar/ReportsSideBarController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/reports/ReportsSideBarController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/A/sidebar/SettingsSideBarController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/settings/SettingsSideBarController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/EditWard.fxml" afterPath="$PROJECT_DIR$/src/A/administration/EditWard.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/NewWard.fxml" afterPath="$PROJECT_DIR$/src/A/administration/NewWard.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="$PROJECT_DIR$/src/A/administration/WardManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="$PROJECT_DIR$/src/A/admission/AdmissionManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/EditAdmission.fxml" afterPath="$PROJECT_DIR$/src/A/admission/EditAdmission.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/NewAdmission.fxml" afterPath="$PROJECT_DIR$/src/A/admission/NewAdmission.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EditEmployee.fxml" afterPath="$PROJECT_DIR$/src/A/employee/EditEmployee.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EditSpeciality.fxml" afterPath="$PROJECT_DIR$/src/A/employee/EditSpeciality.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="$PROJECT_DIR$/src/A/employee/EmployeeManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEmployee.fxml" afterPath="$PROJECT_DIR$/src/A/employee/NewEmployee.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewSpeciality.fxml" afterPath="$PROJECT_DIR$/src/A/employee/NewSpeciality.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="$PROJECT_DIR$/src/A/employee/SpecialityManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/EditTest.fxml" afterPath="$PROJECT_DIR$/src/A/medical/EditTest.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/NewTest.fxml" afterPath="$PROJECT_DIR$/src/A/medical/NewTest.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="$PROJECT_DIR$/src/A/medical/TestManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditEthnicity.fxml" afterPath="$PROJECT_DIR$/src/A/patient/EditEthnicity.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditPatient.fxml" afterPath="$PROJECT_DIR$/src/A/patient/EditPatient.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditRace.fxml" afterPath="$PROJECT_DIR$/src/A/patient/EditRace.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EditTreatment.fxml" afterPath="$PROJECT_DIR$/src/A/patient/EditTreatment.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="$PROJECT_DIR$/src/A/patient/EthnicityManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEthnicity.fxml" afterPath="$PROJECT_DIR$/src/A/patient/NewEthnicity.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewPatient.fxml" afterPath="$PROJECT_DIR$/src/A/patient/NewPatient.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewRace.fxml" afterPath="$PROJECT_DIR$/src/A/patient/NewRace.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewTreatment.fxml" afterPath="$PROJECT_DIR$/src/A/patient/NewTreatment.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/src/A/patient/PatientManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/RaceManagement.fxml" afterPath="$PROJECT_DIR$/src/A/patient/RaceManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/TreatmentManagement.fxml" afterPath="$PROJECT_DIR$/src/A/patient/TreatmentManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/EditPayment.fxml" afterPath="$PROJECT_DIR$/src/A/payment/EditPayment.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPayment.fxml" afterPath="$PROJECT_DIR$/src/A/payment/NewPayment.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/src/A/payment/PaymentManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/EditExternalPhysician.fxml" afterPath="$PROJECT_DIR$/src/A/physician/EditExternalPhysician.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/ExternalPhysicianManagement.fxml" afterPath="$PROJECT_DIR$/src/A/physician/ExternalPhysicianManagement.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/NewExternalPhysician.fxml" afterPath="$PROJECT_DIR$/src/A/physician/NewExternalPhysician.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/AdministrationSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/AdministrationSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/AdmissionSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/MedicalSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/MedicalSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PaymentSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/ReportsSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/reports/ReportsSideBar.fxml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/SettingsSideBar.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/settings/SettingsSideBar.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -211,45 +245,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/EditPayment.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/EditRace.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/EditSpeciality.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/A/WardManagementController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/EmployeeSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/EmployeeSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PhysicianSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PhysicianSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PatientSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PatientSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/AdmissionSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/AdmissionSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PaymentSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/PaymentSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/MedicalSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/MedicalSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/AdministrationSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/AdministrationSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/ReportsSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/ReportsSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/SettingsSideBar.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/SettingsSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/Launcher.fxml" />
-        <option value="$PROJECT_DIR$/src/com/oasis/A/SettingsSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/A/ReportsSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/A/PhysicianSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/A/PaymentSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/PatientSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/MedicalSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/EmployeeSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/AdmissionSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/AdministrationSideBarController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/LauncherController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/LauncherController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/administration/SettingsSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/medical/EditTestController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/payment/PaymentManagementController.java" />
@@ -262,6 +265,37 @@
         <option value="$PROJECT_DIR$/src/com/oasis/A/patient/TreatmentManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/admission/AdmissionManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/A/employee/SpecialityManagementController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/EmployeeSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/sidebar/EmployeeSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PhysicianSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/PhysicianSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/PatientSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/PatientSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/sidebar/PhysicianSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/physician/PhysicianSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/settings/SettingsSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/SettingsSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/settings/SettingsSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/reports/ReportsSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/reports/ReportsSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/medical/MedicalSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/MedicalSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/medical/MedicalSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/PaymentSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/administration/AdministrationSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionSideBar.fxml" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/AdministrationSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/A/sidebar/AdmissionSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/administration/AdministrationSideBarController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionSideBarController.java" />
       </list>
     </option>
   </component>
@@ -297,6 +331,35 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -351,35 +414,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -612,6 +646,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="payment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="configuration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -683,19 +769,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.arquillian" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\settings" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\reports" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\physician" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\payment" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\patient" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\A" />
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\styles" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\patient" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\physician" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\employee" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\medical" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\administration" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1237,11 +1323,12 @@
       <workItem from="1492959732789" duration="1243000" />
       <workItem from="1492997673057" duration="634000" />
       <workItem from="1493014786468" duration="7699000" />
+      <workItem from="1493041450333" duration="13220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99577000" />
+    <option name="totallyTimeSpent" value="112797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1263,7 +1350,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1280,6 +1366,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1301,146 +1388,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/sidebar/AdministrationSideBar.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="71" lean-forward="true" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/UIName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/medical/NewTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/medical/TestManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/medical/EditTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/payment/EditPaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/payment/NewPaymentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/payment/PaymentManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/employee/EmployeeManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/A/employee/NewEmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1448,7 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1456,7 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1464,7 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,7 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,7 +1427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1488,7 +1434,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,7 +1441,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1504,7 +1448,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1512,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1520,7 +1462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1528,7 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,7 +1483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,7 +1490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1560,7 +1497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1568,91 +1504,216 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/patient/EditTreatmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/patient/NewTreatmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/patient/TreatmentManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/admission/NewAdmissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/admission/EditAdmissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/admission/AdmissionManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/employee/EditSpecialityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/employee/NewSpecialityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A/employee/SpecialityManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="38" column="81" lean-forward="false" selection-start-line="38" selection-start-column="81" selection-end-line="38" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/AdmissionSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/main_sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="188">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="91" column="58" lean-forward="false" selection-start-line="91" selection-start-column="58" selection-end-line="91" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="41" column="78" lean-forward="false" selection-start-line="41" selection-start-column="78" selection-end-line="41" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/AdministrationSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientSideBar.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="92" lean-forward="false" selection-start-line="16" selection-start-column="92" selection-end-line="16" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/physician/PhysicianSideBarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/PaymentSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/EmployeeSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/ReportsSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/settings/SettingsSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="11" column="96" lean-forward="true" selection-start-line="11" selection-start-column="96" selection-end-line="11" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/settings/SettingsSideBarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/SettingsSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/reports/ReportsSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/PatientSideBarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/MedicalSideBarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/sidebar/PhysicianSideBarController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/reports/ReportsSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
@@ -1662,75 +1723,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/patient/EditTreatmentController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/medical/MedicalSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/patient/NewTreatmentController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/medical/MedicalSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="170">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="16" selection-end-column="15" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/patient/TreatmentManagementController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/admission/NewAdmissionController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/admission/EditAdmissionController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/admission/AdmissionManagementController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/administration/AdministrationSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="93" lean-forward="false" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/employee/EditSpecialityController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionSideBar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="204">
+          <caret line="12" column="98" lean-forward="true" selection-start-line="12" selection-start-column="98" selection-end-line="12" selection-end-column="98" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/employee/NewSpecialityController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/administration/AdministrationSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/A/employee/SpecialityManagementController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

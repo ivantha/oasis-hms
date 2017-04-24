@@ -7,19 +7,6 @@
     /*-fx-opacity: 95%;*/
 }
 
-.launcherTabAnchorPane{
-    -fx-background-color: #1c2b36;
-    /*-fx-border-width: 1px;*/
-    -fx-border-color: #ffffff;
-}
-
-.launcherTabTitleLabel{
-    -fx-font-family: 'Calibri';
-    -fx-text-fill: #b4b4b4;
-    -fx-font-size: 15;
-    -fx-font-weight: bold;
-}
-
 .launcherTile{
     -fx-background-color: transparent;
 }
@@ -38,9 +25,9 @@
     -fx-background-position: 50% 50%;
 }
 
-/*.launcherTile:hover{*/
-    /*-fx-background-color: #16232c;*/
-/*}*/
+.launcherTile:hover{
+    -fx-background-color: #16232c;
+}
 
 #employeeTile .boxImage{
     -fx-background-image: url("../icons/employee_dark.png");
@@ -99,8 +86,8 @@
 }
 
 #settingsTile .boxImage{
-    -fx-background-image: url("../icons/options_dark.png");
+    -fx-background-image: url("../icons/settings_dark.png");
 }
 #settingsTile:hover .boxImage{
-    -fx-background-image: url("../icons/options_light.png");
+    -fx-background-image: url("../icons/settings_light.png");
 }
