@@ -18,11 +18,11 @@
                <children>
                   <VBox layoutY="215.0" prefHeight="250.0" prefWidth="200.0" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
                      <children>
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 1" />
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 2" />
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 4" />
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 5" />
-                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 6" />
+                        <Button fx:id="category1Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 1" />
+                        <Button fx:id="category2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 2" />
+                        <Button fx:id="category3Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 3" />
+                        <Button fx:id="category4Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 4" />
+                        <Button fx:id="category5Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 5" />
                      </children>
                   </VBox>
                   <AnchorPane fx:id="controlAnchorPane" prefHeight="30.0" prefWidth="200.0">

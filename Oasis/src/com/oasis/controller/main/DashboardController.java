@@ -14,10 +14,23 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
+    @FXML
+    public Button category1Button;
+    @FXML
+    public Button category2Button;
+    @FXML
+    public Button category3Button;
+    @FXML
+    public Button category4Button;
+    @FXML
+    public Button category5Button;
+    @FXML
+
     private boolean isLauncherVisible = false;
     private Parent launcherParent;
 
@@ -28,7 +41,13 @@ public class DashboardController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        category1Button.setOnAction(event -> {
+            UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT);
+        });
 
+        category2Button.setOnAction(event -> {
+            UIFactory.launchUI(UIName.NEW_PHYSICIAN);
+        });
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
@@ -50,10 +69,10 @@ public class DashboardController implements Controller {
     public void showLauncher() {
         if (!isLauncherVisible()) {
             slideInLauncher();
-            setLauncherVisible(true);
         } else {
-            slideOutLauncher();
-            setLauncherVisible(false);
+            slideOutLauncher(event -> {
+                this.workspaceAnchorPane.getChildren().remove(launcherParent);
+            });
         }
     }
 
@@ -77,9 +96,11 @@ public class DashboardController implements Controller {
 
         ParallelTransition pt = new ParallelTransition(launcherParent, translateTransition, scaleTransition);
         pt.play();
+
+        setLauncherVisible(true);
     }
 
-    private void slideOutLauncher() {
+    private void slideOutLauncher(EventHandler<ActionEvent> eventEventHandler) {
         final Duration TIME_SEC = Duration.millis(300);
 
         TranslateTransition translateTransition = new TranslateTransition(TIME_SEC);
@@ -95,14 +116,22 @@ public class DashboardController implements Controller {
         scaleTransition.setToY(0);
 
         ParallelTransition pt = new ParallelTransition(launcherParent, translateTransition, scaleTransition);
-        pt.setOnFinished(event -> {
-            this.workspaceAnchorPane.getChildren().remove(launcherParent);
-        });
+        pt.setOnFinished(eventEventHandler);
         pt.play();
+
+        setLauncherVisible(false);
     }
 
     public void setWorkspace(Parent parent) {
-        this.workspaceAnchorPane.getChildren().clear();
-        this.workspaceAnchorPane.getChildren().add(parent);
+        if (isLauncherVisible()) {
+            EventHandler<ActionEvent> eventEventHandler = event -> {
+                this.workspaceAnchorPane.getChildren().clear();
+                this.workspaceAnchorPane.getChildren().add(parent);
+            };
+            slideOutLauncher(eventEventHandler);
+        } else {
+            this.workspaceAnchorPane.getChildren().clear();
+            this.workspaceAnchorPane.getChildren().add(parent);
+        }
     }
 }

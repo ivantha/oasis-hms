@@ -31,6 +31,7 @@ public class UIFactory {
             try {
                 loadUI(uiName, uiName.getLocation());
             } catch (IOException e) {
+                System.out.println("UI initialization error : " + uiName.name());
                 e.printStackTrace();
             }
         }
