@@ -16,8 +16,8 @@ public enum UIName {
     REPORTS_SIDEBAR("/com/oasis/ui/view/reports/ReportsSideBar.fxml"),
     SETTINGS_SIDEBAR("/com/oasis/ui/view/settings/SettingsSideBar.fxml"),
 
-    NEW_PHYSICIAN("/A/physician/NewExternalPhysician.fxml"),
-    PHYSICIAN_MANAGEMENT("/A/physician/ExternalPhysicianManagement.fxml");
+    NEW_PHYSICIAN("/com/oasis/ui/view/physician/NewExternalPhysician.fxml"),
+    PHYSICIAN_MANAGEMENT("/com/oasis/ui/view/physician/ExternalPhysicianManagement.fxml");
 
     private final String location;
 

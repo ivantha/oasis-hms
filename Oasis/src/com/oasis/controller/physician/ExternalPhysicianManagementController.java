@@ -1,4 +1,4 @@
-package A.physician;
+package com.oasis.controller.physician;
 
 import com.oasis.controller.Controller;
 

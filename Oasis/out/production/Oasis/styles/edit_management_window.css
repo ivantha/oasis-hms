@@ -2,34 +2,30 @@
     src: url('../fonts/Roboto-Medium.ttf');
 }
 
-.backgroundPane{
+.backgroundPane {
     -fx-background-color: #f5f5f5;
 }
 
-#navigationPane{
-    /*-fx-background-color: darkcyan;*/
-    /*-fx-padding: 10px;*/
+#navigationPane {
+    /*-fx-background-color: #ee818b;*/
+    -fx-padding: 0px 30px 0px 30px;
 }
 
-#managePane{
-    /*-fx-background-color: #ee2015;*/
-    -fx-padding: 0px 10px 10px 10px;
+#managePane {
+    /*-fx-background-color: cornflowerblue;*/
+    -fx-padding: 10px 30px 10px 30px;
 }
 
-#editPane{
-    -fx-background-color: green;
+#editPane {
+    /*-fx-background-color: green;*/
+    -fx-padding: 0px 30px 0px 30px;
 }
 
-/*#searchPane{*/
-    /*-fx-background-color: #ffffff;*/
-    /*-fx-padding: 10px;*/
-/*}*/
-
-#searchPane .label{
+#searchPane .label {
     -fx-font-family: 'Calibri';
 }
 
-#searchPane .button{
+#searchPane .button {
     -fx-background-image: url("../icons/close_dark.png");
     -fx-background-size: 14px;
     -fx-background-repeat: no-repeat;
@@ -43,6 +39,6 @@
     -fx-background-radius: 7px;
 }
 
-#searchPane .button:hover{
+#searchPane .button:hover {
     -fx-background-image: url("../icons/close_light.png");
 }

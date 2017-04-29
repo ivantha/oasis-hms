@@ -2,6 +2,7 @@ package com.oasis.controller.main;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.services.ExternalPhysicianServices;
 import com.oasis.ui.UIName;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.*;
@@ -47,6 +48,18 @@ public class DashboardController implements Controller {
 
         category2Button.setOnAction(event -> {
             UIFactory.launchUI(UIName.NEW_PHYSICIAN);
+        });
+
+        category3Button.setOnAction(event -> {
+            ExternalPhysicianServices.getPhysicianList();
+        });
+
+        category4Button.setOnAction(event -> {
+
+        });
+
+        category5Button.setOnAction(event -> {
+
         });
     }
 
