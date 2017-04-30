@@ -23,9 +23,10 @@ public abstract class Cache<T> {
     }
 
     private void updateItemList(){
-        itemUpdater(itemHashMap);
+        itemHashMap.clear();
+        itemAdder(itemHashMap);
         setItemListChanged(false);
     }
 
-    public abstract void itemUpdater(HashMap<Integer, T> itemHashMap);
+    public abstract void itemAdder(HashMap<Integer, T> itemHashMap);
 }

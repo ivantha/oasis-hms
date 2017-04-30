@@ -6,6 +6,7 @@ import com.oasis.configuration.ConfigurationHandler;
 import com.oasis.controller.main.DashboardController;
 import com.oasis.factory.UIFactory;
 import com.oasis.model.*;
+import com.oasis.services.*;
 import com.oasis.ui.UIName;
 import javafx.application.Platform;
 
@@ -28,57 +29,71 @@ public class SystemFunction {
 
         Session.bloodGroupCache = new Cache<BloodGroup>() {
             @Override
-            public void itemUpdater(HashMap<Integer, BloodGroup> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, BloodGroup> itemHashMap) {
+                itemHashMap.putAll(BloodGroupServices.getBloodGroupHashMap());
             }
         };
 
         Session.degreeCache = new Cache<Degree>() {
             @Override
-            public void itemUpdater(HashMap<Integer, Degree> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, Degree> itemHashMap) {
+                itemHashMap.putAll(DegreeServices.getDegreeHashMap());
             }
         };
 
         Session.employeeCache = new Cache<Employee>() {
             @Override
-            public void itemUpdater(HashMap<Integer, Employee> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, Employee> itemHashMap) {
+                itemHashMap.putAll(EmployeeServices.getEmployeeHashMap());
             }
         };
 
         Session.employeeRoleCache = new Cache<EmployeeRole>() {
             @Override
-            public void itemUpdater(HashMap<Integer, EmployeeRole> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, EmployeeRole> itemHashMap) {
+                itemHashMap.putAll(EmployeeRoleServices.getEmployeeRoleHashMap());
             }
         };
 
         Session.ethnicityCache = new Cache<Ethnicity>() {
             @Override
-            public void itemUpdater(HashMap<Integer, Ethnicity> itemHashMap) {
+            public void itemAdder(HashMap<Integer, Ethnicity> itemHashMap) {
+                itemHashMap.putAll(EthnicityServices.getEthnicityHashMap());
+            }
+        };
 
+        Session.physicianDesignationCache = new Cache<PhysicianDesignation>() {
+            @Override
+            public void itemAdder(HashMap<Integer, PhysicianDesignation> itemHashMap) {
+                itemHashMap.putAll(PhysicianDesignationServices.getPhysicianDesignationhashMap());
+            }
+        };
+
+        Session.raceCache = new Cache<Race>() {
+            @Override
+            public void itemAdder(HashMap<Integer, Race> itemHashMap) {
+                itemHashMap.putAll(RaceServices.getRaceHashMap());
             }
         };
 
         Session.specialistBranchCache = new Cache<SpecialistBranch>() {
             @Override
-            public void itemUpdater(HashMap<Integer, SpecialistBranch> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, SpecialistBranch> itemHashMap) {
+                itemHashMap.putAll(SpecialistBranchServices.getSpecialistBranchHashMap());
             }
         };
 
         Session.testCache = new Cache<Test>() {
             @Override
-            public void itemUpdater(HashMap<Integer, Test> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, Test> itemHashMap) {
+                itemHashMap.putAll(TestServices.getTestHashMap());
             }
         };
 
         Session.wardCache = new Cache<Ward>() {
             @Override
-            public void itemUpdater(HashMap<Integer, Ward> itemHashMap) {
-
+            public void itemAdder(HashMap<Integer, Ward> itemHashMap) {
+                itemHashMap.putAll(WardServices.getWardHashMap());
             }
         };
     }

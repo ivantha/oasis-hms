@@ -2,11 +2,11 @@ package com.oasis.model;
 
 public class PhysicianDesignation {
     private int id;
-    private String description;
+    private String name;
 
-    public PhysicianDesignation(int id, String description) {
+    public PhysicianDesignation(int id, String name) {
         this.id = id;
-        this.description = description;
+        this.name = name;
     }
 
     public int getId() {
@@ -17,11 +17,11 @@ public class PhysicianDesignation {
         this.id = id;
     }
 
-    public String getDescription() {
-        return description;
+    public String getName() {
+        return name;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setName(String name) {
+        this.name = name;
     }
 }

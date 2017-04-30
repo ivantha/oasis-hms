@@ -2,7 +2,8 @@ package com.oasis.controller.main;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
-import com.oasis.services.ExternalPhysicianServices;
+import com.oasis.model.Physician;
+import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.*;
@@ -15,8 +16,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import javax.swing.*;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
@@ -51,7 +52,7 @@ public class DashboardController implements Controller {
         });
 
         category3Button.setOnAction(event -> {
-            ExternalPhysicianServices.getPhysicianList();
+
         });
 
         category4Button.setOnAction(event -> {

@@ -10,6 +10,14 @@ public class Physician {
     private PhysicianDesignation physicianDesignation;
     private ArrayList<PhysicianTelephone> physicianTelephoneArrayList = new ArrayList<>();
 
+    public Physician(int id, String firstName, String middleName, String lastName, PhysicianDesignation physicianDesignation) {
+        this.id = id;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.physicianDesignation = physicianDesignation;
+    }
+
     public int getId() {
         return id;
     }
