@@ -31,14 +31,14 @@
       </AnchorPane>
       <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
          <children>
-            <TableView layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="physicianTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn prefWidth="100.0" text="Id" />
-                <TableColumn prefWidth="200.0" text="First name" />
-                  <TableColumn prefWidth="290.0" text="Middle name" />
-                  <TableColumn prefWidth="200.0" text="Last name" />
-                  <TableColumn prefWidth="150.0" text="Designation" />
-                  <TableColumn prefWidth="100.0" text="Telephone" />
+                <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id" />
+                <TableColumn fx:id="firstNameTableColumn" prefWidth="200.0" text="First name" />
+                  <TableColumn fx:id="middleNameTableColumn" prefWidth="290.0" text="Middle name" />
+                  <TableColumn fx:id="lastNameTableColumn" prefWidth="200.0" text="Last name" />
+                  <TableColumn fx:id="designationTableColumn" prefWidth="150.0" text="Designation" />
+                  <TableColumn fx:id="telephoneTableColumn" prefWidth="100.0" text="Telephone" />
               </columns>
             </TableView>
          </children>
@@ -78,7 +78,7 @@
                   <Label text="Id" />
                   <AnchorPane GridPane.columnIndex="1">
                      <children>
-                        <TextField layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+                        <TextField editable="false" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
                      </children>
                   </AnchorPane>
                </children>

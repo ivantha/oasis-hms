@@ -10,4 +10,9 @@ public class NewExternalPhysicianController implements Controller {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
+    @Override
+    public void refreshView() {
+
+    }
 }

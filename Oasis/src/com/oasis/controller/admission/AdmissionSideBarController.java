@@ -19,6 +19,11 @@ public class AdmissionSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newAdmissionButtonOnAction(ActionEvent actionEvent) {
 

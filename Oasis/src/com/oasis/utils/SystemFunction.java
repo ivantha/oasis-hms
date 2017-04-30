@@ -14,9 +14,9 @@ import java.util.HashMap;
 
 public class SystemFunction {
     public static void start() {
-        UIFactory.initializeAllUIs();
-
         SystemFunction.initializeSession();
+
+        UIFactory.initializeAllUIs();
     }
 
     public static void exit() {

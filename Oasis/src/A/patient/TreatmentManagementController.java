@@ -1,4 +1,18 @@
 package A.patient;
 
-public class TreatmentManagementController {
+import com.oasis.controller.Controller;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class TreatmentManagementController implements Controller{
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
+
+    @Override
+    public void refreshView() {
+
+    }
 }

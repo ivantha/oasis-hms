@@ -1,10 +1,13 @@
 package com.oasis.controller.main;
 
+import com.oasis.common.Session;
 import com.oasis.controller.Controller;
+import com.oasis.controller.physician.ExternalPhysicianManagementController;
 import com.oasis.factory.UIFactory;
 import com.oasis.model.Physician;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
+import com.oasis.utils.Cache;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.*;
 import javafx.event.ActionEvent;
@@ -17,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -44,15 +48,15 @@ public class DashboardController implements Controller {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         category1Button.setOnAction(event -> {
-            UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT);
+            UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT, true);
         });
 
         category2Button.setOnAction(event -> {
-            UIFactory.launchUI(UIName.NEW_PHYSICIAN);
+            UIFactory.launchUI(UIName.NEW_PHYSICIAN, true);
         });
 
         category3Button.setOnAction(event -> {
-
+            Session.physicianDesignationCache.getItemHashMap().get(1).setName("car");
         });
 
         category4Button.setOnAction(event -> {
@@ -62,6 +66,11 @@ public class DashboardController implements Controller {
         category5Button.setOnAction(event -> {
 
         });
+    }
+
+    @Override
+    public void refreshView() {
+
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {

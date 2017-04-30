@@ -21,13 +21,18 @@ public class PhysicianSideBarController implements Controller {
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newPhysicianButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_PHYSICIAN);
+        UIFactory.launchUI(UIName.NEW_PHYSICIAN, true);
     }
 
     @FXML
     public void physicianManagementButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT);
+        UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT, true);
     }
 }

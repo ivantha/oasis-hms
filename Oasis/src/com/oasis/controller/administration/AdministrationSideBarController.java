@@ -19,6 +19,11 @@ public class AdministrationSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newWardButtonOnAction(ActionEvent actionEvent) {
 

@@ -17,6 +17,11 @@ public class SettingsSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void settingsButtonOnAction(ActionEvent actionEvent) {
 

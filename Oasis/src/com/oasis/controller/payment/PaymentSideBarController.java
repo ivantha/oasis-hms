@@ -19,6 +19,11 @@ public class PaymentSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newPaymentButtonOnAction(ActionEvent actionEvent) {
 

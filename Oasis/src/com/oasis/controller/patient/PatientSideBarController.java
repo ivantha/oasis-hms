@@ -28,6 +28,11 @@ public class PatientSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newPatientButtonOnAction(ActionEvent actionEvent) {
 

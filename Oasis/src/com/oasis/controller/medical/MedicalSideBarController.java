@@ -19,6 +19,11 @@ public class MedicalSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newTestButtonOnAction(ActionEvent actionEvent) {
 

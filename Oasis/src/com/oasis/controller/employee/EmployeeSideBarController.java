@@ -26,6 +26,11 @@ public class EmployeeSideBarController implements Controller{
 
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void newEmployeeButtonOnAction(ActionEvent actionEvent) {
 

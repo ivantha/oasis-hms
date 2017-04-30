@@ -43,6 +43,11 @@ public class LauncherController implements Controller {
         setLauncherSideBar(UIName.EMPLOYEE_SIDEBAR);
     }
 
+    @Override
+    public void refreshView() {
+
+    }
+
     @FXML
     public void employeeTileOnMouseClicked(MouseEvent mouseEvent) {
         setTilePressed(employeeTile, "com/oasis/resources/icons/employee_black.png");

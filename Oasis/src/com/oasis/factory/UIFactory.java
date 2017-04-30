@@ -46,8 +46,13 @@ public class UIFactory {
         return ui;
     }
 
-    public static void launchUI(UIName uiName) {
-        Parent parent = UIFactory.getUI(uiName).getParent();
+    public static void launchUI(UIName uiName, boolean isRefreshed) {
+        UI ui = UIFactory.getUI(uiName);
+        Parent parent = ui.getParent();
+        if(isRefreshed) {
+            Controller controller = ui.getController();
+            controller.refreshView();
+        }
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.setWorkspace(parent);
     }
