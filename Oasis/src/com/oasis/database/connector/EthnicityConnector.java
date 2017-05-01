@@ -29,4 +29,17 @@ public class EthnicityConnector extends Connect {
 
         return ethnicityHashMap;
     }
+
+    public void newEthnicity(Ethnicity ethnicity) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "ethnicity(name) " +
+                    "VALUES(?)");
+            preparedStatement.setString(1, ethnicity.getName());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

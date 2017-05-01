@@ -43,11 +43,11 @@ public class DashboardController implements Controller {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         category1Button.setOnAction(event -> {
-            UIFactory.launchUI(UIName.PHYSICIAN_MANAGEMENT, true);
+
         });
 
         category2Button.setOnAction(event -> {
-            UIFactory.launchUI(UIName.NEW_PHYSICIAN, true);
+
         });
 
         category3Button.setOnAction(event -> {

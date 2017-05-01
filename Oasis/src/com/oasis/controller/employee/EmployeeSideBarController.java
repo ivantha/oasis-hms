@@ -1,6 +1,8 @@
 package com.oasis.controller.employee;
 
 import com.oasis.controller.Controller;
+import com.oasis.factory.UIFactory;
+import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,26 +35,26 @@ public class EmployeeSideBarController implements Controller{
 
     @FXML
     public void newEmployeeButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.NEW_EMPLOYEE, true);
     }
 
     @FXML
     public void employeeManagementButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.EMPLOYEE_MANAGEMENT, true);
     }
 
     @FXML
     public void submitAttendanceButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.SUBMIT_ATTENDANCE, true);
     }
 
     @FXML
     public void attendanceManagementButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.ATTENDANCE_MANAGEMENT, true);
     }
 
     @FXML
     public void specialitiesButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.SPECIALITY_MANAGEMENT, true);
     }
 }

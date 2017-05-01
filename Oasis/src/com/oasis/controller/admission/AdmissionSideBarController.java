@@ -1,6 +1,8 @@
 package com.oasis.controller.admission;
 
 import com.oasis.controller.Controller;
+import com.oasis.factory.UIFactory;
+import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -26,11 +28,11 @@ public class AdmissionSideBarController implements Controller{
 
     @FXML
     public void newAdmissionButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.NEW_ADMISSION, true);
     }
 
     @FXML
     public void admissionManagementButtonOnAction(ActionEvent actionEvent) {
-
+        UIFactory.launchUI(UIName.ADMISSION_MANAGEMENT, true);
     }
 }

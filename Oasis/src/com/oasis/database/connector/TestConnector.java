@@ -32,4 +32,19 @@ public class TestConnector extends Connect {
 
         return testHashMap;
     }
+
+    public void newTest(Test test) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "test(name, description, base_price) " +
+                    "VALUES(?, ?, ?)");
+            preparedStatement.setString(1, test.getName());
+            preparedStatement.setString(2, test.getDescription());
+            preparedStatement.setDouble(3, test.getBasePrice());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

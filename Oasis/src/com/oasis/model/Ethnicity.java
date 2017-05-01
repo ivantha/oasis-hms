@@ -1,12 +1,18 @@
 package com.oasis.model;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 public class Ethnicity {
     private int id;
-    private String name;
+    private StringProperty name = new SimpleStringProperty();
+
+    public Ethnicity() {
+    }
 
     public Ethnicity(int id, String name) {
         this.id = id;
-        this.name = name;
+        this.name.setValue(name);
     }
 
     public int getId() {
@@ -18,10 +24,14 @@ public class Ethnicity {
     }
 
     public String getName() {
+        return name.get();
+    }
+
+    public StringProperty nameProperty() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name.set(name);
     }
 }

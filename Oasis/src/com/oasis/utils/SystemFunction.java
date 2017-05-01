@@ -30,7 +30,7 @@ public class SystemFunction {
         Session.physicianConnector = new PhysicianConnector();
         Session.wardConnector = new WardConnector();
         Session.testConnector = new TestConnector();
-        Session.specialistBranchConnector = new SpecialistBranchConnector();
+        Session.specialityConnector = new SpecialityConnector();
         Session.raceConnector = new RaceConnector();
         Session.physicianTelephoneConnector = new PhysicianTelephoneConnector();
         Session.physicianDesignationConnector = new PhysicianDesignationConnector();
@@ -89,10 +89,10 @@ public class SystemFunction {
             }
         };
 
-        Session.specialistBranchCache = new Cache<SpecialistBranch>() {
+        Session.specialistBranchCache = new Cache<Speciality>() {
             @Override
-            public void itemAdder(HashMap<Integer, SpecialistBranch> itemHashMap) {
-                itemHashMap.putAll(Session.specialistBranchConnector.getSpecialistBranchHashMap());
+            public void itemAdder(HashMap<Integer, Speciality> itemHashMap) {
+                itemHashMap.putAll(Session.specialityConnector.getSpecialistBranchHashMap());
             }
         };
 

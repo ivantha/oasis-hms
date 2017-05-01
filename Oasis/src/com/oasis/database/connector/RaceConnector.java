@@ -2,7 +2,6 @@ package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
 import com.oasis.database.Connect;
-import com.oasis.model.Ethnicity;
 import com.oasis.model.Race;
 
 import java.sql.ResultSet;
@@ -29,5 +28,18 @@ public class RaceConnector extends Connect {
         }
 
         return raceHashMap;
+    }
+
+    public void newRace(Race race) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "race(name) " +
+                    "VALUES(?)");
+            preparedStatement.setString(1, race.getName());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

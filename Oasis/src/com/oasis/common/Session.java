@@ -11,7 +11,7 @@ public class Session {
     public static PhysicianConnector physicianConnector;
     public static WardConnector wardConnector;
     public static TestConnector testConnector;
-    public static SpecialistBranchConnector specialistBranchConnector;
+    public static SpecialityConnector specialityConnector;
     public static RaceConnector raceConnector;
     public static PhysicianTelephoneConnector physicianTelephoneConnector;
     public static PhysicianDesignationConnector physicianDesignationConnector;
@@ -28,7 +28,7 @@ public class Session {
     public static Cache<Ethnicity> ethnicityCache;
     public static Cache<PhysicianDesignation> physicianDesignationCache;
     public static Cache<Race> raceCache;
-    public static Cache<SpecialistBranch> specialistBranchCache;
+    public static Cache<Speciality> specialistBranchCache;
     public static Cache<Test> testCache;
     public static Cache<Ward> wardCache;
 }
