@@ -18,7 +18,7 @@
 
 #editPane {
     /*-fx-background-color: green;*/
-    -fx-padding: 0px 30px 0px 30px;
+    -fx-padding: 10px 30px 30px 30px;
 }
 
 #searchPane .label {

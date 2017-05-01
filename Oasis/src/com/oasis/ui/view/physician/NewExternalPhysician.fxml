@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.physician.NewExternalPhysicianController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.physician.NewPhysicianController">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="415.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
          <columnConstraints>
@@ -22,47 +22,40 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="First name" GridPane.rowIndex="1" />
-            <Label text="Middle name" GridPane.rowIndex="2" />
-            <Label text="Last name" GridPane.rowIndex="3" />
+            <Label text="First name" />
+            <Label text="Middle name" GridPane.rowIndex="1" />
+            <Label text="Last name" GridPane.rowIndex="2" />
+            <AnchorPane GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="firstNameTextField" layoutY="14.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
             <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <TextField layoutY="14.0" prefWidth="150.0" />
+                  <TextField fx:id="middleNameTextField" layoutY="14.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
             <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <TextField layoutY="14.0" prefWidth="200.0" />
+                  <TextField fx:id="lastNameTextField" layoutY="14.0" />
                </children>
             </AnchorPane>
+            <Label text="Designation" GridPane.rowIndex="3" />
             <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <TextField layoutY="14.0" />
+                  <ComboBox fx:id="designationComboBox" layoutY="16.0" prefHeight="25.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
-            <Label text="Id" />
-            <AnchorPane GridPane.columnIndex="1">
-               <children>
-                  <TextField editable="false" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
-               </children>
-            </AnchorPane>
-            <Label text="Designation" GridPane.rowIndex="4" />
+            <Label text="Telephone" GridPane.rowIndex="4" />
             <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <ComboBox layoutY="16.0" prefHeight="25.0" prefWidth="150.0" />
-               </children>
-            </AnchorPane>
-            <Label text="Telephone" GridPane.rowIndex="5" />
-            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <children>
-                  <TextField layoutY="16.0" prefWidth="150.0" />
+                  <TextField fx:id="telephoneTextField" layoutY="16.0" prefWidth="150.0" />
                </children>
             </AnchorPane>
          </children>
       </GridPane>
-      <Button layoutX="986.0" layoutY="651.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="OK" />
+      <Button fx:id="okButton" layoutX="986.0" layoutY="651.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" />
    </children>
 </AnchorPane>

@@ -1,6 +1,6 @@
 package com.oasis.model;
 
-public class Ward {
+public class Ward{
     private int id;
     private String name;
     private String description;

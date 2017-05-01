@@ -1,15 +1,12 @@
 package com.oasis.controller.main;
 
-import com.oasis.common.Session;
 import com.oasis.controller.Controller;
-import com.oasis.controller.physician.ExternalPhysicianManagementController;
 import com.oasis.factory.UIFactory;
-import com.oasis.model.Physician;
-import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
-import com.oasis.utils.Cache;
 import com.oasis.utils.SystemFunction;
-import javafx.animation.*;
+import javafx.animation.ParallelTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,8 +17,6 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
@@ -56,7 +51,7 @@ public class DashboardController implements Controller {
         });
 
         category3Button.setOnAction(event -> {
-            Session.physicianDesignationCache.getItemHashMap().get(1).setName("car");
+
         });
 
         category4Button.setOnAction(event -> {
