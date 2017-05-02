@@ -54,4 +54,40 @@ public class WardConnector extends Connect {
             e.printStackTrace();
         }
     }
+
+    public void updateWard(Ward ward) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE ward SET " +
+                    "name = ?, " +
+                    "description = ?, " +
+                    "max_patient_count = ?, " +
+                    "current_patient_count = ?, " +
+                    "gender_acceptance = ?, " +
+                    "supervisor_id = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, ward.getName());
+            preparedStatement.setString(2, ward.getDescription());
+            preparedStatement.setInt(3, ward.getMaxPatientCount());
+            preparedStatement.setInt(4, ward.getCurrentPatientCount());
+            preparedStatement.setString(5, ward.getGenderAcceptance().getTag());
+            preparedStatement.setInt(6, ward.getSupervisorId());
+            preparedStatement.setInt(7, ward.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteWard(Ward ward) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM ward " +
+                    "WHERE id = ?");
+            preparedStatement.setInt(1, ward.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

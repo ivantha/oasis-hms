@@ -1,6 +1,6 @@
 package com.oasis.model;
 
-public class Gender {
+public class Gender implements Model<Gender>{
     private int id;
     private String tag;
     private String name;
@@ -41,6 +41,11 @@ public class Gender {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public Gender clone() {
+        return new Gender(getId(), getTag());
     }
 
     public int getId() {
