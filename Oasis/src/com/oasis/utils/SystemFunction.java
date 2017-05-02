@@ -75,6 +75,14 @@ public class SystemFunction {
             }
         };
 
+        Session.genderCache = new Cache<Gender>() {
+            @Override
+            public void itemAdder(HashMap<Integer, Gender> itemHashMap) {
+            }
+        };
+        Session.genderCache.getItemHashMap().put(1, new Gender(1, "m"));
+        Session.genderCache.getItemHashMap().put(2, new Gender(2, "f"));
+
         Session.physicianDesignationCache = new Cache<PhysicianDesignation>() {
             @Override
             public void itemAdder(HashMap<Integer, PhysicianDesignation> itemHashMap) {
@@ -89,10 +97,10 @@ public class SystemFunction {
             }
         };
 
-        Session.specialistBranchCache = new Cache<Speciality>() {
+        Session.specialityCache = new Cache<Speciality>() {
             @Override
             public void itemAdder(HashMap<Integer, Speciality> itemHashMap) {
-                itemHashMap.putAll(Session.specialityConnector.getSpecialistBranchHashMap());
+                itemHashMap.putAll(Session.specialityConnector.getSpecialityHashMap());
             }
         };
 

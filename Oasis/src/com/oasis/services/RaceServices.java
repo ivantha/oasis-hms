@@ -1,11 +1,9 @@
 package com.oasis.services;
 
 import com.oasis.common.Session;
-import com.oasis.model.Physician;
 import com.oasis.model.Race;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class RaceServices {
     public static Race getRacebyId(int id){
@@ -15,6 +13,24 @@ public class RaceServices {
     public static void newRace(ArrayList<Race> raceArrayList) {
         for(Race race: raceArrayList){
             Session.raceConnector.newRace(race);
+        }
+    }
+
+    public static ArrayList<Race> getRaceArrayList(){
+        ArrayList<Race> raceArrayList = new ArrayList<>();
+        raceArrayList.addAll(Session.raceConnector.getRaceHashMap().values());
+        return raceArrayList;
+    }
+
+    public static void updateRace(ArrayList<Race> raceArrayList){
+        for(Race race: raceArrayList){
+            Session.raceConnector.updateRace(race);
+        }
+    }
+
+    public static void deleteRace(ArrayList<Race> raceArrayList){
+        for(Race race: raceArrayList){
+            Session.raceConnector.deleteRace(race);
         }
     }
 }

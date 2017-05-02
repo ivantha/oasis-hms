@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Test {
+public class Test implements Model<Test>{
     private int id;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -19,6 +19,37 @@ public class Test {
         this.name.setValue(name);
         this.description.setValue(description);
         this.basePrice.setValue(basePrice);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!Test.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        Test t = (Test) obj;
+        if(t.getId() != getId()){
+            return false;
+        }
+        if(t.getName() != getName()){
+            return false;
+        }
+        if(t.getDescription() != getDescription()){
+            return false;
+        }
+        if(t.getBasePrice() != getBasePrice()){
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public Test clone() {
+        return new Test(getId(), getName(), getDescription(), getBasePrice());
     }
 
     public int getId() {

@@ -26,9 +26,10 @@ public class Session {
     public static Cache<Employee> employeeCache;
     public static Cache<EmployeeRole> employeeRoleCache;
     public static Cache<Ethnicity> ethnicityCache;
+    public static Cache<Gender> genderCache;
     public static Cache<PhysicianDesignation> physicianDesignationCache;
     public static Cache<Race> raceCache;
-    public static Cache<Speciality> specialistBranchCache;
+    public static Cache<Speciality> specialityCache;
     public static Cache<Test> testCache;
     public static Cache<Ward> wardCache;
 }

@@ -47,4 +47,34 @@ public class TestConnector extends Connect {
             e.printStackTrace();
         }
     }
+
+    public void updateTest(Test test) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE test SET " +
+                    "name = ?, " +
+                    "description = ?, " +
+                    "base_price = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, test.getName());
+            preparedStatement.setString(2, test.getDescription());
+            preparedStatement.setDouble(3, test.getBasePrice());
+            preparedStatement.setInt(4, test.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteTest(Test test) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM test " +
+                    "WHERE id = ?");
+            preparedStatement.setInt(1, test.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -42,4 +42,30 @@ public class RaceConnector extends Connect {
             e.printStackTrace();
         }
     }
+
+    public void updateRace(Race race) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE race SET " +
+                    "name = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, race.getName());
+            preparedStatement.setInt(2, race.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteRace(Race race) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM race " +
+                    "WHERE id = ?");
+            preparedStatement.setInt(1, race.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

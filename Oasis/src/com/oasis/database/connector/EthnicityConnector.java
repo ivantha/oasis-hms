@@ -42,4 +42,30 @@ public class EthnicityConnector extends Connect {
             e.printStackTrace();
         }
     }
+
+    public void updateEthnicity(Ethnicity ethnicity) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE ethnicity SET " +
+                    "name = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, ethnicity.getName());
+            preparedStatement.setInt(2, ethnicity.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deleteEthnicity(Ethnicity ethnicity) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM ethnicity " +
+                    "WHERE id = ?");
+            preparedStatement.setInt(1, ethnicity.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

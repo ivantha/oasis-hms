@@ -3,7 +3,7 @@ package com.oasis.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Speciality {
+public class Speciality implements Model<Speciality>{
     private int id;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -15,6 +15,34 @@ public class Speciality {
         this.id = id;
         this.name.setValue(name);
         this.description.setValue(description);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!Speciality.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        Speciality s = (Speciality) obj;
+        if(s.getId() != getId()){
+            return false;
+        }
+        if(s.getName() != getName()){
+            return false;
+        }
+        if(s.getDescription() != getDescription()){
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public Speciality clone() {
+        return new Speciality(getId(), getName(), getDescription());
     }
 
     public int getId() {

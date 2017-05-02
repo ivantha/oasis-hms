@@ -1,14 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oasis.controller.employee.SpecialityManagementController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/edit_management_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.employee.SpecialityManagementController">
+   <children>
+      <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0">
+         <children>
+            <HBox fx:id="searchPane" alignment="CENTER_LEFT" layoutY="3.0" prefHeight="45.0" prefWidth="350.0" spacing="20.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label text="Search" />
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <TextField prefHeight="25.0" prefWidth="250.0" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
+         <children>
+            <TableView fx:id="specialityTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id" />
+                  <TableColumn fx:id="nameTableColumn" prefWidth="300.0" text="Name" />
+                  <TableColumn fx:id="descriptionTableColumn" prefWidth="640.0" text="Description" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
+         <children>
+            <GridPane prefHeight="100.0" prefWidth="288.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Name" GridPane.rowIndex="1" />
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="nameTextField" layoutY="16.0" prefWidth="200.0" />
+                     </children>
+                  </AnchorPane>
+                  <Label text="Id" />
+                  <AnchorPane GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="idTextField" editable="false" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="0.0" />
+            <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="deleteButton" layoutX="1000.0" layoutY="8.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <GridPane layoutX="375.0" prefHeight="100.0" prefWidth="397.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="109.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="288.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Description" />
+                  <AnchorPane GridPane.columnIndex="1">
+                     <children>
+                        <TextArea fx:id="descriptionTextArea" prefHeight="95.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
