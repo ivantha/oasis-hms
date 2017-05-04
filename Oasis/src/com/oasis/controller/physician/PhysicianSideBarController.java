@@ -2,6 +2,8 @@ package com.oasis.controller.physician;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.DynamicButtonDragDetectedEventHandler;
+import com.oasis.listener.DynamicButtonDragDoneEventHandler;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +20,10 @@ public class PhysicianSideBarController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        newPhysicianButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PHYSICIAN));
+        newPhysicianButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        physicianManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PHYSICIAN_MANAGEMENT));
+        physicianManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override

@@ -2,6 +2,8 @@ package com.oasis.controller.payment;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.DynamicButtonDragDetectedEventHandler;
+import com.oasis.listener.DynamicButtonDragDoneEventHandler;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +20,10 @@ public class PaymentSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        newPaymentButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PATIENT));
+        newPaymentButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        paymentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PAYMENT_MANAGEMENT));
+        paymentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override

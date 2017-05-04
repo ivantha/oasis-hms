@@ -11,21 +11,30 @@
          <children>
             <AnchorPane fx:id="sideBarAnchorPane" prefHeight="700.0" prefWidth="200.0" stylesheets="@../../../resources/styles/main_sidebar.css">
                <children>
-                  <VBox layoutY="215.0" prefHeight="250.0" prefWidth="200.0" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
+                  <AnchorPane fx:id="navigationAnchorPane" layoutY="134.0" prefHeight="282.0" prefWidth="200.0" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
                      <children>
-                        <Button fx:id="category1Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 1" />
-                        <Button fx:id="category2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 2" />
-                        <Button fx:id="category3Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 3" />
-                        <Button fx:id="category4Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 4" />
-                        <Button fx:id="category5Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" styleClass="tabButton" text="Category 5" />
-                     </children>
-                  </VBox>
-                  <AnchorPane fx:id="controlAnchorPane" prefHeight="30.0" prefWidth="200.0">
-                     <children>
-                        <Button fx:id="closeButton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#closeButtonOnAction" />
-                        <Button fx:id="minimizeButton" layoutX="36.0" layoutY="11.0" mnemonicParsing="false" onAction="#minimizeButtonOnAction" />
+                        <VBox prefHeight="282.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="mainSideButton1AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton2AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton3AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton4AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton5AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton6AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton7AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
+                  <AnchorPane fx:id="controlAnchorPane" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="closeButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#closeButtonOnAction" />
+                        <Button fx:id="minimizeButton" layoutX="36.0" layoutY="8.0" mnemonicParsing="false" onAction="#minimizeButtonOnAction" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="loginAnchorPane" layoutY="32.0" prefHeight="102.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="statisticsAnchorPane" layoutY="416.0" prefHeight="152.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="notificationAnchorPane" layoutY="568.0" prefHeight="130.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="workspaceAnchorPane" prefHeight="700.0" prefWidth="1100.0" HBox.hgrow="ALWAYS" />

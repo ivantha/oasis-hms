@@ -1,7 +1,9 @@
 package com.oasis.controller.main;
 
+import com.oasis.common.Session;
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.*;
 import com.oasis.ui.UIName;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.ParallelTransition;
@@ -21,16 +23,19 @@ import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
     @FXML
-    public Button category1Button;
+    public AnchorPane mainSideButton1AnchorPane;
     @FXML
-    public Button category2Button;
+    public AnchorPane mainSideButton2AnchorPane;
     @FXML
-    public Button category3Button;
+    public AnchorPane mainSideButton3AnchorPane;
     @FXML
-    public Button category4Button;
+    public AnchorPane mainSideButton4AnchorPane;
     @FXML
-    public Button category5Button;
+    public AnchorPane mainSideButton5AnchorPane;
     @FXML
+    public AnchorPane mainSideButton6AnchorPane;
+    @FXML
+    public AnchorPane mainSideButton7AnchorPane;
 
     private boolean isLauncherVisible = false;
     private Parent launcherParent;
@@ -42,25 +47,21 @@ public class DashboardController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        category1Button.setOnAction(event -> {
+        setAsDynamic(mainSideButton1AnchorPane);
+        setAsDynamic(mainSideButton2AnchorPane);
+        setAsDynamic(mainSideButton3AnchorPane);
+        setAsDynamic(mainSideButton4AnchorPane);
+        setAsDynamic(mainSideButton5AnchorPane);
+        setAsDynamic(mainSideButton6AnchorPane);
+        setAsDynamic(mainSideButton7AnchorPane);
 
-        });
-
-        category2Button.setOnAction(event -> {
-
-        });
-
-        category3Button.setOnAction(event -> {
-
-        });
-
-        category4Button.setOnAction(event -> {
-
-        });
-
-        category5Button.setOnAction(event -> {
-
-        });
+        SystemFunction.loadDynamicButton(mainSideButton1AnchorPane, Session.APP_CONFIG.getTabButton1());
+        SystemFunction.loadDynamicButton(mainSideButton2AnchorPane, Session.APP_CONFIG.getTabButton2());
+        SystemFunction.loadDynamicButton(mainSideButton3AnchorPane, Session.APP_CONFIG.getTabButton3());
+        SystemFunction.loadDynamicButton(mainSideButton4AnchorPane, Session.APP_CONFIG.getTabButton4());
+        SystemFunction.loadDynamicButton(mainSideButton5AnchorPane, Session.APP_CONFIG.getTabButton5());
+        SystemFunction.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6());
+        SystemFunction.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7());
     }
 
     @Override
@@ -138,6 +139,13 @@ public class DashboardController implements Controller {
         pt.play();
 
         setLauncherVisible(false);
+    }
+
+    private void setAsDynamic(AnchorPane anchorPane){
+        anchorPane.setOnDragOver(new DynamicPaneDragOverEventHandler());
+        anchorPane.setOnDragEntered(new DynamicPaneDragEnteredEventHandler());
+        anchorPane.setOnDragExited(new DynamicPaneDragExitedEventHandler());
+        anchorPane.setOnDragDropped(new DynamicPaneDragDroppedEventHandler());
     }
 
     public void setWorkspace(Parent parent) {

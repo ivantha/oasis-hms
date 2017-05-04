@@ -2,6 +2,8 @@ package com.oasis.controller.admission;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.DynamicButtonDragDetectedEventHandler;
+import com.oasis.listener.DynamicButtonDragDoneEventHandler;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +20,10 @@ public class AdmissionSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        newAdmissionButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_ADMISSION));
+        newAdmissionButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        admissionManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ADMISSION_MANAGEMENT));
+        admissionManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override

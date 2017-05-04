@@ -44,12 +44,20 @@ public class ConfigurationHandler {
         }
     }
 
-    private void setDefaultConfigurations() {
+    public void setDefaultConfigurations() {
         this.setProperty("stage_title", "Oasis - Hospital Management System");
         this.setProperty("server_ip", "localhost");
         this.setProperty("user_name", "root");
         this.setProperty("password", "");
         this.setProperty("db_name", "oasisdb");
+
+        this.setProperty("tab_button_1", "");
+        this.setProperty("tab_button_2", "");
+        this.setProperty("tab_button_3", "");
+        this.setProperty("tab_button_4", "");
+        this.setProperty("tab_button_5", "");
+        this.setProperty("tab_button_6", "");
+        this.setProperty("tab_button_7", "");
     }
 
     public void setProperty(String property, String value) {

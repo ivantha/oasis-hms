@@ -2,6 +2,8 @@ package com.oasis.controller.patient;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.DynamicButtonDragDetectedEventHandler;
+import com.oasis.listener.DynamicButtonDragDoneEventHandler;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +30,18 @@ public class PatientSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        newPatientButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PATIENT));
+        newPatientButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        patientManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PATIENT_MANAGEMENT));
+        patientManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        newTreatmentButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_TREATMENT));
+        newTreatmentButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        treatmentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.TREATMENT_MANAGEMENT));
+        treatmentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        raceButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.RACE_MANAGEMENT));
+        raceButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        ethnicityButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ETHNICITY_MANAGEMENT));
+        ethnicityButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override

@@ -2,6 +2,8 @@ package com.oasis.controller.employee;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.listener.DynamicButtonDragDetectedEventHandler;
+import com.oasis.listener.DynamicButtonDragDoneEventHandler;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,7 +27,16 @@ public class EmployeeSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        newEmployeeButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EMPLOYEE));
+        newEmployeeButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        employeeManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.EMPLOYEE_MANAGEMENT));
+        employeeManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        submitAttendanceButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.SUBMIT_ATTENDANCE));
+        submitAttendanceButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        attendanceManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ATTENDANCE_MANAGEMENT));
+        attendanceManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        specialitiesButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.SPECIALITY_MANAGEMENT));
+        specialitiesButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override

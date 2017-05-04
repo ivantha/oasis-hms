@@ -8,14 +8,16 @@ import com.oasis.database.connector.*;
 import com.oasis.factory.UIFactory;
 import com.oasis.model.*;
 import com.oasis.ui.UIName;
+import com.oasis.ui.utils.UIUtils;
 import javafx.application.Platform;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 
 import java.util.HashMap;
 
 public class SystemFunction {
     public static void start() {
         SystemFunction.initializeSession();
-
         UIFactory.initializeAllUIs();
     }
 
@@ -117,6 +119,22 @@ public class SystemFunction {
                 itemHashMap.putAll(Session.wardConnector.getWardHashMap());
             }
         };
+    }
+
+    public static void loadDynamicButton(AnchorPane tabButtonAnchorPane, String name){
+        if (!name.equals("")){
+            Button sideButton = new Button();
+            sideButton.setPrefWidth(200);
+            sideButton.setPrefHeight(40);
+            sideButton.getStyleClass().add("tabButton");
+
+            UIName uiName = UIName.valueOf(name);
+            sideButton.setText(UIUtils.getUIName(uiName));
+            sideButton.setOnAction(event1 -> UIFactory.launchUI(uiName, true));
+
+            tabButtonAnchorPane.getChildren().clear();
+            tabButtonAnchorPane.getChildren().add(sideButton);
+        }
     }
 
     public static void showLauncher() {
