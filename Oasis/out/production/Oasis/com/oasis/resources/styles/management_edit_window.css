@@ -27,16 +27,17 @@
 
 #searchPane .button {
     -fx-background-image: url("../icons/close_dark.png");
-    -fx-background-size: 14px;
+    -fx-background-size: 16px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: 50% 50%;
 
-    -fx-min-width: 14px;
-    -fx-min-height: 14px;
-    -fx-max-width: 14px;
-    -fx-max-height: 14px;
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+    -fx-max-width: 16px;
+    -fx-max-height: 16px;
     -fx-border-color: transparent;
-    -fx-background-radius: 7px;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0px;
 }
 
 #searchPane .button:hover {

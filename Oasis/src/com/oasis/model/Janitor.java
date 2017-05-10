@@ -1,7 +1,9 @@
 package com.oasis.model;
 
+import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.ObservableList;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -243,17 +245,17 @@ public class Janitor extends Employee{
     }
 
     @Override
-    public ArrayList<Degree> getDegreeArrayListObjectProperty() {
-        return super.getDegreeArrayListObjectProperty();
+    public ObservableList<Degree> getDegreeListProperty() {
+        return super.getDegreeListProperty();
     }
 
     @Override
-    public ObjectProperty<ArrayList<Degree>> degreeArrayListObjectPropertyProperty() {
-        return super.degreeArrayListObjectPropertyProperty();
+    public ListProperty<Degree> degreeListPropertyProperty() {
+        return super.degreeListPropertyProperty();
     }
 
     @Override
-    public void setDegreeArrayListObjectProperty(ArrayList<Degree> degreeArrayListObjectProperty) {
-        super.setDegreeArrayListObjectProperty(degreeArrayListObjectProperty);
+    public void setDegreeListProperty(ObservableList<Degree> degreeListProperty) {
+        super.setDegreeListProperty(degreeListProperty);
     }
 }

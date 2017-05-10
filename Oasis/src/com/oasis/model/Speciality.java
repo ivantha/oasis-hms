@@ -18,6 +18,11 @@ public class Speciality implements Model<Speciality>{
     }
 
     @Override
+    public String toString() {
+        return getName();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

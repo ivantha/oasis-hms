@@ -42,10 +42,11 @@ public enum UIName {
     //Employee
     NEW_SPECIALITY("/com/oasis/ui/view/employee/NewSpeciality.fxml"),
     SPECIALITY_MANAGEMENT("/com/oasis/ui/view/employee/SpecialityManagement.fxml"),
-    NEW_EMPLOYEE("/com/oasis/ui/view/employee/NewEmployee.fxml"),
+    NEW_EDIT_EMPLOYEE("/com/oasis/ui/view/employee/NewEditEmployee.fxml"),
     EMPLOYEE_MANAGEMENT("/com/oasis/ui/view/employee/EmployeeManagement.fxml"),
     SUBMIT_ATTENDANCE("/com/oasis/ui/view/employee/SubmitAttendance.fxml"),
     ATTENDANCE_MANAGEMENT("/com/oasis/ui/view/employee/AttendanceManagement.fxml"),
+    DEGREE_LIST_POPOVER("/com/oasis/ui/view/employee/DegreeListPopOver.fxml"),
 
     //Medical
     NEW_TEST("/com/oasis/ui/view/medical/NewTest.fxml"),

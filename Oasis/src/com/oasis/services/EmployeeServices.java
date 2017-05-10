@@ -22,29 +22,34 @@ public class EmployeeServices {
     public static void newEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
             Session.employeeConnector.newEmployee(employee);
+            EmployeeServices.uploadImage("new_", employee.getId());
         }
     }
 
     public static void updateEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
             Session.employeeConnector.updateEmployee(employee);
+            EmployeeServices.uploadImage("changed_", employee.getId());
 
-            File source = new File(System.getProperty("user.dir"), "temp\\pp_changed_" + employee.getId() + ".jpg");
-            if(source.exists()){
-                File dest = new File(System.getProperty("user.dir"), "profile_pictures\\pp_" + employee.getId() + ".jpg");
-                source.delete();
-                try {
-                    FileUtils.copyFile(source, dest);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
         }
     }
 
     public static void deleteEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
             Session.employeeConnector.deleteEmployee(employee);
+        }
+    }
+
+    private static void uploadImage(String prefix, int employeeID){
+        File source = new File(System.getProperty("user.dir"), "temp\\" + prefix + employeeID + ".jpg");
+        if(source.exists()){
+            File dest = new File(System.getProperty("user.dir"), "profile_pictures\\pp_" + employeeID + ".jpg");
+            source.delete();
+            try {
+                FileUtils.copyFile(source, dest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

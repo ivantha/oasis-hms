@@ -1,6 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
 import com.oasis.database.Connect;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
@@ -81,13 +82,17 @@ public class PhysicianConnector extends Connect {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "physician(first_name, middle_name, last_name, physician_designation_id) " +
-                    "VALUES(?, ?, ?, ?)");
+                    "VALUES(?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, physician.getFirstName());
             preparedStatement.setString(2, physician.getMiddleName());
             preparedStatement.setString(3, physician.getLastName());
             preparedStatement.setInt(4, physician.getPhysicianDesignationObjectProperty().getId());
 
             preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            if(resultSet.next()) {
+                physician.setId(resultSet.getInt(1));
+            }
 
             for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
                 PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +

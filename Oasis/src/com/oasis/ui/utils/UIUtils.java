@@ -63,7 +63,7 @@ public class UIUtils {
             case SPECIALITY_MANAGEMENT:
                 name = "Speciality management";
                 break;
-            case NEW_EMPLOYEE:
+            case NEW_EDIT_EMPLOYEE:
                 name = "New employee";
                 break;
             case EMPLOYEE_MANAGEMENT:

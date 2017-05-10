@@ -1,6 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
 import com.oasis.database.Connect;
 import com.oasis.model.*;
 import com.oasis.services.EmployeeRoleServices;
@@ -99,7 +100,7 @@ public class EmployeeConnector extends Connect {
                 String acronym = resultSet4.getString("degree.acronym");
                 Degree degree = new Degree(degreeId, name, acronym);
 
-                employeeHashMap.get(employeeId).getDegreeArrayListObjectProperty().add(degree);
+                employeeHashMap.get(employeeId).getDegreeListProperty().add(degree);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -113,7 +114,7 @@ public class EmployeeConnector extends Connect {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "employee(nic, first_name, middle_name, last_name, gender, dob, start_date, end_date, employee_role_id, " +
                     "default_shift_start, default_shift_end, working_days) " +
-                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, employee.getNic());
             preparedStatement.setString(2, employee.getFirstName());
             preparedStatement.setString(3, employee.getMiddleName());
@@ -128,11 +129,15 @@ public class EmployeeConnector extends Connect {
             preparedStatement.setString(12, employee.getWorkingDays().toString());
 
             preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            if(resultSet.next()) {
+                employee.setId(resultSet.getInt(1));
+            }
 
             for (EmployeeTelephone employeeTelephone : employee.getEmployeeTelephoneArrayList()) {
                 PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_telephone(employee_id, telephone) " +
-                        "VALUES(?, ?, ?)");
+                        "VALUES(?, ?)");
                 preparedStatement1.setInt(1, employee.getId());
                 preparedStatement1.setString(2, employeeTelephone.getTelephone());
 
@@ -142,7 +147,7 @@ public class EmployeeConnector extends Connect {
             for (EmployeeAddress employeeAddress : employee.getEmployeeAddressArrayList()) {
                 PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_address(employee_id, street, town, province, postal_code) " +
-                        "VALUES(?, ?, ?)");
+                        "VALUES(?, ?, ?, ?, ?)");
                 preparedStatement1.setInt(1, employee.getId());
                 preparedStatement1.setString(2, employeeAddress.getStreet());
                 preparedStatement1.setString(3, employeeAddress.getTown());
@@ -155,17 +160,17 @@ public class EmployeeConnector extends Connect {
             for (EmployeeEmail employeeEmail : employee.getEmployeeEmailArrayList()) {
                 PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_email(employee_id, email) " +
-                        "VALUES(?, ?, ?)");
+                        "VALUES(?, ?)");
                 preparedStatement1.setInt(1, employee.getId());
                 preparedStatement1.setString(2, employeeEmail.getEmail());
 
                 preparedStatement1.execute();
             }
 
-            for (Degree degree : employee.getDegreeArrayListObjectProperty()) {
+            for (Degree degree : employee.getDegreeListProperty()) {
                 PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_has_degree(employee_id, degree_id) " +
-                        "VALUES(?, ?, ?)");
+                        "VALUES(?, ?)");
                 preparedStatement1.setInt(1, employee.getId());
                 preparedStatement1.setInt(2, degree.getId());
 

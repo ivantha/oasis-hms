@@ -27,7 +27,7 @@ public class EmployeeSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        newEmployeeButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EMPLOYEE));
+        newEmployeeButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EDIT_EMPLOYEE));
         newEmployeeButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         employeeManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.EMPLOYEE_MANAGEMENT));
         employeeManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
@@ -46,7 +46,7 @@ public class EmployeeSideBarController implements Controller{
 
     @FXML
     public void newEmployeeButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_EMPLOYEE, true);
+        UIFactory.launchUI(UIName.NEW_EDIT_EMPLOYEE, true);
     }
 
     @FXML

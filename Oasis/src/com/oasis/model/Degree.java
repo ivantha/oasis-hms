@@ -11,6 +11,34 @@ public class Degree {
         this.acronym = acronym;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!Degree.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        Degree d = (Degree) obj;
+        if (d.getId() != getId()) {
+            return false;
+        }
+        if (d.getName() != getName()) {
+            return false;
+        }
+        if (d.getAcronym() != getAcronym()) {
+            return false;
+        }
+
+        return true;
+    }
+
     public int getId() {
         return id;
     }

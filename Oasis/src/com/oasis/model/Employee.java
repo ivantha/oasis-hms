@@ -1,9 +1,9 @@
 package com.oasis.model;
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import com.oasis.utils.Compare;
+import javafx.beans.property.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -26,11 +26,18 @@ public class Employee implements Model<Employee> {
     private ArrayList<EmployeeTelephone> employeeTelephoneArrayList = new ArrayList<>();
     private ArrayList<EmployeeAddress> employeeAddressArrayList = new ArrayList<>();
     private ArrayList<EmployeeEmail> employeeEmailArrayList = new ArrayList<>();
-    private ObjectProperty<ArrayList<Degree>> degreeArrayListObjectProperty = new SimpleObjectProperty<>(new ArrayList<>());
+    private ListProperty<Degree> degreeListProperty;
+
+    public Employee() {
+        ObservableList<Degree> degreeObservableList = FXCollections.observableList(new ArrayList<>());
+        degreeListProperty = new SimpleListProperty<>(degreeObservableList);
+    }
 
     public Employee(int id, String nic, String firstName, String middleName, String lastName, Gender gender, LocalDate dob,
                     LocalDate startDate, LocalDate endDate, EmployeeRole employeeRole,
                     LocalTime defaultShiftStart, LocalTime defaultShiftEnd, WorkingDays workingDays) {
+        this();
+
         this.id = id;
         this.nic.setValue(nic);
         this.firstName.setValue(firstName);
@@ -50,6 +57,8 @@ public class Employee implements Model<Employee> {
                     LocalDate startDate, LocalDate endDate, EmployeeRole employeeRole,
                     LocalTime defaultShiftStart, LocalTime defaultShiftEnd, WorkingDays workingDays,
                     EmployeeTelephone employeeTelephone, EmployeeAddress employeeAddress, EmployeeEmail employeeEmail) {
+        this();
+
         this.id = id;
         this.nic.setValue(nic);
         this.firstName.setValue(firstName);
@@ -126,7 +135,7 @@ public class Employee implements Model<Employee> {
         if (!e.getEmployeeEmailArrayList().get(0).equals(getEmployeeEmailArrayList().get(0))) {
             return false;
         }
-        if (!e.getDegreeArrayListObjectProperty().equals(getDegreeArrayListObjectProperty())) {
+        if (!Compare.isEqual(e.getDegreeListProperty(), getDegreeListProperty())) {
             return false;
         }
 
@@ -139,7 +148,7 @@ public class Employee implements Model<Employee> {
                 getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays(),
                 getEmployeeTelephoneArrayList().get(0).clone(), getEmployeeAddressArrayList().get(0).clone(), getEmployeeEmailArrayList().get(0).clone());
 
-        clonedEmployee.getDegreeArrayListObjectProperty().addAll(getDegreeArrayListObjectProperty());
+        clonedEmployee.getDegreeListProperty().addAll(getDegreeListProperty());
 
         return clonedEmployee;
     }
@@ -316,15 +325,15 @@ public class Employee implements Model<Employee> {
         this.employeeEmailArrayList = employeeEmailArrayList;
     }
 
-    public ArrayList<Degree> getDegreeArrayListObjectProperty() {
-        return degreeArrayListObjectProperty.get();
+    public ObservableList<Degree> getDegreeListProperty() {
+        return degreeListProperty.get();
     }
 
-    public ObjectProperty<ArrayList<Degree>> degreeArrayListObjectPropertyProperty() {
-        return degreeArrayListObjectProperty;
+    public ListProperty<Degree> degreeListPropertyProperty() {
+        return degreeListProperty;
     }
 
-    public void setDegreeArrayListObjectProperty(ArrayList<Degree> degreeArrayListObjectProperty) {
-        this.degreeArrayListObjectProperty.set(degreeArrayListObjectProperty);
+    public void setDegreeListProperty(ObservableList<Degree> degreeListProperty) {
+        this.degreeListProperty.set(degreeListProperty);
     }
 }

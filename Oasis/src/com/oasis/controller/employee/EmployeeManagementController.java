@@ -109,7 +109,7 @@ public class EmployeeManagementController implements Controller{
                 if (oldValue != null) {
                     telephoneTextField.textProperty().unbindBidirectional(oldValue.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
                     emailTextField.textProperty().unbindBidirectional(oldValue.getEmployeeEmailArrayList().get(0).emailProperty());
-                    degreeLabel.textProperty().unbindBidirectional(oldValue.degreeArrayListObjectPropertyProperty());
+                    degreeLabel.textProperty().unbindBidirectional(oldValue.degreeListPropertyProperty());
 
                     startDateDatePicker.valueProperty().unbindBidirectional(oldValue.startDateProperty());
                     endDateDatePicker.valueProperty().unbindBidirectional(oldValue.endDateProperty());
@@ -131,9 +131,9 @@ public class EmployeeManagementController implements Controller{
 
                 telephoneTextField.textProperty().bindBidirectional(newValue.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
                 emailTextField.textProperty().bindBidirectional(newValue.getEmployeeEmailArrayList().get(0).emailProperty());
-                degreeLabel.textProperty().bindBidirectional(newValue.degreeArrayListObjectPropertyProperty(), new StringConverter<ArrayList<Degree>>() {
+                degreeLabel.textProperty().bindBidirectional(newValue.degreeListPropertyProperty(), new StringConverter<ObservableList<Degree>>() {
                     @Override
-                    public String toString(ArrayList<Degree> object) {
+                    public String toString(ObservableList<Degree> object) {
                         String acronymChain = "";
                         if(object.isEmpty()){
                             acronymChain = "[..]";
@@ -151,9 +151,10 @@ public class EmployeeManagementController implements Controller{
                     }
 
                     @Override
-                    public ArrayList<Degree> fromString(String string) {
+                    public ObservableList<Degree> fromString(String string) {
                         return null;
                     }
+
                 });
 
                 startDateDatePicker.valueProperty().bindBidirectional(newValue.startDateProperty());
@@ -231,7 +232,7 @@ public class EmployeeManagementController implements Controller{
     }
 
     public void newButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_EMPLOYEE, true);
+        UIFactory.launchUI(UIName.NEW_EDIT_EMPLOYEE, true);
     }
 
     public void browseButtonOnAction(ActionEvent actionEvent) {

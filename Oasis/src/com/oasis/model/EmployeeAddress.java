@@ -10,6 +10,9 @@ public class EmployeeAddress implements Model<EmployeeAddress>{
     private StringProperty province = new SimpleStringProperty();
     private StringProperty postalCode = new SimpleStringProperty();
 
+    public EmployeeAddress() {
+    }
+
     public EmployeeAddress(int id, String street, String town, String province, String postalCode) {
         this.id = id;
         this.street.setValue(street);
