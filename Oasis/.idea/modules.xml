@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Oasis.iml" filepath="$PROJECT_DIR$/Oasis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OasisPreloader/OasisPreloader.iml" filepath="$PROJECT_DIR$/OasisPreloader/OasisPreloader.iml" />
     </modules>
   </component>
 </project>

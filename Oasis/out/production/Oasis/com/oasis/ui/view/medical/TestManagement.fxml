@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/edit_management_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.medical.TestManagementController">
    <children>
       <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0">
@@ -77,7 +76,7 @@
             </GridPane>
             <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="0.0" />
             <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="deleteButton" layoutX="1000.0" layoutY="8.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="deleteButton" disable="true" layoutX="970.0" layoutY="141.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" />
             <GridPane layoutX="375.0" prefHeight="100.0" prefWidth="397.0" AnchorPane.topAnchor="0.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="109.0" />

@@ -17,6 +17,7 @@
       <element id="archive" name="Oasis.jar">
         <element id="module-output" name="Oasis" />
       </element>
+      <element id="module-output" name="OasisPreloader" />
     </root>
   </artifact>
 </component>

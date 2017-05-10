@@ -2,7 +2,7 @@ package com.oasis.controller.settings;
 
 import com.oasis.common.Session;
 import com.oasis.controller.Controller;
-import com.oasis.main.Main;
+import com.oasis.main.OasisApplication;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -31,7 +31,7 @@ public class SettingsSideBarController implements Controller{
         primaryStage.close();
         Platform.runLater(() -> {
             try {
-                new Main().start(new Stage());
+                new OasisApplication().start(new Stage());
             } catch (Exception e) {
                 e.printStackTrace();
             }

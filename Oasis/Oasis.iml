@@ -13,5 +13,6 @@
     <orderEntry type="library" name="platform" level="project" />
     <orderEntry type="library" name="jfoenix" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.41-bin" level="project" />
+    <orderEntry type="module" module-name="OasisPreloader" />
   </component>
 </module>

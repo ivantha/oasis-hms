@@ -91,7 +91,6 @@ public class ConfigurationFile {
     public void setTabButton1(String tabButton1) {
         this.tabButton1 = tabButton1;
         configurationHandler.setProperty("tab_button_1", tabButton1);
-        System.out.println(tabButton1);
     }
 
     public String getTabButton2() {
