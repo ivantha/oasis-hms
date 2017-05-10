@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Oasis</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="com.oasis.main.Main" />
+        <option name="appClass" value="com.oasis.main.OasisApplication" />
         <option name="description" value="" />
         <option name="height" value="700" />
         <option name="htmlPlaceholderId" value="" />
@@ -18,6 +18,17 @@
         <element id="module-output" name="Oasis" />
       </element>
       <element id="module-output" name="OasisPreloader" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/README.txt" />
+      <element id="directory" name="profile_pictures">
+        <element id="dir-copy" path="$PROJECT_DIR$/resources/profile_pictures" />
+      </element>
+      <element id="archive" name="ext_lib.jar">
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/jna.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.41-bin.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/platform.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfoenix.jar" path-in-jar="/" />
+        <element id="extracted-dir" path="$PROJECT_DIR$/lib/annotations-java8.jar" path-in-jar="/" />
+      </element>
     </root>
   </artifact>
 </component>

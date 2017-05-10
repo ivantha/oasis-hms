@@ -102,7 +102,7 @@ public class Employee implements Model<Employee> {
         if (!e.getStartDate().equals(getStartDate())) {
             return false;
         }
-        if ((e.getEndDate() == null && getEndDate() == null) || (!e.getEndDate().equals(getEndDate()))) {
+        if (!(e.getEndDate() == null ? getEndDate() == null : !e.getEndDate().equals(getEndDate()))) {
             return false;
         }
         if (!e.getEmployeeRole().equals(getEmployeeRole())) {

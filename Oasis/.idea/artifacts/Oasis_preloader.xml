@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Oasis_preloader</output-path>
     <properties id="javafx-preloader-properties">
       <options>
-        <option name="preloaderClass" value="com.oasis.preloader.OasisPreloader" />
+        <option name="preloaderClass" value="preloader.OasisPreloader" />
       </options>
     </properties>
     <root id="archive" name="Oasis_preloader.jar" />

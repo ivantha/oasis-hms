@@ -105,19 +105,11 @@ public class PhysicianConnector extends Connect {
 
     public void deletePhysician(Physician physician) {
         try {
-            for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
-                PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM physician_telephone " +
-                        "WHERE physician_id = ?");
-                preparedStatement.setInt(1, physician.getId());
-
-                preparedStatement.execute();
-            }
-
-            PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("DELETE FROM physician " +
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM physician " +
                     "WHERE id = ?");
-            preparedStatement1.setInt(1, physician.getId());
+            preparedStatement.setInt(1, physician.getId());
 
-            preparedStatement1.execute();
+            preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }

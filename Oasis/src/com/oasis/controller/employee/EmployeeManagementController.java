@@ -4,21 +4,28 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.main.Main;
 import com.oasis.model.Degree;
 import com.oasis.model.Employee;
 import com.oasis.model.EmployeeRole;
 import com.oasis.model.Gender;
 import com.oasis.services.EmployeeServices;
 import com.oasis.ui.UIName;
+import com.oasis.utils.SystemFunction;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.util.StringConverter;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -161,6 +168,8 @@ public class EmployeeManagementController implements Controller{
                 fridayCheckBox.selectedProperty().bindBidirectional(newValue.getWorkingDays().fridayProperty());
                 saturdayCheckBox.selectedProperty().bindBidirectional(newValue.getWorkingDays().saturdayProperty());
                 sundayCheckBox.selectedProperty().bindBidirectional(newValue.getWorkingDays().sundayProperty());
+
+                loadProfilePicture(newValue.getId());
             }
         });
     }
@@ -187,10 +196,16 @@ public class EmployeeManagementController implements Controller{
         genderTableColumn.setCellValueFactory(param -> param.getValue().genderProperty());
         dobTableColumn.setCellValueFactory(param -> param.getValue().dobProperty());
         roleTableColumn.setCellValueFactory(param -> param.getValue().employeeRoleProperty());
+
+        SystemFunction.cleanTemp("pp_changed_");
     }
 
     public void deleteButtonOnAction(ActionEvent actionEvent) {
-
+        Employee selectedEmployee = employeeTableView.getSelectionModel().getSelectedItem();
+        if(selectedEmployee != null){
+            employeeTableView.getItems().remove(selectedEmployee);
+            deletedEmployeeHashMap.put(selectedEmployee.getId(), selectedEmployee);
+        }
     }
 
     public void editButtonOnAction(ActionEvent actionEvent) {
@@ -198,7 +213,21 @@ public class EmployeeManagementController implements Controller{
     }
 
     public void saveButtonOnAction(ActionEvent actionEvent) {
+        if (employeeTableView.getSelectionModel().getSelectedItem() != null) {
+            Employee employee = employeeTableView.getSelectionModel().getSelectedItem();
 
+            if(!employee.equals(tempEmployeeHashMap.get(employee.getId()))){
+                editedEmployeeHashMap.put(employee.getId(), employee);
+            }
+        }
+
+        EmployeeServices.updateEmployee(new ArrayList<>(editedEmployeeHashMap.values()));
+        editedEmployeeHashMap.clear();
+
+        EmployeeServices.deleteEmployee(new ArrayList<>(deletedEmployeeHashMap.values()));
+        deletedEmployeeHashMap.clear();
+
+        refreshView();
     }
 
     public void newButtonOnAction(ActionEvent actionEvent) {
@@ -206,6 +235,36 @@ public class EmployeeManagementController implements Controller{
     }
 
     public void browseButtonOnAction(ActionEvent actionEvent) {
+        Employee selectedEmployee = employeeTableView.getSelectionModel().getSelectedItem();
+        if(selectedEmployee != null){
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Select an image");
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files", "*.jpg"));
 
+            File source = fileChooser.showOpenDialog(null);
+            System.out.println(source.getAbsolutePath());
+
+            File dest = new File(System.getProperty("user.dir"), "temp\\pp_changed_" + selectedEmployee.getId() + ".jpg");
+            try {
+                FileUtils.copyFile(source, dest);
+                editedEmployeeHashMap.put(selectedEmployee.getId(), selectedEmployee);
+
+                loadProfilePicture(selectedEmployee.getId());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void loadProfilePicture(int employeeId){
+        File savedImage = new File(System.getProperty("user.dir") + "/profile_pictures/",  "pp_" + employeeId + ".jpg");
+        File changedImage = new File(System.getProperty("user.dir") + "/temp/",  "pp_changed_" + employeeId + ".jpg");
+        Image profilePictureImage = new Image(Main.class.getResourceAsStream("/com/oasis/resources/images/default_profile_picture.png"));
+        if(savedImage.exists()){
+            profilePictureImage = new Image(savedImage.toURI().toString());
+        }else if (changedImage.exists()){
+            profilePictureImage = new Image(changedImage.toURI().toString());
+        }
+        profilePictureImageView.setImage(profilePictureImage);
     }
 }

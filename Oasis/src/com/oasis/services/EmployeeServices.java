@@ -2,7 +2,10 @@ package com.oasis.services;
 
 import com.oasis.common.Session;
 import com.oasis.model.Employee;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class EmployeeServices {
@@ -25,6 +28,17 @@ public class EmployeeServices {
     public static void updateEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
             Session.employeeConnector.updateEmployee(employee);
+
+            File source = new File(System.getProperty("user.dir"), "temp\\pp_changed_" + employee.getId() + ".jpg");
+            if(source.exists()){
+                File dest = new File(System.getProperty("user.dir"), "profile_pictures\\pp_" + employee.getId() + ".jpg");
+                source.delete();
+                try {
+                    FileUtils.copyFile(source, dest);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

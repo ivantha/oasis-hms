@@ -13,12 +13,15 @@ import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.File;
 import java.util.HashMap;
 
 public class SystemFunction {
     public static void start() {
         SystemFunction.initializeSession();
         UIFactory.initializeAllUIs();
+
+        createDefaultDirectories();
     }
 
     public static void exit() {
@@ -121,8 +124,20 @@ public class SystemFunction {
         };
     }
 
-    public static void loadDynamicButton(AnchorPane tabButtonAnchorPane, String name){
-        if (!name.equals("")){
+    private static void createDefaultDirectories() {
+        File tempDirectory = new File(System.getProperty("user.dir"), "temp");
+        if (!tempDirectory.exists()) {
+            tempDirectory.mkdir();
+        }
+
+        File profilePicturesDirectory = new File(System.getProperty("user.dir"), "profile_pictures");
+        if (!profilePicturesDirectory.exists()) {
+            profilePicturesDirectory.mkdir();
+        }
+    }
+
+    public static void loadDynamicButton(AnchorPane tabButtonAnchorPane, String name) {
+        if (!name.equals("")) {
             Button sideButton = new Button();
             sideButton.setPrefWidth(200);
             sideButton.setPrefHeight(40);
@@ -140,5 +155,14 @@ public class SystemFunction {
     public static void showLauncher() {
         DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
         dashboardController.showLauncher();
+    }
+
+    public static void cleanTemp(String prefix) {
+        File tempDirectory = new File(System.getProperty("user.dir"), "temp");
+        for (File file : tempDirectory.listFiles()) {
+            if (file.getName().startsWith(prefix)) {
+                file.delete();
+            }
+        }
     }
 }

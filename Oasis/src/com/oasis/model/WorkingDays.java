@@ -15,32 +15,6 @@ public class WorkingDays implements Model<WorkingDays>{
     public WorkingDays() {
     }
 
-    public WorkingDays(String days) {
-        if (days.length() == 7){
-            if(days.charAt(0) == '1'){
-                setMonday(true);
-            }
-            if(days.charAt(1) == '1'){
-                setTuesdays(true);
-            }
-            if(days.charAt(2) == '1'){
-                setWednesday(true);
-            }
-            if(days.charAt(3) == '1'){
-                setThursday(true);
-            }
-            if(days.charAt(4) == '1'){
-                setFriday(true);
-            }
-            if(days.charAt(5) == '1'){
-                setSaturday(true);
-            }
-            if(days.charAt(6) == '1'){
-                setSunday(true);
-            }
-        }
-    }
-
     public WorkingDays(boolean monday, boolean tuesdays, boolean wednesday,
                        boolean thursday, boolean friday, boolean saturday, boolean sunday) {
         this.monday.setValue(monday);
@@ -50,6 +24,48 @@ public class WorkingDays implements Model<WorkingDays>{
         this.friday.setValue(friday);
         this.saturday.setValue(saturday);
         this.sunday.setValue(sunday);
+    }
+
+    @Override
+    public String toString() {
+        String workingDaysChain = "";
+        if(isMonday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isTuesdays()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isWednesday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isThursday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isFriday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isSaturday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+        if(isSunday()){
+            workingDaysChain += "1";
+        }else {
+            workingDaysChain += "0";
+        }
+
+        return workingDaysChain;
     }
 
     @Override
@@ -90,6 +106,36 @@ public class WorkingDays implements Model<WorkingDays>{
     @Override
     public WorkingDays clone() {
         return new WorkingDays(isMonday(), isTuesdays(), isWednesday(), isThursday(), isFriday(), isSaturday(), isSunday());
+    }
+
+    public static WorkingDays valueOf(String days){
+        WorkingDays workingDays = new WorkingDays();
+
+        if (days.length() == 7){
+            if(days.charAt(0) == '1'){
+                workingDays.setMonday(true);
+            }
+            if(days.charAt(1) == '1'){
+                workingDays.setTuesdays(true);
+            }
+            if(days.charAt(2) == '1'){
+                workingDays.setWednesday(true);
+            }
+            if(days.charAt(3) == '1'){
+                workingDays.setThursday(true);
+            }
+            if(days.charAt(4) == '1'){
+                workingDays.setFriday(true);
+            }
+            if(days.charAt(5) == '1'){
+                workingDays.setSaturday(true);
+            }
+            if(days.charAt(6) == '1'){
+                workingDays.setSunday(true);
+            }
+        }
+
+        return workingDays;
     }
 
     public boolean isMonday() {
