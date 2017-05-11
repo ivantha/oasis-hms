@@ -37,7 +37,7 @@ public class EmployeeTelephone implements Model<EmployeeTelephone>{
 
     @Override
     public EmployeeTelephone clone() {
-        return new EmployeeTelephone(id, getTelephone());
+        return new EmployeeTelephone(getId(), getTelephone());
     }
 
     public int getId() {

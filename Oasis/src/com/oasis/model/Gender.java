@@ -1,7 +1,7 @@
 package com.oasis.model;
 
 public class Gender implements Model<Gender>{
-    private int id;
+    private int id = 0;
     private String tag;
     private String name;
 

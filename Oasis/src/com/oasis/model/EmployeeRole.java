@@ -1,7 +1,7 @@
 package com.oasis.model;
 
 public class EmployeeRole implements Model<EmployeeRole> {
-    private int id;
+    private int id = 0;
     private String role;
 
     public EmployeeRole(int id, String role) {

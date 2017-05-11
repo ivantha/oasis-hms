@@ -10,7 +10,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class Employee implements Model<Employee> {
-    private int id;
+    private int id = 0;
     private StringProperty nic = new SimpleStringProperty();
     private StringProperty firstName = new SimpleStringProperty();
     private StringProperty middleName = new SimpleStringProperty();

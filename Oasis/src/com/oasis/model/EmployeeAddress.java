@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class EmployeeAddress implements Model<EmployeeAddress>{
-    private int id;
+    private int id = 0;
     private StringProperty street = new SimpleStringProperty();
     private StringProperty town = new SimpleStringProperty();
     private StringProperty province = new SimpleStringProperty();

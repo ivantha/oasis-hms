@@ -1,7 +1,7 @@
 package com.oasis.model;
 
 public class Degree {
-    private int id;
+    private int id = 0;
     private String name;
     private String acronym;
 
@@ -29,10 +29,10 @@ public class Degree {
         if (d.getId() != getId()) {
             return false;
         }
-        if (d.getName() != getName()) {
+        if (!d.getName().equals(getName())) {
             return false;
         }
-        if (d.getAcronym() != getAcronym()) {
+        if (!d.getAcronym().equals(getAcronym())) {
             return false;
         }
 

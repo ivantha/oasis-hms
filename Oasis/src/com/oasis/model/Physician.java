@@ -8,7 +8,7 @@ import javafx.beans.property.StringProperty;
 import java.util.ArrayList;
 
 public class Physician implements Model<Physician>{
-    private int id;
+    private int id = 0;
     private StringProperty firstName = new SimpleStringProperty();
     private StringProperty middleName = new SimpleStringProperty();
     private StringProperty lastName = new SimpleStringProperty();

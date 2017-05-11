@@ -64,14 +64,11 @@ public class PhysicianConnector extends Connect {
             preparedStatement.execute();
 
             for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
-                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
-                        "physician_telephone(id, physician_id, telephone) " +
-                        "VALUES(?, ?, ?)");
-                preparedStatement1.setInt(1, physicianTelephone.getId());
-                preparedStatement1.setInt(2, physician.getId());
-                preparedStatement1.setString(3, physicianTelephone.getTelephone());
-
-                preparedStatement1.execute();
+                if(physicianTelephone.getId() == 0){
+                    newPhysicianTelephone(physician.getId(), physicianTelephone);
+                }else {
+                    updatePhysicianTelephone(physicianTelephone);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -95,13 +92,7 @@ public class PhysicianConnector extends Connect {
             }
 
             for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
-                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                        "physician_telephone(physician_id, telephone) " +
-                        "VALUES(?, ?, ?)");
-                preparedStatement1.setInt(1, physician.getId());
-                preparedStatement1.setString(2, physicianTelephone.getTelephone());
-
-                preparedStatement1.execute();
+                newPhysicianTelephone(physician.getId(), physicianTelephone);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -118,5 +109,26 @@ public class PhysicianConnector extends Connect {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private void newPhysicianTelephone(int physicianId, PhysicianTelephone physicianTelephone) throws SQLException {
+        PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                "physician_telephone(physician_id, telephone) " +
+                "VALUES(?, ?, ?)");
+        preparedStatement1.setInt(1, physicianId);
+        preparedStatement1.setString(2, physicianTelephone.getTelephone());
+
+        preparedStatement1.execute();
+    }
+
+    private void updatePhysicianTelephone(PhysicianTelephone physicianTelephone) throws SQLException {
+        PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE physician_telephone SET " +
+                "telephone = ? " +
+                "WHERE id = ?");
+
+        preparedStatement.setString(1, physicianTelephone.getTelephone());
+        preparedStatement.setInt(2, physicianTelephone.getId());
+
+        preparedStatement.execute();
     }
 }

@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Test implements Model<Test>{
-    private int id;
+    private int id = 0;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
     private DoubleProperty basePrice = new SimpleDoubleProperty();

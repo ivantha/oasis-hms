@@ -40,12 +40,12 @@ public class EmployeeServices {
     }
 
     private static void uploadImage(String prefix, int employeeID){
-        File source = new File(System.getProperty("user.dir"), "temp\\" + prefix + employeeID + ".jpg");
+        File source = new File(System.getProperty("user.dir"), "temp\\pp_" + prefix + employeeID + ".jpg");
         if(source.exists()){
             File dest = new File(System.getProperty("user.dir"), "profile_pictures\\pp_" + employeeID + ".jpg");
-            source.delete();
             try {
                 FileUtils.copyFile(source, dest);
+                source.delete();
             } catch (IOException e) {
                 e.printStackTrace();
             }

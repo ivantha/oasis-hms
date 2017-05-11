@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class PhysicianTelephone implements Model<PhysicianTelephone> {
-    private int id;
+    private int id = 0;
     private StringProperty telephone = new SimpleStringProperty();
 
     public PhysicianTelephone() {

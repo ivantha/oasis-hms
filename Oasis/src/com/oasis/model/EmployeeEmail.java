@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class EmployeeEmail {
-    private int id;
+    private int id = 0;
     private StringProperty email = new SimpleStringProperty();
 
     public EmployeeEmail() {

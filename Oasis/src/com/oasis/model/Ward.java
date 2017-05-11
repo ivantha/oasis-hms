@@ -3,7 +3,7 @@ package com.oasis.model;
 import javafx.beans.property.*;
 
 public class Ward implements Model<Ward>{
-    private int id;
+    private int id = 0;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
     private IntegerProperty maxPatientCount = new SimpleIntegerProperty();

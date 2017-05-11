@@ -1,7 +1,7 @@
 package com.oasis.model;
 
 public class BloodGroup {
-    private int id;
+    private int id = 0;
     private String name;
 
     public BloodGroup(int id, String name) {

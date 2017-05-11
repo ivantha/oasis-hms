@@ -1,14 +1,7 @@
 package com.oasis.model;
 
-import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.StringProperty;
-import javafx.collections.ObservableList;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
 
 public class Doctor extends Employee{
     private ObjectProperty<Speciality> specialityObjectProperty = new SimpleObjectProperty();

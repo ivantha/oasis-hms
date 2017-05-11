@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Ethnicity implements Model<Ethnicity> {
-    private int id;
+    private int id = 0;
     private StringProperty name = new SimpleStringProperty();
 
     public Ethnicity() {
