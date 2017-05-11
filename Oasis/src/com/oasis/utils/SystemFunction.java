@@ -38,8 +38,6 @@ public class SystemFunction {
         Session.testConnector = new TestConnector();
         Session.specialityConnector = new SpecialityConnector();
         Session.raceConnector = new RaceConnector();
-        Session.physicianTelephoneConnector = new PhysicianTelephoneConnector();
-        Session.physicianDesignationConnector = new PhysicianDesignationConnector();
         Session.ethnicityConnector = new EthnicityConnector();
         Session.employeeConnector = new EmployeeConnector();
         Session.employeeRoleConnector = new EmployeeRoleConnector();
@@ -92,7 +90,7 @@ public class SystemFunction {
         Session.physicianDesignationCache = new Cache<PhysicianDesignation>() {
             @Override
             public void itemAdder(HashMap<Integer, PhysicianDesignation> itemHashMap) {
-                itemHashMap.putAll(Session.physicianDesignationConnector.getPhysicianDesignationhashMap());
+                itemHashMap.putAll(Session.physicianConnector.getPhysicianDesignationhashMap());
             }
         };
 

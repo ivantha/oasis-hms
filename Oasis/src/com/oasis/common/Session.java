@@ -13,8 +13,6 @@ public class Session {
     public static TestConnector testConnector;
     public static SpecialityConnector specialityConnector;
     public static RaceConnector raceConnector;
-    public static PhysicianTelephoneConnector physicianTelephoneConnector;
-    public static PhysicianDesignationConnector physicianDesignationConnector;
     public static EthnicityConnector ethnicityConnector;
     public static EmployeeConnector employeeConnector;
     public static EmployeeRoleConnector employeeRoleConnector;

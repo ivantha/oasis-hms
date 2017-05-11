@@ -6,7 +6,7 @@ import com.oasis.database.Connect;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
 import com.oasis.model.PhysicianTelephone;
-import com.oasis.services.PhysicianDesignationServices;
+import com.oasis.services.PhysicianServices;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,7 +27,7 @@ public class PhysicianConnector extends Connect {
                 String middleName = resultSet.getString("physician.middle_name");
                 String lastName = resultSet.getString("physician.last_name");
                 PhysicianDesignation physicianDesignation =
-                        PhysicianDesignationServices.getPhysicianDesignationById(
+                        PhysicianServices.getPhysicianDesignationById(
                                 resultSet.getInt("physician.physician_designation_id"));
                 int physicianTelephoneID = resultSet.getInt("physician_telephone.id");
                 String physicianTelephoneTelephone = resultSet.getString("physician_telephone.telephone");
@@ -45,6 +45,48 @@ public class PhysicianConnector extends Connect {
         }
 
         return physicianHashMap;
+    }
+
+    public HashMap<Integer, PhysicianDesignation> getPhysicianDesignationhashMap(){
+        HashMap<Integer, PhysicianDesignation> physicianDesignationHashMap = new HashMap<>();
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician_designation");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                int id = resultSet.getInt("physician_designation.id");
+                String name = resultSet.getString("physician_designation.name");
+
+                PhysicianDesignation physicianDesignation = new PhysicianDesignation(id, name);
+                physicianDesignationHashMap.put(id, physicianDesignation);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return physicianDesignationHashMap;
+    }
+
+    public HashMap<Integer, PhysicianTelephone> getPhysicianTelephoneHashMap(){
+        HashMap<Integer, PhysicianTelephone> physicianTelephoneHashMap = new HashMap<>();
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician_telephone");
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                int id = resultSet.getInt("physician_telephone.id");
+                String telephone = resultSet.getString("physician_telephone.telephone");
+
+                PhysicianTelephone physicianTelephone = new PhysicianTelephone(id, telephone);
+                physicianTelephoneHashMap.put(id, physicianTelephone);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return physicianTelephoneHashMap;
     }
 
     public void updatePhysician(Physician physician) {

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Oasis.jar" size="6606506" download="eager" />
+    <jar href="Oasis.jar" size="6603766" download="eager" />
     <jar href="ext_lib.jar" size="5110626" download="eager" />
   </resources>
   <jfx:javafx-desc  width="1300" height="700" main-class="com.oasis.main.OasisApplication"  name="Oasis" />

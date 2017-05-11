@@ -4,7 +4,6 @@ import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
-import com.oasis.services.PhysicianDesignationServices;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
 import javafx.collections.FXCollections;
@@ -109,7 +108,7 @@ public class PhysicianManagementController implements Controller {
         telephoneTableColumn.setCellValueFactory(param -> param.getValue().getPhysicianTelephoneArrayList().get(0).telephoneProperty());
 
         ObservableList<PhysicianDesignation> physicianDesignationObservableList = FXCollections
-                .observableList(PhysicianDesignationServices.getPhysicianDesignationArrayList());
+                .observableList(PhysicianServices.getPhysicianDesignationArrayList());
         designationComboBox.setItems(physicianDesignationObservableList);
     }
 

@@ -5,7 +5,6 @@ import com.oasis.factory.UIFactory;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
 import com.oasis.model.PhysicianTelephone;
-import com.oasis.services.PhysicianDesignationServices;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
 import javafx.collections.FXCollections;
@@ -53,7 +52,7 @@ public class NewPhysicianController implements Controller {
         telephoneTextField.textProperty().bindBidirectional(tempPhysician.getPhysicianTelephoneArrayList().get(0).telephoneProperty());
 
         ObservableList<PhysicianDesignation> physicianDesignationObservableList = FXCollections
-                .observableList(PhysicianDesignationServices.getPhysicianDesignationArrayList());
+                .observableList(PhysicianServices.getPhysicianDesignationArrayList());
         designationComboBox.setItems(physicianDesignationObservableList);
     }
 
