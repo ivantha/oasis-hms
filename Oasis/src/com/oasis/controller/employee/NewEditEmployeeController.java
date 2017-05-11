@@ -28,7 +28,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class NewEditEmployeeController implements Controller{
+public class NewEditEmployeeController implements Controller {
     @FXML
     private TextField nicTextField;
     @FXML
@@ -100,6 +100,7 @@ public class NewEditEmployeeController implements Controller{
     private Button okButton;
 
     private Employee tempEmployee;
+    private boolean isEditingMode = false;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -110,37 +111,51 @@ public class NewEditEmployeeController implements Controller{
     public void refreshView() {
         tempEmployee = new Employee();
         tempEmployee.setId(0);
+        bindFields(tempEmployee);
 
-        nicTextField.textProperty().bindBidirectional(tempEmployee.nicProperty());
-        firstNameTextField.textProperty().bindBidirectional(tempEmployee.firstNameProperty());
-        middleNameTextField.textProperty().bindBidirectional(tempEmployee.middleNameProperty());
-        lastNameTextField.textProperty().bindBidirectional(tempEmployee.lastNameProperty());
-        genderComboBox.valueProperty().bindBidirectional(tempEmployee.genderProperty());
-        dobDatePicker.valueProperty().bindBidirectional(tempEmployee.dobProperty());
-        startDateDatePicker.valueProperty().bindBidirectional(tempEmployee.startDateProperty());
-        endDateDatePicker.valueProperty().bindBidirectional(tempEmployee.endDateProperty());
-        employeeRoleComboBox.valueProperty().bindBidirectional(tempEmployee.employeeRoleProperty());
-        shiftStartTimeTimePicker.valueProperty().bindBidirectional(tempEmployee.defaultShiftStartProperty());
-        shiftEndTimeTimePicker.valueProperty().bindBidirectional(tempEmployee.defaultShiftEndProperty());
+        isEditingMode = false;
+        employeeRoleComboBox.setDisable(false);
+    }
 
-        mondayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().mondayProperty());
-        tuesdayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().tuesdaysProperty());
-        wednesdayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().wednesdayProperty());
-        thursdayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().thursdayProperty());
-        fridayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().fridayProperty());
-        saturdayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().saturdayProperty());
-        sundayCheckBox.selectedProperty().bindBidirectional(tempEmployee.getWorkingDays().sundayProperty());
+    public void showEmployee(Employee employee) {
+        tempEmployee = employee;
+        bindFields(employee);
+
+        isEditingMode = true;
+        employeeRoleComboBox.setDisable(true);
+    }
+
+    private void bindFields(Employee employee) {
+        nicTextField.textProperty().bindBidirectional(employee.nicProperty());
+        firstNameTextField.textProperty().bindBidirectional(employee.firstNameProperty());
+        middleNameTextField.textProperty().bindBidirectional(employee.middleNameProperty());
+        lastNameTextField.textProperty().bindBidirectional(employee.lastNameProperty());
+        genderComboBox.valueProperty().bindBidirectional(employee.genderProperty());
+        dobDatePicker.valueProperty().bindBidirectional(employee.dobProperty());
+        startDateDatePicker.valueProperty().bindBidirectional(employee.startDateProperty());
+        endDateDatePicker.valueProperty().bindBidirectional(employee.endDateProperty());
+        employeeRoleComboBox.valueProperty().bindBidirectional(employee.employeeRoleProperty());
+        shiftStartTimeTimePicker.valueProperty().bindBidirectional(employee.defaultShiftStartProperty());
+        shiftEndTimeTimePicker.valueProperty().bindBidirectional(employee.defaultShiftEndProperty());
+
+        mondayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().mondayProperty());
+        tuesdayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().tuesdaysProperty());
+        wednesdayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().wednesdayProperty());
+        thursdayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().thursdayProperty());
+        fridayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().fridayProperty());
+        saturdayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().saturdayProperty());
+        sundayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().sundayProperty());
 
         tempEmployee.getEmployeeTelephoneArrayList().add(new EmployeeTelephone());
-        telephoneTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
+        telephoneTextField.textProperty().bindBidirectional(employee.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
         tempEmployee.getEmployeeEmailArrayList().add(new EmployeeEmail());
-        emailTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeEmailArrayList().get(0).emailProperty());
+        emailTextField.textProperty().bindBidirectional(employee.getEmployeeEmailArrayList().get(0).emailProperty());
 
         tempEmployee.getEmployeeAddressArrayList().add(new EmployeeAddress());
-        streetTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeAddressArrayList().get(0).streetProperty());
-        townTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeAddressArrayList().get(0).townProperty());
-        provinceTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeAddressArrayList().get(0).provinceProperty());
-        postalCodeTextField.textProperty().bindBidirectional(tempEmployee.getEmployeeAddressArrayList().get(0).postalCodeProperty());
+        streetTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).streetProperty());
+        townTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).townProperty());
+        provinceTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).provinceProperty());
+        postalCodeTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).postalCodeProperty());
 
         specialityComboBox.setDisable(true);
 
@@ -156,17 +171,22 @@ public class NewEditEmployeeController implements Controller{
                 .observableList(SpecialityServices.getSpecialityArrayList());
         specialityComboBox.setItems(specialityObservableList);
 
-        degreeListView.itemsProperty().bindBidirectional(tempEmployee.degreeListPropertyProperty());
+        degreeListView.itemsProperty().bindBidirectional(employee.degreeListPropertyProperty());
     }
 
     public void browseButtonOnAction(ActionEvent actionEvent) {
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle("Select an image");
-            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files", "*.jpg"));
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select an image");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files", "*.jpg"));
 
-            File source = fileChooser.showOpenDialog(null);
+        File source = fileChooser.showOpenDialog(null);
 
-            File dest = new File(System.getProperty("user.dir"), "temp\\pp_new_" + tempEmployee.getId() + ".jpg");
+        File dest;
+        if (!isEditingMode) {
+            dest = new File(System.getProperty("user.dir"), "temp\\pp_new_" + tempEmployee.getId() + ".jpg");
+        } else {
+            dest = new File(System.getProperty("user.dir"), "temp\\pp_changed_" + tempEmployee.getId() + ".jpg");
+        }
 
         try {
             FileUtils.copyFile(source, dest);
@@ -198,7 +218,7 @@ public class NewEditEmployeeController implements Controller{
 
     public void removeCircleButtonOnAction(ActionEvent actionEvent) {
         Degree selectedDegree = degreeListView.getSelectionModel().getSelectedItem();
-        if(selectedDegree != null){
+        if (selectedDegree != null) {
             degreeListView.getItems().remove(selectedDegree);
         }
     }
@@ -206,17 +226,19 @@ public class NewEditEmployeeController implements Controller{
     public void okButtonOnAction(ActionEvent actionEvent) {
         ArrayList<Employee> employeeArrayList = new ArrayList<>();
         employeeArrayList.add(tempEmployee);
-
-        EmployeeServices.newEmployee(employeeArrayList);
-
+        if (!isEditingMode) {
+            EmployeeServices.newEmployee(employeeArrayList);
+        } else {
+            EmployeeServices.updateEmployee(employeeArrayList);
+        }
         UIFactory.launchUI(UIName.EMPLOYEE_MANAGEMENT, true);
     }
 
     public void employeeRoleComboBoxOnAction(ActionEvent actionEvent) {
         EmployeeRole selectedEmployeeRole = employeeRoleComboBox.getSelectionModel().getSelectedItem();
-        if(selectedEmployeeRole != null && selectedEmployeeRole.getRole().equals("Doctor")){
+        if (selectedEmployeeRole != null && selectedEmployeeRole.isDoctor()) {
             specialityComboBox.setDisable(false);
-        }else {
+        } else {
             specialityComboBox.setDisable(true);
         }
     }

@@ -336,4 +336,70 @@ public class Employee implements Model<Employee> {
     public void setDegreeListProperty(ObservableList<Degree> degreeListProperty) {
         this.degreeListProperty.set(degreeListProperty);
     }
+
+    public boolean isDoctor(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Doctor");
+        }else {
+            return false;
+        }
+    }
+
+    public boolean isNurse(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Nurse");
+        }else {
+            return false;
+        }
+    }
+    public boolean isTech(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Tech");
+        }else {
+            return false;
+        }
+    }
+    public boolean isTheraphist(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Theraphist");
+        }else {
+            return false;
+        }
+    }
+    public boolean isPharmacist(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Pharmacist");
+        }else {
+            return false;
+        }
+    }
+    public boolean isMedicalAssistant(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Medical Assistant");
+        }else {
+            return false;
+        }
+    }
+    public boolean isMedicalLabTechnologist(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Medical Lab Technologist");
+        }else {
+            return false;
+        }
+    }
+    public boolean isDiatician(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Diatician");
+        }else {
+            return false;
+        }
+    }
+    public boolean isJanitor(){
+        if(employeeRole != null){
+            return  getEmployeeRole().getRole().equals("Janitor");
+        }else {
+            return false;
+        }
+    }
+
 }

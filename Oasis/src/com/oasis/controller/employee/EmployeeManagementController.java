@@ -3,6 +3,7 @@ package com.oasis.controller.employee;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
 import com.oasis.controller.Controller;
+import com.oasis.controller.main.DashboardController;
 import com.oasis.factory.UIFactory;
 import com.oasis.main.Main;
 import com.oasis.model.Degree;
@@ -10,12 +11,14 @@ import com.oasis.model.Employee;
 import com.oasis.model.EmployeeRole;
 import com.oasis.model.Gender;
 import com.oasis.services.EmployeeServices;
+import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import com.oasis.utils.SystemFunction;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -210,7 +213,15 @@ public class EmployeeManagementController implements Controller{
     }
 
     public void editButtonOnAction(ActionEvent actionEvent) {
-
+        Employee selectedEmployee = employeeTableView.getSelectionModel().getSelectedItem();
+        if(selectedEmployee != null) {
+            UI ui = UIFactory.getUI(UIName.NEW_EDIT_EMPLOYEE);
+            Parent parent = ui.getParent();
+            NewEditEmployeeController controller = (NewEditEmployeeController) ui.getController();
+            controller.showEmployee(selectedEmployee);
+            DashboardController dashboardController = ((DashboardController) (UIFactory.getUI(UIName.DASHBOARD).getController()));
+            dashboardController.setWorkspace(parent);
+        }
     }
 
     public void saveButtonOnAction(ActionEvent actionEvent) {

@@ -1,6 +1,6 @@
 package com.oasis.model;
 
-public class EmployeeRole implements Model<EmployeeRole>{
+public class EmployeeRole implements Model<EmployeeRole> {
     private int id;
     private String role;
 
@@ -24,10 +24,10 @@ public class EmployeeRole implements Model<EmployeeRole>{
         }
 
         EmployeeRole er = (EmployeeRole) obj;
-        if(er.getId() != getId()){
+        if (er.getId() != getId()) {
             return false;
         }
-        if(er.getRole() != getRole()){
+        if (er.getRole() != getRole()) {
             return false;
         }
 
@@ -53,5 +53,41 @@ public class EmployeeRole implements Model<EmployeeRole>{
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public boolean isDoctor() {
+        return getRole().equals("Doctor");
+    }
+
+    public boolean isNurse() {
+        return getRole().equals("Nurse");
+    }
+
+    public boolean isTech() {
+        return getRole().equals("Tech");
+    }
+
+    public boolean isTheraphist() {
+        return getRole().equals("Theraphist");
+    }
+
+    public boolean isPharmacist() {
+        return getRole().equals("Pharmacist");
+    }
+
+    public boolean isMedicalAssistant() {
+        return getRole().equals("Medical Assistant");
+    }
+
+    public boolean isMedicalLabTechnologist() {
+        return getRole().equals("Medical Lab Technologist");
+    }
+
+    public boolean isDiatician() {
+        return getRole().equals("Diatician");
+    }
+
+    public boolean isJanitor() {
+        return getRole().equals("Janitor");
     }
 }

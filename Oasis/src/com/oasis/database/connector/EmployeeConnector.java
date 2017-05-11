@@ -145,36 +145,46 @@ public class EmployeeConnector extends Connect {
             }
 
             for (EmployeeAddress employeeAddress : employee.getEmployeeAddressArrayList()) {
-                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_address(employee_id, street, town, province, postal_code) " +
                         "VALUES(?, ?, ?, ?, ?)");
-                preparedStatement1.setInt(1, employee.getId());
-                preparedStatement1.setString(2, employeeAddress.getStreet());
-                preparedStatement1.setString(3, employeeAddress.getTown());
-                preparedStatement1.setString(4, employeeAddress.getProvince());
-                preparedStatement1.setString(5, employeeAddress.getPostalCode());
+                preparedStatement2.setInt(1, employee.getId());
+                preparedStatement2.setString(2, employeeAddress.getStreet());
+                preparedStatement2.setString(3, employeeAddress.getTown());
+                preparedStatement2.setString(4, employeeAddress.getProvince());
+                preparedStatement2.setString(5, employeeAddress.getPostalCode());
 
-                preparedStatement1.execute();
+                preparedStatement2.execute();
             }
 
             for (EmployeeEmail employeeEmail : employee.getEmployeeEmailArrayList()) {
-                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                PreparedStatement preparedStatement3 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_email(employee_id, email) " +
                         "VALUES(?, ?)");
-                preparedStatement1.setInt(1, employee.getId());
-                preparedStatement1.setString(2, employeeEmail.getEmail());
+                preparedStatement3.setInt(1, employee.getId());
+                preparedStatement3.setString(2, employeeEmail.getEmail());
 
-                preparedStatement1.execute();
+                preparedStatement3.execute();
             }
 
             for (Degree degree : employee.getDegreeListProperty()) {
-                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                PreparedStatement preparedStatement4 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                         "employee_has_degree(employee_id, degree_id) " +
                         "VALUES(?, ?)");
-                preparedStatement1.setInt(1, employee.getId());
-                preparedStatement1.setInt(2, degree.getId());
+                preparedStatement4.setInt(1, employee.getId());
+                preparedStatement4.setInt(2, degree.getId());
 
-                preparedStatement1.execute();
+                preparedStatement4.execute();
+            }
+
+            if(employee.isDoctor()){
+                PreparedStatement preparedStatement5 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                        "doctor(employee_id, speciality_id) " +
+                        "VALUES(?, ?)");
+                preparedStatement5.setInt(1, employee.getId());
+                preparedStatement5.setInt(2, ((Doctor)employee).getSpecialityObjectProperty().getId());
+
+                preparedStatement5.execute();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -182,7 +192,93 @@ public class EmployeeConnector extends Connect {
     }
 
     public void updateEmployee(Employee employee) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE employee SET " +
+                    "nic = ?, " +
+                    "first_name = ?, " +
+                    "middle_name = ?, " +
+                    "last_name = ?, " +
+                    "gender = ?, " +
+                    "dob = ?, " +
+                    "start_date = ?, " +
+                    "end_date = ?, " +
+                    "employee_role_id = ?, " +
+                    "default_shift_start = ?, " +
+                    "default_shift_end = ?, " +
+                    "working_days = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, employee.getNic());
+            preparedStatement.setString(2, employee.getFirstName());
+            preparedStatement.setString(3, employee.getMiddleName());
+            preparedStatement.setString(4, employee.getFirstName());
+            preparedStatement.setString(5, employee.getGender().getTag());
+            preparedStatement.setDate(6, Date.valueOf(employee.getDob()));
+            preparedStatement.setDate(7, Date.valueOf(employee.getStartDate()));
+            preparedStatement.setDate(8, Date.valueOf(employee.getEndDate()));
+            preparedStatement.setInt(9, employee.getEmployeeRole().getId());
+            preparedStatement.setTime(10, Time.valueOf(employee.getDefaultShiftStart()));
+            preparedStatement.setTime(11, Time.valueOf(employee.getDefaultShiftEnd()));
+            preparedStatement.setString(12, employee.getWorkingDays().toString());
+            preparedStatement.setInt(13, employee.getId());
 
+            preparedStatement.execute();
+
+            for (EmployeeTelephone employeeTelephone : employee.getEmployeeTelephoneArrayList()) {
+                PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
+                        "employee_telephone(id, employee_id, telephone) " +
+                        "VALUES(?, ?, ?)");
+                preparedStatement1.setInt(1, employee.getId());
+                preparedStatement1.setInt(2, employeeTelephone.getId());
+                preparedStatement1.setString(3, employeeTelephone.getTelephone());
+
+                preparedStatement1.execute();
+            }
+
+            for (EmployeeAddress employeeAddress : employee.getEmployeeAddressArrayList()) {
+                PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
+                        "employee_address(employee_id, street, town, province, postal_code) " +
+                        "VALUES(?, ?, ?, ?, ?)");
+                preparedStatement2.setInt(1, employee.getId());
+                preparedStatement2.setString(2, employeeAddress.getStreet());
+                preparedStatement2.setString(3, employeeAddress.getTown());
+                preparedStatement2.setString(4, employeeAddress.getProvince());
+                preparedStatement2.setString(5, employeeAddress.getPostalCode());
+
+                preparedStatement2.execute();
+            }
+
+            for (EmployeeEmail employeeEmail : employee.getEmployeeEmailArrayList()) {
+                PreparedStatement preparedStatement3 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
+                        "employee_email(employee_id, email) " +
+                        "VALUES(?, ?)");
+                preparedStatement3.setInt(1, employee.getId());
+                preparedStatement3.setString(2, employeeEmail.getEmail());
+
+                preparedStatement3.execute();
+            }
+
+            for (Degree degree : employee.getDegreeListProperty()) {
+                PreparedStatement preparedStatement4 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
+                        "employee_has_degree(employee_id, degree_id) " +
+                        "VALUES(?, ?)");
+                preparedStatement4.setInt(1, employee.getId());
+                preparedStatement4.setInt(2, degree.getId());
+
+                preparedStatement4.execute();
+            }
+
+            if(employee.isDoctor()){
+                PreparedStatement preparedStatement5 = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
+                        "doctor(employee_id, speciality_id) " +
+                        "VALUES(?, ?)");
+                preparedStatement5.setInt(1, employee.getId());
+                preparedStatement5.setInt(2, ((Doctor)employee).getSpecialityObjectProperty().getId());
+
+                preparedStatement5.execute();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void deleteEmployee(Employee employee) {

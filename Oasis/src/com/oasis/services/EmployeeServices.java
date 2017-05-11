@@ -30,7 +30,6 @@ public class EmployeeServices {
         for(Employee employee: employeeArrayList){
             Session.employeeConnector.updateEmployee(employee);
             EmployeeServices.uploadImage("changed_", employee.getId());
-
         }
     }
 
