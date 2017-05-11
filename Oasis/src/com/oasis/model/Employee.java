@@ -23,9 +23,9 @@ public class Employee implements Model<Employee> {
     private ObjectProperty<LocalTime> defaultShiftStart = new SimpleObjectProperty<>();
     private ObjectProperty<LocalTime> defaultShiftEnd = new SimpleObjectProperty<>();
     private WorkingDays workingDays = new WorkingDays();
-    private ArrayList<EmployeeTelephone> employeeTelephoneArrayList = new ArrayList<>();
-    private ArrayList<EmployeeAddress> employeeAddressArrayList = new ArrayList<>();
-    private ArrayList<EmployeeEmail> employeeEmailArrayList = new ArrayList<>();
+    private ArrayList<Telephone> telephoneArrayList = new ArrayList<>();
+    private ArrayList<Address> addressArrayList = new ArrayList<>();
+    private ArrayList<Email> emailArrayList = new ArrayList<>();
     private ListProperty<Degree> degreeListProperty;
 
     public Employee() {
@@ -56,7 +56,7 @@ public class Employee implements Model<Employee> {
     public Employee(int id, String nic, String firstName, String middleName, String lastName, Gender gender, LocalDate dob,
                     LocalDate startDate, LocalDate endDate, EmployeeRole employeeRole,
                     LocalTime defaultShiftStart, LocalTime defaultShiftEnd, WorkingDays workingDays,
-                    EmployeeTelephone employeeTelephone, EmployeeAddress employeeAddress, EmployeeEmail employeeEmail) {
+                    Telephone telephone, Address address, Email email) {
         this();
 
         this.id = id;
@@ -72,9 +72,9 @@ public class Employee implements Model<Employee> {
         this.defaultShiftStart.setValue(defaultShiftStart);
         this.defaultShiftEnd.setValue(defaultShiftEnd);
         this.workingDays = workingDays;
-        this.employeeTelephoneArrayList.add(employeeTelephone);
-        this.employeeAddressArrayList.add(employeeAddress);
-        this.employeeEmailArrayList.add(employeeEmail);
+        this.telephoneArrayList.add(telephone);
+        this.addressArrayList.add(address);
+        this.emailArrayList.add(email);
     }
 
     @Override
@@ -126,13 +126,13 @@ public class Employee implements Model<Employee> {
         if (!e.getWorkingDays().equals(getWorkingDays())) {
             return false;
         }
-        if (!e.getEmployeeTelephoneArrayList().get(0).equals(getEmployeeTelephoneArrayList().get(0))) {
+        if (!e.getTelephoneArrayList().get(0).equals(getTelephoneArrayList().get(0))) {
             return false;
         }
-        if (!e.getEmployeeAddressArrayList().get(0).equals(getEmployeeAddressArrayList().get(0))) {
+        if (!e.getAddressArrayList().get(0).equals(getAddressArrayList().get(0))) {
             return false;
         }
-        if (!e.getEmployeeEmailArrayList().get(0).equals(getEmployeeEmailArrayList().get(0))) {
+        if (!e.getEmailArrayList().get(0).equals(getEmailArrayList().get(0))) {
             return false;
         }
         if (!Compare.isEqual(e.getDegreeListProperty(), getDegreeListProperty())) {
@@ -146,7 +146,7 @@ public class Employee implements Model<Employee> {
     public Employee clone() {
         Employee clonedEmployee =  new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
                 getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays(),
-                getEmployeeTelephoneArrayList().get(0).clone(), getEmployeeAddressArrayList().get(0).clone(), getEmployeeEmailArrayList().get(0).clone());
+                getTelephoneArrayList().get(0).clone(), getAddressArrayList().get(0).clone(), getEmailArrayList().get(0).clone());
 
         clonedEmployee.getDegreeListProperty().addAll(getDegreeListProperty());
 
@@ -301,28 +301,28 @@ public class Employee implements Model<Employee> {
         this.workingDays = workingDays;
     }
 
-    public ArrayList<EmployeeTelephone> getEmployeeTelephoneArrayList() {
-        return employeeTelephoneArrayList;
+    public ArrayList<Telephone> getTelephoneArrayList() {
+        return telephoneArrayList;
     }
 
-    public void setEmployeeTelephoneArrayList(ArrayList<EmployeeTelephone> employeeTelephoneArrayList) {
-        this.employeeTelephoneArrayList = employeeTelephoneArrayList;
+    public void setTelephoneArrayList(ArrayList<Telephone> telephoneArrayList) {
+        this.telephoneArrayList = telephoneArrayList;
     }
 
-    public ArrayList<EmployeeAddress> getEmployeeAddressArrayList() {
-        return employeeAddressArrayList;
+    public ArrayList<Address> getAddressArrayList() {
+        return addressArrayList;
     }
 
-    public void setEmployeeAddressArrayList(ArrayList<EmployeeAddress> employeeAddressArrayList) {
-        this.employeeAddressArrayList = employeeAddressArrayList;
+    public void setAddressArrayList(ArrayList<Address> addressArrayList) {
+        this.addressArrayList = addressArrayList;
     }
 
-    public ArrayList<EmployeeEmail> getEmployeeEmailArrayList() {
-        return employeeEmailArrayList;
+    public ArrayList<Email> getEmailArrayList() {
+        return emailArrayList;
     }
 
-    public void setEmployeeEmailArrayList(ArrayList<EmployeeEmail> employeeEmailArrayList) {
-        this.employeeEmailArrayList = employeeEmailArrayList;
+    public void setEmailArrayList(ArrayList<Email> emailArrayList) {
+        this.emailArrayList = emailArrayList;
     }
 
     public ObservableList<Degree> getDegreeListProperty() {

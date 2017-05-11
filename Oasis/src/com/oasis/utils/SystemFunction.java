@@ -10,7 +10,6 @@ import com.oasis.model.*;
 import com.oasis.ui.UIName;
 import com.oasis.ui.utils.UIUtils;
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -37,7 +36,6 @@ public class SystemFunction {
         Session.wardConnector = new WardConnector();
         Session.testConnector = new TestConnector();
         Session.specialityConnector = new SpecialityConnector();
-        Session.raceConnector = new RaceConnector();
         Session.ethnicityConnector = new EthnicityConnector();
         Session.employeeConnector = new EmployeeConnector();
         Session.employeeRoleConnector = new EmployeeRoleConnector();
@@ -91,13 +89,6 @@ public class SystemFunction {
             @Override
             public void itemAdder(HashMap<Integer, PhysicianDesignation> itemHashMap) {
                 itemHashMap.putAll(Session.physicianConnector.getPhysicianDesignationhashMap());
-            }
-        };
-
-        Session.raceCache = new Cache<Race>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Race> itemHashMap) {
-                itemHashMap.putAll(Session.raceConnector.getRaceHashMap());
             }
         };
 

@@ -13,7 +13,7 @@ public class Physician implements Model<Physician>{
     private StringProperty middleName = new SimpleStringProperty();
     private StringProperty lastName = new SimpleStringProperty();
     private ObjectProperty<PhysicianDesignation> physicianDesignationObjectProperty = new SimpleObjectProperty<>();
-    private ArrayList<PhysicianTelephone> physicianTelephoneArrayList = new ArrayList<>();
+    private ArrayList<Telephone> telephoneArrayList = new ArrayList<>();
 
     public Physician() {
     }
@@ -51,7 +51,7 @@ public class Physician implements Model<Physician>{
         if(!p.getPhysicianDesignationObjectProperty().equals(getPhysicianDesignationObjectProperty())){
             return false;
         }
-        if (!p.getPhysicianTelephoneArrayList().get(0).equals(getPhysicianTelephoneArrayList().get(0))){
+        if (!p.getTelephoneArrayList().get(0).equals(getTelephoneArrayList().get(0))){
             return false;
         }
 
@@ -62,8 +62,8 @@ public class Physician implements Model<Physician>{
     public Physician clone(){
         Physician clonedPhysician = new Physician(id, getFirstName(), getMiddleName(), getLastName(),
                 getPhysicianDesignationObjectProperty().clone());
-        for(PhysicianTelephone physicianTelephone: physicianTelephoneArrayList) {
-            clonedPhysician.getPhysicianTelephoneArrayList().add(physicianTelephone.clone());
+        for(Telephone telephone: telephoneArrayList) {
+            clonedPhysician.getTelephoneArrayList().add(telephone.clone());
         }
         return clonedPhysician;
     }
@@ -124,11 +124,11 @@ public class Physician implements Model<Physician>{
         this.physicianDesignationObjectProperty.set(physicianDesignationObjectProperty);
     }
 
-    public ArrayList<PhysicianTelephone> getPhysicianTelephoneArrayList() {
-        return physicianTelephoneArrayList;
+    public ArrayList<Telephone> getTelephoneArrayList() {
+        return telephoneArrayList;
     }
 
-    public void setPhysicianTelephoneArrayList(ArrayList<PhysicianTelephone> physicianTelephoneArrayList) {
-        this.physicianTelephoneArrayList = physicianTelephoneArrayList;
+    public void setTelephoneArrayList(ArrayList<Telephone> telephoneArrayList) {
+        this.telephoneArrayList = telephoneArrayList;
     }
 }

@@ -6,7 +6,7 @@ public class Janitor extends Employee{
         super(employee.getId(), employee.getNic(), employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
                 employee.getGender(), employee.getDob(), employee.getStartDate(), employee.getEndDate(), employee.getEmployeeRole(),
                 employee.getDefaultShiftStart(), employee.getDefaultShiftEnd(), employee.getWorkingDays(),
-                employee.getEmployeeTelephoneArrayList().get(0), employee.getEmployeeAddressArrayList().get(0), employee.getEmployeeEmailArrayList().get(0));
+                employee.getTelephoneArrayList().get(0), employee.getAddressArrayList().get(0), employee.getEmailArrayList().get(0));
     }
 
     @Override

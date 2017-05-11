@@ -3,17 +3,17 @@ package com.oasis.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class EmployeeAddress implements Model<EmployeeAddress>{
+public class Address implements Model<Address>{
     private int id = 0;
     private StringProperty street = new SimpleStringProperty();
     private StringProperty town = new SimpleStringProperty();
     private StringProperty province = new SimpleStringProperty();
     private StringProperty postalCode = new SimpleStringProperty();
 
-    public EmployeeAddress() {
+    public Address() {
     }
 
-    public EmployeeAddress(int id, String street, String town, String province, String postalCode) {
+    public Address(int id, String street, String town, String province, String postalCode) {
         this.id = id;
         this.street.setValue(street);
         this.town.setValue(town);
@@ -26,11 +26,11 @@ public class EmployeeAddress implements Model<EmployeeAddress>{
         if (obj == null) {
             return false;
         }
-        if (!EmployeeAddress.class.isAssignableFrom(obj.getClass())) {
+        if (!Address.class.isAssignableFrom(obj.getClass())) {
             return false;
         }
 
-        EmployeeAddress ea = (EmployeeAddress) obj;
+        Address ea = (Address) obj;
         if (ea.getId() != getId()) {
             return false;
         }
@@ -51,8 +51,8 @@ public class EmployeeAddress implements Model<EmployeeAddress>{
     }
 
     @Override
-    public EmployeeAddress clone() {
-        return new EmployeeAddress(id, getStreet(), getTown(), getProvince(), getPostalCode());
+    public Address clone() {
+        return new Address(id, getStreet(), getTown(), getProvince(), getPostalCode());
     }
 
     public int getId() {

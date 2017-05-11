@@ -1,8 +1,6 @@
 package com.oasis.main;
 
-import com.oasis.model.EmployeeTelephone;
 import com.sun.javafx.application.LauncherImpl;
-import preloader.OasisPreloader;
 
 public class Main {
     public static void main(String args[]){

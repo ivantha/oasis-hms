@@ -69,7 +69,7 @@ public class PhysicianManagementController implements Controller {
                     middleNameTextField.textProperty().unbindBidirectional(oldValue.middleNameProperty());
                     lastNameTextField.textProperty().unbindBidirectional(oldValue.lastNameProperty());
                     designationComboBox.valueProperty().unbindBidirectional(oldValue.physicianDesignationObjectPropertyProperty());
-                    telephoneTextField.textProperty().unbindBidirectional(oldValue.getPhysicianTelephoneArrayList()
+                    telephoneTextField.textProperty().unbindBidirectional(oldValue.getTelephoneArrayList()
                             .get(0).telephoneProperty());
 
                     if(!oldValue.equals(tempPhysicianHashMap.get(oldValue.getId()))){
@@ -80,7 +80,7 @@ public class PhysicianManagementController implements Controller {
                 middleNameTextField.textProperty().bindBidirectional(newValue.middleNameProperty());
                 lastNameTextField.textProperty().bindBidirectional(newValue.lastNameProperty());
                 designationComboBox.valueProperty().bindBidirectional(newValue.physicianDesignationObjectPropertyProperty());
-                telephoneTextField.textProperty().bindBidirectional(newValue.getPhysicianTelephoneArrayList()
+                telephoneTextField.textProperty().bindBidirectional(newValue.getTelephoneArrayList()
                         .get(0).telephoneProperty());
             }
         });
@@ -105,7 +105,7 @@ public class PhysicianManagementController implements Controller {
         middleNameTableColumn.setCellValueFactory(param -> param.getValue().middleNameProperty());
         lastNameTableColumn.setCellValueFactory(param -> param.getValue().lastNameProperty());
         designationTableColumn.setCellValueFactory(param -> param.getValue().physicianDesignationObjectPropertyProperty());
-        telephoneTableColumn.setCellValueFactory(param -> param.getValue().getPhysicianTelephoneArrayList().get(0).telephoneProperty());
+        telephoneTableColumn.setCellValueFactory(param -> param.getValue().getTelephoneArrayList().get(0).telephoneProperty());
 
         ObservableList<PhysicianDesignation> physicianDesignationObservableList = FXCollections
                 .observableList(PhysicianServices.getPhysicianDesignationArrayList());

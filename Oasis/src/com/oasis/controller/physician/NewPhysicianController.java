@@ -4,7 +4,7 @@ import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
-import com.oasis.model.PhysicianTelephone;
+import com.oasis.model.Telephone;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
 import javafx.collections.FXCollections;
@@ -48,8 +48,8 @@ public class NewPhysicianController implements Controller {
         middleNameTextField.textProperty().bindBidirectional(tempPhysician.middleNameProperty());
         lastNameTextField.textProperty().bindBidirectional(tempPhysician.lastNameProperty());
         designationComboBox.valueProperty().bindBidirectional(tempPhysician.physicianDesignationObjectPropertyProperty());
-        tempPhysician.getPhysicianTelephoneArrayList().add(new PhysicianTelephone());
-        telephoneTextField.textProperty().bindBidirectional(tempPhysician.getPhysicianTelephoneArrayList().get(0).telephoneProperty());
+        tempPhysician.getTelephoneArrayList().add(new Telephone());
+        telephoneTextField.textProperty().bindBidirectional(tempPhysician.getTelephoneArrayList().get(0).telephoneProperty());
 
         ObservableList<PhysicianDesignation> physicianDesignationObservableList = FXCollections
                 .observableList(PhysicianServices.getPhysicianDesignationArrayList());

@@ -57,9 +57,9 @@ public class EmployeeConnector extends Connect {
                 int employeeId = resultSet1.getInt("employee_telephone.employee_id");
                 int employeeTelephoneId = resultSet1.getInt("employee_telephone.id");
                 String employeeTelephoneTelephone = resultSet1.getString("employee_telephone.telephone");
-                EmployeeTelephone employeeTelephone = new EmployeeTelephone(employeeTelephoneId, employeeTelephoneTelephone);
+                Telephone telephone = new Telephone(employeeTelephoneId, employeeTelephoneTelephone);
 
-                employeeHashMap.get(employeeId).getEmployeeTelephoneArrayList().add(employeeTelephone);
+                employeeHashMap.get(employeeId).getTelephoneArrayList().add(telephone);
             }
 
             PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_address");
@@ -72,9 +72,9 @@ public class EmployeeConnector extends Connect {
                 String employeeAddressTown = resultSet2.getString("employee_address.town");
                 String employeeAddressProvince = resultSet2.getString("employee_address.province");
                 String employeeAddressPostalCode = resultSet2.getString("employee_address.postal_code");
-                EmployeeAddress employeeAddress = new EmployeeAddress(employeeAddressId, employeeAddressStreet, employeeAddressTown, employeeAddressProvince, employeeAddressPostalCode);
+                Address address = new Address(employeeAddressId, employeeAddressStreet, employeeAddressTown, employeeAddressProvince, employeeAddressPostalCode);
 
-                employeeHashMap.get(employeeId).getEmployeeAddressArrayList().add(employeeAddress);
+                employeeHashMap.get(employeeId).getAddressArrayList().add(address);
             }
 
             PreparedStatement preparedStatement3 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_email");
@@ -84,9 +84,9 @@ public class EmployeeConnector extends Connect {
                 int employeeId = resultSet3.getInt("employee_email.employee_id");
                 int employeeEmailId = resultSet3.getInt("employee_email.id");
                 String employeeEmailEmail = resultSet3.getString("employee_email.email");
-                EmployeeEmail employeeEmail = new EmployeeEmail(employeeEmailId, employeeEmailEmail);
+                Email email = new Email(employeeEmailId, employeeEmailEmail);
 
-                employeeHashMap.get(employeeId).getEmployeeEmailArrayList().add(employeeEmail);
+                employeeHashMap.get(employeeId).getEmailArrayList().add(email);
             }
 
             PreparedStatement preparedStatement4 = (PreparedStatement) getConnection().prepareStatement("SELECT employee_has_degree.employee_id, degree.id, " +
@@ -135,16 +135,16 @@ public class EmployeeConnector extends Connect {
                 employee.setId(resultSet.getInt(1));
             }
 
-            for (EmployeeTelephone employeeTelephone : employee.getEmployeeTelephoneArrayList()) {
-                newEmployeeTelephone(employee.getId(), employeeTelephone);
+            for (Telephone telephone : employee.getTelephoneArrayList()) {
+                newEmployeeTelephone(employee.getId(), telephone);
             }
 
-            for (EmployeeAddress employeeAddress : employee.getEmployeeAddressArrayList()) {
-                newEmployeeAddress(employee.getId(), employeeAddress);
+            for (Address address : employee.getAddressArrayList()) {
+                newEmployeeAddress(employee.getId(), address);
             }
 
-            for (EmployeeEmail employeeEmail : employee.getEmployeeEmailArrayList()) {
-                newEmployeeEmail(employee.getId(), employeeEmail);
+            for (Email email : employee.getEmailArrayList()) {
+                newEmployeeEmail(employee.getId(), email);
             }
 
             for (Degree degree : employee.getDegreeListProperty()) {
@@ -191,27 +191,27 @@ public class EmployeeConnector extends Connect {
 
             preparedStatement.execute();
 
-            for (EmployeeTelephone employeeTelephone : employee.getEmployeeTelephoneArrayList()) {
-                if (employeeTelephone.getId() == 0) {
-                    newEmployeeTelephone(employee.getId(), employeeTelephone);
+            for (Telephone telephone : employee.getTelephoneArrayList()) {
+                if (telephone.getId() == 0) {
+                    newEmployeeTelephone(employee.getId(), telephone);
                 } else {
-                    updateEmployeeTelephone(employeeTelephone);
+                    updateEmployeeTelephone(telephone);
                 }
             }
 
-            for (EmployeeAddress employeeAddress : employee.getEmployeeAddressArrayList()) {
-                if (employeeAddress.getId() == 0) {
-                    newEmployeeAddress(employee.getId(), employeeAddress);
+            for (Address address : employee.getAddressArrayList()) {
+                if (address.getId() == 0) {
+                    newEmployeeAddress(employee.getId(), address);
                 } else {
-                    updateEmployeeAddress(employeeAddress);
+                    updateEmployeeAddress(address);
                 }
             }
 
-            for (EmployeeEmail employeeEmail : employee.getEmployeeEmailArrayList()) {
-                if (employeeEmail.getId() == 0) {
-                    newEmployeeEmail(employee.getId(), employeeEmail);
+            for (Email email : employee.getEmailArrayList()) {
+                if (email.getId() == 0) {
+                    newEmployeeEmail(employee.getId(), email);
                 } else {
-                    updateEmployeeEmail(employeeEmail);
+                    updateEmployeeEmail(email);
                 }
             }
 
@@ -245,41 +245,41 @@ public class EmployeeConnector extends Connect {
         }
     }
 
-    private void newEmployeeTelephone(int employeeId, EmployeeTelephone employeeTelephone) throws SQLException {
+    private void newEmployeeTelephone(int employeeId, Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "employee_telephone(employee_id, telephone) " +
                 "VALUES(?, ?)");
         preparedStatement.setInt(1, employeeId);
-        preparedStatement.setString(2, employeeTelephone.getTelephone());
+        preparedStatement.setString(2, telephone.getTelephone());
 
         preparedStatement.execute();
     }
 
-    private void updateEmployeeTelephone(EmployeeTelephone employeeTelephone) throws SQLException {
+    private void updateEmployeeTelephone(Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE employee_telephone SET " +
                 "telephone = ? " +
                 "WHERE id = ?");
 
-        preparedStatement.setString(1, employeeTelephone.getTelephone());
-        preparedStatement.setInt(2, employeeTelephone.getId());
+        preparedStatement.setString(1, telephone.getTelephone());
+        preparedStatement.setInt(2, telephone.getId());
 
         preparedStatement.execute();
     }
 
-    private void newEmployeeAddress(int employeeId, EmployeeAddress employeeAddress) throws SQLException {
+    private void newEmployeeAddress(int employeeId, Address address) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "employee_address(employee_id, street, town, province, postal_code) " +
                 "VALUES(?, ?, ?, ?, ?)");
         preparedStatement.setInt(1, employeeId);
-        preparedStatement.setString(2, employeeAddress.getStreet());
-        preparedStatement.setString(3, employeeAddress.getTown());
-        preparedStatement.setString(4, employeeAddress.getProvince());
-        preparedStatement.setString(5, employeeAddress.getPostalCode());
+        preparedStatement.setString(2, address.getStreet());
+        preparedStatement.setString(3, address.getTown());
+        preparedStatement.setString(4, address.getProvince());
+        preparedStatement.setString(5, address.getPostalCode());
 
         preparedStatement.execute();
     }
 
-    private void updateEmployeeAddress(EmployeeAddress employeeAddress) throws SQLException {
+    private void updateEmployeeAddress(Address address) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE employee_address SET " +
                 "street = ?, " +
                 "town = ?, " +
@@ -287,32 +287,32 @@ public class EmployeeConnector extends Connect {
                 "postal_code = ? " +
                 "WHERE id = ?");
 
-        preparedStatement.setString(1, employeeAddress.getStreet());
-        preparedStatement.setString(2, employeeAddress.getTown());
-        preparedStatement.setString(3, employeeAddress.getProvince());
-        preparedStatement.setString(4, employeeAddress.getPostalCode());
-        preparedStatement.setInt(5, employeeAddress.getId());
+        preparedStatement.setString(1, address.getStreet());
+        preparedStatement.setString(2, address.getTown());
+        preparedStatement.setString(3, address.getProvince());
+        preparedStatement.setString(4, address.getPostalCode());
+        preparedStatement.setInt(5, address.getId());
 
         preparedStatement.execute();
     }
 
-    private void newEmployeeEmail(int employeeId, EmployeeEmail employeeEmail) throws SQLException {
+    private void newEmployeeEmail(int employeeId, Email email) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "employee_email(employee_id, email) " +
                 "VALUES(?, ?)");
         preparedStatement.setInt(1, employeeId);
-        preparedStatement.setString(2, employeeEmail.getEmail());
+        preparedStatement.setString(2, email.getEmail());
 
         preparedStatement.execute();
     }
 
-    private void updateEmployeeEmail(EmployeeEmail employeeEmail) throws SQLException {
+    private void updateEmployeeEmail(Email email) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE employee_email SET " +
                 "email = ? " +
                 "WHERE id = ?");
 
-        preparedStatement.setString(1, employeeEmail.getEmail());
-        preparedStatement.setInt(2, employeeEmail.getId());
+        preparedStatement.setString(1, email.getEmail());
+        preparedStatement.setInt(2, email.getId());
 
         preparedStatement.execute();
     }

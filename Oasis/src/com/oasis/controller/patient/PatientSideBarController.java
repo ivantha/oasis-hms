@@ -23,8 +23,6 @@ public class PatientSideBarController implements Controller{
     @FXML
     private Button treatmentManagementButton;
     @FXML
-    private Button raceButton;
-    @FXML
     private Button ethnicityButton;
     @FXML
 
@@ -38,8 +36,6 @@ public class PatientSideBarController implements Controller{
         newTreatmentButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         treatmentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.TREATMENT_MANAGEMENT));
         treatmentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
-        raceButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.RACE_MANAGEMENT));
-        raceButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         ethnicityButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ETHNICITY_MANAGEMENT));
         ethnicityButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
@@ -67,11 +63,6 @@ public class PatientSideBarController implements Controller{
     @FXML
     public void treatmentManagementButtonOnAction(ActionEvent actionEvent) {
         UIFactory.launchUI(UIName.TREATMENT_MANAGEMENT, true);
-    }
-
-    @FXML
-    public void raceButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.RACE_MANAGEMENT, true);
     }
 
     @FXML

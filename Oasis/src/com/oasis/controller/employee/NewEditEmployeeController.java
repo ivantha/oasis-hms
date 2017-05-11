@@ -162,13 +162,13 @@ public class NewEditEmployeeController implements Controller {
         saturdayCheckBox.selectedProperty().unbindBidirectional(employee.getWorkingDays().saturdayProperty());
         sundayCheckBox.selectedProperty().unbindBidirectional(employee.getWorkingDays().sundayProperty());
 
-        telephoneTextField.textProperty().unbindBidirectional(employee.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
-        emailTextField.textProperty().unbindBidirectional(employee.getEmployeeEmailArrayList().get(0).emailProperty());
+        telephoneTextField.textProperty().unbindBidirectional(employee.getTelephoneArrayList().get(0).telephoneProperty());
+        emailTextField.textProperty().unbindBidirectional(employee.getEmailArrayList().get(0).emailProperty());
 
-        streetTextField.textProperty().unbindBidirectional(employee.getEmployeeAddressArrayList().get(0).streetProperty());
-        townTextField.textProperty().unbindBidirectional(employee.getEmployeeAddressArrayList().get(0).townProperty());
-        provinceTextField.textProperty().unbindBidirectional(employee.getEmployeeAddressArrayList().get(0).provinceProperty());
-        postalCodeTextField.textProperty().unbindBidirectional(employee.getEmployeeAddressArrayList().get(0).postalCodeProperty());
+        streetTextField.textProperty().unbindBidirectional(employee.getAddressArrayList().get(0).streetProperty());
+        townTextField.textProperty().unbindBidirectional(employee.getAddressArrayList().get(0).townProperty());
+        provinceTextField.textProperty().unbindBidirectional(employee.getAddressArrayList().get(0).provinceProperty());
+        postalCodeTextField.textProperty().unbindBidirectional(employee.getAddressArrayList().get(0).postalCodeProperty());
 
         degreeListView.itemsProperty().unbindBidirectional(employee.degreeListPropertyProperty());
     }
@@ -195,18 +195,18 @@ public class NewEditEmployeeController implements Controller {
         sundayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().sundayProperty());
 
         if (!isEditingMode) {
-            tempEmployee.getEmployeeTelephoneArrayList().add(new EmployeeTelephone());
-            tempEmployee.getEmployeeEmailArrayList().add(new EmployeeEmail());
-            tempEmployee.getEmployeeAddressArrayList().add(new EmployeeAddress());
+            tempEmployee.getTelephoneArrayList().add(new Telephone());
+            tempEmployee.getEmailArrayList().add(new Email());
+            tempEmployee.getAddressArrayList().add(new Address());
         }
 
-        telephoneTextField.textProperty().bindBidirectional(employee.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
-        emailTextField.textProperty().bindBidirectional(employee.getEmployeeEmailArrayList().get(0).emailProperty());
+        telephoneTextField.textProperty().bindBidirectional(employee.getTelephoneArrayList().get(0).telephoneProperty());
+        emailTextField.textProperty().bindBidirectional(employee.getEmailArrayList().get(0).emailProperty());
 
-        streetTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).streetProperty());
-        townTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).townProperty());
-        provinceTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).provinceProperty());
-        postalCodeTextField.textProperty().bindBidirectional(employee.getEmployeeAddressArrayList().get(0).postalCodeProperty());
+        streetTextField.textProperty().bindBidirectional(employee.getAddressArrayList().get(0).streetProperty());
+        townTextField.textProperty().bindBidirectional(employee.getAddressArrayList().get(0).townProperty());
+        provinceTextField.textProperty().bindBidirectional(employee.getAddressArrayList().get(0).provinceProperty());
+        postalCodeTextField.textProperty().bindBidirectional(employee.getAddressArrayList().get(0).postalCodeProperty());
 
         specialityComboBox.setDisable(true);
 

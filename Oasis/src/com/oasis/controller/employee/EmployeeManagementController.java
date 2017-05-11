@@ -100,7 +100,6 @@ public class EmployeeManagementController implements Controller{
     @FXML
     private Button newButton;
 
-
     private HashMap<Integer, Employee> tempEmployeeHashMap = new HashMap<>();
     private HashMap<Integer, Employee> editedEmployeeHashMap = new HashMap<>();
     private HashMap<Integer, Employee> deletedEmployeeHashMap = new HashMap<>();
@@ -110,8 +109,8 @@ public class EmployeeManagementController implements Controller{
         employeeTableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (employeeTableView.getSelectionModel().getSelectedItem() != null) {
                 if (oldValue != null) {
-                    telephoneTextField.textProperty().unbindBidirectional(oldValue.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
-                    emailTextField.textProperty().unbindBidirectional(oldValue.getEmployeeEmailArrayList().get(0).emailProperty());
+                    telephoneTextField.textProperty().unbindBidirectional(oldValue.getTelephoneArrayList().get(0).telephoneProperty());
+                    emailTextField.textProperty().unbindBidirectional(oldValue.getEmailArrayList().get(0).emailProperty());
                     degreeLabel.textProperty().unbindBidirectional(oldValue.degreeListPropertyProperty());
 
                     startDateDatePicker.valueProperty().unbindBidirectional(oldValue.startDateProperty());
@@ -132,8 +131,8 @@ public class EmployeeManagementController implements Controller{
                     }
                 }
 
-                telephoneTextField.textProperty().bindBidirectional(newValue.getEmployeeTelephoneArrayList().get(0).telephoneProperty());
-                emailTextField.textProperty().bindBidirectional(newValue.getEmployeeEmailArrayList().get(0).emailProperty());
+                telephoneTextField.textProperty().bindBidirectional(newValue.getTelephoneArrayList().get(0).telephoneProperty());
+                emailTextField.textProperty().bindBidirectional(newValue.getEmailArrayList().get(0).emailProperty());
                 degreeLabel.textProperty().bindBidirectional(newValue.degreeListPropertyProperty(), new StringConverter<ObservableList<Degree>>() {
                     @Override
                     public String toString(ObservableList<Degree> object) {

@@ -2,9 +2,7 @@ package com.oasis.controller.medical;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
-import com.oasis.model.Race;
 import com.oasis.model.Test;
-import com.oasis.services.RaceServices;
 import com.oasis.services.TestServices;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;

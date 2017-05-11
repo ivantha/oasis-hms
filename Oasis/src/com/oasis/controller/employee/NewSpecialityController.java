@@ -2,9 +2,7 @@ package com.oasis.controller.employee;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
-import com.oasis.model.Race;
 import com.oasis.model.Speciality;
-import com.oasis.services.RaceServices;
 import com.oasis.services.SpecialityServices;
 import com.oasis.ui.UIName;
 import javafx.event.ActionEvent;

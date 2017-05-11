@@ -5,7 +5,7 @@ import com.mysql.jdbc.Statement;
 import com.oasis.database.Connect;
 import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
-import com.oasis.model.PhysicianTelephone;
+import com.oasis.model.Telephone;
 import com.oasis.services.PhysicianServices;
 
 import java.sql.ResultSet;
@@ -37,8 +37,8 @@ public class PhysicianConnector extends Connect {
                     physicianHashMap.put(id, physician);
                 }
 
-                PhysicianTelephone physicianTelephone = new PhysicianTelephone(physicianTelephoneID, physicianTelephoneTelephone);
-                physicianHashMap.get(id).getPhysicianTelephoneArrayList().add(physicianTelephone);
+                Telephone telephone = new Telephone(physicianTelephoneID, physicianTelephoneTelephone);
+                physicianHashMap.get(id).getTelephoneArrayList().add(telephone);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -68,8 +68,8 @@ public class PhysicianConnector extends Connect {
         return physicianDesignationHashMap;
     }
 
-    public HashMap<Integer, PhysicianTelephone> getPhysicianTelephoneHashMap(){
-        HashMap<Integer, PhysicianTelephone> physicianTelephoneHashMap = new HashMap<>();
+    public HashMap<Integer, Telephone> getPhysicianTelephoneHashMap(){
+        HashMap<Integer, Telephone> physicianTelephoneHashMap = new HashMap<>();
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician_telephone");
@@ -79,8 +79,8 @@ public class PhysicianConnector extends Connect {
                 int id = resultSet.getInt("physician_telephone.id");
                 String telephone = resultSet.getString("physician_telephone.telephone");
 
-                PhysicianTelephone physicianTelephone = new PhysicianTelephone(id, telephone);
-                physicianTelephoneHashMap.put(id, physicianTelephone);
+                Telephone telephone1 = new Telephone(id, telephone);
+                physicianTelephoneHashMap.put(id, telephone1);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -105,11 +105,11 @@ public class PhysicianConnector extends Connect {
 
             preparedStatement.execute();
 
-            for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
-                if(physicianTelephone.getId() == 0){
-                    newPhysicianTelephone(physician.getId(), physicianTelephone);
+            for (Telephone telephone : physician.getTelephoneArrayList()) {
+                if(telephone.getId() == 0){
+                    newPhysicianTelephone(physician.getId(), telephone);
                 }else {
-                    updatePhysicianTelephone(physicianTelephone);
+                    updatePhysicianTelephone(telephone);
                 }
             }
         } catch (SQLException e) {
@@ -133,8 +133,8 @@ public class PhysicianConnector extends Connect {
                 physician.setId(resultSet.getInt(1));
             }
 
-            for (PhysicianTelephone physicianTelephone : physician.getPhysicianTelephoneArrayList()) {
-                newPhysicianTelephone(physician.getId(), physicianTelephone);
+            for (Telephone telephone : physician.getTelephoneArrayList()) {
+                newPhysicianTelephone(physician.getId(), telephone);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -153,23 +153,23 @@ public class PhysicianConnector extends Connect {
         }
     }
 
-    private void newPhysicianTelephone(int physicianId, PhysicianTelephone physicianTelephone) throws SQLException {
+    private void newPhysicianTelephone(int physicianId, Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "physician_telephone(physician_id, telephone) " +
                 "VALUES(?, ?, ?)");
         preparedStatement1.setInt(1, physicianId);
-        preparedStatement1.setString(2, physicianTelephone.getTelephone());
+        preparedStatement1.setString(2, telephone.getTelephone());
 
         preparedStatement1.execute();
     }
 
-    private void updatePhysicianTelephone(PhysicianTelephone physicianTelephone) throws SQLException {
+    private void updatePhysicianTelephone(Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE physician_telephone SET " +
                 "telephone = ? " +
                 "WHERE id = ?");
 
-        preparedStatement.setString(1, physicianTelephone.getTelephone());
-        preparedStatement.setInt(2, physicianTelephone.getId());
+        preparedStatement.setString(1, telephone.getTelephone());
+        preparedStatement.setInt(2, telephone.getId());
 
         preparedStatement.execute();
     }

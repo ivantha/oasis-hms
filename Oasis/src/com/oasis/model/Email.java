@@ -3,14 +3,14 @@ package com.oasis.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class EmployeeEmail {
+public class Email implements Model<Email>{
     private int id = 0;
     private StringProperty email = new SimpleStringProperty();
 
-    public EmployeeEmail() {
+    public Email() {
     }
 
-    public EmployeeEmail(int id, String email) {
+    public Email(int id, String email) {
         this.id = id;
         this.email.setValue(email);
     }
@@ -20,11 +20,11 @@ public class EmployeeEmail {
         if (obj == null) {
             return false;
         }
-        if (!EmployeeEmail.class.isAssignableFrom(obj.getClass())) {
+        if (!Email.class.isAssignableFrom(obj.getClass())) {
             return false;
         }
 
-        EmployeeEmail ee = (EmployeeEmail) obj;
+        Email ee = (Email) obj;
         if (ee.getId() != getId()) {
             return false;
         }
@@ -36,8 +36,8 @@ public class EmployeeEmail {
     }
 
     @Override
-    public EmployeeEmail clone() {
-        return new EmployeeEmail(id, getEmail());
+    public Email clone() {
+        return new Email(id, getEmail());
     }
 
     public int getId() {

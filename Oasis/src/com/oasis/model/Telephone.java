@@ -3,14 +3,14 @@ package com.oasis.model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class PhysicianTelephone implements Model<PhysicianTelephone> {
+public class Telephone implements Model<Telephone>{
     private int id = 0;
     private StringProperty telephone = new SimpleStringProperty();
 
-    public PhysicianTelephone() {
+    public Telephone() {
     }
 
-    public PhysicianTelephone(int id, String telephone) {
+    public Telephone(int id, String telephone) {
         this.id = id;
         this.telephone.setValue(telephone);
     }
@@ -20,15 +20,15 @@ public class PhysicianTelephone implements Model<PhysicianTelephone> {
         if (obj == null) {
             return false;
         }
-        if (!PhysicianTelephone.class.isAssignableFrom(obj.getClass())) {
+        if (!Telephone.class.isAssignableFrom(obj.getClass())) {
             return false;
         }
 
-        PhysicianTelephone pt = (PhysicianTelephone) obj;
-        if (pt.getId() != getId()) {
+        Telephone et = (Telephone) obj;
+        if (et.getId() != getId()) {
             return false;
         }
-        if (pt.getTelephone() != getTelephone()) {
+        if (et.getTelephone() != getTelephone()) {
             return false;
         }
 
@@ -36,8 +36,8 @@ public class PhysicianTelephone implements Model<PhysicianTelephone> {
     }
 
     @Override
-    public PhysicianTelephone clone() {
-        return new PhysicianTelephone(id, getTelephone());
+    public Telephone clone() {
+        return new Telephone(getId(), getTelephone());
     }
 
     public int getId() {
