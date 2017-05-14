@@ -55,6 +55,23 @@ public class Address implements Model<Address>{
         return new Address(id, getStreet(), getTown(), getProvince(), getPostalCode());
     }
 
+    public boolean isEmpty(){
+        if (!"".equals(getStreet())){
+            return false;
+        }
+        if (!"".equals(getTown())){
+            return false;
+        }
+        if (!"".equals(getProvince())){
+            return false;
+        }
+        if (!"".equals(getPostalCode())){
+            return false;
+        }
+
+        return true;
+    }
+
     public int getId() {
         return id;
     }

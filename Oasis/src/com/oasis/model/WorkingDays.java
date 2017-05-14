@@ -138,6 +138,10 @@ public class WorkingDays implements Model<WorkingDays>{
         return workingDays;
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public boolean isMonday() {
         return monday.get();
     }

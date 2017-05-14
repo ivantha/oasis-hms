@@ -145,12 +145,27 @@ public class Employee implements Model<Employee> {
     @Override
     public Employee clone() {
         Employee clonedEmployee =  new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
-                getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays(),
-                getTelephoneArrayList().get(0).clone(), getAddressArrayList().get(0).clone(), getEmailArrayList().get(0).clone());
+                getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays());
 
-        clonedEmployee.getDegreeListProperty().addAll(getDegreeListProperty());
+        for(Telephone telephone: getTelephoneArrayList()){
+            clonedEmployee.getTelephoneArrayList().add(telephone.clone());
+        }
+        for(Address address: getAddressArrayList()){
+            clonedEmployee.getAddressArrayList().add(address.clone());
+        }
+        for(Email email: getEmailArrayList()){
+            clonedEmployee.getEmailArrayList().add(email.clone());
+        }
+        for(Degree degree: getDegreeListProperty()){
+            clonedEmployee.getDegreeListProperty().add(degree);
+        }
+//        clonedEmployee.getDegreeListProperty().addAll(getDegreeListProperty());
 
         return clonedEmployee;
+    }
+
+    public boolean isEmpty(){
+        return false;
     }
 
     public int getId() {

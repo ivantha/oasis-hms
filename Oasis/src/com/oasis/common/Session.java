@@ -17,6 +17,7 @@ public class Session {
     public static EmployeeRoleConnector employeeRoleConnector;
     public static DegreeConnector degreeConnector;
     public static BloodGroupConnector bloodGroupConnector;
+    public static PatientConnector patientConnector;
 
     public static Cache<BloodGroup> bloodGroupCache;
     public static Cache<Degree> degreeCache;

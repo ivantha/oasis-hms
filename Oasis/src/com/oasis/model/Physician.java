@@ -68,6 +68,10 @@ public class Physician implements Model<Physician>{
         return clonedPhysician;
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

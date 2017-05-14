@@ -21,6 +21,7 @@ public class EmployeeServices {
 
     public static void newEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
+            EmployeeServices.removeEmptyAttributes(employee);
             Session.employeeConnector.newEmployee(employee);
             EmployeeServices.uploadImage("new_", employee.getId());
         }
@@ -28,6 +29,7 @@ public class EmployeeServices {
 
     public static void updateEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
+            EmployeeServices.removeEmptyAttributes(employee);
             Session.employeeConnector.updateEmployee(employee);
             EmployeeServices.uploadImage("changed_", employee.getId());
         }
@@ -35,6 +37,7 @@ public class EmployeeServices {
 
     public static void deleteEmployee(ArrayList<Employee> employeeArrayList){
         for(Employee employee: employeeArrayList){
+            EmployeeServices.removeEmptyAttributes(employee);
             Session.employeeConnector.deleteEmployee(employee);
         }
     }
@@ -50,5 +53,11 @@ public class EmployeeServices {
                 e.printStackTrace();
             }
         }
+    }
+
+    private static void removeEmptyAttributes(Employee employee){
+        CommonServices.removeEmptyObjects(employee.getTelephoneArrayList());
+        CommonServices.removeEmptyObjects(employee.getAddressArrayList());
+        CommonServices.removeEmptyObjects(employee.getEmailArrayList());
     }
 }

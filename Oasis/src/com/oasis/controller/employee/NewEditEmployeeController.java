@@ -194,9 +194,13 @@ public class NewEditEmployeeController implements Controller {
         saturdayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().saturdayProperty());
         sundayCheckBox.selectedProperty().bindBidirectional(employee.getWorkingDays().sundayProperty());
 
-        if (!isEditingMode) {
+        if(tempEmployee.getTelephoneArrayList().isEmpty()) {
             tempEmployee.getTelephoneArrayList().add(new Telephone());
+        }
+        if(tempEmployee.getEmailArrayList().isEmpty()) {
             tempEmployee.getEmailArrayList().add(new Email());
+        }
+        if(tempEmployee.getAddressArrayList().isEmpty()) {
             tempEmployee.getAddressArrayList().add(new Address());
         }
 

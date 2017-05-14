@@ -42,6 +42,10 @@ public class PhysicianDesignation implements Model<PhysicianDesignation> {
         return new PhysicianDesignation(id, getName());
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

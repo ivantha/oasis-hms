@@ -52,6 +52,10 @@ public class Test implements Model<Test>{
         return new Test(getId(), getName(), getDescription(), getBasePrice());
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

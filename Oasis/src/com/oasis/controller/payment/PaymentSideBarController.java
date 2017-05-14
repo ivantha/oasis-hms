@@ -20,7 +20,7 @@ public class PaymentSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        newPaymentButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PATIENT));
+        newPaymentButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EDIT_PATIENT));
         newPaymentButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         paymentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PAYMENT_MANAGEMENT));
         paymentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());

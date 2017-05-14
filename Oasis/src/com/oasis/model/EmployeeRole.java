@@ -39,6 +39,10 @@ public class EmployeeRole implements Model<EmployeeRole> {
         return new EmployeeRole(getId(), getRole());
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

@@ -41,6 +41,7 @@ public class SystemFunction {
         Session.employeeRoleConnector = new EmployeeRoleConnector();
         Session.degreeConnector = new DegreeConnector();
         Session.bloodGroupConnector = new BloodGroupConnector();
+        Session.patientConnector = new PatientConnector();
 
         Session.bloodGroupCache = new Cache<BloodGroup>() {
             @Override

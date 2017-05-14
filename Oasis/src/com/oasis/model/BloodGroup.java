@@ -1,12 +1,46 @@
 package com.oasis.model;
 
-public class BloodGroup {
+public class BloodGroup implements Model<BloodGroup>{
     private int id = 0;
     private String name;
 
     public BloodGroup(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!BloodGroup.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        BloodGroup bg = (BloodGroup) obj;
+        if(bg.getId() != getId()){
+            return false;
+        }
+        if(bg.getName() != getName()){
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public BloodGroup clone() {
+        return null;
+    }
+
+    public boolean isEmpty(){
+        return false;
     }
 
     public int getId() {

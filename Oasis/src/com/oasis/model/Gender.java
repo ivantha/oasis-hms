@@ -48,6 +48,10 @@ public class Gender implements Model<Gender>{
         return new Gender(getId(), getTag());
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

@@ -50,6 +50,10 @@ public class Speciality implements Model<Speciality>{
         return new Speciality(getId(), getName(), getDescription());
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

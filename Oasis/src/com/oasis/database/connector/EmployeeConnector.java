@@ -266,6 +266,8 @@ public class EmployeeConnector extends Connect {
         preparedStatement.execute();
     }
 
+    //Delete employee telephone
+
     private void newEmployeeAddress(int employeeId, Address address) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "employee_address(employee_id, street, town, province, postal_code) " +
@@ -296,6 +298,8 @@ public class EmployeeConnector extends Connect {
         preparedStatement.execute();
     }
 
+    //Delete employee address
+
     private void newEmployeeEmail(int employeeId, Email email) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "employee_email(employee_id, email) " +
@@ -316,6 +320,8 @@ public class EmployeeConnector extends Connect {
 
         preparedStatement.execute();
     }
+
+    //Delete employee email
 
     private void replaceEmployeeDegree(int employeeId, Degree degree) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("REPLACE INTO " +
@@ -356,4 +362,6 @@ public class EmployeeConnector extends Connect {
 
         preparedStatement.execute();
     }
+
+    //Delete doctor speciality
 }

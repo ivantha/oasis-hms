@@ -16,6 +16,11 @@ public class Ethnicity implements Model<Ethnicity> {
     }
 
     @Override
+    public String toString() {
+        return getName();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -38,6 +43,10 @@ public class Ethnicity implements Model<Ethnicity> {
     @Override
     public Ethnicity clone() {
         return new Ethnicity(getId(), getName());
+    }
+
+    public boolean isEmpty(){
+        return false;
     }
 
     public int getId() {

@@ -40,6 +40,14 @@ public class Email implements Model<Email>{
         return new Email(id, getEmail());
     }
 
+    public boolean isEmpty(){
+        if (!"".equals(getEmail())){
+            return false;
+        }
+
+        return true;
+    }
+
     public int getId() {
         return id;
     }

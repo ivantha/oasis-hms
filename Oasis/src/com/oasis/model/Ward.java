@@ -66,6 +66,10 @@ public class Ward implements Model<Ward>{
         return clonedWard;
     }
 
+    public boolean isEmpty(){
+        return false;
+    }
+
     public int getId() {
         return id;
     }

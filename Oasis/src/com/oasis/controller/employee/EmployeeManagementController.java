@@ -253,8 +253,6 @@ public class EmployeeManagementController implements Controller{
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Image Files", "*.jpg"));
 
             File source = fileChooser.showOpenDialog(null);
-            System.out.println(source.getAbsolutePath());
-
             File dest = new File(System.getProperty("user.dir"), "temp\\pp_changed_" + selectedEmployee.getId() + ".jpg");
             try {
                 FileUtils.copyFile(source, dest);

@@ -30,13 +30,11 @@ public enum UIName {
     PAYMENT_MANAGEMENT("/com/oasis/ui/view/payment/PaymentManagement.fxml"),
 
     //Patient
-    NEW_RACE("/com/oasis/ui/view/patient/NewRace.fxml"),
-    RACE_MANAGEMENT("/com/oasis/ui/view/patient/RaceManagement.fxml"),
     NEW_ETHNICITY("/com/oasis/ui/view/patient/NewEthnicity.fxml"),
     ETHNICITY_MANAGEMENT("/com/oasis/ui/view/patient/EthnicityManagement.fxml"),
     NEW_TREATMENT("/com/oasis/ui/view/patient/NewTreatment.fxml"),
     TREATMENT_MANAGEMENT("/com/oasis/ui/view/patient/TreatmentManagement.fxml"),
-    NEW_PATIENT("/com/oasis/ui/view/patient/NewPatient.fxml"),
+    NEW_EDIT_PATIENT("/com/oasis/ui/view/patient/NewEditPatient.fxml"),
     PATIENT_MANAGEMENT("/com/oasis/ui/view/patient/PatientManagement.fxml"),
 
     //Employee

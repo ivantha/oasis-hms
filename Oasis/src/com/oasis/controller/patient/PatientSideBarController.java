@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-import javax.swing.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,7 +27,7 @@ public class PatientSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        newPatientButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PATIENT));
+        newPatientButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EDIT_PATIENT));
         newPatientButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         patientManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PATIENT_MANAGEMENT));
         patientManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
@@ -47,7 +46,7 @@ public class PatientSideBarController implements Controller{
 
     @FXML
     public void newPatientButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_PATIENT, true);
+        UIFactory.launchUI(UIName.NEW_EDIT_PATIENT, true);
     }
 
     @FXML

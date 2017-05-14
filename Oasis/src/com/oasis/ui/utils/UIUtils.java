@@ -31,12 +31,6 @@ public class UIUtils {
                 break;
 
             //Patient
-            case NEW_RACE:
-                name = "New race";
-                break;
-            case RACE_MANAGEMENT:
-                name = "Race management";
-                break;
             case NEW_ETHNICITY:
                 name = "New ethnicity";
                 break;
@@ -49,7 +43,7 @@ public class UIUtils {
             case TREATMENT_MANAGEMENT:
                 name = "Treatment management";
                 break;
-            case NEW_PATIENT:
+            case NEW_EDIT_PATIENT:
                 name = "New patient";
                 break;
             case PATIENT_MANAGEMENT:

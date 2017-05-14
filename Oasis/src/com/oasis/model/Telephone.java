@@ -40,6 +40,14 @@ public class Telephone implements Model<Telephone>{
         return new Telephone(getId(), getTelephone());
     }
 
+    public boolean isEmpty(){
+        if (!"".equals(getTelephone())){
+            return false;
+        }
+
+        return true;
+    }
+
     public int getId() {
         return id;
     }
