@@ -37,7 +37,7 @@ public class PatientServices {
         }
     }
 
-    private static void removeEmptyAttributes(Patient patient){
+    public static void removeEmptyAttributes(Patient patient){
         CommonServices.removeEmptyObjects(patient.getTelephoneArrayList());
         CommonServices.removeEmptyObjects(patient.getAddressArrayList());
         CommonServices.removeEmptyObjects(patient.getEmailArrayList());

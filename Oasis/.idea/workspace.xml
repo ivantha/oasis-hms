@@ -8,90 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/services/CommonServices.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/services/PatientServices.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/NewPatientController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewPatient.fxml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" afterPath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Oasis/Oasis.jar" afterPath="$PROJECT_DIR$/out/artifacts/Oasis/Oasis.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Oasis/ext_lib.jar" afterPath="$PROJECT_DIR$/out/artifacts/Oasis/ext_lib.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/common/Session.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/common/Session.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/NewEditEmployeeController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/NewEditEmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController$1$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientSideBarController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/patient/PatientSideBarController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/payment/PaymentSideBarController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/payment/PaymentSideBarController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/EmployeeConnector.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/EmployeeConnector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Address.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Address.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/BloodGroup.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/BloodGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Email.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Email.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmergencyContact.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmergencyContact.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Employee.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Employee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmployeeRole.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmployeeRole.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Ethnicity.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Ethnicity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Gender.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Gender.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Model.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Patient.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Patient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Physician.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Physician.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/PhysicianDesignation.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/PhysicianDesignation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Speciality.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Speciality.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Telephone.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Telephone.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Test.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Ward.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Ward.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/WorkingDays.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/WorkingDays.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/BloodGroupServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/BloodGroupServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/EmployeeServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/EmployeeServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/UIName.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/utils/UIUtils$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/utils/UIUtils$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/utils/UIUtils.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/utils/UIUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PatientConnector.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PatientConnector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/PatientServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/PatientServices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.properties" afterPath="$PROJECT_DIR$/config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Oasis/Oasis.jnlp" afterPath="$PROJECT_DIR$/out/artifacts/Oasis/Oasis.jnlp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/common/Session.java" afterPath="$PROJECT_DIR$/src/com/oasis/common/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Address.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/BloodGroup.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/BloodGroup.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Email.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Email.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/EmergencyContact.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/EmergencyContact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Employee.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/EmployeeRole.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/EmployeeRole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Ethnicity.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Ethnicity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Gender.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Gender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Model.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Patient.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Patient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Physician.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Physician.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/PhysicianDesignation.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/PhysicianDesignation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Speciality.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Speciality.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Telephone.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Telephone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Test.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Ward.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Ward.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/WorkingDays.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/WorkingDays.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/BloodGroupServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/BloodGroupServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/EmployeeServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/EmployeeServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" afterPath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/patient/NewPatientController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewPatient.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEditPatient.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/PatientServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/PatientServices.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -159,37 +90,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PatientConnector.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PatientConnector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+            <state relative-caret-position="-1901">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1494729880100" expanded="true" signature="703:724" ph="SELECT * FRO... patient" />
-                <marker date="1494729880100" expanded="true" signature="2091:2122" ph="SELECT * FRO... patient_telephone" />
-                <marker date="1494729880100" expanded="true" signature="2815:2844" ph="SELECT * FRO... patient_address" />
-                <marker date="1494729880100" expanded="true" signature="3865:3892" ph="SELECT * FRO... patient_email" />
-                <marker date="1494729880100" expanded="true" signature="4525:4556" ph="SELECT * FRO... emergency_contact" />
-                <marker date="1494729880100" expanded="true" signature="5941:5998" ph="DELETE FROM " />
-                <marker date="1494729880100" expanded="true" signature="6382:6488" ph="INSERT INTO employee_telephone... " />
-                <marker date="1494729880100" expanded="true" signature="6834:6931" ph="UPDATE emplo... " />
-                <marker date="1494729880100" expanded="true" signature="7324:7464" ph="INSERT INTO employee_address... " />
-                <marker date="1494729880100" expanded="true" signature="7986:8182" ph="UPDATE emplo... " />
-                <marker date="1494729880100" expanded="true" signature="8747:8846" ph="INSERT INTO employee_email... " />
-                <marker date="1494729880100" expanded="true" signature="9172:9261" ph="UPDATE emplo... " />
-                <marker date="1494729880100" expanded="true" signature="9665:9807" ph="INSERT INTO employee_email... " />
-                <marker date="1494729880100" expanded="true" signature="10396:10597" ph="UPDATE emplo... " />
+                <marker date="1495157780422" expanded="true" signature="736:757" ph="SELECT * FRO... patient" />
+                <marker date="1495157780422" expanded="true" signature="2124:2155" ph="SELECT * FRO... patient_telephone" />
+                <marker date="1495157780422" expanded="true" signature="2848:2877" ph="SELECT * FRO... patient_address" />
+                <marker date="1495157780422" expanded="true" signature="3898:3925" ph="SELECT * FRO... patient_email" />
+                <marker date="1495157780422" expanded="true" signature="4558:4589" ph="SELECT * FRO... emergency_contact" />
+                <marker date="1495157780422" expanded="true" signature="5860:6085" ph="INSERT INTO patient... " />
+                <marker date="1495157780422" expanded="true" signature="7936:7993" ph="DELETE FROM " />
+                <marker date="1495157780422" expanded="true" signature="8377:8484" ph="INSERT INTO employee_telephone... " />
+                <marker date="1495157780422" expanded="true" signature="8830:8927" ph="UPDATE emplo... " />
+                <marker date="1495157780422" expanded="true" signature="9320:9460" ph="INSERT INTO employee_address... " />
+                <marker date="1495157780422" expanded="true" signature="9982:10178" ph="UPDATE emplo... " />
+                <marker date="1495157780422" expanded="true" signature="10743:10842" ph="INSERT INTO employee_email... " />
+                <marker date="1495157780422" expanded="true" signature="11168:11257" ph="UPDATE emplo... " />
+                <marker date="1495157780422" expanded="true" signature="11661:11803" ph="INSERT INTO employee_email... " />
+                <marker date="1495157780422" expanded="true" signature="12392:12593" ph="UPDATE emplo... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeConnector.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeConnector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4284">
-              <caret line="365" column="30" lean-forward="false" selection-start-line="365" selection-start-column="30" selection-end-line="365" selection-end-column="30" />
+            <state relative-caret-position="995">
+              <caret line="203" column="45" lean-forward="true" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="45" />
               <folding>
                 <marker date="1494729880111" expanded="true" signature="792:814" ph="SELECT * FRO... employee" />
                 <marker date="1494729880111" expanded="true" signature="2646:2678" ph="SELECT * FRO... employee_telephone" />
@@ -293,19 +224,19 @@
         <option value="$PROJECT_DIR$/src/com/oasis/model/Test.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Speciality.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/PhysicianDesignation.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/model/Physician.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/model/Patient.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Ethnicity.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/EmployeeRole.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Gender.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Employee.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/services/CommonServices.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/services/EmployeeServices.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/services/PatientServices.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/services/PatientServices.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/model/Patient.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/model/Physician.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
       </list>
     </option>
   </component>
@@ -534,28 +465,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -652,6 +561,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="physician" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="patient" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -684,6 +619,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -766,7 +702,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -789,7 +724,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/Login details.txt" />
-    <property name="settings.editor.selected.configurable" value="preferences.arquillian" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
@@ -1405,11 +1340,20 @@
       <workItem from="1494650930181" duration="878000" />
       <workItem from="1494651997938" duration="3035000" />
       <workItem from="1494677044420" duration="10917000" />
+      <workItem from="1494730498662" duration="283000" />
+      <workItem from="1494737174588" duration="2978000" />
+      <workItem from="1494769293091" duration="390000" />
+      <workItem from="1494780136624" duration="20000" />
+      <workItem from="1494788017447" duration="595000" />
+      <workItem from="1494815101591" duration="4806000" />
+      <workItem from="1494898373203" duration="211000" />
+      <workItem from="1494905678462" duration="409000" />
+      <workItem from="1495134689627" duration="3104000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445055000" />
+    <option name="totallyTimeSpent" value="457851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1430,7 +1374,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2912254" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3343419" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1473,27 +1417,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEthnicityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="32" column="28" lean-forward="false" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/EthnicityManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="92" column="17" lean-forward="false" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/EthnicityConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Race.java" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/PatientSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1546,45 +1469,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/AbstractList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="511" column="19" lean-forward="false" selection-start-line="511" selection-start-column="19" selection-end-line="511" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/UIName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEditPatient.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="53" column="108" lean-forward="false" selection-start-line="53" selection-start-column="108" selection-end-line="53" selection-end-column="108" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/new_edit_window.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/Notification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/CommonServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/EmployeeServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="203" column="24" lean-forward="false" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="883" column="16" lean-forward="false" selection-start-line="883" selection-start-column="16" selection-end-line="883" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="707" column="23" lean-forward="false" selection-start-line="707" selection-start-column="23" selection-end-line="707" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Telephone.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/TableCell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/Timestamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="150" column="46" lean-forward="false" selection-start-line="150" selection-start-column="46" selection-end-line="150" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PatientServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#203#204#0" expanded="false" />
+            <element signature="e#278#279#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="511" column="19" lean-forward="false" selection-start-line="511" selection-start-column="19" selection-end-line="511" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/BloodGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Degree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Doctor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1605,83 +1642,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        <state relative-caret-position="553">
+          <caret line="169" column="0" lean-forward="true" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/Notification.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/EmployeeRole.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="323">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Ethnicity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="36" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/BloodGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="366">
+          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#842#843#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="false" />
+            <element signature="e#1069#1070#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Degree.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="425">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Doctor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Janitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/WorkingDays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="140" column="4" lean-forward="false" selection-start-line="140" selection-start-column="4" selection-end-line="142" selection-end-column="5" />
-          <folding>
-            <element signature="e#4121#4122#0" expanded="true" />
-            <element signature="e#4149#4150#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="125" column="13" lean-forward="true" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Ward.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="476">
           <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding>
             <element signature="e#2255#2256#0" expanded="true" />
@@ -1692,91 +1706,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="e#1485#1486#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="629">
+          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Telephone.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Speciality.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          <folding>
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/PhysicianDesignation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="47" column="4" lean-forward="false" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
-          <folding>
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Physician.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2436#2437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Ethnicity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="49" column="5" lean-forward="false" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-          <folding>
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/EmployeeRole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding>
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Gender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding>
-            <element signature="e#1049#1050#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="169" column="4" lean-forward="false" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
-          <folding>
-            <element signature="e#6624#6625#0" expanded="true" />
-            <element signature="e#6652#6653#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1788,124 +1744,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/CommonServices.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Nurse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PatientServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/EmployeeServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="61" lean-forward="false" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="203" column="24" lean-forward="false" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+        <state relative-caret-position="187">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Physician.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        <state relative-caret-position="-116">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Patient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="259" column="32" lean-forward="false" selection-start-line="259" selection-start-column="32" selection-end-line="259" selection-end-column="32" />
-          <folding>
-            <element signature="e#8564#8565#0" expanded="true" />
-            <element signature="e#8610#8611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="883" column="16" lean-forward="false" selection-start-line="883" selection-start-column="16" selection-end-line="883" selection-end-column="16" />
-          <folding>
-            <element signature="e#37718#37719#0" expanded="false" />
-            <element signature="e#37754#37755#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="707" column="23" lean-forward="false" selection-start-line="707" selection-start-column="23" selection-end-line="707" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/TableCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="88" column="11" lean-forward="false" selection-start-line="88" selection-start-column="11" selection-end-line="88" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/sql/Timestamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="-119">
+          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1907">
-          <caret line="237" column="16" lean-forward="false" selection-start-line="237" selection-start-column="16" selection-end-line="237" selection-end-column="16" />
+        <state relative-caret-position="-1011">
+          <caret line="107" column="23" lean-forward="false" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+        <state relative-caret-position="700">
+          <caret line="151" column="32" lean-forward="false" selection-start-line="151" selection-start-column="32" selection-end-line="151" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/physician/PhysicianManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="111" column="73" lean-forward="true" selection-start-line="109" selection-start-column="8" selection-end-line="111" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1901">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#7045#7046#0" expanded="true" />
+            <marker date="1495157780422" expanded="true" signature="736:757" ph="SELECT * FRO... patient" />
+            <marker date="1495157780422" expanded="true" signature="2124:2155" ph="SELECT * FRO... patient_telephone" />
+            <marker date="1495157780422" expanded="true" signature="2848:2877" ph="SELECT * FRO... patient_address" />
+            <marker date="1495157780422" expanded="true" signature="3898:3925" ph="SELECT * FRO... patient_email" />
+            <marker date="1495157780422" expanded="true" signature="4558:4589" ph="SELECT * FRO... emergency_contact" />
+            <marker date="1495157780422" expanded="true" signature="5860:6085" ph="INSERT INTO patient... " />
+            <marker date="1495157780422" expanded="true" signature="7936:7993" ph="DELETE FROM " />
+            <marker date="1495157780422" expanded="true" signature="8377:8484" ph="INSERT INTO employee_telephone... " />
+            <marker date="1495157780422" expanded="true" signature="8830:8927" ph="UPDATE emplo... " />
+            <marker date="1495157780422" expanded="true" signature="9320:9460" ph="INSERT INTO employee_address... " />
+            <marker date="1495157780422" expanded="true" signature="9982:10178" ph="UPDATE emplo... " />
+            <marker date="1495157780422" expanded="true" signature="10743:10842" ph="INSERT INTO employee_email... " />
+            <marker date="1495157780422" expanded="true" signature="11168:11257" ph="UPDATE emplo... " />
+            <marker date="1495157780422" expanded="true" signature="11661:11803" ph="INSERT INTO employee_email... " />
+            <marker date="1495157780422" expanded="true" signature="12392:12593" ph="UPDATE emplo... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4284">
-          <caret line="365" column="30" lean-forward="false" selection-start-line="365" selection-start-column="30" selection-end-line="365" selection-end-column="30" />
+        <state relative-caret-position="995">
+          <caret line="203" column="45" lean-forward="true" selection-start-line="203" selection-start-column="45" selection-end-line="203" selection-end-column="45" />
           <folding>
             <marker date="1494729880111" expanded="true" signature="792:814" ph="SELECT * FRO... employee" />
             <marker date="1494729880111" expanded="true" signature="2646:2678" ph="SELECT * FRO... employee_telephone" />
@@ -1924,30 +1841,6 @@
             <marker date="1494729880111" expanded="true" signature="15316:15406" ph="UPDATE emplo... " />
             <marker date="1494729880111" expanded="true" signature="16240:16353" ph="DELETE FROM " />
             <marker date="1494729880111" expanded="true" signature="16702:16803" ph="INSERT INTO doctor... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1494729880100" expanded="true" signature="703:724" ph="SELECT * FRO... patient" />
-            <marker date="1494729880100" expanded="true" signature="2091:2122" ph="SELECT * FRO... patient_telephone" />
-            <marker date="1494729880100" expanded="true" signature="2815:2844" ph="SELECT * FRO... patient_address" />
-            <marker date="1494729880100" expanded="true" signature="3865:3892" ph="SELECT * FRO... patient_email" />
-            <marker date="1494729880100" expanded="true" signature="4525:4556" ph="SELECT * FRO... emergency_contact" />
-            <marker date="1494729880100" expanded="true" signature="5941:5998" ph="DELETE FROM " />
-            <marker date="1494729880100" expanded="true" signature="6382:6488" ph="INSERT INTO employee_telephone... " />
-            <marker date="1494729880100" expanded="true" signature="6834:6931" ph="UPDATE emplo... " />
-            <marker date="1494729880100" expanded="true" signature="7324:7464" ph="INSERT INTO employee_address... " />
-            <marker date="1494729880100" expanded="true" signature="7986:8182" ph="UPDATE emplo... " />
-            <marker date="1494729880100" expanded="true" signature="8747:8846" ph="INSERT INTO employee_email... " />
-            <marker date="1494729880100" expanded="true" signature="9172:9261" ph="UPDATE emplo... " />
-            <marker date="1494729880100" expanded="true" signature="9665:9807" ph="INSERT INTO employee_email... " />
-            <marker date="1494729880100" expanded="true" signature="10396:10597" ph="UPDATE emplo... " />
           </folding>
         </state>
       </provider>

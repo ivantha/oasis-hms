@@ -1,6 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
 import com.oasis.database.Connect;
 import com.oasis.model.*;
 import com.oasis.services.BloodGroupServices;
@@ -100,7 +101,45 @@ public class PatientConnector extends Connect{
     }
 
     public void newPatient(Patient patient) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "patient(nic, first_name, middle_name, last_name, gender, dob, " +
+                    "blood_group_id, ethnicity_id, description) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(1, patient.getNic());
+            preparedStatement.setString(2, patient.getFirstName());
+            preparedStatement.setString(3, patient.getMiddleName());
+            preparedStatement.setString(4, patient.getLastName());
+            preparedStatement.setString(5, patient.getGender().getTag());
+            preparedStatement.setDate(6, java.sql.Date.valueOf(patient.getDob()));
+            preparedStatement.setInt(7, patient.getBloodGroupObjectProperty().getId());
+            preparedStatement.setInt(8, patient.getEthnicityObjectProperty().getId());
+            preparedStatement.setString(9, patient.getDescription());
 
+            preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+            if (resultSet.next()) {
+                patient.setId(resultSet.getInt(1));
+            }
+
+            for (Telephone telephone : patient.getTelephoneArrayList()) {
+                newPatientTelephone(patient.getId(), telephone);
+            }
+
+            for (Address address : patient.getAddressArrayList()) {
+                newPatientAddress(patient.getId(), address);
+            }
+
+            for (Email email : patient.getEmailArrayList()) {
+                newPatientEmail(patient.getId(), email);
+            }
+
+            for (EmergencyContact emergencyContact : patient.getEmergencyContactArrayList()) {
+                newPatientEmergencyContact(patient.getId(), emergencyContact);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void updatePatient(Patient patient) {
@@ -121,7 +160,7 @@ public class PatientConnector extends Connect{
 
     private void newPatientTelephone(int patientId, Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
-                "patient_telephone(patientId, telephone) " +
+                "patient_telephone(patient_id, telephone) " +
                 "VALUES(?, ?)");
         preparedStatement.setInt(1, patientId);
         preparedStatement.setString(2, telephone.getTelephone());

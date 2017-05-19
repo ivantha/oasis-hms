@@ -51,7 +51,8 @@ public class Physician implements Model<Physician>{
         if(!p.getPhysicianDesignationObjectProperty().equals(getPhysicianDesignationObjectProperty())){
             return false;
         }
-        if (!p.getTelephoneArrayList().get(0).equals(getTelephoneArrayList().get(0))){
+        if (!(p.getTelephoneArrayList().isEmpty() ? getTelephoneArrayList().isEmpty() :
+                p.getTelephoneArrayList().equals(getTelephoneArrayList()))) {
             return false;
         }
 

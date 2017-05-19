@@ -107,17 +107,20 @@ public class Patient implements Model<Patient>{
         if (!(p.getDescription() == null ? getDescription() == null : !p.getDescription().equals(getDescription()))) {
             return false;
         }
-        if (!p.getTelephoneArrayList().get(0).equals(getTelephoneArrayList().get(0))) {
+        if (!(p.getTelephoneArrayList().isEmpty() ? getTelephoneArrayList().isEmpty() :
+                p.getTelephoneArrayList().equals(getTelephoneArrayList()))) {
             return false;
         }
-        if (!p.getAddressArrayList().get(0).equals(getAddressArrayList().get(0))) {
+        if (!(p.getAddressArrayList().isEmpty() ? getAddressArrayList().isEmpty() :
+                p.getAddressArrayList().equals(getAddressArrayList()))) {
             return false;
         }
-        if (!p.getEmailArrayList().get(0).equals(getEmailArrayList().get(0))) {
+        if (!(p.getEmailArrayList().isEmpty() ? getEmailArrayList().isEmpty() :
+                p.getEmailArrayList().equals(getEmailArrayList()))) {
             return false;
         }
         if (!(p.getEmergencyContactArrayList().isEmpty() ? getEmergencyContactArrayList().isEmpty() :
-                !p.getEmergencyContactArrayList().equals(getEmergencyContactArrayList()))) {
+                p.getEmergencyContactArrayList().equals(getEmergencyContactArrayList()))) {
             return false;
         }
 

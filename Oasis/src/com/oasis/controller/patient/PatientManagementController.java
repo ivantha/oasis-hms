@@ -3,10 +3,9 @@ package com.oasis.controller.patient;
 import com.oasis.controller.Controller;
 import com.oasis.controller.main.DashboardController;
 import com.oasis.factory.UIFactory;
-import com.oasis.model.BloodGroup;
-import com.oasis.model.Ethnicity;
-import com.oasis.model.Gender;
-import com.oasis.model.Patient;
+import com.oasis.model.*;
+import com.oasis.services.BloodGroupServices;
+import com.oasis.services.EthnicityServices;
 import com.oasis.services.PatientServices;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
@@ -96,9 +95,20 @@ public class PatientManagementController implements Controller{
                     ethnicityComboBox.valueProperty().unbindBidirectional(oldValue.ethnicityObjectPropertyProperty());
                     bloodGroupComboBox.valueProperty().unbindBidirectional(oldValue.bloodGroupObjectPropertyProperty());
 
+                    PatientServices.removeEmptyAttributes(oldValue);
                     if(!oldValue.equals(tempPatientHashMap.get(oldValue.getId()))){
                         editedPatientHashMap.put(oldValue.getId(), oldValue);
                     }
+                }
+
+                if(newValue.getTelephoneArrayList().isEmpty()) {
+                    newValue.getTelephoneArrayList().add(new Telephone());
+                }
+                if(newValue.getEmailArrayList().isEmpty()) {
+                    newValue.getEmailArrayList().add(new Email());
+                }
+                if(newValue.getAddressArrayList().isEmpty()) {
+                    newValue.getAddressArrayList().add(new Address());
                 }
 
                 streetTextField.textProperty().bindBidirectional(newValue.getAddressArrayList().get(0).streetProperty());
@@ -153,6 +163,13 @@ public class PatientManagementController implements Controller{
                 };
             }
         });
+
+        ObservableList<Ethnicity> ethnicityObservableList = FXCollections
+                .observableList(EthnicityServices.getEthnicityArrayList());
+        ethnicityComboBox.setItems(ethnicityObservableList);
+        ObservableList<BloodGroup> bloodGroupObservableList = FXCollections
+                .observableList(BloodGroupServices.getBloodGroupArrayList());
+        bloodGroupComboBox.setItems(bloodGroupObservableList);
     }
 
     public void editButtonOnAction(ActionEvent actionEvent) {
