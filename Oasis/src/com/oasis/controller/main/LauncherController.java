@@ -105,12 +105,14 @@ public class LauncherController implements Controller {
     private void setTilePressed(AnchorPane tile, String blackIconPath) {
         lastPressedTile.setStyle(null);
         lastPressedTile.getChildren().get(0).setStyle(null);
+        lastPressedTile.getChildren().get(1).setStyle(null);
 
         tile.setStyle("-fx-background-color: #d27d1e;");
         tile.getChildren().get(0).setStyle("-fx-background-image: url('" + blackIconPath + "');" +
                 "-fx-background-size: 50px;" +
                 "-fx-background-repeat: no-repeat;" +
                 "-fx-background-position: 50% 50%;");
+        tile.getChildren().get(1).setStyle("-fx-text-fill: #000000");
         lastPressedTile = tile;
     }
 

@@ -10,6 +10,7 @@
     -fx-font-family: 'Calibri';
     -fx-text-fill: #b4b4b4;
     -fx-font-size: 13;
+    -fx-background-radius: 0px;
     -fx-background-color: transparent;
 }
 

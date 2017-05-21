@@ -36,6 +36,7 @@ public enum UIName {
     TREATMENT_MANAGEMENT("/com/oasis/ui/view/patient/TreatmentManagement.fxml"),
     NEW_EDIT_PATIENT("/com/oasis/ui/view/patient/NewEditPatient.fxml"),
     PATIENT_MANAGEMENT("/com/oasis/ui/view/patient/PatientManagement.fxml"),
+    PATIENT_DETAILS_POPOVER("/com/oasis/ui/view/patient/PatientDetailsPopOver.fxml"),
 
     //Employee
     NEW_SPECIALITY("/com/oasis/ui/view/employee/NewSpeciality.fxml"),

@@ -1,61 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import org.controlsfx.control.textfield.CustomTextField?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewAdmissionController">
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewAdmissionController">
    <children>
-      <GridPane layoutX="14.0" layoutY="14.0" prefHeight="337.0" prefWidth="415.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
-         <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-         </rowConstraints>
+      <GridPane layoutX="150.0" layoutY="150.0" prefHeight="450.0" prefWidth="440.0" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="247.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Label text="Patient id" />
-            <Label text="Middle name" GridPane.rowIndex="1" />
-            <Label text="Last name" GridPane.rowIndex="2" />
-            <AnchorPane GridPane.columnIndex="1">
+            <Label text="Patient" />
+            <Label text="Physician" GridPane.rowIndex="1" />
+            <Label text="Admission consultant" GridPane.rowIndex="2" />
+            <Label text="Leading consultant" GridPane.rowIndex="3" />
+            <Label text="Cause" GridPane.rowIndex="4" />
+            <Label text="Admission date" GridPane.rowIndex="5" />
+            <CustomTextField fx:id="physicianCFXTextField" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CustomTextField fx:id="admissionConsultantCFXTextField" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CustomTextField fx:id="leadingConsultantCFXTextField" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="causeTextArea" maxHeight="120.0" maxWidth="250.0" minHeight="120.0" prefHeight="120.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Admission time" GridPane.rowIndex="6" />
+            <HBox spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
-                  <TextField fx:id="firstNameTextField" layoutY="14.0" prefWidth="150.0" />
+                  <AnchorPane>
+                     <children>
+                        <JFXTimePicker fx:id="admissionTimeTimePicker" layoutY="11.0" prefWidth="120.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="nowButton" layoutY="13.0" mnemonicParsing="false" onAction="#nowButtonOnAction" text="Now" />
+                     </children>
+                  </AnchorPane>
                </children>
-            </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            </HBox>
+            <HBox spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <children>
-                  <TextField fx:id="middleNameTextField" layoutY="14.0" prefWidth="200.0" />
+                  <AnchorPane>
+                     <children>
+                        <JFXDatePicker fx:id="admissionDateDatePicker" layoutY="11.0" prefWidth="120.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="todayButton" layoutY="13.0" mnemonicParsing="false" onAction="#todayButtonOnAction" text="Today" />
+                     </children>
+                  </AnchorPane>
                </children>
-            </AnchorPane>
-            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <TextField fx:id="lastNameTextField" layoutY="14.0" />
-               </children>
-            </AnchorPane>
-            <Label text="Designation" GridPane.rowIndex="3" />
-            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <ComboBox fx:id="designationComboBox" layoutY="16.0" prefHeight="25.0" prefWidth="150.0" />
-               </children>
-            </AnchorPane>
-            <Label text="Telephone" GridPane.rowIndex="4" />
-            <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <children>
-                  <TextField fx:id="telephoneTextField" layoutY="16.0" prefWidth="150.0" />
-               </children>
-            </AnchorPane>
+            </HBox>
+            <AnchorPane fx:id="patientAnchorPane" maxHeight="25.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.vgrow="NEVER" />
          </children>
       </GridPane>
-      <Button fx:id="okButton" layoutX="986.0" layoutY="651.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" />
+      <Button fx:id="okButton" layoutX="1006.0" layoutY="671.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

@@ -43,4 +43,10 @@ public class PatientServices {
         CommonServices.removeEmptyObjects(patient.getEmailArrayList());
         CommonServices.removeEmptyObjects(patient.getEmergencyContactArrayList());
     }
+
+    public static ArrayList<Patient> getPatientLike(String param){
+        ArrayList<Patient> patientArrayList = new ArrayList<>();
+        patientArrayList.addAll(Session.patientConnector.getPatientLike(param).values());
+        return patientArrayList;
+    }
 }

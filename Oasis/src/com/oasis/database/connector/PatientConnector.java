@@ -20,6 +20,21 @@ public class PatientConnector extends Connect{
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient");
+            getPatientGeneralDetails(preparedStatement, patientHashMap);
+
+            getPatientTelephoneDetails(patientHashMap);
+            getPatientAddressDetails(patientHashMap);
+            getPatientEmailDetails(patientHashMap);
+            getPatientEmailDetails(patientHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return patientHashMap;
+    }
+
+    private void getPatientGeneralDetails(PreparedStatement preparedStatement, HashMap<Integer, Patient> patientHashMap){
+        try {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -38,9 +53,15 @@ public class PatientConnector extends Connect{
                 Patient patient = new Patient(id, nic, firstName, middleName, lastName, gender, dob, bloodGroup, ethnicity, addedDate, description);
                 patientHashMap.put(id, patient);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-            PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_telephone");
-            ResultSet resultSet1 = preparedStatement1.executeQuery();
+    private void getPatientTelephoneDetails(HashMap<Integer, Patient> patientHashMap){
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_telephone");
+            ResultSet resultSet1 = preparedStatement.executeQuery();
 
             while (resultSet1.next()) {
                 int patientId = resultSet1.getInt("patient_telephone.patient_id");
@@ -50,9 +71,15 @@ public class PatientConnector extends Connect{
 
                 patientHashMap.get(patientId).getTelephoneArrayList().add(telephone);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_address");
-            ResultSet resultSet2 = preparedStatement2.executeQuery();
+    private void getPatientAddressDetails(HashMap<Integer, Patient> patientHashMap){
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_address");
+            ResultSet resultSet2 = preparedStatement.executeQuery();
 
             while (resultSet2.next()) {
                 int patientId = resultSet2.getInt("patient_address.patient_id");
@@ -65,9 +92,15 @@ public class PatientConnector extends Connect{
 
                 patientHashMap.get(patientId).getAddressArrayList().add(address);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-            PreparedStatement preparedStatement3 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_email");
-            ResultSet resultSet3 = preparedStatement3.executeQuery();
+    private void getPatientEmailDetails(HashMap<Integer, Patient> patientHashMap){
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_email");
+            ResultSet resultSet3 = preparedStatement.executeQuery();
 
             while (resultSet3.next()) {
                 int patientId = resultSet3.getInt("patient_email.patient_id");
@@ -77,17 +110,23 @@ public class PatientConnector extends Connect{
 
                 patientHashMap.get(patientId).getEmailArrayList().add(email);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-            PreparedStatement preparedStatement4 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM emergency_contact");
-            ResultSet resultSet4 = preparedStatement4.executeQuery();
+    private void getPatientEmergencyContactDetails(HashMap<Integer, Patient> patientHashMap){
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM emergency_contact");
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet4.next()){
-                int patientId = resultSet3.getInt("patient_email.patient_id");
-                int emergencyContactId = resultSet3.getInt("patient_email.id");
-                String emergencyContactName = resultSet3.getString("patient_email.email");
-                String emergencyContactRelationship = resultSet3.getString("patient_email.email");
-                String emergencyContactTelephone = resultSet3.getString("patient_email.email");
-                String emergencyContactAddress = resultSet3.getString("patient_email.email");
+            while (resultSet.next()){
+                int patientId = resultSet.getInt("patient_email.patient_id");
+                int emergencyContactId = resultSet.getInt("patient_email.id");
+                String emergencyContactName = resultSet.getString("patient_email.email");
+                String emergencyContactRelationship = resultSet.getString("patient_email.email");
+                String emergencyContactTelephone = resultSet.getString("patient_email.email");
+                String emergencyContactAddress = resultSet.getString("patient_email.email");
 
                 EmergencyContact emergencyContact = new EmergencyContact(emergencyContactId, emergencyContactName,
                         emergencyContactRelationship, emergencyContactTelephone, emergencyContactAddress);
@@ -96,8 +135,6 @@ public class PatientConnector extends Connect{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return patientHashMap;
     }
 
     public void newPatient(Patient patient) {
@@ -143,7 +180,65 @@ public class PatientConnector extends Connect{
     }
 
     public void updatePatient(Patient patient) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE patient SET " +
+                    "nic = ?, " +
+                    "first_name = ?, " +
+                    "middle_name = ?, " +
+                    "last_name = ?, " +
+                    "gender = ?, " +
+                    "dob = ?, " +
+                    "blood_group_id = ?, " +
+                    "ethnicity_id = ?, " +
+                    "description = ? " +
+                    "WHERE id = ?");
+            preparedStatement.setString(1, patient.getNic());
+            preparedStatement.setString(2, patient.getFirstName());
+            preparedStatement.setString(3, patient.getMiddleName());
+            preparedStatement.setString(4, patient.getFirstName());
+            preparedStatement.setString(5, patient.getGender().getTag());
+            preparedStatement.setDate(6, java.sql.Date.valueOf(patient.getDob()));
+            preparedStatement.setInt(7, patient.getBloodGroupObjectProperty().getId());
+            preparedStatement.setInt(8, patient.getEthnicityObjectProperty().getId());
+            preparedStatement.setString(9, patient.getDescription());
+            preparedStatement.setInt(10, patient.getId());
 
+            preparedStatement.execute();
+
+            for (Telephone telephone : patient.getTelephoneArrayList()) {
+                if (telephone.getId() == 0) {
+                    newPatientTelephone(patient.getId(), telephone);
+                } else {
+                    updatePatientTelephone(telephone);
+                }
+            }
+
+            for (Address address : patient.getAddressArrayList()) {
+                if (address.getId() == 0) {
+                    newPatientAddress(patient.getId(), address);
+                } else {
+                    updatePatientAddress(address);
+                }
+            }
+
+            for (Email email : patient.getEmailArrayList()) {
+                if (email.getId() == 0) {
+                    newPatientEmail(patient.getId(), email);
+                } else {
+                    updatePatientEmail(email);
+                }
+            }
+
+            for (EmergencyContact emergencyContact : patient.getEmergencyContactArrayList()) {
+                if (emergencyContact.getId() == 0) {
+                    newPatientEmergencyContact(patient.getId(), emergencyContact);
+                } else {
+                    updatePatientEmergencyContact(emergencyContact);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void deletePatient(Patient patient) {
@@ -267,4 +362,22 @@ public class PatientConnector extends Connect{
     }
 
     //Delete patient emergency contact
+
+    public HashMap<Integer, Patient> getPatientLike(String param){
+        HashMap<Integer, Patient> patientHashMap = new HashMap<>();
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient WHERE " +
+                    "CONCAT_WS(' ', first_name, middle_name, last_name) LIKE '%" + param + "%'");
+            getPatientGeneralDetails(preparedStatement, patientHashMap);
+
+//            getPatientTelephoneDetails(patientHashMap);
+//            getPatientAddressDetails(patientHashMap);
+//            getPatientEmailDetails(patientHashMap);
+//            getPatientEmergencyContactDetails(patientHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return patientHashMap;
+    }
 }

@@ -9,6 +9,10 @@ import com.oasis.utils.SystemFunction;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -45,6 +49,8 @@ public class DashboardController implements Controller {
     @FXML
     private AnchorPane workspaceAnchorPane;
 
+    private ObjectProperty<Button> lastPressedMainSideButton = new SimpleObjectProperty<>();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setAsDynamic(mainSideButton1AnchorPane);
@@ -55,13 +61,28 @@ public class DashboardController implements Controller {
         setAsDynamic(mainSideButton6AnchorPane);
         setAsDynamic(mainSideButton7AnchorPane);
 
-        SystemFunction.loadDynamicButton(mainSideButton1AnchorPane, Session.APP_CONFIG.getTabButton1());
-        SystemFunction.loadDynamicButton(mainSideButton2AnchorPane, Session.APP_CONFIG.getTabButton2());
-        SystemFunction.loadDynamicButton(mainSideButton3AnchorPane, Session.APP_CONFIG.getTabButton3());
-        SystemFunction.loadDynamicButton(mainSideButton4AnchorPane, Session.APP_CONFIG.getTabButton4());
-        SystemFunction.loadDynamicButton(mainSideButton5AnchorPane, Session.APP_CONFIG.getTabButton5());
-        SystemFunction.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6());
-        SystemFunction.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7());
+        SystemFunction.loadDynamicButton(mainSideButton1AnchorPane, Session.APP_CONFIG.getTabButton1(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton2AnchorPane, Session.APP_CONFIG.getTabButton2(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton3AnchorPane, Session.APP_CONFIG.getTabButton3(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton4AnchorPane, Session.APP_CONFIG.getTabButton4(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton5AnchorPane, Session.APP_CONFIG.getTabButton5(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6(), lastPressedMainSideButton);
+        SystemFunction.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7(), lastPressedMainSideButton);
+
+        lastPressedMainSideButton.addListener(new ChangeListener<Button>() {
+            @Override
+            public void changed(ObservableValue<? extends Button> observable, Button oldValue, Button newValue) {
+                if(oldValue != null) {
+                    oldValue.setStyle(null);
+                }
+
+                newValue.setStyle("-fx-font-family: 'Calibri';\n" +
+                        "-fx-text-fill: #000000;\n" +
+                        "-fx-font-size: 13;\n" +
+                        "-fx-background-radius: 0px;\n" +
+                        "-fx-background-color: #d27d1e;");
+            }
+        });
     }
 
     @Override
@@ -145,7 +166,7 @@ public class DashboardController implements Controller {
         anchorPane.setOnDragOver(new DynamicPaneDragOverEventHandler());
         anchorPane.setOnDragEntered(new DynamicPaneDragEnteredEventHandler());
         anchorPane.setOnDragExited(new DynamicPaneDragExitedEventHandler());
-        anchorPane.setOnDragDropped(new DynamicPaneDragDroppedEventHandler());
+        anchorPane.setOnDragDropped(new DynamicPaneDragDroppedEventHandler(lastPressedMainSideButton));
     }
 
     public void setWorkspace(Parent parent) {

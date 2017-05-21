@@ -4,6 +4,7 @@ import com.oasis.common.Temp;
 import com.oasis.factory.UIFactory;
 import com.oasis.ui.UIName;
 import com.oasis.ui.utils.UIUtils;
+import javafx.beans.property.ObjectProperty;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.input.ClipboardContent;
@@ -12,6 +13,12 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.layout.AnchorPane;
 
 public class DynamicPaneDragDroppedEventHandler implements EventHandler<DragEvent> {
+    private ObjectProperty<Button> lastPressedMainSideButton;
+
+    public DynamicPaneDragDroppedEventHandler(ObjectProperty<Button> lastPressedMainSideButton) {
+        this.lastPressedMainSideButton = lastPressedMainSideButton;
+    }
+
     @Override
     public void handle(DragEvent event) {
         Dragboard dragboard = event.getDragboard();
@@ -28,7 +35,10 @@ public class DynamicPaneDragDroppedEventHandler implements EventHandler<DragEven
 
             UIName uiName = UIName.valueOf(String.valueOf(dragboard.getContent(Temp.BUTTON_NAME_DATA_FORMAT)));
             sideButton.setText(UIUtils.getUIName(uiName));
-            sideButton.setOnAction(event1 -> UIFactory.launchUI(uiName, true));
+            sideButton.setOnAction(event1 -> {
+                UIFactory.launchUI(uiName, true);
+                lastPressedMainSideButton.setValue(sideButton);
+            });
 
             AnchorPane tabButtonAnchorPane = (AnchorPane) eventSource;
             tabButtonAnchorPane.getChildren().clear();

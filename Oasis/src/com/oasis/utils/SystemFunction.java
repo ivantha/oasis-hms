@@ -10,6 +10,7 @@ import com.oasis.model.*;
 import com.oasis.ui.UIName;
 import com.oasis.ui.utils.UIUtils;
 import javafx.application.Platform;
+import javafx.beans.property.ObjectProperty;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -127,7 +128,7 @@ public class SystemFunction {
         }
     }
 
-    public static void loadDynamicButton(AnchorPane tabButtonAnchorPane, String name) {
+    public static void loadDynamicButton(AnchorPane tabButtonAnchorPane, String name, ObjectProperty<Button> lastPressedMainSideButton) {
         if (!name.equals("")) {
             Button sideButton = new Button();
             sideButton.setPrefWidth(200);
@@ -136,7 +137,10 @@ public class SystemFunction {
 
             UIName uiName = UIName.valueOf(name);
             sideButton.setText(UIUtils.getUIName(uiName));
-            sideButton.setOnAction(event1 -> UIFactory.launchUI(uiName, true));
+            sideButton.setOnAction(event1 -> {
+                UIFactory.launchUI(uiName, true);
+                lastPressedMainSideButton.setValue(sideButton);
+            });
 
             tabButtonAnchorPane.getChildren().clear();
             tabButtonAnchorPane.getChildren().add(sideButton);
