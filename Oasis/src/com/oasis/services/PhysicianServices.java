@@ -44,4 +44,10 @@ public class PhysicianServices {
         physicianDesignationArrayList.addAll(Session.physicianDesignationCache.getItemHashMap().values());
         return physicianDesignationArrayList;
     }
+
+    public static ArrayList<Physician> getPhysicianLike(String param){
+        ArrayList<Physician> physicianArrayList = new ArrayList<>();
+        physicianArrayList.addAll(Session.physicianConnector.getPhysicianLike(param).values());
+        return physicianArrayList;
+    }
 }

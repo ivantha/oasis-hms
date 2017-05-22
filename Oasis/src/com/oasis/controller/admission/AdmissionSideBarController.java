@@ -20,7 +20,7 @@ public class AdmissionSideBarController implements Controller{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        newAdmissionButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_ADMISSION));
+        newAdmissionButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_EDIT_ADMISSION));
         newAdmissionButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         admissionManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ADMISSION_MANAGEMENT));
         admissionManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
@@ -33,7 +33,7 @@ public class AdmissionSideBarController implements Controller{
 
     @FXML
     public void newAdmissionButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_ADMISSION, true);
+        UIFactory.launchUI(UIName.NEW_EDIT_ADMISSION, true);
     }
 
     @FXML

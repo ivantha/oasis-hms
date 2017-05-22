@@ -1,6 +1,7 @@
 package com.oasis.controller.employee;
 
 import com.oasis.controller.Controller;
+import com.oasis.controller.PopOverController;
 import com.oasis.model.Degree;
 import com.oasis.services.DegreeServices;
 import javafx.collections.FXCollections;
@@ -12,7 +13,7 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DegreeListPopOverController implements Controller{
+public class DegreeListPopOverController implements PopOverController<Degree>{
     @FXML
     private ListView<Degree> degreeListView;
 
@@ -27,6 +28,10 @@ public class DegreeListPopOverController implements Controller{
     public void refreshView() {
         ObservableList<Degree> degreeObservableList = FXCollections.observableList(DegreeServices.getDegreeArrayList());
         degreeListView.setItems(degreeObservableList);
+    }
+
+    @Override
+    public void refreshView(Degree degree) {
     }
 
     public ObservableList<Degree> getAddedDegreeObservableList() {

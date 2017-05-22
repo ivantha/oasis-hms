@@ -78,6 +78,11 @@ public class Employee implements Model<Employee> {
     }
 
     @Override
+    public String toString() {
+        return getFirstName() + (getMiddleName() != null ? " " + getMiddleName() : "") + " " + getLastName();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -126,13 +131,16 @@ public class Employee implements Model<Employee> {
         if (!e.getWorkingDays().equals(getWorkingDays())) {
             return false;
         }
-        if (!e.getTelephoneArrayList().get(0).equals(getTelephoneArrayList().get(0))) {
+        if (!(e.getTelephoneArrayList().isEmpty() ? getTelephoneArrayList().isEmpty() :
+                e.getTelephoneArrayList().equals(getTelephoneArrayList()))) {
             return false;
         }
-        if (!e.getAddressArrayList().get(0).equals(getAddressArrayList().get(0))) {
+        if (!(e.getAddressArrayList().isEmpty() ? getAddressArrayList().isEmpty() :
+                e.getAddressArrayList().equals(getAddressArrayList()))) {
             return false;
         }
-        if (!e.getEmailArrayList().get(0).equals(getEmailArrayList().get(0))) {
+        if (!(e.getEmailArrayList().isEmpty() ? getEmailArrayList().isEmpty() :
+                e.getEmailArrayList().equals(getEmailArrayList()))) {
             return false;
         }
         if (!Compare.isEqual(e.getDegreeListProperty(), getDegreeListProperty())) {

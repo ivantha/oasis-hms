@@ -60,4 +60,10 @@ public class EmployeeServices {
         CommonServices.removeEmptyObjects(employee.getAddressArrayList());
         CommonServices.removeEmptyObjects(employee.getEmailArrayList());
     }
+
+    public static ArrayList<Employee> getEmployeeLike(String param){
+        ArrayList<Employee> employeeArrayList = new ArrayList<>();
+        employeeArrayList.addAll(Session.employeeConnector.getEmployeeLike(param).values());
+        return employeeArrayList;
+    }
 }

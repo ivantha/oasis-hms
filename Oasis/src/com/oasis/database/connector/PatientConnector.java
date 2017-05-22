@@ -14,7 +14,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 
-public class PatientConnector extends Connect{
+public class PatientConnector extends Connect {
     public HashMap<Integer, Patient> getPatientHashMap() {
         HashMap<Integer, Patient> patientHashMap = new HashMap<>();
 
@@ -25,7 +25,7 @@ public class PatientConnector extends Connect{
             getPatientTelephoneDetails(patientHashMap);
             getPatientAddressDetails(patientHashMap);
             getPatientEmailDetails(patientHashMap);
-            getPatientEmailDetails(patientHashMap);
+            getPatientEmergencyContactDetails(patientHashMap);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -33,7 +33,7 @@ public class PatientConnector extends Connect{
         return patientHashMap;
     }
 
-    private void getPatientGeneralDetails(PreparedStatement preparedStatement, HashMap<Integer, Patient> patientHashMap){
+    private void getPatientGeneralDetails(PreparedStatement preparedStatement, HashMap<Integer, Patient> patientHashMap) {
         try {
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -58,7 +58,7 @@ public class PatientConnector extends Connect{
         }
     }
 
-    private void getPatientTelephoneDetails(HashMap<Integer, Patient> patientHashMap){
+    private void getPatientTelephoneDetails(HashMap<Integer, Patient> patientHashMap) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_telephone");
             ResultSet resultSet1 = preparedStatement.executeQuery();
@@ -73,10 +73,12 @@ public class PatientConnector extends Connect{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the patients are not in the hash map
         }
     }
 
-    private void getPatientAddressDetails(HashMap<Integer, Patient> patientHashMap){
+    private void getPatientAddressDetails(HashMap<Integer, Patient> patientHashMap) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_address");
             ResultSet resultSet2 = preparedStatement.executeQuery();
@@ -94,10 +96,12 @@ public class PatientConnector extends Connect{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the patients are not in the hash map
         }
     }
 
-    private void getPatientEmailDetails(HashMap<Integer, Patient> patientHashMap){
+    private void getPatientEmailDetails(HashMap<Integer, Patient> patientHashMap) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient_email");
             ResultSet resultSet3 = preparedStatement.executeQuery();
@@ -112,15 +116,17 @@ public class PatientConnector extends Connect{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the patients are not in the hash map
         }
     }
 
-    private void getPatientEmergencyContactDetails(HashMap<Integer, Patient> patientHashMap){
+    private void getPatientEmergencyContactDetails(HashMap<Integer, Patient> patientHashMap) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM emergency_contact");
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int patientId = resultSet.getInt("patient_email.patient_id");
                 int emergencyContactId = resultSet.getInt("patient_email.id");
                 String emergencyContactName = resultSet.getString("patient_email.email");
@@ -134,6 +140,8 @@ public class PatientConnector extends Connect{
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the patients are not in the hash map
         }
     }
 
@@ -363,17 +371,17 @@ public class PatientConnector extends Connect{
 
     //Delete patient emergency contact
 
-    public HashMap<Integer, Patient> getPatientLike(String param){
+    public HashMap<Integer, Patient> getPatientLike(String param) {
         HashMap<Integer, Patient> patientHashMap = new HashMap<>();
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM patient WHERE " +
                     "CONCAT_WS(' ', first_name, middle_name, last_name) LIKE '%" + param + "%'");
             getPatientGeneralDetails(preparedStatement, patientHashMap);
 
-//            getPatientTelephoneDetails(patientHashMap);
-//            getPatientAddressDetails(patientHashMap);
-//            getPatientEmailDetails(patientHashMap);
-//            getPatientEmergencyContactDetails(patientHashMap);
+            getPatientTelephoneDetails(patientHashMap);
+            getPatientAddressDetails(patientHashMap);
+            getPatientEmailDetails(patientHashMap);
+            getPatientEmergencyContactDetails(patientHashMap);
         } catch (SQLException e) {
             e.printStackTrace();
         }

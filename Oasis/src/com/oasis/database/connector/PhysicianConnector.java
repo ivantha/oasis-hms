@@ -11,6 +11,7 @@ import com.oasis.services.PhysicianServices;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class PhysicianConnector extends Connect {
     public HashMap<Integer, Physician> getPhysicianHashMap() {
@@ -19,6 +20,16 @@ public class PhysicianConnector extends Connect {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician " +
                     "LEFT JOIN physician_telephone ON physician.id = physician_telephone.physician_id");
+            getPhysicianAllDetails(preparedStatement, physicianHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return physicianHashMap;
+    }
+
+    private void getPhysicianAllDetails(PreparedStatement preparedStatement, HashMap<Integer, Physician> physicianHashMap) {
+        try {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -43,18 +54,16 @@ public class PhysicianConnector extends Connect {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return physicianHashMap;
     }
 
-    public HashMap<Integer, PhysicianDesignation> getPhysicianDesignationhashMap(){
+    public HashMap<Integer, PhysicianDesignation> getPhysicianDesignationhashMap() {
         HashMap<Integer, PhysicianDesignation> physicianDesignationHashMap = new HashMap<>();
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician_designation");
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("physician_designation.id");
                 String name = resultSet.getString("physician_designation.name");
 
@@ -68,14 +77,14 @@ public class PhysicianConnector extends Connect {
         return physicianDesignationHashMap;
     }
 
-    public HashMap<Integer, Telephone> getPhysicianTelephoneHashMap(){
+    public HashMap<Integer, Telephone> getPhysicianTelephoneHashMap() {
         HashMap<Integer, Telephone> physicianTelephoneHashMap = new HashMap<>();
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician_telephone");
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("physician_telephone.id");
                 String telephone = resultSet.getString("physician_telephone.telephone");
 
@@ -106,9 +115,9 @@ public class PhysicianConnector extends Connect {
             preparedStatement.execute();
 
             for (Telephone telephone : physician.getTelephoneArrayList()) {
-                if(telephone.getId() == 0){
+                if (telephone.getId() == 0) {
                     newPhysicianTelephone(physician.getId(), telephone);
-                }else {
+                } else {
                     updatePhysicianTelephone(telephone);
                 }
             }
@@ -129,7 +138,7 @@ public class PhysicianConnector extends Connect {
 
             preparedStatement.execute();
             ResultSet resultSet = preparedStatement.getGeneratedKeys();
-            if(resultSet.next()) {
+            if (resultSet.next()) {
                 physician.setId(resultSet.getInt(1));
             }
 
@@ -172,5 +181,20 @@ public class PhysicianConnector extends Connect {
         preparedStatement.setInt(2, telephone.getId());
 
         preparedStatement.execute();
+    }
+
+    public HashMap<Integer, Physician> getPhysicianLike(String param) {
+        HashMap<Integer, Physician> physicianHashMap = new HashMap<>();
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM physician " +
+                    "LEFT JOIN physician_telephone ON physician.id = physician_telephone.physician_id " +
+                    "WHERE CONCAT_WS(' ', first_name, middle_name, last_name) LIKE '%" + param + "%'");
+            getPhysicianAllDetails(preparedStatement, physicianHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return physicianHashMap;
     }
 }

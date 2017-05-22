@@ -15,7 +15,7 @@ public class UIUtils {
                 break;
 
             //Admission
-            case NEW_ADMISSION:
+            case NEW_EDIT_ADMISSION:
                 name = "New admission";
                 break;
             case ADMISSION_MANAGEMENT:

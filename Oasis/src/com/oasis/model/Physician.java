@@ -27,6 +27,11 @@ public class Physician implements Model<Physician>{
     }
 
     @Override
+    public String toString() {
+        return getFirstName() + (getMiddleName() != null ? " " + getMiddleName() : "") + " " + getLastName();
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

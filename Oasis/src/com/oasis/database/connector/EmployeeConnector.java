@@ -15,6 +15,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
+import java.util.Map;
 
 public class EmployeeConnector extends Connect {
     public HashMap<Integer, Employee> getEmployeeHashMap() {
@@ -22,6 +23,21 @@ public class EmployeeConnector extends Connect {
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee");
+            getEmployeeGeneralDetails(preparedStatement, employeeHashMap);
+
+            getEmployeeTelephoneDetails(employeeHashMap);
+            getEmployeeAddressDetails(employeeHashMap);
+            getEmployeeEmailDetails(employeeHashMap);
+            getEmployeeDegreeDetails(employeeHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return employeeHashMap;
+    }
+
+    private void getEmployeeGeneralDetails(PreparedStatement preparedStatement, HashMap<Integer, Employee> employeeHashMap) {
+        try {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
@@ -49,65 +65,97 @@ public class EmployeeConnector extends Connect {
                         employeeRole, defaultShiftStart, defaultShiftEnd, workingDays);
                 employeeHashMap.put(id, employee);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the employees are not in the hash map
+        }
+    }
 
-            PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_telephone");
-            ResultSet resultSet1 = preparedStatement1.executeQuery();
+    private void getEmployeeTelephoneDetails(HashMap<Integer, Employee> employeeHashMap) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_telephone");
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet1.next()) {
-                int employeeId = resultSet1.getInt("employee_telephone.employee_id");
-                int employeeTelephoneId = resultSet1.getInt("employee_telephone.id");
-                String employeeTelephoneTelephone = resultSet1.getString("employee_telephone.telephone");
+            while (resultSet.next()) {
+                int employeeId = resultSet.getInt("employee_telephone.employee_id");
+                int employeeTelephoneId = resultSet.getInt("employee_telephone.id");
+                String employeeTelephoneTelephone = resultSet.getString("employee_telephone.telephone");
                 Telephone telephone = new Telephone(employeeTelephoneId, employeeTelephoneTelephone);
 
                 employeeHashMap.get(employeeId).getTelephoneArrayList().add(telephone);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the employees are not in the hash map
+        }
+    }
 
-            PreparedStatement preparedStatement2 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_address");
-            ResultSet resultSet2 = preparedStatement2.executeQuery();
+    private void getEmployeeAddressDetails(HashMap<Integer, Employee> employeeHashMap) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_address");
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet2.next()) {
-                int employeeId = resultSet2.getInt("employee_address.employee_id");
-                int employeeAddressId = resultSet2.getInt("employee_address.id");
-                String employeeAddressStreet = resultSet2.getString("employee_address.street");
-                String employeeAddressTown = resultSet2.getString("employee_address.town");
-                String employeeAddressProvince = resultSet2.getString("employee_address.province");
-                String employeeAddressPostalCode = resultSet2.getString("employee_address.postal_code");
+            while (resultSet.next()) {
+                int employeeId = resultSet.getInt("employee_address.employee_id");
+                int employeeAddressId = resultSet.getInt("employee_address.id");
+                String employeeAddressStreet = resultSet.getString("employee_address.street");
+                String employeeAddressTown = resultSet.getString("employee_address.town");
+                String employeeAddressProvince = resultSet.getString("employee_address.province");
+                String employeeAddressPostalCode = resultSet.getString("employee_address.postal_code");
                 Address address = new Address(employeeAddressId, employeeAddressStreet, employeeAddressTown, employeeAddressProvince, employeeAddressPostalCode);
 
                 employeeHashMap.get(employeeId).getAddressArrayList().add(address);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the employees are not in the hash map
+        }
+    }
 
-            PreparedStatement preparedStatement3 = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_email");
-            ResultSet resultSet3 = preparedStatement3.executeQuery();
+    private void getEmployeeEmailDetails(HashMap<Integer, Employee> employeeHashMap) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_email");
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet3.next()) {
-                int employeeId = resultSet3.getInt("employee_email.employee_id");
-                int employeeEmailId = resultSet3.getInt("employee_email.id");
-                String employeeEmailEmail = resultSet3.getString("employee_email.email");
+            while (resultSet.next()) {
+                int employeeId = resultSet.getInt("employee_email.employee_id");
+                int employeeEmailId = resultSet.getInt("employee_email.id");
+                String employeeEmailEmail = resultSet.getString("employee_email.email");
                 Email email = new Email(employeeEmailId, employeeEmailEmail);
 
                 employeeHashMap.get(employeeId).getEmailArrayList().add(email);
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the employees are not in the hash map
+        }
+    }
 
-            PreparedStatement preparedStatement4 = (PreparedStatement) getConnection().prepareStatement("SELECT employee_has_degree.employee_id, degree.id, " +
+    private void getEmployeeDegreeDetails(HashMap<Integer, Employee> employeeHashMap) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT employee_has_degree.employee_id, degree.id, " +
                     "degree.name, degree.acronym FROM employee_has_degree " +
                     "INNER JOIN degree ON degree.id = employee_has_degree.degree_id");
-            ResultSet resultSet4 = preparedStatement4.executeQuery();
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet4.next()) {
-                int employeeId = resultSet4.getInt("employee_has_degree.employee_id");
-                int degreeId = resultSet4.getInt("degree.id");
-                String name = resultSet4.getString("degree.name");
-                String acronym = resultSet4.getString("degree.acronym");
+            while (resultSet.next()) {
+                int employeeId = resultSet.getInt("employee_has_degree.employee_id");
+                int degreeId = resultSet.getInt("degree.id");
+                String name = resultSet.getString("degree.name");
+                String acronym = resultSet.getString("degree.acronym");
                 Degree degree = new Degree(degreeId, name, acronym);
 
                 employeeHashMap.get(employeeId).getDegreeListProperty().add(degree);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (NullPointerException e) {
+            // Expected when all the employees are not in the hash map
         }
-
-        return employeeHashMap;
     }
 
     public void newEmployee(Employee employee) {
@@ -364,4 +412,23 @@ public class EmployeeConnector extends Connect {
     }
 
     //Delete doctor speciality
+
+    public HashMap<Integer, Employee> getEmployeeLike(String param) {
+        HashMap<Integer, Employee> employeeHashMap = new HashMap<>();
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee WHERE " +
+                    "CONCAT_WS(' ', first_name, middle_name, last_name) LIKE '%" + param + "%'");
+            getEmployeeGeneralDetails(preparedStatement, employeeHashMap);
+
+            getEmployeeTelephoneDetails(employeeHashMap);
+            getEmployeeAddressDetails(employeeHashMap);
+            getEmployeeEmailDetails(employeeHashMap);
+            getEmployeeDegreeDetails(employeeHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return employeeHashMap;
+    }
 }

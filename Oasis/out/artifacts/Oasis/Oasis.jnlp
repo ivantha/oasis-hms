@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Oasis.jnlp">
+  <information>
+    <title>Oasis - Hospital Management System</title>
+    <vendor>Unknown</vendor>
+    <description>Oasis</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Oasis.jar" size="6631925" download="eager" />
+    <jar href="ext_lib.jar" size="5110626" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="1300" height="700" main-class="com.oasis.main.OasisApplication"  name="Oasis" />
+  <update check="background"/>
+</jnlp>

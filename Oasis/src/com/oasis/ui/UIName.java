@@ -20,9 +20,10 @@ public enum UIName {
     //Physician
     NEW_PHYSICIAN("/com/oasis/ui/view/physician/NewPhysician.fxml"),
     PHYSICIAN_MANAGEMENT("/com/oasis/ui/view/physician/PhysicianManagement.fxml"),
+    PHYSICIAN_DETAILS_POPOVER("/com/oasis/ui/view/physician/PhysicianDetailsPopOver.fxml"),
 
     //Admission
-    NEW_ADMISSION("/com/oasis/ui/view/admission/NewAdmission.fxml"),
+    NEW_EDIT_ADMISSION("/com/oasis/ui/view/admission/NewEditAdmission.fxml"),
     ADMISSION_MANAGEMENT("/com/oasis/ui/view/admission/AdmissionManagement.fxml"),
 
     //Payment
@@ -46,6 +47,7 @@ public enum UIName {
     SUBMIT_ATTENDANCE("/com/oasis/ui/view/employee/SubmitAttendance.fxml"),
     ATTENDANCE_MANAGEMENT("/com/oasis/ui/view/employee/AttendanceManagement.fxml"),
     DEGREE_LIST_POPOVER("/com/oasis/ui/view/employee/DegreeListPopOver.fxml"),
+    EMPLOYEE_DETAILS_POPOVER("/com/oasis/ui/view/employee/EmployeeDetailsPopOver.fxml"),
 
     //Medical
     NEW_TEST("/com/oasis/ui/view/medical/NewTest.fxml"),
