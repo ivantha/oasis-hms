@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
@@ -21,8 +22,7 @@ public class Doctor extends Employee{
 
     @Override
     public Employee clone() {
-        return super.clone();
-        //More code
+        return Session.cloner.deepClone(this);
     }
 
     public Speciality getSpecialityObjectProperty() {

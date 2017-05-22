@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -66,12 +67,7 @@ public class Physician implements Model<Physician>{
 
     @Override
     public Physician clone(){
-        Physician clonedPhysician = new Physician(id, getFirstName(), getMiddleName(), getLastName(),
-                getPhysicianDesignationObjectProperty().clone());
-        for(Telephone telephone: telephoneArrayList) {
-            clonedPhysician.getTelephoneArrayList().add(telephone.clone());
-        }
-        return clonedPhysician;
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

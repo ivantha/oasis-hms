@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -37,7 +38,7 @@ public class Email implements Model<Email>{
 
     @Override
     public Email clone() {
-        return new Email(id, getEmail());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

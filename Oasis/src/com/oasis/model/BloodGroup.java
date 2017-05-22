@@ -1,5 +1,7 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
+
 public class BloodGroup implements Model<BloodGroup>{
     private int id = 0;
     private String name;
@@ -36,7 +38,7 @@ public class BloodGroup implements Model<BloodGroup>{
 
     @Override
     public BloodGroup clone() {
-        return null;
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

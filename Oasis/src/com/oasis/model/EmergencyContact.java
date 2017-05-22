@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -46,7 +47,7 @@ public class EmergencyContact implements Model<EmergencyContact>{
 
     @Override
     public EmergencyContact clone() {
-        return new EmergencyContact(getId(), getName(), getRelationship() ,getTelephone() ,getAddress());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

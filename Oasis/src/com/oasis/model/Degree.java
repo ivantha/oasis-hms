@@ -1,6 +1,8 @@
 package com.oasis.model;
 
-public class Degree {
+import com.oasis.common.Session;
+
+public class Degree implements Model<Degree>{
     private int id = 0;
     private String name;
     private String acronym;
@@ -37,6 +39,16 @@ public class Degree {
         }
 
         return true;
+    }
+
+    @Override
+    public Degree clone() {
+        return Session.cloner.deepClone(this);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
     }
 
     public int getId() {

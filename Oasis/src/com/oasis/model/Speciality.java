@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -47,7 +48,7 @@ public class Speciality implements Model<Speciality>{
 
     @Override
     public Speciality clone() {
-        return new Speciality(getId(), getName(), getDescription());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

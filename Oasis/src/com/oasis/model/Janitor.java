@@ -1,6 +1,8 @@
 package com.oasis.model;
 
 
+import com.oasis.common.Session;
+
 public class Janitor extends Employee{
     public Janitor(Employee employee) {
         super(employee.getId(), employee.getNic(), employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
@@ -16,8 +18,7 @@ public class Janitor extends Employee{
     }
 
     @Override
-    public Employee clone() {
-        return super.clone();
-        //More code
+    public Janitor clone() {
+        return Session.cloner.deepClone(this);
     }
 }

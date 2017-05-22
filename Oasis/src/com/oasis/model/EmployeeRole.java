@@ -1,5 +1,7 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
+
 public class EmployeeRole implements Model<EmployeeRole> {
     private int id = 0;
     private String role;
@@ -36,7 +38,7 @@ public class EmployeeRole implements Model<EmployeeRole> {
 
     @Override
     public EmployeeRole clone() {
-        return new EmployeeRole(getId(), getRole());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

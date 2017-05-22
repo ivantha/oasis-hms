@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.*;
 
 public class Ward implements Model<Ward>{
@@ -61,9 +62,7 @@ public class Ward implements Model<Ward>{
 
     @Override
     public Ward clone(){
-        Ward clonedWard = new Ward(id, getName(), getDescription(), getMaxPatientCount(),
-                getCurrentPatientCount(), getGenderAcceptance(), getSupervisorId());
-        return clonedWard;
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

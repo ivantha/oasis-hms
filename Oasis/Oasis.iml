@@ -16,5 +16,7 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.41-bin" level="project" />
     <orderEntry type="library" name="commons-io-2.5" level="project" />
     <orderEntry type="library" name="controlsfx-8.40.12" level="project" />
+    <orderEntry type="module" module-name="DeepClone" />
+    <orderEntry type="module" module-name="DeepClone" />
   </component>
 </module>

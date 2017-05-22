@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -37,7 +38,7 @@ public class Telephone implements Model<Telephone>{
 
     @Override
     public Telephone clone() {
-        return new Telephone(getId(), getTelephone());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

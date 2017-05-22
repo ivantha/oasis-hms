@@ -9,6 +9,7 @@ import com.oasis.factory.UIFactory;
 import com.oasis.model.*;
 import com.oasis.ui.UIName;
 import com.oasis.ui.utils.UIUtils;
+import com.rits.cloning.Cloner;
 import javafx.application.Platform;
 import javafx.beans.property.ObjectProperty;
 import javafx.scene.control.Button;
@@ -114,6 +115,8 @@ public class SystemFunction {
                 itemHashMap.putAll(Session.wardConnector.getWardHashMap());
             }
         };
+
+        Session.cloner = new Cloner();
     }
 
     private static void createDefaultDirectories() {

@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -52,7 +53,7 @@ public class Address implements Model<Address>{
 
     @Override
     public Address clone() {
-        return new Address(id, getStreet(), getTown(), getProvince(), getPostalCode());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

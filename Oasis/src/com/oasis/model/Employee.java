@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import com.oasis.utils.Compare;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
@@ -152,24 +153,7 @@ public class Employee implements Model<Employee> {
 
     @Override
     public Employee clone() {
-        Employee clonedEmployee =  new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
-                getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays());
-
-        for(Telephone telephone: getTelephoneArrayList()){
-            clonedEmployee.getTelephoneArrayList().add(telephone.clone());
-        }
-        for(Address address: getAddressArrayList()){
-            clonedEmployee.getAddressArrayList().add(address.clone());
-        }
-        for(Email email: getEmailArrayList()){
-            clonedEmployee.getEmailArrayList().add(email.clone());
-        }
-        for(Degree degree: getDegreeListProperty()){
-            clonedEmployee.getDegreeListProperty().add(degree);
-        }
-//        clonedEmployee.getDegreeListProperty().addAll(getDegreeListProperty());
-
-        return clonedEmployee;
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

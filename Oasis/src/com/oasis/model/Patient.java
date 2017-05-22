@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -134,23 +135,7 @@ public class Patient implements Model<Patient>{
 
     @Override
     public Patient clone() {
-        Patient clonedPatient = new Patient(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
-                getBloodGroupObjectProperty(), getEthnicityObjectProperty(), getAddedDateObjectProperty(), getDescription());
-
-        for(Telephone telephone: getTelephoneArrayList()){
-            clonedPatient.getTelephoneArrayList().add(telephone.clone());
-        }
-        for(Address address: getAddressArrayList()){
-            clonedPatient.getAddressArrayList().add(address.clone());
-        }
-        for(Email email: getEmailArrayList()){
-            clonedPatient.getEmailArrayList().add(email.clone());
-        }
-        for(EmergencyContact emergencyContact: getEmergencyContactArrayList()){
-            clonedPatient.getEmergencyContactArrayList().add(emergencyContact.clone());
-        }
-
-        return clonedPatient;
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

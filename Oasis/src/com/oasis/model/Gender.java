@@ -1,5 +1,7 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
+
 public class Gender implements Model<Gender>{
     private int id = 0;
     private String tag;
@@ -45,7 +47,7 @@ public class Gender implements Model<Gender>{
 
     @Override
     public Gender clone() {
-        return new Gender(getId(), getTag());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

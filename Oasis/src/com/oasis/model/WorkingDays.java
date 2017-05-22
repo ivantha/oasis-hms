@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
@@ -105,7 +106,7 @@ public class WorkingDays implements Model<WorkingDays>{
 
     @Override
     public WorkingDays clone() {
-        return new WorkingDays(isMonday(), isTuesdays(), isWednesday(), isThursday(), isFriday(), isSaturday(), isSunday());
+        return Session.cloner.deepClone(this);
     }
 
     public static WorkingDays valueOf(String days){

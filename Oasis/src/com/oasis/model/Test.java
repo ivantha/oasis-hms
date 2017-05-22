@@ -1,5 +1,6 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -49,7 +50,7 @@ public class Test implements Model<Test>{
 
     @Override
     public Test clone() {
-        return new Test(getId(), getName(), getDescription(), getBasePrice());
+        return Session.cloner.deepClone(this);
     }
 
     public boolean isEmpty(){

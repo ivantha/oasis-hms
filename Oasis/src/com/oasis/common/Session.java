@@ -4,6 +4,7 @@ import com.oasis.configuration.ConfigurationFile;
 import com.oasis.database.connector.*;
 import com.oasis.model.*;
 import com.oasis.utils.Cache;
+import com.rits.cloning.Cloner;
 
 public class Session {
     public static ConfigurationFile APP_CONFIG;
@@ -29,4 +30,6 @@ public class Session {
     public static Cache<Speciality> specialityCache;
     public static Cache<Test> testCache;
     public static Cache<Ward> wardCache;
+
+    public static Cloner cloner;
 }
