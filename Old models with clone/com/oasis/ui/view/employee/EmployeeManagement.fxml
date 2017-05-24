@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/management_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.employee.EmployeeManagementController">
+   <children>
+      <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0">
+         <children>
+            <HBox fx:id="searchPane" alignment="CENTER_LEFT" layoutY="3.0" prefHeight="45.0" prefWidth="350.0" spacing="20.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
+               <children>
+                  <Label text="Search" />
+                  <HBox alignment="CENTER_LEFT" spacing="5.0">
+                     <children>
+                        <TextField prefHeight="25.0" prefWidth="250.0" />
+                        <Button fx:id="clearButton" mnemonicParsing="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
+         <children>
+            <TableView fx:id="employeeTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id" />
+                  <TableColumn fx:id="firstNameTableColumn" prefWidth="150.0" text="First name" />
+                  <TableColumn fx:id="middleNameTableColumn" prefWidth="140.0" text="Middle name" />
+                  <TableColumn fx:id="lastNameTableColumn" prefWidth="150.0" text="Last name" />
+                  <TableColumn fx:id="nicTableColumn" prefWidth="100.0" text="NIC" />
+                  <TableColumn fx:id="genderTableColumn" prefWidth="100.0" text="Gender" />
+                  <TableColumn fx:id="dobTableColumn" prefWidth="150.0" text="DOB" />
+                  <TableColumn fx:id="roleTableColumn" prefWidth="150.0" text="Role" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
+         <children>
+            <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="0.0" />
+            <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="deleteButton" disable="true" layoutX="970.0" layoutY="143.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" />
+            <AnchorPane layoutX="14.0" layoutY="10.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <ImageView fx:id="profilePictureImageView" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../resources/images/default_profile_picture.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="browseButton" layoutX="48.0" layoutY="161.0" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse" />
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="206.0" layoutY="20.0" prefHeight="200.0" prefWidth="292.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="74.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="97.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Telephone" />
+                  <Label text="Email" GridPane.rowIndex="1" />
+                  <AnchorPane GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="telephoneTextField" layoutY="16.0" prefWidth="100.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="emailTextField" layoutY="16.0" prefWidth="220.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <GridPane layoutX="541.0" layoutY="6.0" prefHeight="200.0" prefWidth="250.0" AnchorPane.topAnchor="0.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="105.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="145.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Shift start time" GridPane.rowIndex="2" />
+                  <Label text="Shift end time" GridPane.rowIndex="3" />
+                  <JFXTimePicker fx:id="shiftStartTimeTimePicker" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTimePicker fx:id="shiftEndTimeTimePicker" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Start date" />
+                  <Label text="End date" GridPane.rowIndex="1" />
+                  <JFXDatePicker fx:id="startDateDatePicker" GridPane.columnIndex="1" />
+                  <JFXDatePicker fx:id="endDateDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <AnchorPane layoutX="829.0" layoutY="10.0" prefHeight="80.0" prefWidth="250.0">
+               <children>
+                  <Label layoutY="6.0" text="Working days" />
+                  <GridPane layoutX="20.0" layoutY="36.0" prefHeight="50.0" prefWidth="210.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Mo" />
+                        <Label text="Tu" GridPane.columnIndex="1" />
+                        <Label text="We" GridPane.columnIndex="2" />
+                        <Label text="Th" GridPane.columnIndex="3" />
+                        <Label text="Fr" GridPane.columnIndex="4" />
+                        <Label text="Sa" GridPane.columnIndex="5" />
+                        <Label text="Su" GridPane.columnIndex="6" />
+                        <CheckBox fx:id="mondayCheckBox" mnemonicParsing="false" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="tuesdayCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="wednesdayCheckBox" mnemonicParsing="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="thursdayCheckBox" mnemonicParsing="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="fridayCheckBox" mnemonicParsing="false" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="saturdayCheckBox" mnemonicParsing="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <CheckBox fx:id="sundayCheckBox" mnemonicParsing="false" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <Button fx:id="editButton" layoutX="854.0" layoutY="143.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit" />
+            <Label fx:id="degreeLabel" layoutX="30.0" layoutY="220.0" text="[..]" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

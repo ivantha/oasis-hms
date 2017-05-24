@@ -1,6 +1,7 @@
 package com.oasis.services;
 
 import com.oasis.common.Session;
+import com.oasis.model.Doctor;
 import com.oasis.model.Employee;
 import org.apache.commons.io.FileUtils;
 
@@ -65,5 +66,13 @@ public class EmployeeServices {
         ArrayList<Employee> employeeArrayList = new ArrayList<>();
         employeeArrayList.addAll(Session.employeeConnector.getEmployeeLike(param).values());
         return employeeArrayList;
+    }
+
+    public static ArrayList<Doctor> getDoctorLike(String param){
+        ArrayList<Doctor> doctorArrayList = new ArrayList<>();
+        for(Employee employee: Session.employeeConnector.getDoctorLike(param).values()){
+            doctorArrayList.add(new Doctor(employee));
+        }
+        return doctorArrayList;
     }
 }

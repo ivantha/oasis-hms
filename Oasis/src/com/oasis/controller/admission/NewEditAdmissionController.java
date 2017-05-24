@@ -1,10 +1,13 @@
 package com.oasis.controller.admission;
 
 import com.jfoenix.controls.JFXDatePicker;
-import com.jfoenix.controls.JFXTimePicker;
-import com.oasis.adapter.SearchAdapter;
 import com.oasis.controller.Controller;
+import com.oasis.factory.UIFactory;
+import com.oasis.model.Admission;
+import com.oasis.model.Doctor;
 import com.oasis.model.Patient;
+import com.oasis.model.Physician;
+import com.oasis.services.AdmissionServices;
 import com.oasis.services.EmployeeServices;
 import com.oasis.services.PatientServices;
 import com.oasis.services.PhysicianServices;
@@ -15,11 +18,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
-import org.controlsfx.control.textfield.CustomTextField;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -38,44 +39,107 @@ public class NewEditAdmissionController implements Controller {
     @FXML
     private JFXDatePicker admissionDateDatePicker;
     @FXML
-    private JFXTimePicker admissionTimeTimePicker;
-    @FXML
     private Button todayButton;
-    @FXML
-    private Button nowButton;
 
     @FXML
     private Button okButton;
 
+    private Admission tempAdmission;
+    private boolean isEditingMode = false;
+
+    private AutoCompleteFXC<Patient> patientAutoCompleteFXC;
+    private AutoCompleteFXC<Physician> physicianAutoCompleteFXC;
+    private AutoCompleteFXC<Doctor> admissionConsultantAutoCompleteFXC;
+    private AutoCompleteFXC<Doctor> leadingConsultantAutoCompleteFXC;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        patientAutoCompleteFXC = new AutoCompleteFXC<>(searchParam ->
+                PatientServices.getPatientLike(searchParam), UIName.PATIENT_DETAILS_POPOVER);
+        physicianAutoCompleteFXC = new AutoCompleteFXC<>(searchParam ->
+                PhysicianServices.getPhysicianLike(searchParam), UIName.PHYSICIAN_DETAILS_POPOVER);
+        admissionConsultantAutoCompleteFXC = new AutoCompleteFXC<>(searchParam ->
+                EmployeeServices.getDoctorLike(searchParam), UIName.EMPLOYEE_DETAILS_POPOVER);
+        leadingConsultantAutoCompleteFXC = new AutoCompleteFXC<>(searchParam ->
+                EmployeeServices.getDoctorLike(searchParam), UIName.EMPLOYEE_DETAILS_POPOVER);
 
-    }
-
-    @Override
-    public void refreshView() {
-        patientAnchorPane.getChildren().add(new AutoCompleteFXC<>(searchParam -> PatientServices.getPatientLike(searchParam), UIName.PATIENT_DETAILS_POPOVER));
-        physicianAnchorPane.getChildren().add(new AutoCompleteFXC<>(searchParam -> PhysicianServices.getPhysicianLike(searchParam), UIName.PHYSICIAN_DETAILS_POPOVER));
-        admissionConsultantAnchorPane.getChildren().add(new AutoCompleteFXC<>(searchParam -> EmployeeServices.getEmployeeLike(searchParam), UIName.EMPLOYEE_DETAILS_POPOVER));
-        leadingConsultantAnchorPane.getChildren().add(new AutoCompleteFXC<>(searchParam -> EmployeeServices.getEmployeeLike(searchParam), UIName.EMPLOYEE_DETAILS_POPOVER));
+        patientAnchorPane.getChildren().add(patientAutoCompleteFXC);
+        physicianAnchorPane.getChildren().add(physicianAutoCompleteFXC);
+        admissionConsultantAnchorPane.getChildren().add(admissionConsultantAutoCompleteFXC);
+        leadingConsultantAnchorPane.getChildren().add(leadingConsultantAutoCompleteFXC);
 
         patientAnchorPane.toBack();
         physicianAnchorPane.toBack();
         admissionConsultantAnchorPane.toBack();
         leadingConsultantAnchorPane.toBack();
-
         causeTextArea.toBack();
+    }
+
+    @Override
+    public void refreshView() {
+        try {
+            unBindFields(tempAdmission);
+        } catch (Exception ex) {
+            //This does not need to be handled
+        }
+
+        tempAdmission = new Admission();
+        tempAdmission.setId(0);
+
+        isEditingMode = false;
+        bindFields(tempAdmission);
+    }
+
+    public void showAdmission(Admission admission){
+        try {
+            unBindFields(tempAdmission);
+        } catch (Exception ex) {
+            //This does not need to be handled
+        }
+
+        tempAdmission = admission;
+
+        isEditingMode = true;
+        bindFields(admission);
+
+        patientAutoCompleteFXC.updateText();
+        physicianAutoCompleteFXC.updateText();
+        admissionConsultantAutoCompleteFXC.updateText();
+        leadingConsultantAutoCompleteFXC.updateText();
+    }
+
+    public void unBindFields(Admission admission){
+        patientAutoCompleteFXC.unBindList();
+        physicianAutoCompleteFXC.unBindList();
+        admissionConsultantAutoCompleteFXC.unBindList();
+        leadingConsultantAutoCompleteFXC.unBindList();
+
+        causeTextArea.textProperty().unbindBidirectional(admission.causeProperty());
+        admissionDateDatePicker.valueProperty().unbindBidirectional(admission.admissionDateObjectPropertyProperty());
+    }
+
+    public void bindFields(Admission admission){
+        patientAutoCompleteFXC.bindList(admission.patientObjectPropertyProperty());
+        physicianAutoCompleteFXC.bindList(admission.physicianObjectPropertyProperty());
+        admissionConsultantAutoCompleteFXC.bindList(admission.admissionConsultantObjectPropertyProperty());
+        leadingConsultantAutoCompleteFXC.bindList(admission.leadingConsultantObjectPropertyProperty());
+
+        causeTextArea.textProperty().bindBidirectional(admission.causeProperty());
+        admissionDateDatePicker.valueProperty().bindBidirectional(admission.admissionDateObjectPropertyProperty());
     }
 
     public void todayButtonOnAction(ActionEvent actionEvent) {
         admissionDateDatePicker.setValue(LocalDate.now());
     }
 
-    public void nowButtonOnAction(ActionEvent actionEvent) {
-        admissionTimeTimePicker.setValue(LocalTime.now());
-    }
-
     public void okButtonOnAction(ActionEvent actionEvent) {
-
+        ArrayList<Admission> admissionArrayList = new ArrayList<>();
+        admissionArrayList.add(tempAdmission);
+        if (!isEditingMode) {
+            AdmissionServices.newAdmission(admissionArrayList);
+        } else {
+            AdmissionServices.updateAdmission(admissionArrayList);
+        }
+        UIFactory.launchUI(UIName.ADMISSION_MANAGEMENT, true);
     }
 }

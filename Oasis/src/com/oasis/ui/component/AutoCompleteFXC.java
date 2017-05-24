@@ -6,9 +6,9 @@ import com.oasis.factory.UIFactory;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import javafx.application.Platform;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.*;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -27,6 +27,8 @@ public class AutoCompleteFXC<T> extends Pane {
 
     private PopOverController popOverController;
     private ListProperty<T> listItemListProperty;
+
+    private ObjectProperty objectProperty = new SimpleObjectProperty();
 
     public AutoCompleteFXC(SearchAdapter<T> searchAdapter, UIName popOverName) {
         this(250, 25, 150, searchAdapter, popOverName);
@@ -86,6 +88,7 @@ public class AutoCompleteFXC<T> extends Pane {
         listView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (null != newValue) {
                 textField.setText(newValue.toString());
+                objectProperty.setValue(newValue);
                 popOver.hide();
             }
         });
@@ -123,5 +126,45 @@ public class AutoCompleteFXC<T> extends Pane {
                 return cell;
             }
         });
+    }
+
+    public TextField getTextField() {
+        return textField;
+    }
+
+    public ListView<T> getListView() {
+        return listView;
+    }
+
+    public VBox getvBox() {
+        return vBox;
+    }
+
+    public PopOver getPopOver() {
+        return popOver;
+    }
+
+    public PopOverController getPopOverController() {
+        return popOverController;
+    }
+
+    public ObservableList getListItemListProperty() {
+        return listItemListProperty.get();
+    }
+
+    public ListProperty<T> listItemListPropertyProperty() {
+        return listItemListProperty;
+    }
+
+    public void bindList(ObjectProperty objectProperty){
+        this.objectProperty = objectProperty;
+    }
+
+    public void unBindList(){
+        this.objectProperty = new SimpleObjectProperty();
+    }
+
+    public void updateText(){
+        textField.setText(objectProperty.getValue().toString());
     }
 }

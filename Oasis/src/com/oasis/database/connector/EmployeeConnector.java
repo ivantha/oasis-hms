@@ -431,4 +431,24 @@ public class EmployeeConnector extends Connect {
 
         return employeeHashMap;
     }
+
+    public HashMap<Integer, Employee> getDoctorLike(String param) {
+        HashMap<Integer, Employee> employeeHashMap = new HashMap<>();
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee " +
+                    "INNER JOIN doctor ON employee.id = doctor.employee_id " +
+                    "WHERE CONCAT_WS(' ', first_name, middle_name, last_name) LIKE '%" + param + "%' ");
+            getEmployeeGeneralDetails(preparedStatement, employeeHashMap);
+
+            getEmployeeTelephoneDetails(employeeHashMap);
+            getEmployeeAddressDetails(employeeHashMap);
+            getEmployeeEmailDetails(employeeHashMap);
+            getEmployeeDegreeDetails(employeeHashMap);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return employeeHashMap;
+    }
 }

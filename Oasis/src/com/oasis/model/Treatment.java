@@ -1,15 +1,36 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.*;
 
 import java.util.Date;
 
-public class Treatment {
+public class Treatment implements Model<Treatment>{
     private int id;
     private StringProperty description = new SimpleStringProperty();
     private StringProperty result = new SimpleStringProperty();
     private DoubleProperty price = new SimpleDoubleProperty();
     private ObjectProperty<Date> giveDate = new SimpleObjectProperty<>();
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public Treatment clone() {
+        return Session.cloner.deepClone(this);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
 
     public int getId() {
         return id;

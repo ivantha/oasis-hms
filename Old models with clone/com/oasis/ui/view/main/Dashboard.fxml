@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" stylesheets="@../../../resources/styles/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.main.DashboardController">
+   <children>
+      <HBox layoutX="192.0" layoutY="162.0" prefHeight="700.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="sideBarAnchorPane" prefHeight="700.0" prefWidth="200.0" stylesheets="@../../../resources/styles/main_sidebar.css">
+               <children>
+                  <AnchorPane fx:id="navigationAnchorPane" layoutY="134.0" prefHeight="282.0" prefWidth="200.0" AnchorPane.bottomAnchor="284.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="134.0">
+                     <children>
+                        <VBox prefHeight="282.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="mainSideButton1AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton2AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton3AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton4AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton5AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton6AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="mainSideButton7AnchorPane" prefHeight="40.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="controlAnchorPane" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="closeButton" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#closeButtonOnAction" />
+                        <Button fx:id="minimizeButton" layoutX="36.0" layoutY="8.0" mnemonicParsing="false" onAction="#minimizeButtonOnAction" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="loginAnchorPane" layoutY="32.0" prefHeight="102.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="statisticsAnchorPane" layoutY="416.0" prefHeight="152.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="notificationAnchorPane" layoutY="568.0" prefHeight="130.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="workspaceAnchorPane" prefHeight="700.0" prefWidth="1100.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

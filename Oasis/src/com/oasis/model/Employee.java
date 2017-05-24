@@ -153,7 +153,23 @@ public class Employee implements Model<Employee> {
 
     @Override
     public Employee clone() {
-        return Session.cloner.deepClone(this);
+        Employee clonedEmployee =  new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
+                getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays());
+
+        for(Telephone telephone: getTelephoneArrayList()){
+            clonedEmployee.getTelephoneArrayList().add(telephone.clone());
+        }
+        for(Address address: getAddressArrayList()){
+            clonedEmployee.getAddressArrayList().add(address.clone());
+        }
+        for(Email email: getEmailArrayList()){
+            clonedEmployee.getEmailArrayList().add(email.clone());
+        }
+        for(Degree degree: getDegreeListProperty()){
+            clonedEmployee.getDegreeListProperty().add(degree);
+        }
+
+        return clonedEmployee;
     }
 
     public boolean isEmpty(){

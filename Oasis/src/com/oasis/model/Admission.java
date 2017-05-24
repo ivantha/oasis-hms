@@ -1,21 +1,60 @@
 package com.oasis.model;
 
+import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Admission {
-    private int id;
+public class Admission implements Model<Admission>{
+    private int id = 0;
     private ObjectProperty<Patient> patientObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Physician> physicianObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Doctor> admissionConsultantObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Doctor> leadingConsultantObjectProperty = new SimpleObjectProperty<>();
     private StringProperty cause = new SimpleStringProperty();
-    private ObjectProperty<Date> admissionDateObjectProperty = new SimpleObjectProperty<>();
-    private ObjectProperty<Date> releaseDateObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<LocalDate> admissionDateObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<LocalDate> releaseDateObjectProperty = new SimpleObjectProperty<>();
+
+    public Admission() {
+    }
+
+    public Admission(int id, Patient patient, Physician physician, Doctor admissionConsultant,
+                     Doctor leadingConsultant, String cause, LocalDate admissionDate, LocalDate releaseDate) {
+        this.id = id;
+        this.patientObjectProperty.setValue(patient);
+        this.physicianObjectProperty.setValue(physician);
+        this.admissionConsultantObjectProperty.setValue(admissionConsultant);
+        this.leadingConsultantObjectProperty.setValue(leadingConsultant);
+        this.cause.setValue(cause);
+        this.admissionDateObjectProperty.setValue(admissionDate);
+        this.releaseDateObjectProperty.setValue(releaseDate);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public Admission clone() {
+        Admission clonedAdmission = new Admission(id, getPatientObjectProperty().clone(), getPhysicianObjectProperty().clone(),
+                getAdmissionConsultantObjectProperty().clone(), getLeadingConsultantObjectProperty().clone(), getCause(),
+                getAdmissionDateObjectProperty(), getReleaseDateObjectProperty());
+        return clonedAdmission;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
 
     public int getId() {
         return id;
@@ -85,27 +124,28 @@ public class Admission {
         this.cause.set(cause);
     }
 
-    public Date getAdmissionDateObjectProperty() {
+    public LocalDate getAdmissionDateObjectProperty() {
         return admissionDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> admissionDateObjectPropertyProperty() {
+    public ObjectProperty<LocalDate> admissionDateObjectPropertyProperty() {
         return admissionDateObjectProperty;
     }
 
-    public void setAdmissionDateObjectProperty(Date admissionDateObjectProperty) {
+    public void setAdmissionDateObjectProperty(LocalDate admissionDateObjectProperty) {
         this.admissionDateObjectProperty.set(admissionDateObjectProperty);
     }
 
-    public Date getReleaseDateObjectProperty() {
+    public LocalDate getReleaseDateObjectProperty() {
         return releaseDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> releaseDateObjectPropertyProperty() {
+    public ObjectProperty<LocalDate> releaseDateObjectPropertyProperty() {
         return releaseDateObjectProperty;
     }
 
-    public void setReleaseDateObjectProperty(Date releaseDateObjectProperty) {
+    public void setReleaseDateObjectProperty(LocalDate releaseDateObjectProperty) {
         this.releaseDateObjectProperty.set(releaseDateObjectProperty);
     }
 }
+

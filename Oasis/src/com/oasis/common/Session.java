@@ -19,6 +19,7 @@ public class Session {
     public static DegreeConnector degreeConnector;
     public static BloodGroupConnector bloodGroupConnector;
     public static PatientConnector patientConnector;
+    public static AdmissionConnector admissionConnector;
 
     public static Cache<BloodGroup> bloodGroupCache;
     public static Cache<Degree> degreeCache;
