@@ -23,9 +23,6 @@ public class UIUtils {
                 break;
 
             //Payment
-            case NEW_PAYMENT:
-                name = "New payment";
-                break;
             case PAYMENT_MANAGEMENT:
                 name = "Payment management";
                 break;

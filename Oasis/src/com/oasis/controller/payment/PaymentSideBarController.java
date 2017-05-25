@@ -14,14 +14,10 @@ import java.util.ResourceBundle;
 
 public class PaymentSideBarController implements Controller{
     @FXML
-    private Button newPaymentButton;
-    @FXML
     private Button paymentManagementButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        newPaymentButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.NEW_PAYMENT));
-        newPaymentButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         paymentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.PAYMENT_MANAGEMENT));
         paymentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
@@ -29,11 +25,6 @@ public class PaymentSideBarController implements Controller{
     @Override
     public void refreshView() {
 
-    }
-
-    @FXML
-    public void newPaymentButtonOnAction(ActionEvent actionEvent) {
-        UIFactory.launchUI(UIName.NEW_PAYMENT, true);
     }
 
     @FXML

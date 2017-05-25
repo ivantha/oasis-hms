@@ -27,7 +27,6 @@ public enum UIName {
     ADMISSION_MANAGEMENT("/com/oasis/ui/view/admission/AdmissionManagement.fxml"),
 
     //Payment
-    NEW_PAYMENT("/com/oasis/ui/view/payment/NewPayment.fxml"),
     PAYMENT_MANAGEMENT("/com/oasis/ui/view/payment/PaymentManagement.fxml"),
 
     //Patient

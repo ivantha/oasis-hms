@@ -69,19 +69,16 @@ public class DashboardController implements Controller {
         SystemFunction.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6(), lastPressedMainSideButton);
         SystemFunction.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7(), lastPressedMainSideButton);
 
-        lastPressedMainSideButton.addListener(new ChangeListener<Button>() {
-            @Override
-            public void changed(ObservableValue<? extends Button> observable, Button oldValue, Button newValue) {
-                if(oldValue != null) {
-                    oldValue.setStyle(null);
-                }
-
-                newValue.setStyle("-fx-font-family: 'Calibri';\n" +
-                        "-fx-text-fill: #000000;\n" +
-                        "-fx-font-size: 13;\n" +
-                        "-fx-background-radius: 0px;\n" +
-                        "-fx-background-color: #d27d1e;");
+        lastPressedMainSideButton.addListener((observable, oldValue, newValue) -> {
+            if(oldValue != null) {
+                oldValue.setStyle(null);
             }
+
+            newValue.setStyle("-fx-font-family: 'Calibri';\n" +
+                    "-fx-text-fill: #000000;\n" +
+                    "-fx-font-size: 13;\n" +
+                    "-fx-background-radius: 0px;\n" +
+                    "-fx-background-color: #d27d1e;");
         });
     }
 
