@@ -13,6 +13,12 @@ public class Payment implements Model<Payment>{
     private DoubleProperty amount = new SimpleDoubleProperty();
     private ObjectProperty<Date> paymentDate = new SimpleObjectProperty<>();
 
+    public Payment(int id, double amount, Date paymentDate) {
+        this.id = id;
+        this.amount.setValue(amount);
+        this.paymentDate.setValue(paymentDate);
+    }
+
     @Override
     public String toString() {
         return super.toString();

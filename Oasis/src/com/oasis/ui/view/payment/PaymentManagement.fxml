@@ -17,23 +17,23 @@
          <children>
             <TableView fx:id="admissionTableView" layoutX="50.0" layoutY="50.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <columns>
-                  <TableColumn fx:id="idTableColumn" prefWidth="108.0" text="Id" />
+                  <TableColumn fx:id="admissionIdTableColumn" prefWidth="108.0" text="Admission id" />
                   <TableColumn fx:id="admissionDateTableColumn" prefWidth="108.0" text="Admission date" />
                   <TableColumn fx:id="releaseDateTableColumn" prefWidth="108.0" text="Release date" />
                </columns>
             </TableView>
-            <TableView fx:id="admissionTableView1" layoutX="365.0" layoutY="10.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="358.0">
+            <TableView fx:id="chargeTableView" layoutX="365.0" layoutY="10.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="358.0">
                <columns>
-                  <TableColumn fx:id="admissionDateTableColumn1" prefWidth="108.0" text="Amount" />
-                  <TableColumn fx:id="releaseDateTableColumn1" prefWidth="108.0" text="Charged date" />
-                  <TableColumn fx:id="idTableColumn1" prefWidth="108.0" text="Type" />
+                  <TableColumn fx:id="chargeAmountTableColumn" prefWidth="108.0" text="Charge amount" />
+                  <TableColumn fx:id="chargedDateTableColumn" prefWidth="108.0" text="Charged date" />
+                  <TableColumn fx:id="typeTableColumn" prefWidth="108.0" text="Type" />
                </columns>
             </TableView>
-            <TableView fx:id="admissionTableView11" layoutX="687.0" layoutY="10.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="716.0">
+            <TableView fx:id="paymentTableView" layoutX="687.0" layoutY="10.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="716.0">
                <columns>
-                  <TableColumn fx:id="admissionDateTableColumn11" prefWidth="108.0" text="Id" />
-                  <TableColumn fx:id="releaseDateTableColumn11" prefWidth="108.0" text="Amount" />
-                  <TableColumn fx:id="idTableColumn11" prefWidth="108.0" text="Payment date" />
+                  <TableColumn fx:id="paymentIdTableColumn" prefWidth="108.0" text="Payment id" />
+                  <TableColumn fx:id="amountTableColumn" prefWidth="108.0" text="Amount" />
+                  <TableColumn fx:id="paymentDateTableColumn" prefWidth="108.0" text="Payment date" />
                </columns>
             </TableView>
          </children>
@@ -54,7 +54,6 @@
             <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="0.0" />
             <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
             <Button fx:id="deleteButton" layoutX="970.0" layoutY="143.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" />
-            <Button fx:id="editButton" layoutX="854.0" layoutY="143.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit" />
             <GridPane layoutX="60.0" layoutY="30.0" prefHeight="201.0" prefWidth="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="48.0" />
@@ -65,7 +64,7 @@
               </rowConstraints>
                <children>
                   <Label text="Cause" GridPane.valignment="TOP" />
-                  <TextArea maxHeight="150.0" prefHeight="150.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                  <TextArea fx:id="causeTextArea" editable="false" maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                </children>
             </GridPane>
             <GridPane layoutX="388.0" layoutY="20.0" prefHeight="201.0" prefWidth="324.0">
@@ -78,7 +77,7 @@
                </rowConstraints>
                <children>
                   <Label text="Description" GridPane.valignment="TOP" />
-                  <TextArea maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                  <TextArea fx:id="descriptionTextArea" editable="false" maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                </children>
             </GridPane>
          </children>

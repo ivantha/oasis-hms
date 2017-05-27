@@ -45,6 +45,8 @@ public class SystemFunction {
         Session.bloodGroupConnector = new BloodGroupConnector();
         Session.patientConnector = new PatientConnector();
         Session.admissionConnector = new AdmissionConnector();
+        Session.chargeConnector = new ChargeConnector();
+        Session.paymentConnector = new PaymentConnector();
 
         Session.bloodGroupCache = new Cache<BloodGroup>() {
             @Override

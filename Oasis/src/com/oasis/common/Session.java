@@ -20,6 +20,8 @@ public class Session {
     public static BloodGroupConnector bloodGroupConnector;
     public static PatientConnector patientConnector;
     public static AdmissionConnector admissionConnector;
+    public static ChargeConnector chargeConnector;
+    public static PaymentConnector paymentConnector;
 
     public static Cache<BloodGroup> bloodGroupCache;
     public static Cache<Degree> degreeCache;
