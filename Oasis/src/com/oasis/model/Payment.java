@@ -1,20 +1,25 @@
 package com.oasis.model;
 
 import com.oasis.common.Session;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.*;
 
 import java.util.Date;
 
 public class Payment implements Model<Payment>{
     private int id;
+    private IntegerProperty admissionId = new SimpleIntegerProperty();
     private DoubleProperty amount = new SimpleDoubleProperty();
     private ObjectProperty<Date> paymentDate = new SimpleObjectProperty<>();
 
-    public Payment(int id, double amount, Date paymentDate) {
+    public Payment(int admissionId, double amount, Date paymentDate) {
+        this.admissionId.setValue(admissionId);
+        this.amount.setValue(amount);
+        this.paymentDate.setValue(paymentDate);
+    }
+
+    public Payment(int id, int admissionId, double amount, Date paymentDate) {
         this.id = id;
+        this.admissionId.setValue(admissionId);
         this.amount.setValue(amount);
         this.paymentDate.setValue(paymentDate);
     }
@@ -45,6 +50,18 @@ public class Payment implements Model<Payment>{
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getAdmissionId() {
+        return admissionId.get();
+    }
+
+    public IntegerProperty admissionIdProperty() {
+        return admissionId;
+    }
+
+    public void setAdmissionId(int admissionId) {
+        this.admissionId.set(admissionId);
     }
 
     public double getAmount() {

@@ -5,6 +5,7 @@ import com.oasis.model.*;
 import com.oasis.services.AdmissionServices;
 import com.oasis.services.ChargeServices;
 import com.oasis.services.PatientServices;
+import com.oasis.services.PaymentServices;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.AutoCompleteFXC;
 import javafx.beans.property.ObjectProperty;
@@ -15,19 +16,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.function.Consumer;
 
 public class PaymentManagementController implements Controller{
     @FXML
@@ -64,21 +62,15 @@ public class PaymentManagementController implements Controller{
     private TextArea causeTextArea;
     @FXML
     private TextArea descriptionTextArea;
+    @FXML
+    private TextField amountTextField;
 
     @FXML
     private Button newButton;
     @FXML
     private Button deleteButton;
-    @FXML
-    private Button saveButton;
 
     private AutoCompleteFXC<Patient> patientAutoCompleteFXC;
-
-    private HashMap<Integer, Payment> tempPaymentHashMap = new HashMap<>();
-    private HashMap<Integer, Payment> editedPaymentHashMap = new HashMap<>();
-    private HashMap<Integer, Payment> deletedPaymentHashMap = new HashMap<>();
-    private HashMap<Integer, Admission> tempAdmissionHashMap = new HashMap<>();
-    private HashMap<Integer, Charge> tempChargeHashMap = new HashMap<>();
 
     private ObjectProperty<Patient> currentPatientObjectProperty = new SimpleObjectProperty<>();
     private ChangeListener<Patient> currentPatientChangeListener;
@@ -117,11 +109,6 @@ public class PaymentManagementController implements Controller{
 
     @Override
     public void refreshView() {
-        tempPaymentHashMap.clear();
-        editedPaymentHashMap.clear();
-        deletedPaymentHashMap.clear();
-        tempAdmissionHashMap.clear();
-
         currentPatientObjectProperty = new SimpleObjectProperty<>();
         patientAutoCompleteFXC.unBindList();
         patientAutoCompleteFXC.bindList(currentPatientObjectProperty);
@@ -137,7 +124,6 @@ public class PaymentManagementController implements Controller{
             ArrayList<Admission> admissionArrayList = new ArrayList<>();
             for (Admission admission : AdmissionServices.getAdmissionArrayListByPatient(newValue)) {
                 admissionArrayList.add(admission.clone());
-                tempAdmissionHashMap.put(admission.getId(), admission.clone());
             }
             ObservableList<Admission> admissionObservableList = FXCollections.observableList(admissionArrayList);
             admissionTableView.setItems(admissionObservableList);
@@ -148,13 +134,8 @@ public class PaymentManagementController implements Controller{
             currentAdmissionObjectProperty.removeListener(currentAdmissionChangeListener);
         }
         currentAdmissionChangeListener = (observable, oldValue, newValue) -> {
-            ArrayList<Charge> chargeArrayList = new ArrayList<>();
-            for (Charge charge : ChargeServices.getChargeArrayListByAdmission(newValue)) {
-                chargeArrayList.add(charge.clone());
-                tempChargeHashMap.put(charge.getId(), charge.clone());
-            }
-            ObservableList<Charge> chargeObservableList = FXCollections.observableList(chargeArrayList);
-            chargeTableView.setItems(chargeObservableList);
+            updateChargeTable(newValue);
+            updatePaymentTable(newValue);
         };
         currentAdmissionObjectProperty.addListener(currentAdmissionChangeListener);
 
@@ -165,17 +146,53 @@ public class PaymentManagementController implements Controller{
         chargeAmountTableColumn.setCellValueFactory(param -> param.getValue().amountProperty().asObject());
         chargedDateTableColumn.setCellValueFactory(param -> param.getValue().chargedDateProperty());
         typeTableColumn.setCellValueFactory(param -> param.getValue().chargeTypeProperty());
+
+        paymentIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        amountTableColumn.setCellValueFactory(param -> param.getValue().amountProperty().asObject());
+        paymentDateTableColumn.setCellValueFactory(param -> param.getValue().paymentDateProperty());
     }
 
     public void newButtonOnAction(ActionEvent actionEvent) {
+        Admission selectedAdmission = admissionTableView.getSelectionModel().getSelectedItem();
+        if(null != selectedAdmission){
+            double amount = Double.valueOf(amountTextField.getText());
+            Payment payment = new Payment(selectedAdmission.getId(), amount, new Date());
 
+            ArrayList<Payment> newPaymentArrayList = new ArrayList<>();
+            newPaymentArrayList.add(payment);
+            PaymentServices.newPayment(newPaymentArrayList);
+
+            amountTextField.setText(null);
+            updatePaymentTable(currentAdmissionObjectProperty.get());
+        }
     }
 
     public void deleteButtonOnAction(ActionEvent actionEvent) {
+        Payment selectedPayment = paymentTableView.getSelectionModel().getSelectedItem();
+        if(selectedPayment != null){
+            paymentTableView.getItems().remove(selectedPayment);
 
+            ArrayList<Payment> deletePaymentArrayList = new ArrayList<>();
+            deletePaymentArrayList.add(selectedPayment);
+            PaymentServices.deletePayment(deletePaymentArrayList);
+        }
     }
 
-    public void saveButtonOnAction(ActionEvent actionEvent) {
+    private void updateChargeTable(Admission admission){
+        ArrayList<Charge> chargeArrayList = new ArrayList<>();
+        for (Charge charge : ChargeServices.getChargeArrayListByAdmission(admission)) {
+            chargeArrayList.add(charge.clone());
+        }
+        ObservableList<Charge> chargeObservableList = FXCollections.observableList(chargeArrayList);
+        chargeTableView.setItems(chargeObservableList);
+    }
 
+    private void updatePaymentTable(Admission admission){
+        ArrayList<Payment> paymentArrayList = new ArrayList<>();
+        for (Payment payment : PaymentServices.getPaymentArrayListByAdmission(admission)) {
+            paymentArrayList.add(payment.clone());
+        }
+        ObservableList<Payment> paymentObservableList = FXCollections.observableList(paymentArrayList);
+        paymentTableView.setItems(paymentObservableList);
     }
 }

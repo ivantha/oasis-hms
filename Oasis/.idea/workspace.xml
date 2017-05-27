@@ -8,35 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/ChargeConnector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/model/Charge.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/model/ChargeType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/services/ChargeServices.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" afterPath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/common/Session.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/common/Session.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/payment/PaymentManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/payment/PaymentManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PaymentConnector.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PaymentConnector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Payment.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Payment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/PaymentServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/PaymentServices.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.properties" afterPath="$PROJECT_DIR$/config.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/PaymentManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/common/Session.java" afterPath="$PROJECT_DIR$/src/com/oasis/common/Session.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Payment.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Payment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" afterPath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,38 +110,15 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PaymentManagementController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentConnector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="19" column="129" lean-forward="false" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
-              <folding>
-                <marker date="1495879172541" expanded="true" signature="680:757" ph="SELECT * FRO... payment" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="CSS File" />
         <option value="Enum" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -194,12 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/PhysicianConnector.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/admission/NewAdmissionController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/model/WorkingDays.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/model/Ward.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Telephone.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Speciality.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/PhysicianDesignation.java" />
@@ -230,7 +184,6 @@
         <option value="$PROJECT_DIR$/src/com/oasis/controller/admission/NewEditAdmissionController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/management_new_window.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
@@ -238,13 +191,20 @@
         <option value="$PROJECT_DIR$/src/com/oasis/services/ChargeServices.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Charge.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/ChargeType.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/common/Session.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/ChargeConnector.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Payment.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/component/NewPaymentDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPayment.fxml" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/DialogController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPaymentController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/payment/NewPaymentController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPaymentDialog.fxml" />
         <option value="$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/database/connector/ChargeConnector.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
       </list>
     </option>
   </component>
@@ -289,6 +249,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -403,157 +365,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physician" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="payment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="patient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="employee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admission" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -645,7 +483,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -767,32 +605,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oasis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="employee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -826,8 +638,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1502,16 +1312,16 @@
       <workItem from="1495763554977" duration="70000" />
       <workItem from="1495768792581" duration="45000" />
       <workItem from="1495849578573" duration="7288000" />
-      <workItem from="1495872560600" duration="5644000" />
+      <workItem from="1495872560600" duration="8647000" />
+      <workItem from="1495889911070" duration="4155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="586848000" />
+    <option name="totallyTimeSpent" value="594006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1529,7 +1339,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27155825" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2753404" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1572,84 +1382,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/objenesis-tck-2.5.1.jar!/org/objenesis/instantiator/sun/SunReflectionFactoryInstantiator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/objenesis-tck-2.5.1.jar!/org/objenesis/ObjenesisBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/admission/NewEditAdmission.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3307">
-          <caret line="295" column="78" lean-forward="true" selection-start-line="295" selection-start-column="78" selection-end-line="295" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Janitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="5266" column="22" lean-forward="false" selection-start-line="5266" selection-start-column="22" selection-end-line="5266" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Doctor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="50" column="78" lean-forward="false" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/value/ObservableValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="125" column="9" lean-forward="false" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/TableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="842" column="22" lean-forward="false" selection-start-line="842" selection-start-column="22" selection-end-line="842" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -1668,13 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/admission/NewEditAdmissionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1700,7 +1425,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/management_new_window.css" />
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/NewPaymentController.java" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentSideBarController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1733,10 +1457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#796#797#0" expanded="false" />
-            <element signature="e#849#850#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1766,22 +1486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PatientServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PhysicianServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/utils/Cache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1807,15 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="181" column="8" lean-forward="true" selection-start-line="181" selection-start-column="8" selection-end-line="201" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="125" column="55" lean-forward="false" selection-start-line="125" selection-start-column="55" selection-end-line="125" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1826,26 +1521,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Admission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="38" lean-forward="true" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/services/AdmissionServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="12" column="34" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/UIName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="67" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1877,23 +1556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding>
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/AdmissionConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <marker date="1495615216132" expanded="true" signature="853:922" ph="SELECT * FRO... admission" />
-            <marker date="1495615216132" expanded="true" signature="2548:2758" ph="INSERT INTO admission... " />
-            <marker date="1495615216132" expanded="true" signature="3859:4230" ph="UPDATE admis... " />
-            <marker date="1495615216132" expanded="true" signature="5391:5450" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1918,26 +1580,8 @@
         <state relative-caret-position="153">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="13" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="97" lean-forward="false" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Payment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="45" lean-forward="false" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,43 +1589,193 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1495879789849" expanded="true" signature="647:748" ph="SELECT * FRO... charge" />
-            <marker date="1495879789849" expanded="true" signature="647:796" ph="SELECT * FRO... charge" />
-            <marker date="1495879789849" expanded="true" signature="1040:1276" ph="SELECT * FRO... charge" />
-            <marker date="1495879789849" expanded="true" signature="1520:1783" ph="SELECT * FRO... charge" />
+            <marker date="1495895399445" expanded="true" signature="5406:5558" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PhysicianServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/SpecialityConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Admission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PatientServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="221" column="13" lean-forward="false" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/SpecialityManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="96" column="49" lean-forward="false" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NewPaymentDialog.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPaymentController.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/DialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/payment/NewPaymentDialog.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/admission/NewEditAdmissionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1530">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="163" column="11" lean-forward="false" selection-start-line="163" selection-start-column="11" selection-end-line="163" selection-end-column="11" />
+          <folding>
+            <element signature="e#6390#6391#0" expanded="false" />
+            <element signature="e#6438#6439#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/PaymentServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/admission/AdmissionManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="127" column="76" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="76" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/PaymentConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="19" column="129" lean-forward="false" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
+        <state relative-caret-position="612">
+          <caret line="46" column="40" lean-forward="false" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
           <folding>
-            <marker date="1495879172541" expanded="true" signature="680:757" ph="SELECT * FRO... payment" />
+            <marker date="1495896017253" expanded="true" signature="680:757" ph="SELECT * FRO... payment" />
+            <marker date="1495896017253" expanded="true" signature="1571:1692" ph="INSERT INTO payment... " />
+            <marker date="1495896017253" expanded="true" signature="2192:2249" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/AdmissionConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="1156">
+          <caret line="83" column="53" lean-forward="true" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
           <folding>
-            <marker date="1495876742967" expanded="true" signature="5613:5765" ph="..." />
+            <marker date="1495615216132" expanded="true" signature="853:922" ph="SELECT * FRO... admission" />
+            <marker date="1495615216132" expanded="true" signature="2548:2758" ph="INSERT INTO admission... " />
+            <marker date="1495615216132" expanded="true" signature="3859:4230" ph="UPDATE admis... " />
+            <marker date="1495615216132" expanded="true" signature="5391:5450" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/PaymentManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="114" column="11" lean-forward="true" selection-start-line="114" selection-start-column="11" selection-end-line="114" selection-end-column="11" />
+        <state relative-caret-position="969">
+          <caret line="166" column="9" lean-forward="true" selection-start-line="166" selection-start-column="9" selection-end-line="166" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/payment/NewPaymentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/UIName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -27,7 +27,7 @@ public class PaymentConnector extends Connect {
                 double amount = resultSet.getDouble("payment.amount");
                 Date paymentDate = resultSet.getDate("payment.payment_date");
 
-                Payment payment = new Payment(id, amount, paymentDate);
+                Payment payment = new Payment(id, admission.getId(), amount, paymentDate);
                 paymentHashMap.put(id, payment);
             }
         } catch (SQLException e) {
@@ -35,5 +35,32 @@ public class PaymentConnector extends Connect {
         }
 
         return paymentHashMap;
+    }
+
+    public void newPayment(Payment payment) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "payment(admission_id, amount, payment_date) " +
+                    "VALUES(?, ?, ?)");
+            preparedStatement.setInt(1, payment.getAdmissionId());
+            preparedStatement.setDouble(2, payment.getAmount());
+            preparedStatement.setObject(3, payment.getPaymentDate());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void deletePayment(Payment payment) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM payment " +
+                    "WHERE id = ?");
+            preparedStatement.setInt(1, payment.getId());
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
