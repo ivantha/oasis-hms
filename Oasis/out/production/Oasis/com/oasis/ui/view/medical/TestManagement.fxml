@@ -89,7 +89,7 @@
                   <Label text="Description" />
                   <AnchorPane GridPane.columnIndex="1">
                      <children>
-                        <TextArea fx:id="descriptionTextArea" prefHeight="95.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="0.0" />
+                        <TextArea fx:id="descriptionTextArea" prefHeight="95.0" prefWidth="250.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="0.0" />
                      </children>
                   </AnchorPane>
                </children>

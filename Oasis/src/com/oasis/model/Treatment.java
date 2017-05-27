@@ -9,8 +9,14 @@ public class Treatment implements Model<Treatment>{
     private int id;
     private StringProperty description = new SimpleStringProperty();
     private StringProperty result = new SimpleStringProperty();
-    private DoubleProperty price = new SimpleDoubleProperty();
     private ObjectProperty<Date> giveDate = new SimpleObjectProperty<>();
+
+    public Treatment(int id, String description, String result, Date giveDate) {
+        this.id = id;
+        this.description.setValue(description);
+        this.result.setValue(result);
+        this.giveDate.setValue(giveDate);
+    }
 
     @Override
     public String toString() {
@@ -62,18 +68,6 @@ public class Treatment implements Model<Treatment>{
 
     public void setResult(String result) {
         this.result.set(result);
-    }
-
-    public double getPrice() {
-        return price.get();
-    }
-
-    public DoubleProperty priceProperty() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price.set(price);
     }
 
     public Date getGiveDate() {

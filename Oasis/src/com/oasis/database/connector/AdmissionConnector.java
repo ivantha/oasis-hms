@@ -35,13 +35,9 @@ public class AdmissionConnector extends Connect {
                 Doctor leadingConsultant = new Doctor(EmployeeServices.getEmployeeById(
                         resultSet.getInt("admission.leading_consultant_id")));
                 String cause = resultSet.getString("admission.cause");
-                LocalDate admissionDate = resultSet.getDate("admission.admission_date").toLocalDate();
+                Date admissionDate = resultSet.getDate("admission.admission_date");
 
-                Date releaseDateDate = resultSet.getDate("admission.release_date");
-                LocalDate releaseDate = null;
-                if(null != releaseDateDate){
-                    releaseDate = releaseDateDate.toLocalDate();
-                }
+                Date releaseDate = resultSet.getDate("admission.release_date");
 
                 Admission admission = new Admission(id, patient, physician, admissionConsultant, leadingConsultant, cause, admissionDate, releaseDate);
                 admissionHashMap.put(id, admission);
@@ -63,11 +59,11 @@ public class AdmissionConnector extends Connect {
             preparedStatement.setInt(3, admission.getAdmissionConsultantObjectProperty().getId());
             preparedStatement.setInt(4, admission.getLeadingConsultantObjectProperty().getId());
             preparedStatement.setString(5, admission.getCause());
-            preparedStatement.setDate(6, Date.valueOf(admission.getAdmissionDateObjectProperty()));
+            preparedStatement.setDate(6, new Date(admission.getAdmissionDateObjectProperty().getTime()));
             if(admission.getReleaseDateObjectProperty() == null){
                 preparedStatement.setNull(7, Types.DATE);
             }else {
-                preparedStatement.setDate(7, Date.valueOf(admission.getReleaseDateObjectProperty()));
+                preparedStatement.setDate(7, new Date(admission.getReleaseDateObjectProperty().getTime()));
             }
 
             preparedStatement.execute();
@@ -92,11 +88,11 @@ public class AdmissionConnector extends Connect {
             preparedStatement.setInt(3, admission.getAdmissionConsultantObjectProperty().getId());
             preparedStatement.setInt(4, admission.getLeadingConsultantObjectProperty().getId());
             preparedStatement.setString(5, admission.getCause());
-            preparedStatement.setDate(6, Date.valueOf(admission.getAdmissionDateObjectProperty()));
+            preparedStatement.setDate(6, new Date(admission.getAdmissionDateObjectProperty().getTime()));
             if(null == admission.getReleaseDateObjectProperty()){
                 preparedStatement.setNull(7, Types.DATE);
             }else {
-                preparedStatement.setDate(7, Date.valueOf(admission.getReleaseDateObjectProperty()));
+                preparedStatement.setDate(7, new Date(admission.getReleaseDateObjectProperty().getTime()));
             }
             preparedStatement.setInt(8, admission.getId());
 

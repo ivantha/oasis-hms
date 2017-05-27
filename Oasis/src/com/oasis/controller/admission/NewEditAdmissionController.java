@@ -13,6 +13,8 @@ import com.oasis.services.PatientServices;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.AutoCompleteFXC;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,6 +22,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -115,7 +118,6 @@ public class NewEditAdmissionController implements Controller {
         leadingConsultantAutoCompleteFXC.unBindList();
 
         causeTextArea.textProperty().unbindBidirectional(admission.causeProperty());
-        admissionDateDatePicker.valueProperty().unbindBidirectional(admission.admissionDateObjectPropertyProperty());
     }
 
     public void bindFields(Admission admission){
@@ -125,7 +127,6 @@ public class NewEditAdmissionController implements Controller {
         leadingConsultantAutoCompleteFXC.bindList(admission.leadingConsultantObjectPropertyProperty());
 
         causeTextArea.textProperty().bindBidirectional(admission.causeProperty());
-        admissionDateDatePicker.valueProperty().bindBidirectional(admission.admissionDateObjectPropertyProperty());
     }
 
     public void todayButtonOnAction(ActionEvent actionEvent) {
@@ -133,6 +134,8 @@ public class NewEditAdmissionController implements Controller {
     }
 
     public void okButtonOnAction(ActionEvent actionEvent) {
+        tempAdmission.setAdmissionDateObjectProperty(Date.valueOf(admissionDateDatePicker.getValue()));
+
         ArrayList<Admission> admissionArrayList = new ArrayList<>();
         admissionArrayList.add(tempAdmission);
         if (!isEditingMode) {

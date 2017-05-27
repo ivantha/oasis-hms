@@ -36,16 +36,16 @@ public class PaymentManagementController implements Controller{
     @FXML
     private TableColumn<Admission, Integer> admissionIdTableColumn;
     @FXML
-    private TableColumn<Admission, LocalDate> admissionDateTableColumn;
+    private TableColumn<Admission, Date> admissionDateTableColumn;
     @FXML
-    private TableColumn<Admission, LocalDate> releaseDateTableColumn;
+    private TableColumn<Admission, Date> releaseDateTableColumn;
 
     @FXML
     private TableView<Charge> chargeTableView;
     @FXML
     private TableColumn<Charge, Double> chargeAmountTableColumn;
     @FXML
-    private TableColumn<Charge, LocalDate> chargedDateTableColumn;
+    private TableColumn<Charge, Date> chargedDateTableColumn;
     @FXML
     private TableColumn<Charge, ChargeType> typeTableColumn;
 

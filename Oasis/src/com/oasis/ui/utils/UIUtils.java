@@ -21,6 +21,12 @@ public class UIUtils {
             case ADMISSION_MANAGEMENT:
                 name = "Admission management";
                 break;
+            case NEW_EDIT_TREATMENT:
+                name = "New treatment";
+                break;
+            case TREATMENT_MANAGEMENT:
+                name = "Treatment management";
+                break;
 
             //Payment
             case PAYMENT_MANAGEMENT:
@@ -33,12 +39,6 @@ public class UIUtils {
                 break;
             case ETHNICITY_MANAGEMENT:
                 name = "Ethnicity management";
-                break;
-            case NEW_TREATMENT:
-                name = "New treatment";
-                break;
-            case TREATMENT_MANAGEMENT:
-                name = "Treatment management";
                 break;
             case NEW_EDIT_PATIENT:
                 name = "New patient";

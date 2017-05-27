@@ -10,8 +10,6 @@
             <children>
                 <Button fx:id="newPatientButton" mnemonicParsing="false" onAction="#newPatientButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="New patient" />
                 <Button fx:id="patientManagementButton" mnemonicParsing="false" onAction="#patientManagementButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="Patient management" />
-                <Button fx:id="newTreatmentButton" mnemonicParsing="false" onAction="#newTreatmentButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="New treatment" />
-                <Button fx:id="treatmentManagementButton" mnemonicParsing="false" onAction="#treatmentManagementButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="Treatment management" />
                 <Button fx:id="ethnicityButton" mnemonicParsing="false" onAction="#ethnicityButtonOnAction" prefHeight="40.0" prefWidth="300.0" styleClass="launcherSideButton" text="Ethnicity" />
             </children>
         </VBox>

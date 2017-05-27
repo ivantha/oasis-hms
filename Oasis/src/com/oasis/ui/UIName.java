@@ -25,6 +25,8 @@ public enum UIName {
     //Admission
     NEW_EDIT_ADMISSION("/com/oasis/ui/view/admission/NewEditAdmission.fxml"),
     ADMISSION_MANAGEMENT("/com/oasis/ui/view/admission/AdmissionManagement.fxml"),
+    NEW_EDIT_TREATMENT("/com/oasis/ui/view/admission/NewEditTreatment.fxml"),
+    TREATMENT_MANAGEMENT("/com/oasis/ui/view/admission/TreatmentManagement.fxml"),
 
     //Payment
     PAYMENT_MANAGEMENT("/com/oasis/ui/view/payment/PaymentManagement.fxml"),
@@ -32,8 +34,6 @@ public enum UIName {
     //Patient
     NEW_ETHNICITY("/com/oasis/ui/view/patient/NewEthnicity.fxml"),
     ETHNICITY_MANAGEMENT("/com/oasis/ui/view/patient/EthnicityManagement.fxml"),
-    NEW_TREATMENT("/com/oasis/ui/view/patient/NewTreatment.fxml"),
-    TREATMENT_MANAGEMENT("/com/oasis/ui/view/patient/TreatmentManagement.fxml"),
     NEW_EDIT_PATIENT("/com/oasis/ui/view/patient/NewEditPatient.fxml"),
     PATIENT_MANAGEMENT("/com/oasis/ui/view/patient/PatientManagement.fxml"),
     PATIENT_DETAILS_POPOVER("/com/oasis/ui/view/patient/PatientDetailsPopOver.fxml"),

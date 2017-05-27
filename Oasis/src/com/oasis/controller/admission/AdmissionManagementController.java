@@ -30,6 +30,7 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -50,9 +51,9 @@ public class AdmissionManagementController implements Controller{
     @FXML
     private TableColumn<Admission, Doctor> leadingConsultantTableColumn;
     @FXML
-    private TableColumn<Admission, LocalDate> admissionDateTableColumn;
+    private TableColumn<Admission, Date> admissionDateTableColumn;
     @FXML
-    private TableColumn<Admission, LocalDate> releaseDateTableColumn;
+    private TableColumn<Admission, Date> releaseDateTableColumn;
 
     @FXML
     private TextArea causeTextArea;

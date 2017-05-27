@@ -9,6 +9,7 @@ import com.oasis.model.ChargeType;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.HashMap;
 
 public class ChargeConnector extends Connect{
@@ -52,7 +53,7 @@ public class ChargeConnector extends Connect{
                 int id = resultSet.getInt("charge.id");
                 double amount = resultSet.getDouble("charge.amount");
                 String description = resultSet.getString("charge.description");
-                LocalDate chargedDate = resultSet.getDate("charge.charged_date").toLocalDate();
+                Date chargedDate = resultSet.getDate("charge.charged_date");
 
                 Charge charge = new Charge(id, amount, description, chargedDate, chargeType);
                 chargeHashMap.put(id, charge);

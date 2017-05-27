@@ -17,6 +17,8 @@ public class AdmissionSideBarController implements Controller{
     private Button newAdmissionButton;
     @FXML
     private Button admissionManagementButton;
+    @FXML
+    private Button treatmentManagementButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -24,6 +26,8 @@ public class AdmissionSideBarController implements Controller{
         newAdmissionButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
         admissionManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.ADMISSION_MANAGEMENT));
         admissionManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
+        treatmentManagementButton.setOnDragDetected(new DynamicButtonDragDetectedEventHandler(UIName.TREATMENT_MANAGEMENT));
+        treatmentManagementButton.setOnDragDone(new DynamicButtonDragDoneEventHandler());
     }
 
     @Override
@@ -39,5 +43,10 @@ public class AdmissionSideBarController implements Controller{
     @FXML
     public void admissionManagementButtonOnAction(ActionEvent actionEvent) {
         UIFactory.launchUI(UIName.ADMISSION_MANAGEMENT, true);
+    }
+
+    @FXML
+    public void treatmentManagementButtonOnAction(ActionEvent actionEvent) {
+        UIFactory.launchUI(UIName.TREATMENT_MANAGEMENT, true);
     }
 }

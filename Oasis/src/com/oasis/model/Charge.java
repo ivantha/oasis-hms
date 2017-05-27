@@ -4,15 +4,16 @@ import com.oasis.common.Session;
 import javafx.beans.property.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Charge implements Model<Charge>{
     private int id;
     private DoubleProperty amount = new SimpleDoubleProperty();
     private StringProperty description = new SimpleStringProperty();
-    private ObjectProperty<LocalDate> chargedDate = new SimpleObjectProperty<>();
+    private ObjectProperty<Date> chargedDate = new SimpleObjectProperty<>();
     private ObjectProperty<ChargeType> chargeType = new SimpleObjectProperty<>();
 
-    public Charge(int id, double amount, String description, LocalDate chargedDate, ChargeType chargeType) {
+    public Charge(int id, double amount, String description, Date chargedDate, ChargeType chargeType) {
         this.id = id;
         this.amount.setValue(amount);
         this.description.setValue(description);
@@ -62,15 +63,15 @@ public class Charge implements Model<Charge>{
         this.description.set(description);
     }
 
-    public LocalDate getChargedDate() {
+    public Date getChargedDate() {
         return chargedDate.get();
     }
 
-    public ObjectProperty<LocalDate> chargedDateProperty() {
+    public ObjectProperty<Date> chargedDateProperty() {
         return chargedDate;
     }
 
-    public void setChargedDate(LocalDate chargedDate) {
+    public void setChargedDate(Date chargedDate) {
         this.chargedDate.set(chargedDate);
     }
 

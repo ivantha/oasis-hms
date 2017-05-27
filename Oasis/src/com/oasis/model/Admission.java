@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 public class Admission implements Model<Admission>{
     private int id = 0;
@@ -15,14 +16,14 @@ public class Admission implements Model<Admission>{
     private ObjectProperty<Doctor> admissionConsultantObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Doctor> leadingConsultantObjectProperty = new SimpleObjectProperty<>();
     private StringProperty cause = new SimpleStringProperty();
-    private ObjectProperty<LocalDate> admissionDateObjectProperty = new SimpleObjectProperty<>();
-    private ObjectProperty<LocalDate> releaseDateObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<Date> admissionDateObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<Date> releaseDateObjectProperty = new SimpleObjectProperty<>();
 
     public Admission() {
     }
 
     public Admission(int id, Patient patient, Physician physician, Doctor admissionConsultant,
-                     Doctor leadingConsultant, String cause, LocalDate admissionDate, LocalDate releaseDate) {
+                     Doctor leadingConsultant, String cause, Date admissionDate, Date releaseDate) {
         this.id = id;
         this.patientObjectProperty.setValue(patient);
         this.physicianObjectProperty.setValue(physician);
@@ -124,27 +125,27 @@ public class Admission implements Model<Admission>{
         this.cause.set(cause);
     }
 
-    public LocalDate getAdmissionDateObjectProperty() {
+    public Date getAdmissionDateObjectProperty() {
         return admissionDateObjectProperty.get();
     }
 
-    public ObjectProperty<LocalDate> admissionDateObjectPropertyProperty() {
+    public ObjectProperty<Date> admissionDateObjectPropertyProperty() {
         return admissionDateObjectProperty;
     }
 
-    public void setAdmissionDateObjectProperty(LocalDate admissionDateObjectProperty) {
+    public void setAdmissionDateObjectProperty(Date admissionDateObjectProperty) {
         this.admissionDateObjectProperty.set(admissionDateObjectProperty);
     }
 
-    public LocalDate getReleaseDateObjectProperty() {
+    public Date getReleaseDateObjectProperty() {
         return releaseDateObjectProperty.get();
     }
 
-    public ObjectProperty<LocalDate> releaseDateObjectPropertyProperty() {
+    public ObjectProperty<Date> releaseDateObjectPropertyProperty() {
         return releaseDateObjectProperty;
     }
 
-    public void setReleaseDateObjectProperty(LocalDate releaseDateObjectProperty) {
+    public void setReleaseDateObjectProperty(Date releaseDateObjectProperty) {
         this.releaseDateObjectProperty.set(releaseDateObjectProperty);
     }
 }
