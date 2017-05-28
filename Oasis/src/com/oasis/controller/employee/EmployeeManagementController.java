@@ -13,6 +13,7 @@ import com.oasis.model.Gender;
 import com.oasis.services.EmployeeServices;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import com.oasis.utils.SystemFunction;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,6 +37,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class EmployeeManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Employee> employeeTableView;
     @FXML
@@ -103,6 +107,8 @@ public class EmployeeManagementController implements Controller{
     private HashMap<Integer, Employee> tempEmployeeHashMap = new HashMap<>();
     private HashMap<Integer, Employee> editedEmployeeHashMap = new HashMap<>();
     private HashMap<Integer, Employee> deletedEmployeeHashMap = new HashMap<>();
+
+    private SearchFXC<Employee> employeeSearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -188,8 +194,11 @@ public class EmployeeManagementController implements Controller{
             employeeArrayList.add(employee.clone());
             tempEmployeeHashMap.put(employee.getId(), employee.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Employee> employeeObservableList = FXCollections.observableList(employeeArrayList);
-        employeeTableView.setItems(employeeObservableList);
+        employeeSearchFXC = new SearchFXC<>(searchTextField, employeeTableView, employeeObservableList,
+                "getFirstName", "getMiddleName", "getLastName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         firstNameTableColumn.setCellValueFactory(param -> param.getValue().firstNameProperty());

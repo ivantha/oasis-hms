@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/management_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.patient.PatientManagementController">
    <children>
       <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0">
@@ -22,7 +21,7 @@
                   <Label text="Search" />
                   <HBox alignment="CENTER_LEFT" spacing="5.0">
                      <children>
-                        <TextField prefHeight="25.0" prefWidth="250.0" />
+                        <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="250.0" />
                         <Button fx:id="clearButton" mnemonicParsing="false" />
                      </children>
                   </HBox>

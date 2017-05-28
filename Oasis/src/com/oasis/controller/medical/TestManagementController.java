@@ -5,6 +5,7 @@ import com.oasis.factory.UIFactory;
 import com.oasis.model.Test;
 import com.oasis.services.TestServices;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +20,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class TestManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Test> testTableView;
     @FXML
@@ -49,6 +53,8 @@ public class TestManagementController implements Controller{
     private HashMap<Integer, Test> tempTestHashMap = new HashMap<>();
     private HashMap<Integer, Test> editedTestHashMap = new HashMap<>();
     private HashMap<Integer, Test> deletedTestHashMap = new HashMap<>();
+
+    private SearchFXC<Test> testSearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -83,8 +89,11 @@ public class TestManagementController implements Controller{
             testArrayList.add(test.clone());
             tempTestHashMap.put(test.getId(), test.clone());
         }
-        ObservableList<Test> raceObservableList = FXCollections.observableList(testArrayList);
-        testTableView.setItems(raceObservableList);
+
+        searchTextField.setText(null);
+        ObservableList<Test> testObservableList = FXCollections.observableList(testArrayList);
+        testSearchFXC = new SearchFXC<>(searchTextField, testTableView, testObservableList,
+                "getName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameTableColumn.setCellValueFactory(param -> param.getValue().nameProperty());

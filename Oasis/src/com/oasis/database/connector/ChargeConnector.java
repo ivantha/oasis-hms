@@ -8,7 +8,8 @@ import com.oasis.model.ChargeType;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
+import java.sql.Statement;
+import java.sql.Types;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -61,5 +62,62 @@ public class ChargeConnector extends Connect{
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void newCharge(Charge charge) {
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "charge(amount, description, charged_date) " +
+                    "VALUES(?, ?, ?)");
+            preparedStatement.setDouble(1, charge.getAmount());
+            if(null == charge.getDescription()){
+                preparedStatement.setNull(2, Types.VARCHAR);
+            }else {
+                preparedStatement.setString(2, charge.getDescription());
+            }
+            preparedStatement.setDate(3, new java.sql.Date(charge.getChargedDate().getTime()));
+
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public int newChargeWithReturnId(Charge charge) {
+        int chardeId = 0;
+
+        try {
+            PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+                    "charge(amount, description, charged_date) " +
+                    "VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setDouble(1, charge.getAmount());
+            if(null == charge.getDescription()){
+                preparedStatement.setNull(2, Types.VARCHAR);
+            }else {
+                preparedStatement.setString(2, charge.getDescription());
+            }
+            preparedStatement.setDate(3, new java.sql.Date(charge.getChargedDate().getTime()));
+
+            preparedStatement.execute();
+            ResultSet resultSet = preparedStatement.getGeneratedKeys();
+
+            if (resultSet.next()) {
+                chardeId = resultSet.getInt(1);
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return chardeId;
+    }
+
+    public void updateCharge(Charge charge) {
+
+    }
+
+    public void deleteCharge(Charge charge) {
+
     }
 }

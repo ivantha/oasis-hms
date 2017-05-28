@@ -13,6 +13,9 @@ public class Charge implements Model<Charge>{
     private ObjectProperty<Date> chargedDate = new SimpleObjectProperty<>();
     private ObjectProperty<ChargeType> chargeType = new SimpleObjectProperty<>();
 
+    public Charge() {
+    }
+
     public Charge(int id, double amount, String description, Date chargedDate, ChargeType chargeType) {
         this.id = id;
         this.amount.setValue(amount);
@@ -29,6 +32,35 @@ public class Charge implements Model<Charge>{
     @Override
     public boolean isEmpty() {
         return false;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!Charge.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        Charge c = (Charge) obj;
+        if(c.getId() != getId()){
+            return false;
+        }
+        if(c.getAmount() != getAmount()){
+            return false;
+        }
+        if(c.getDescription() != getDescription()){
+            return false;
+        }
+        if(c.getChargedDate() != getChargedDate()){
+            return false;
+        }
+        if(c.getChargeType() != getChargeType()){
+            return false;
+        }
+
+        return true;
     }
 
     public int getId() {

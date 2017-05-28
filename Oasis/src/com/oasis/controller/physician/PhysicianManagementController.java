@@ -6,6 +6,7 @@ import com.oasis.model.Physician;
 import com.oasis.model.PhysicianDesignation;
 import com.oasis.services.PhysicianServices;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,6 +20,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class PhysicianManagementController implements Controller {
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Physician> physicianTableView;
     @FXML
@@ -57,6 +61,8 @@ public class PhysicianManagementController implements Controller {
     private HashMap<Integer, Physician> tempPhysicianHashMap = new HashMap<>();
     private HashMap<Integer, Physician> editedPhysicianHashMap = new HashMap<>();
     private HashMap<Integer, Physician> deletedPhysicianHashMap = new HashMap<>();
+
+    private SearchFXC<Physician> physicianSearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -97,8 +103,11 @@ public class PhysicianManagementController implements Controller {
             physicianArrayList.add(physician.clone());
             tempPhysicianHashMap.put(physician.getId(), physician.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Physician> physicianObservableList = FXCollections.observableList(physicianArrayList);
-        physicianTableView.setItems(physicianObservableList);
+        physicianSearchFXC = new SearchFXC<>(searchTextField, physicianTableView, physicianObservableList,
+                "getFirstName", "getMiddleName", "getLastName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         firstNameTableColumn.setCellValueFactory(param -> param.getValue().firstNameProperty());

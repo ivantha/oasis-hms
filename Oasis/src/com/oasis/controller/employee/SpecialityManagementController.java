@@ -5,6 +5,7 @@ import com.oasis.factory.UIFactory;
 import com.oasis.model.Speciality;
 import com.oasis.services.SpecialityServices;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +19,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class SpecialityManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Speciality> specialityTableView;
     @FXML
@@ -44,6 +48,8 @@ public class SpecialityManagementController implements Controller{
     private HashMap<Integer, Speciality> tempSpecialityHashMap = new HashMap<>();
     private HashMap<Integer, Speciality> editedSpecialityHashMap = new HashMap<>();
     private HashMap<Integer, Speciality> deletedSpecialityHashMap = new HashMap<>();
+
+    private SearchFXC<Speciality> specialitySearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -76,8 +82,11 @@ public class SpecialityManagementController implements Controller{
             specialityArrayList.add(speciality.clone());
             tempSpecialityHashMap.put(speciality.getId(), speciality.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Speciality> specialityObservableList = FXCollections.observableList(specialityArrayList);
-        specialityTableView.setItems(specialityObservableList);
+        specialitySearchFXC = new SearchFXC<>(searchTextField, specialityTableView, specialityObservableList,
+                "getName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameTableColumn.setCellValueFactory(param -> param.getValue().nameProperty());

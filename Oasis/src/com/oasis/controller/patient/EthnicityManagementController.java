@@ -5,6 +5,7 @@ import com.oasis.factory.UIFactory;
 import com.oasis.model.Ethnicity;
 import com.oasis.services.EthnicityServices;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +22,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class EthnicityManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Ethnicity> ethnicityTableView;
     @FXML
@@ -43,6 +47,8 @@ public class EthnicityManagementController implements Controller{
     private HashMap<Integer, Ethnicity> tempEthnicityHashMap = new HashMap<>();
     private HashMap<Integer, Ethnicity> editedEthnicityHashMap = new HashMap<>();
     private HashMap<Integer, Ethnicity> deletedEthnicityHashMap = new HashMap<>();
+
+    private SearchFXC<Ethnicity> ethnicitySearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -73,8 +79,11 @@ public class EthnicityManagementController implements Controller{
             ethnicityArrayList.add(ethnicity.clone());
             tempEthnicityHashMap.put(ethnicity.getId(), ethnicity.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Ethnicity> ethnicityObservableList = FXCollections.observableList(ethnicityArrayList);
-        ethnicityTableView.setItems(ethnicityObservableList);
+        ethnicitySearchFXC = new SearchFXC<>(searchTextField, ethnicityTableView, ethnicityObservableList,
+                "getName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameTableColumn.setCellValueFactory(param -> param.getValue().nameProperty());

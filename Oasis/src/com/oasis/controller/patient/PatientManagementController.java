@@ -9,6 +9,7 @@ import com.oasis.services.EthnicityServices;
 import com.oasis.services.PatientServices;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,6 +29,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class PatientManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Patient> patientTableView;
     @FXML
@@ -78,6 +82,8 @@ public class PatientManagementController implements Controller{
     private HashMap<Integer, Patient> tempPatientHashMap = new HashMap<>();
     private HashMap<Integer, Patient> editedPatientHashMap = new HashMap<>();
     private HashMap<Integer, Patient> deletedPatientHashMap = new HashMap<>();
+
+    private SearchFXC<Patient> patientSearchFXC;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -136,8 +142,11 @@ public class PatientManagementController implements Controller{
             patientArrayList.add(patient.clone());
             tempPatientHashMap.put(patient.getId(), patient.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Patient> patientObservableList = FXCollections.observableList(patientArrayList);
-        patientTableView.setItems(patientObservableList);
+        patientSearchFXC = new SearchFXC<>(searchTextField, patientTableView, patientObservableList,
+                "getFirstName", "getMiddleName", "getLastName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         firstNameTableColumn.setCellValueFactory(param -> param.getValue().firstNameProperty());

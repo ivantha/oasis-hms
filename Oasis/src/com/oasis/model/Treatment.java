@@ -9,13 +9,17 @@ public class Treatment implements Model<Treatment>{
     private int id;
     private StringProperty description = new SimpleStringProperty();
     private StringProperty result = new SimpleStringProperty();
-    private ObjectProperty<Date> giveDate = new SimpleObjectProperty<>();
+    private ObjectProperty<Date> givenDateObjectProperty = new SimpleObjectProperty<>();
+    private ObjectProperty<Charge> chargeObjectProperty = new SimpleObjectProperty<>();
 
-    public Treatment(int id, String description, String result, Date giveDate) {
+    public Treatment() {
+    }
+
+    public Treatment(int id, String description, String result, Date givenDateObjectProperty) {
         this.id = id;
         this.description.setValue(description);
         this.result.setValue(result);
-        this.giveDate.setValue(giveDate);
+        this.givenDateObjectProperty.setValue(givenDateObjectProperty);
     }
 
     @Override
@@ -25,7 +29,28 @@ public class Treatment implements Model<Treatment>{
 
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if (obj == null) {
+            return false;
+        }
+        if (!Treatment.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        Treatment t = (Treatment) obj;
+        if(t.getId() != getId()){
+            return false;
+        }
+        if(t.getDescription() != getDescription()){
+            return false;
+        }
+        if(t.getResult() != getResult()){
+            return false;
+        }
+        if(t.getGivenDateObjectProperty() != getGivenDateObjectProperty()){
+            return false;
+        }
+
+        return true;
     }
 
     @Override
@@ -70,15 +95,27 @@ public class Treatment implements Model<Treatment>{
         this.result.set(result);
     }
 
-    public Date getGiveDate() {
-        return giveDate.get();
+    public Date getGivenDateObjectProperty() {
+        return givenDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> giveDateProperty() {
-        return giveDate;
+    public ObjectProperty<Date> givenDateObjectPropertyProperty() {
+        return givenDateObjectProperty;
     }
 
-    public void setGiveDate(Date giveDate) {
-        this.giveDate.set(giveDate);
+    public void setGivenDateObjectProperty(Date givenDateObjectProperty) {
+        this.givenDateObjectProperty.set(givenDateObjectProperty);
+    }
+
+    public Charge getChargeObjectProperty() {
+        return chargeObjectProperty.get();
+    }
+
+    public ObjectProperty<Charge> chargeObjectPropertyProperty() {
+        return chargeObjectProperty;
+    }
+
+    public void setChargeObjectProperty(Charge chargeObjectProperty) {
+        this.chargeObjectProperty.set(chargeObjectProperty);
     }
 }

@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/management_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.TreatmentManagementController">
    <children>
       <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
@@ -45,8 +44,6 @@
       </AnchorPane>
       <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
          <children>
-            <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button fx:id="deleteButton" layoutX="861.0" layoutY="185.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" />
             <GridPane layoutX="60.0" layoutY="30.0" prefHeight="201.0" prefWidth="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="48.0" />
@@ -60,7 +57,6 @@
                   <TextArea fx:id="causeTextArea" editable="false" maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                </children>
             </GridPane>
-            <Button fx:id="editButton" layoutX="970.0" layoutY="141.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit" />
             <GridPane layoutX="388.0" layoutY="20.0" prefHeight="201.0" prefWidth="324.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="10.0" prefWidth="48.0" />
@@ -71,9 +67,13 @@
                </rowConstraints>
                <children>
                   <Label text="Result" GridPane.valignment="TOP" />
-                  <TextArea fx:id="resultTextArea" editable="false" maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                  <TextArea fx:id="resultTextArea" maxHeight="100.0" prefHeight="100.0" prefWidth="270.0" wrapText="true" GridPane.columnIndex="1" GridPane.valignment="TOP" />
                </children>
             </GridPane>
+            <Button fx:id="saveButton" layoutX="862.0" layoutY="185.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" />
+            <Button fx:id="newButton" layoutX="1014.0" layoutY="212.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button fx:id="deleteButton" layoutX="970.0" layoutY="145.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" />
+            <Button fx:id="editButton" layoutX="862.0" layoutY="145.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit" />
          </children>
       </AnchorPane>
    </children>

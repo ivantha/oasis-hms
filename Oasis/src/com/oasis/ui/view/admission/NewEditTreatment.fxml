@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.oasis.controller.admission.NewEditTreatmentController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditTreatmentController">
+   <children>
+      <Button fx:id="okButton" layoutX="826.0" layoutY="599.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <GridPane layoutX="60.0" layoutY="60.0" prefHeight="444.0" prefWidth="403.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="113.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="290.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Patient" />
+            <Label text="Admission id" GridPane.rowIndex="1" />
+            <Label text="Description" GridPane.rowIndex="2" />
+            <Label text="Result" GridPane.rowIndex="3" />
+            <Label text="Given date" GridPane.rowIndex="4" />
+            <TextField fx:id="patientTextField" editable="false" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" />
+            <TextField fx:id="admissionIdTextField" editable="false" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="treatmentDescriptionTextArea" maxHeight="125.0" maxWidth="250.0" prefHeight="125.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextArea fx:id="resultTextArea" maxHeight="125.0" maxWidth="250.0" prefHeight="125.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXDatePicker fx:id="givenDateDatePicker" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="522.0" layoutY="30.0" prefHeight="201.0" prefWidth="403.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="113.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="290.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Amount" GridPane.rowIndex="1" />
+            <Label text="Description" GridPane.rowIndex="2" />
+            <Label text="Charged date" GridPane.rowIndex="3" />
+            <TextField fx:id="amountTextField" disable="true" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="chargedDescriptionTextArea" disable="true" maxHeight="125.0" maxWidth="250.0" prefHeight="125.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXDatePicker fx:id="chargedDateDatePicker" disable="true" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Charged" />
+            <CheckBox fx:id="chargedCheckBox" mnemonicParsing="false" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </children>
 </AnchorPane>

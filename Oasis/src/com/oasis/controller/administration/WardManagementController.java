@@ -8,6 +8,7 @@ import com.oasis.model.Ward;
 import com.oasis.services.GenderServices;
 import com.oasis.services.WardServices;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.SearchFXC;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,6 +23,9 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class WardManagementController implements Controller{
+    @FXML
+    private TextField searchTextField;
+
     @FXML
     private TableView<Ward> wardTableView;
     @FXML
@@ -65,6 +69,8 @@ public class WardManagementController implements Controller{
     private HashMap<Integer, Ward> editedWardHashMap = new HashMap<>();
     private HashMap<Integer, Ward> deletedWardHashMap = new HashMap<>();
 
+    private SearchFXC<Ward> wardSearchFXC;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         wardTableView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -104,8 +110,11 @@ public class WardManagementController implements Controller{
             wardArrayList.add(ward.clone());
             tempWardHashMap.put(ward.getId(), ward.clone());
         }
+
+        searchTextField.setText(null);
         ObservableList<Ward> wardObservableList = FXCollections.observableList(wardArrayList);
-        wardTableView.setItems(wardObservableList);
+        wardSearchFXC = new SearchFXC<>(searchTextField, wardTableView, wardObservableList,
+                "getName");
 
         idTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameTableColumn.setCellValueFactory(param -> param.getValue().nameProperty());

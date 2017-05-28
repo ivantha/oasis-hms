@@ -12,4 +12,26 @@ public class ChargeServices {
         chargeArrayList.addAll(Session.chargeConnector.getChargeHashMapByAdmission(admission).values());
         return chargeArrayList;
     }
+
+    public static void newCharge(ArrayList<Charge> chargeArrayList) {
+        for(Charge charge: chargeArrayList){
+            Session.chargeConnector.newCharge(charge);
+        }
+    }
+
+    public static void updateCharge(ArrayList<Charge> chargeArrayList){
+        for(Charge charge: chargeArrayList){
+            Session.chargeConnector.updateCharge(charge);
+        }
+    }
+
+    public static void deleteCharge(ArrayList<Charge> chargeArrayList){
+        for(Charge charge: chargeArrayList){
+            Session.chargeConnector.deleteCharge(charge);
+        }
+    }
+
+    public static int newChargeWithReturnId(Charge charge){
+        return Session.chargeConnector.newChargeWithReturnId(charge);
+    }
 }
