@@ -48,6 +48,7 @@ public class SystemFunction {
         Session.chargeConnector = new ChargeConnector();
         Session.paymentConnector = new PaymentConnector();
         Session.treatmentConnector = new TreatmentConnector();
+        Session.userConnector = new UserConnector();
 
         Session.bloodGroupCache = new Cache<BloodGroup>() {
             @Override
@@ -143,7 +144,8 @@ public class SystemFunction {
             sideButton.getStyleClass().add("tabButton");
 
             UIName uiName = UIName.valueOf(name);
-            sideButton.setText(UIUtils.getUIName(uiName));
+            sideButton.setText("                " + UIUtils.getUIName(uiName));
+            sideButton.getStyleClass().add(uiName.name());
             sideButton.setOnAction(event1 -> {
                 UIFactory.launchUI(uiName, true);
                 lastPressedMainSideButton.setValue(sideButton);

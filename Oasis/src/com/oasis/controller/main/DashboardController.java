@@ -74,11 +74,11 @@ public class DashboardController implements Controller {
                 oldValue.setStyle(null);
             }
 
-            newValue.setStyle("-fx-font-family: 'Calibri';\n" +
-                    "-fx-text-fill: #000000;\n" +
+            newValue.setStyle("-fx-font-family: 'Roboto';\n" +
+                    "-fx-text-fill: #FFFFFF;\n" +
                     "-fx-font-size: 13;\n" +
                     "-fx-background-radius: 0px;\n" +
-                    "-fx-background-color: #d27d1e;");
+                    "-fx-background-color: #AFB42B;");
         });
     }
 

@@ -1,0 +1,29 @@
+#sideBarAnchorPane{
+    -fx-background-color: #16232c;
+}
+
+#workspaceAnchorPane{
+    -fx-background-color: #f2f4f8;
+}
+
+.tabButton{
+    -fx-font-family: 'Calibri';
+    -fx-text-fill: #b4b4b4;
+    -fx-font-size: 13;
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+}
+
+.tabButton:hover{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #16232c;
+}
+
+#controlAnchorPane{
+    -fx-background-color: transparent;
+}
+
+#workspaceAnchorPane{
+    -fx-background-color: #ffffff;
+}
+

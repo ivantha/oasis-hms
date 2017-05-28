@@ -1,7 +1,3 @@
-@font-face {
-    src: url('../fonts/Roboto-Medium.ttf');
-}
-
 .sideBarPane{
    	-fx-background-color: transparent;
     -fx-border-color: #16232c;

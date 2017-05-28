@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="javafx-preloader" name="Oasis_preloader">
+    <output-path>$PROJECT_DIR$/out/artifacts/Oasis_preloader</output-path>
+    <properties id="javafx-preloader-properties">
+      <options>
+        <option name="preloaderClass" value="preloader.OasisPreloader" />
+      </options>
+    </properties>
+    <root id="archive" name="Oasis_preloader.jar" />
+  </artifact>
+</component>

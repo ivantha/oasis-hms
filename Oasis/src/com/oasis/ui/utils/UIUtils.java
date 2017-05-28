@@ -11,7 +11,7 @@ public class UIUtils {
                 name = "New physician";
                 break;
             case PHYSICIAN_MANAGEMENT:
-                name = "Physician management";
+                name = "Physician";
                 break;
 
             //Admission
@@ -19,18 +19,18 @@ public class UIUtils {
                 name = "New admission";
                 break;
             case ADMISSION_MANAGEMENT:
-                name = "Admission management";
+                name = "Admission";
                 break;
             case NEW_EDIT_TREATMENT:
                 name = "New treatment";
                 break;
             case TREATMENT_MANAGEMENT:
-                name = "Treatment management";
+                name = "Treatments";
                 break;
 
             //Payment
             case PAYMENT_MANAGEMENT:
-                name = "Payment management";
+                name = "Payments";
                 break;
 
             //Patient
@@ -38,13 +38,13 @@ public class UIUtils {
                 name = "New ethnicity";
                 break;
             case ETHNICITY_MANAGEMENT:
-                name = "Ethnicity management";
+                name = "Ethnicity";
                 break;
             case NEW_EDIT_PATIENT:
                 name = "New patient";
                 break;
             case PATIENT_MANAGEMENT:
-                name = "Patient management";
+                name = "Patients";
                 break;
 
             //Employee
@@ -52,19 +52,19 @@ public class UIUtils {
                 name = "New speciality";
                 break;
             case SPECIALITY_MANAGEMENT:
-                name = "Speciality management";
+                name = "Specialities";
                 break;
             case NEW_EDIT_EMPLOYEE:
                 name = "New employee";
                 break;
             case EMPLOYEE_MANAGEMENT:
-                name = "Employee management";
+                name = "Employees";
                 break;
             case SUBMIT_ATTENDANCE:
                 name = "Submit attendance";
                 break;
             case ATTENDANCE_MANAGEMENT:
-                name = "Attendance management";
+                name = "Attendance";
                 break;
 
             //Medical
@@ -72,7 +72,7 @@ public class UIUtils {
                 name = "New test";
                 break;
             case TEST_MANAGEMENT:
-                name = "Test management";
+                name = "Tests";
                 break;
 
             //Administration
@@ -80,7 +80,7 @@ public class UIUtils {
                 name = "New ward";
                 break;
             case WARD_MANAGEMENT:
-                name = "Ward management";
+                name = "Wards";
                 break;
         }
 

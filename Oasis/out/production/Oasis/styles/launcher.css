@@ -1,7 +1,3 @@
-@font-face {
-    src: url('../fonts/Roboto-Medium.ttf');
-}
-
 #backgroundAnchorPane{
     -fx-background-color: #1c2b36;
     /*-fx-opacity: 95%;*/

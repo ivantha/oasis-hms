@@ -1,0 +1,45 @@
+@font-face {
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+.backgroundPane {
+    -fx-background-color: #f5f5f5;
+}
+
+#navigationPane {
+    /*-fx-background-color: #ee818b;*/
+    -fx-padding: 0px 30px 0px 30px;
+}
+
+#managePane {
+    /*-fx-background-color: cornflowerblue;*/
+    -fx-padding: 10px 30px 10px 30px;
+}
+
+#editPane {
+    /*-fx-background-color: green;*/
+    -fx-padding: 10px 30px 30px 30px;
+}
+
+#searchPane .label {
+    -fx-font-family: 'Calibri';
+}
+
+#searchPane .button {
+    -fx-background-image: url("../icons/close_dark.png");
+    -fx-background-size: 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50% 50%;
+
+    -fx-min-width: 16px;
+    -fx-min-height: 16px;
+    -fx-max-width: 16px;
+    -fx-max-height: 16px;
+    -fx-border-color: transparent;
+    -fx-background-radius: 8px;
+    -fx-background-insets: 0px;
+}
+
+#searchPane .button:hover {
+    -fx-background-image: url("../icons/close_light.png");
+}

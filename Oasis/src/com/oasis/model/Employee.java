@@ -1,6 +1,5 @@
 package com.oasis.model;
 
-import com.oasis.common.Session;
 import com.oasis.utils.Compare;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
@@ -28,6 +27,8 @@ public class Employee implements Model<Employee> {
     private ArrayList<Address> addressArrayList = new ArrayList<>();
     private ArrayList<Email> emailArrayList = new ArrayList<>();
     private ListProperty<Degree> degreeListProperty;
+    private StringProperty username = new SimpleStringProperty();
+    private StringProperty password = new SimpleStringProperty();
 
     public Employee() {
         ObservableList<Degree> degreeObservableList = FXCollections.observableList(new ArrayList<>());
@@ -145,6 +146,12 @@ public class Employee implements Model<Employee> {
             return false;
         }
         if (!Compare.isEqual(e.getDegreeListProperty(), getDegreeListProperty())) {
+            return false;
+        }
+        if (!(e.getUsername() == null ? getUsername() == null : !e.getUsername().equals(getUsername()))) {
+            return false;
+        }
+        if (!(e.getPassword() == null ? getPassword() == null : !e.getPassword().equals(getPassword()))) {
             return false;
         }
 
@@ -358,6 +365,30 @@ public class Employee implements Model<Employee> {
 
     public void setDegreeListProperty(ObservableList<Degree> degreeListProperty) {
         this.degreeListProperty.set(degreeListProperty);
+    }
+
+    public String getUsername() {
+        return username.get();
+    }
+
+    public StringProperty usernameProperty() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username.set(username);
+    }
+
+    public String getPassword() {
+        return password.get();
+    }
+
+    public StringProperty passwordProperty() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password.set(password);
     }
 
     public boolean isDoctor(){

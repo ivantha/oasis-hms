@@ -1,0 +1,59 @@
+@font-face {
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+#backgroundAnchorPane{
+    -fx-background-color: #ffffff;
+}
+
+#closeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #D32F2F;
+}
+
+#closeButton:hover{
+    -fx-background-color: #F44336;
+}
+
+#minimizeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #FFA000;
+}
+
+#minimizeButton:hover{
+    -fx-background-color: #FFC107;
+}
+
+.label, .text-field, .password-field{
+    -fx-font-family: 'Roboto Medium';
+    -fx-font-size: 14px;
+}
+
+#signInButton{
+    -fx-font-family: 'Roboto Medium';
+    -fx-font-size: 14px;
+
+    -fx-background-radius: 2px;
+
+    -fx-text-fill: #ffffff;
+
+    -fx-background-color: #1976D2;
+}
+
+#signInButton:hover{
+    -fx-background-color: #2196F3;
+}
+
+#messageLabel{
+    -fx-text-fill: #F44336;
+}

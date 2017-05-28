@@ -34,7 +34,7 @@
                   </AnchorPane>
                   <AnchorPane fx:id="loginAnchorPane" layoutY="32.0" prefHeight="102.0" prefWidth="200.0" />
                   <AnchorPane fx:id="statisticsAnchorPane" layoutY="416.0" prefHeight="152.0" prefWidth="200.0" />
-                  <AnchorPane fx:id="notificationAnchorPane" layoutY="568.0" prefHeight="130.0" prefWidth="200.0" />
+                  <AnchorPane fx:id="notificationAnchorPane" layoutY="568.0" prefHeight="132.0" prefWidth="200.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="workspaceAnchorPane" prefHeight="700.0" prefWidth="1100.0" HBox.hgrow="ALWAYS" />

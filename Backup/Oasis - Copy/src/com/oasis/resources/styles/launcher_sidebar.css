@@ -1,0 +1,26 @@
+@font-face {
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+.sideBarPane{
+   	-fx-background-color: transparent;
+    -fx-border-color: #16232c;
+}
+
+.launcherSideButton{
+    -fx-background-color: #1c2b36;
+    -fx-background-radius: 0px;
+
+    -fx-text-fill: #b4b4b4;
+    -fx-font-size: 13;
+    -fx-wrap-text: true;
+}
+
+.launcherSideButton:hover{
+    -fx-background-color: #16232c;
+    -fx-text-fill: #ffffff;
+}
+
+.launcherSideDetailsPanel{
+	-fx-border-color: #16232c;
+}

@@ -1,3 +1,9 @@
+* {
+    -dark-primary-color: #0097A7;
+    -default-primary-color: #B2EBF2;
+    -border-color: transparent;
+}
+
 #closeButton{
     -fx-min-width: 14px;
     -fx-min-height: 14px;
@@ -5,11 +11,11 @@
     -fx-max-height: 14px;
     -fx-border-radius: 7px;
     -fx-background-radius: 7px;
-    -fx-background-color: #d22015;
+    -fx-background-color: #D32F2F;
 }
 
 #closeButton:hover{
-    -fx-background-color: #ee2015;
+    -fx-background-color: #F44336;
 }
 
 #minimizeButton{
@@ -19,37 +25,37 @@
     -fx-max-height: 14px;
     -fx-border-radius: 7px;
     -fx-background-radius: 7px;
-    -fx-background-color: #d27d1e;
+    -fx-background-color: #FFA000;
 }
 
 #minimizeButton:hover{
-    -fx-background-color: #eb951e;
+    -fx-background-color: #FFC107;
 }
 
 #controlAnchorPane{
-    -fx-border-width: 0px 0px 2px 0px;
-    -fx-border-color: #16232c;
-    -fx-background-color: #1c2b36;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: -dark-primary-color;
 }
 
 #loginAnchorPane{
-    -fx-border-width: 0px 0px 2px 0px;
-    -fx-border-color: #16232c;
-    -fx-background-color: #1c2b36;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: -dark-primary-color;
 }
 
 #navigationAnchorPane{
-    -fx-border-width: 0px 0px 2px 0px;
-    -fx-border-color: #16232c;
-    -fx-background-color: #1c2b36;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: -dark-primary-color;
 }
 
 #statisticsAnchorPane{
-    -fx-border-width: 0px 0px 2px 0px;
-    -fx-border-color: #16232c;
-    -fx-background-color: #1c2b36;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: -dark-primary-color;
 }
 
 #notificationAnchorPane{
-    -fx-background-color: #1c2b36;
+    -fx-background-color: -dark-primary-color;
 }
