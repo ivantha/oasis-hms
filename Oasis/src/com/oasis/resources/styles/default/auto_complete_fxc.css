@@ -1,0 +1,13 @@
+@import "palatte.css";
+
+.text-field{
+    /*-fx-focus-color: -fx-control-inner-background;*/
+    /*-fx-faint-focus-color: -fx-control-inner-background;*/
+    /*-fx-focus-color: transparent;*/
+    /*-fx-faint-focus-color: transparent;*/
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #0093ff;
+    -fx-text-fill: white;
+}

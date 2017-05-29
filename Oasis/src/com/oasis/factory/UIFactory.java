@@ -1,5 +1,6 @@
 package com.oasis.factory;
 
+import com.oasis.common.Session;
 import com.oasis.controller.Controller;
 import com.oasis.controller.main.DashboardController;
 import com.oasis.ui.UI;
@@ -8,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 
 public class UIFactory {
@@ -40,9 +42,14 @@ public class UIFactory {
     private static UI loadUI(UIName uiName, String location) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(UIFactory.class.getResource(location));
         Parent parent = fxmlLoader.load();
+        URL cssURL = UIFactory.class.getClassLoader().getResource("com/oasis/resources/styles/" +
+                Session.APP_CONFIG.getTheme() + "/" + uiName.getStyle() + ".css");
+        parent.setStyle(cssURL.toExternalForm());
         Controller controller = fxmlLoader.getController();
+
         UI ui = new UI(parent, controller);
         UIFactory.UI_HASH_MAP.put(uiName, ui);
+
         return ui;
     }
 

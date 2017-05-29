@@ -1,0 +1,240 @@
+@import "palatte.css";
+
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#sideBarAnchorPane{
+    -fx-background-color: -white-smoke-color;
+}
+
+#workspaceAnchorPane {
+    -fx-background-color: -default-background-color;
+}
+
+#closeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #D32F2F;
+}
+
+#closeButton:hover{
+    -fx-background-color: #F44336;
+}
+
+#minimizeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #FFA000;
+}
+
+#minimizeButton:hover{
+    -fx-background-color: #FFC107;
+}
+
+#controlAnchorPane{
+    /*-fx-border-width: 0px 0px 1px 0px;*/
+    /*-fx-border-color: -default-border-color;*/
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+#loginAnchorPane{
+    /*-fx-border-width: 0px 0px 1px 0px;*/
+    /*-fx-border-color: -default-border-color;*/
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+#navigationAnchorPane{
+    /*-fx-border-width: 0px 0px 1px 0px;*/
+    /*-fx-border-color: -default-border-color;*/
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+#statisticsAnchorPane{
+    /*-fx-border-width: 0px 0px 1px 0px;*/
+    /*-fx-border-color: -default-border-color;*/
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+#notificationAnchorPane{
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+.tabButton {
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: -default-font-color;
+    -fx-font-size: 13;
+    -fx-alignment: center-left;
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    /*-fx-effect: dropshadow(gaussian, rgba(0, 151, 167, 0.1), 1, 1.0, 0, 0);*/
+
+    -fx-background-size: 23px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 13%;
+}
+
+.tabButton:hover {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: -light-primary-color;
+}
+
+#controlAnchorPane {
+    -fx-background-color: transparent;
+}
+
+.NEW_PHYSICIAN{
+    -fx-background-image: url("../../icons/sidebar/new_physician_dark.png");
+}
+.NEW_PHYSICIAN:hover{
+    -fx-background-image: url("../../icons/sidebar/new_physician.png");
+}
+
+.PHYSICIAN_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/physicians_dark.png");
+}
+.PHYSICIAN_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/physicians.png");
+}
+
+.NEW_EDIT_ADMISSION{
+    -fx-background-image: url("../../icons/sidebar/new_admission_dark.png");
+}
+.NEW_EDIT_ADMISSION:hover{
+    -fx-background-image: url("../../icons/sidebar/new_admission.png");
+}
+
+.ADMISSION_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/admission_dark.png");
+}
+.ADMISSION_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/admission.png");
+}
+
+.NEW_EDIT_TREATMENT{
+    -fx-background-image: url("../../icons/sidebar/new_treatment_dark.png");
+}
+.NEW_EDIT_TREATMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/new_treatment.png");
+}
+
+.TREATMENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/treatments_dark.png");
+}
+.TREATMENT_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/treatments.png");
+}
+
+.PAYMENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/payments_dark.png");
+}
+.PAYMENT_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/payments.png");
+}
+
+.NEW_ETHNICITY{
+    -fx-background-image: url("../../icons/sidebar/new_ethnicity_dark.png");
+}
+.NEW_ETHNICITY:hover{
+    -fx-background-image: url("../../icons/sidebar/new_ethnicity.png");
+}
+
+.ETHNICITY_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/ethnicity_dark.png");
+}
+.ETHNICITY_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/ethnicity.png");
+}
+
+.NEW_EDIT_PATIENT{
+    -fx-background-image: url("../../icons/sidebar/new_patient_dark.png");
+}
+.NEW_EDIT_PATIENT:hover{
+    -fx-background-image: url("../../icons/sidebar/new_patient.png");
+}
+
+.PATIENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/patients_dark.png");
+}
+.PATIENT_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/patients.png");
+}
+
+.NEW_SPECIALITY{
+    -fx-background-image: url("../../icons/sidebar/new_speciality_dark.png");
+}
+.NEW_SPECIALITY:hover{
+    -fx-background-image: url("../../icons/sidebar/new_speciality.png");
+}
+
+.SPECIALITY_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/specialities_dark.png");
+}
+.SPECIALITY_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/specialities.png");
+}
+
+.NEW_EDIT_EMPLOYEE{
+    -fx-background-image: url("../../icons/sidebar/new_employee_dark.png");
+}
+.NEW_EDIT_EMPLOYEE:hover{
+    -fx-background-image: url("../../icons/sidebar/new_employee.png");
+}
+
+.EMPLOYEE_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/employee_dark.png");
+}
+.EMPLOYEE_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/employee.png");
+}
+
+.SUBMIT_ATTENDANCE{
+    -fx-background-image: url("../../icons/sidebar/submit_attendance_dark.png");
+}
+.SUBMIT_ATTENDANCE:hover{
+    -fx-background-image: url("../../icons/sidebar/submit_attendance.png");
+}
+
+.ATTENDANCE_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/attendance_dark.png");
+}
+.ATTENDANCE_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/attendance.png");
+}
+
+.NEW_TEST{
+    -fx-background-image: url("../../icons/sidebar/new_test_dark.png");
+}
+.NEW_TEST:hover{
+    -fx-background-image: url("../../icons/sidebar/new_test.png");
+}
+
+.TEST_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/tests_dark.png");
+}
+.TEST_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/tests.png");
+}
+
+.NEW_WARD{
+    -fx-background-image: url("../../icons/sidebar/new_ward_dark.png");
+}
+.NEW_WARD:hover{
+    -fx-background-image: url("../../icons/sidebar/new_ward.png");
+}
+
+.WARD_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/wards_dark.png");
+}
+.WARD_MANAGEMENT:hover{
+    -fx-background-image: url("../../icons/sidebar/wards.png");
+}
+

@@ -1,0 +1,62 @@
+@import "palatte.css";
+
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#backgroundAnchorPane{
+    -fx-background-color: -default-background-color;
+    -fx-padding: 30px;
+}
+
+#closeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #D32F2F;
+}
+
+#closeButton:hover{
+    -fx-background-color: #F44336;
+}
+
+#minimizeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #FFA000;
+}
+
+#minimizeButton:hover{
+    -fx-background-color: #FFC107;
+}
+
+.label, .text-field, .password-field{
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 14px;
+}
+
+#signInButton{
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 14px;
+
+    -fx-background-radius: 2px;
+
+    -fx-text-fill: #ffffff;
+
+    -fx-background-color: #0097A7;
+}
+
+#signInButton:hover{
+    -fx-background-color: #00BCD4;
+}
+
+#messageLabel{
+    -fx-text-fill: #F44336;
+}

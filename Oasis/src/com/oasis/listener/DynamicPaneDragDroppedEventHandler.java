@@ -34,7 +34,9 @@ public class DynamicPaneDragDroppedEventHandler implements EventHandler<DragEven
             sideButton.getStyleClass().add("tabButton");
 
             UIName uiName = UIName.valueOf(String.valueOf(dragboard.getContent(Temp.BUTTON_NAME_DATA_FORMAT)));
-            sideButton.setText(UIUtils.getUIName(uiName));
+            sideButton.setText("                " + UIUtils.getUIName(uiName));
+            sideButton.getStyleClass().add(uiName.name());
+
             sideButton.setOnAction(event1 -> {
                 UIFactory.launchUI(uiName, true);
                 lastPressedMainSideButton.setValue(sideButton);

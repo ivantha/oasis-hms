@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 
-<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditTreatmentController">
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditTreatmentController">
    <children>
       <Button fx:id="okButton" layoutX="826.0" layoutY="599.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <GridPane layoutX="60.0" layoutY="60.0" prefHeight="444.0" prefWidth="403.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">

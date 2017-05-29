@@ -57,7 +57,7 @@ public class OasisApplication extends Application {
         ////////////////////////////////////////////////////////////
 //        SystemFunction.start();
 //
-//        UI ui = UIFactory.getUI(UIName.DASHBOARD);
+//        UI ui = UIFactory.getUI(UIName.LOGIN);
 //        Parent parent = ui.getParent();
 //        Scene scene = new Scene(parent, 1300, 700);
 //

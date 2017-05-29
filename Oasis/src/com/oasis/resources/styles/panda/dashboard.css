@@ -1,0 +1,156 @@
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#workspaceAnchorPane {
+    -fx-background-color: #FFFFFF;
+}
+
+* {
+    -dark-primary-color: #0097A7;
+    -default-primary-color: #B2EBF2;
+    -border-color: transparent;
+}
+
+#closeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #D32F2F;
+}
+
+#closeButton:hover{
+    -fx-background-color: #F44336;
+}
+
+#minimizeButton{
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-background-color: #FFA000;
+}
+
+#minimizeButton:hover{
+    -fx-background-color: #FFC107;
+}
+
+#controlAnchorPane{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: #122f42;
+}
+
+#loginAnchorPane{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: #122f42;
+}
+
+#navigationAnchorPane{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: #183447;
+}
+
+#statisticsAnchorPane{
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-color: -border-color;
+    -fx-background-color: #183447;
+}
+
+#notificationAnchorPane{
+    -fx-background-color: #183447;
+}
+
+.tabButton {
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13;
+    -fx-alignment: center-left;
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 151, 167, 0.1), 1, 1.0, 0, 0);
+
+    -fx-background-size: 23px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 13%;
+}
+
+.tabButton:hover {
+    -fx-background-color: #27a2df;
+}
+
+#controlAnchorPane {
+    -fx-background-color: transparent;
+}
+
+.NEW_PHYSICIAN{
+    -fx-background-image: url("../../icons/sidebar/New physician.png");
+}
+.PHYSICIAN_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Physicians.png");
+}
+.NEW_EDIT_ADMISSION{
+    -fx-background-image: url("../../icons/sidebar/New admission.png");
+}
+.ADMISSION_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Admission.png");
+}
+.NEW_EDIT_TREATMENT{
+    -fx-background-image: url("../../icons/sidebar/New treatment.png");
+}
+.TREATMENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Treatments.png");
+}
+.PAYMENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Payments.png");
+}
+.NEW_ETHNICITY{
+    -fx-background-image: url("../../icons/sidebar/New ethnicity.png");
+}
+.ETHNICITY_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Ethnicity.png");
+}
+.NEW_EDIT_PATIENT{
+    -fx-background-image: url("../../icons/sidebar/New patient.png");
+}
+.PATIENT_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Patients.png");
+}
+.NEW_SPECIALITY{
+    -fx-background-image: url("../../icons/sidebar/New speciality.png");
+}
+.SPECIALITY_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Specialities.png");
+}
+.NEW_EDIT_EMPLOYEE{
+    -fx-background-image: url("../../icons/sidebar/New employee.png");
+}
+.EMPLOYEE_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Employee.png");
+}
+.SUBMIT_ATTENDANCE{
+    -fx-background-image: url("../../icons/sidebar/Submit attendance.png");
+}
+.ATTENDANCE_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Attendance.png");
+}
+.NEW_TEST{
+    -fx-background-image: url("../../icons/sidebar/New test.png");
+}
+.TEST_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Tests.png");
+}
+.NEW_WARD{
+    -fx-background-image: url("../../icons/sidebar/New ward.png");
+}
+.WARD_MANAGEMENT{
+    -fx-background-image: url("../../icons/sidebar/Wards.png");
+}
+

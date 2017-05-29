@@ -4,6 +4,7 @@ public class ConfigurationFile {
     private ConfigurationHandler configurationHandler;
 
     private String stageTitle;
+    private String theme;
 
     //Database
     private String serverIP;
@@ -24,6 +25,8 @@ public class ConfigurationFile {
         this.configurationHandler = configurationHandler;
 
         this.stageTitle = configurationHandler.getProperty("stage_title");
+        this.theme = configurationHandler.getProperty("theme");
+
         this.serverIP = configurationHandler.getProperty("server_ip");
         this.userName = configurationHandler.getProperty("user_name");
         this.password = configurationHandler.getProperty("password");
@@ -45,6 +48,15 @@ public class ConfigurationFile {
     public void setStageTitle(String stageTitle) {
         this.stageTitle = stageTitle;
         configurationHandler.setProperty("stage_title", stageTitle);
+    }
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+        configurationHandler.setProperty("theme", theme);
     }
 
     public String getServerIP() {

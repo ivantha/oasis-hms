@@ -1,0 +1,133 @@
+@import "palatte.css";
+
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#backgroundAnchorPane{
+    -fx-background-color: #153346;
+    /*-fx-opacity: 95%;*/
+}
+
+.launcherTile{
+    -fx-background-color: transparent;
+}
+
+.launcherTile .label{
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13;
+    -fx-wrap-text: true;
+    -fx-alignment: top-center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 151, 167, 0.1), 1, 1.0, 0, 0);
+    /*-fx-text-alignment: center;*/
+}
+
+.launcherTile .boxImage{
+    -fx-background-size: 50px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50% 50%;
+}
+
+.launcherTile:hover{
+    -fx-background-color: #27a2df;
+}
+
+/*#employeeTile .boxImage{*/
+    /*-fx-background-image: url("../icons/employee_dark.png");*/
+/*}*/
+/*#employeeTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/employee_light.png");*/
+/*}*/
+
+/*#physicianTile .boxImage{*/
+    /*-fx-background-image: url("../icons/physician_dark.png");*/
+/*}*/
+/*#physicianTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/physician_light.png");*/
+/*}*/
+
+/*#patientTile .boxImage{*/
+    /*-fx-background-image: url("../icons/patient_dark.png");*/
+/*}*/
+/*#patientTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/patient_light.png");*/
+/*}*/
+
+/*#admissionTile .boxImage{*/
+    /*-fx-background-image: url("../icons/admission_dark.png");*/
+/*}*/
+/*#admissionTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/admission_light.png");*/
+/*}*/
+
+/*#paymentTile .boxImage{*/
+    /*-fx-background-image: url("../icons/payment_dark.png");*/
+/*}*/
+/*#paymentTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/payment_light.png");*/
+/*}*/
+
+/*#medicalTile .boxImage{*/
+    /*-fx-background-image: url("../icons/medical_dark.png");*/
+/*}*/
+/*#medicalTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/medical_light.png");*/
+/*}*/
+
+/*#administrationTile .boxImage{*/
+    /*-fx-background-image: url("../icons/administration_dark.png");*/
+/*}*/
+/*#administrationTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/administration_light.png");*/
+/*}*/
+
+/*#reportsTile .boxImage{*/
+    /*-fx-background-image: url("../icons/reports_dark.png");*/
+/*}*/
+/*#reportsTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/reports_light.png");*/
+/*}*/
+
+/*#settingsTile .boxImage{*/
+    /*-fx-background-image: url("../icons/settings_dark.png");*/
+/*}*/
+/*#settingsTile:hover .boxImage{*/
+    /*-fx-background-image: url("../icons/settings_light.png");*/
+/*}*/
+
+#employeeTile .boxImage{
+    -fx-background-image: url("../../icons/employee_light.png");
+}
+
+#physicianTile .boxImage{
+    -fx-background-image: url("../../icons/physician_light.png");
+}
+
+#patientTile .boxImage{
+    -fx-background-image: url("../../icons/patient_light.png");
+}
+
+#admissionTile .boxImage{
+    -fx-background-image: url("../../icons/admission_light.png");
+}
+
+#paymentTile .boxImage{
+    -fx-background-image: url("../../icons/payment_light.png");
+}
+
+#medicalTile .boxImage{
+    -fx-background-image: url("../../icons/medical_light.png");
+}
+
+#administrationTile .boxImage{
+    -fx-background-image: url("../../icons/administration_light.png");
+}
+
+#reportsTile .boxImage{
+    -fx-background-image: url("../../icons/reports_light.png");
+}
+
+#settingsTile .boxImage{
+    -fx-background-image: url("../../icons/settings_light.png");
+}

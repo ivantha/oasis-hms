@@ -75,10 +75,10 @@ public class DashboardController implements Controller {
             }
 
             newValue.setStyle("-fx-font-family: 'Roboto';\n" +
-                    "-fx-text-fill: #FFFFFF;\n" +
+//                    "-fx-text-fill: #FFFFFF;\n" +
                     "-fx-font-size: 13;\n" +
                     "-fx-background-radius: 0px;\n" +
-                    "-fx-background-color: #AFB42B;");
+                    "-fx-background-color: #03A9F4;");
         });
     }
 

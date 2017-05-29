@@ -46,6 +46,8 @@ public class ConfigurationHandler {
 
     public void setDefaultConfigurations() {
         this.setProperty("stage_title", "Oasis - Hospital Management System");
+        this.setProperty("theme", "default");
+
         this.setProperty("server_ip", "localhost");
         this.setProperty("user_name", "root");
         this.setProperty("password", "");

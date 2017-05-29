@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditAdmissionController">
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditAdmissionController">
    <children>
       <GridPane layoutX="150.0" layoutY="150.0" prefHeight="450.0" prefWidth="440.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Oasis.jar" size="6681125" download="eager" />
+    <jar href="Oasis.jar" size="6236440" download="eager" />
     <jar href="ext_lib\annotations-java8.jar" size="25243" download="eager" />
     <jar href="ext_lib\cloner.jar" size="23991" download="eager" />
     <jar href="ext_lib\commons-io-2.5.jar" size="208696" download="eager" />

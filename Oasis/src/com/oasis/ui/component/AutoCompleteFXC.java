@@ -59,7 +59,7 @@ public class AutoCompleteFXC<T> extends Pane {
         this.getChildren().add(vBox);
 
         this.setMaxHeight(parentHeight);
-        this.getStylesheets().add(this.getClass().getResource("/com/oasis/resources/styles/auto_complete_fxc.css").toExternalForm());
+        this.getStylesheets().add(this.getClass().getResource("/styles/default/auto_complete_fxc.css").toExternalForm());
 
         textField.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue) {
