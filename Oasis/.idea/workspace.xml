@@ -8,50 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/control_pane.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/navigation_pane.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/close_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/close_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/minus_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/minus_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/close_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/close_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/minus_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/minus_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/close_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/close_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/minus_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/minus_light.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imgscalr/imgscalr.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/ui/utils/ImageScaler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/OasisApplication$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/OasisApplication$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/OasisApplication.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/main/OasisApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/utils/SystemFunction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Oasis.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Oasis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/dashboard.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/palatte.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/palatte.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Dashboard.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/dashboard.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/palatte.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/palatte.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Oasis.iml" afterPath="$PROJECT_DIR$/Oasis.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" afterPath="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java" afterPath="$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/palatte.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/palatte.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" afterPath="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -153,22 +118,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="209" column="5" lean-forward="false" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="366">
+              <caret line="216" column="53" lean-forward="false" selection-start-line="216" selection-start-column="53" selection-end-line="216" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -181,8 +148,8 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -231,8 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/oasis/ui/component/SearchFXC.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/physician/PhysicianManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/EthnicityManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/administration/WardManagementController.java" />
@@ -275,13 +240,15 @@
         <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/palatte.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/navigation_pane.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/control_pane.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/utils/SystemFunction.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/utils/ImgScaler.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/utils/ImageScaler.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
       </list>
     </option>
   </component>
@@ -307,7 +274,9 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -450,6 +419,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -797,6 +792,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="nodejs_interpreter_path" value="C:/Program Files (x86)/nodejs/node" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/imgscalr/src" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -807,19 +803,19 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\resources\styles\panda" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\resources\styles" />
-      <recent name="D:\Git\hospital-management-system\Oasis\OasisPreloader\src\preloader" />
-      <recent name="D:\Git\hospital-management-system\Oasis\DeepClone\src" />
-      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\A" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\resources\styles\default" />
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\admission" />
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\employee" />
       <recent name="D:\Git\hospital-management-system\Oasis\resources" />
       <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\ui\view\patient" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\resources\styles\panda" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\resources\styles" />
+      <recent name="D:\Git\hospital-management-system\Oasis\OasisPreloader\src\preloader" />
+      <recent name="D:\Git\hospital-management-system\Oasis\DeepClone\src" />
+      <recent name="D:\Git\hospital-management-system\Oasis\src\com\oasis\A" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1445,15 +1441,16 @@
       <workItem from="1496023627949" duration="9585000" />
       <workItem from="1496039745654" duration="13246000" />
       <workItem from="1496056481649" duration="948000" />
-      <workItem from="1496063859934" duration="12335000" />
+      <workItem from="1496063859934" duration="15370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="693483000" />
+    <option name="totallyTimeSpent" value="696518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1471,7 +1468,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1514,45 +1511,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/DegreeConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/EmployeeConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="181" column="35" lean-forward="true" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/database/connector/UserConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/UserServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/common/Temp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -1817,14 +1775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="209" column="5" lean-forward="false" selection-start-line="209" selection-start-column="5" selection-end-line="209" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1837,14 +1787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" lean-forward="false" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1881,11 +1823,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imgscalr/src/org/imgscalr/AsyncScalr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/image/BufferedImage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/awt/image/BufferedImageOp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgscalr/src/org/imgscalr/Scalr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1452">
+          <caret line="332" column="34" lean-forward="false" selection-start-line="332" selection-start-column="34" selection-end-line="332" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/ImageScaler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="216" column="53" lean-forward="false" selection-start-line="216" selection-start-column="53" selection-end-line="216" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

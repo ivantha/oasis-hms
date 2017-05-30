@@ -39,6 +39,7 @@
         </element>
       </element>
       <element id="artifact" artifact-name="Oasis_preloader" />
+      <element id="module-output" name="imgscalr" />
     </root>
   </artifact>
 </component>

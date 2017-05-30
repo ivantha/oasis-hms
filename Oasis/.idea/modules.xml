@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/DeepClone/DeepClone.iml" filepath="$PROJECT_DIR$/DeepClone/DeepClone.iml" />
       <module fileurl="file://$PROJECT_DIR$/Oasis.iml" filepath="$PROJECT_DIR$/Oasis.iml" />
       <module fileurl="file://$PROJECT_DIR$/OasisPreloader/OasisPreloader.iml" filepath="$PROJECT_DIR$/OasisPreloader/OasisPreloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imgscalr/imgscalr.iml" filepath="$PROJECT_DIR$/imgscalr/imgscalr.iml" />
     </modules>
   </component>
 </project>

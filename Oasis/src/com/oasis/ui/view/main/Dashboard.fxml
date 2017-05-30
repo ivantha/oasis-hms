@@ -37,8 +37,8 @@
                                     <Circle fx:id="profilePictureCircle" fill="DODGERBLUE" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
                                     <AnchorPane prefWidth="160.0">
                                        <children>
-                                          <Label fx:id="roleLabel" layoutX="4.0" layoutY="24.0" text="&lt;Role&gt;" />
-                                          <Label fx:id="nameLabel" layoutX="4.0" layoutY="41.0" text="&lt;Name&gt;" />
+                                          <Label fx:id="roleLabel" layoutX="7.0" layoutY="24.0" text="&lt;Role&gt;" />
+                                          <Label fx:id="nameLabel" layoutX="7.0" layoutY="41.0" text="&lt;Name&gt;" />
                                        </children>
                                     </AnchorPane>
                                  </children>

@@ -6,6 +6,7 @@ import com.oasis.factory.UIFactory;
 import com.oasis.listener.*;
 import com.oasis.main.Main;
 import com.oasis.ui.UIName;
+import com.oasis.ui.utils.ImageScaler;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
@@ -13,6 +14,7 @@ import javafx.animation.TranslateTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -27,10 +29,15 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.imgscalr.Scalr;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static org.imgscalr.Scalr.OP_ANTIALIAS;
+import static org.imgscalr.Scalr.OP_BRIGHTER;
 
 public class DashboardController implements Controller {
     @FXML
@@ -205,8 +212,9 @@ public class DashboardController implements Controller {
         if(savedImage.exists()){
             profilePictureImage = new Image(savedImage.toURI().toString());
         }
+        Image resizedImage = ImageScaler.resizeImage(profilePictureImage, 30);
 
-        profilePictureCircle.setFill(new ImagePattern(profilePictureImage));
+        profilePictureCircle.setFill(new ImagePattern(resizedImage));
     }
 
     public void signOutButtonOnAction(ActionEvent actionEvent) {
