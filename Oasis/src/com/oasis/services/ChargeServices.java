@@ -31,7 +31,7 @@ public class ChargeServices {
         }
     }
 
-    public static int newChargeWithReturnId(Charge charge){
-        return Session.chargeConnector.newChargeWithReturnId(charge);
+    public static int newChargeWithReturid(Charge charge){
+        return Session.chargeConnector.newChargeWithReturid(charge);
     }
 }

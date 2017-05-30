@@ -162,11 +162,11 @@ public class PhysicianConnector extends Connect {
         }
     }
 
-    private void newPhysicianTelephone(int physicianId, Telephone telephone) throws SQLException {
+    private void newPhysicianTelephone(int physiciaid, Telephone telephone) throws SQLException {
         PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "physician_telephone(physician_id, telephone) " +
                 "VALUES(?, ?, ?)");
-        preparedStatement1.setInt(1, physicianId);
+        preparedStatement1.setInt(1, physiciaid);
         preparedStatement1.setString(2, telephone.getTelephone());
 
         preparedStatement1.execute();

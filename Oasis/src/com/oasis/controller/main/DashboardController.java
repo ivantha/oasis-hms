@@ -6,38 +6,36 @@ import com.oasis.factory.UIFactory;
 import com.oasis.listener.*;
 import com.oasis.main.Main;
 import com.oasis.ui.UIName;
+import com.oasis.ui.component.Notification;
+import com.oasis.ui.component.NotificationType;
 import com.oasis.ui.utils.ImageScaler;
-import com.oasis.utils.SystemFunction;
+import com.oasis.services.SystemServices;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.embed.swing.SwingFXUtils;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.effect.DropShadow;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.paint.Color;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import javafx.util.Duration;
-import org.imgscalr.Scalr;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static org.imgscalr.Scalr.OP_ANTIALIAS;
-import static org.imgscalr.Scalr.OP_BRIGHTER;
 
 public class DashboardController implements Controller {
     @FXML
@@ -63,6 +61,11 @@ public class DashboardController implements Controller {
     private AnchorPane mainSideButton7AnchorPane;
 
     @FXML
+    private AnchorPane notificationAnchorPane;
+    @FXML
+    private ListView<Notification> notificationListView;
+
+    @FXML
     private Button signOutButton;
 
     private boolean isLauncherVisible = false;
@@ -85,13 +88,13 @@ public class DashboardController implements Controller {
         setAsDynamic(mainSideButton6AnchorPane);
         setAsDynamic(mainSideButton7AnchorPane);
 
-        SystemFunction.loadDynamicButton(mainSideButton1AnchorPane, Session.APP_CONFIG.getTabButton1(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton2AnchorPane, Session.APP_CONFIG.getTabButton2(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton3AnchorPane, Session.APP_CONFIG.getTabButton3(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton4AnchorPane, Session.APP_CONFIG.getTabButton4(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton5AnchorPane, Session.APP_CONFIG.getTabButton5(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6(), lastPressedMainSideButton);
-        SystemFunction.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton1AnchorPane, Session.APP_CONFIG.getTabButton1(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton2AnchorPane, Session.APP_CONFIG.getTabButton2(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton3AnchorPane, Session.APP_CONFIG.getTabButton3(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton4AnchorPane, Session.APP_CONFIG.getTabButton4(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton5AnchorPane, Session.APP_CONFIG.getTabButton5(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton6AnchorPane, Session.APP_CONFIG.getTabButton6(), lastPressedMainSideButton);
+        SystemServices.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7(), lastPressedMainSideButton);
 
         lastPressedMainSideButton.addListener((observable, oldValue, newValue) -> {
             if(oldValue != null) {
@@ -109,10 +112,44 @@ public class DashboardController implements Controller {
     @Override
     public void refreshView() {
         setLoginDetails();
+
+
+        notificationListView.setItems(Session.notificationObservableList);
+//        notificationListView.setSelectionModel(null);
+
+        Session.notificationObservableList.add(new Notification(1, "One",
+                "This is the first notification", NotificationType.DEFAULT));
+        Session.notificationObservableList.add(new Notification(2, "Successful insertion",
+                "Employee successfully added to the database", NotificationType.SUCCESSFUL));
+        Session.notificationObservableList.add(new Notification(3, "Patient deleted",
+                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL));
+        Session.notificationObservableList.add(new Notification(4, "Error",
+                "Cannot connect with the server", NotificationType.ERROR));
+        Session.notificationObservableList.add(new Notification(5, "Incorrect input",
+                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING));
+        Session.notificationObservableList.add(new Notification(6, "Incorrect input",
+                "Please select a gender", NotificationType.ERROR));
+        Session.notificationObservableList.add(new Notification(7, "Assistive options",
+                "Hover over the options to see tooltips", NotificationType.INFORMATION));
+        Session.notificationObservableList.add(new Notification(8, "One",
+                "This is the first notification", NotificationType.DEFAULT));
+        Session.notificationObservableList.add(new Notification(9, "Successful insertion",
+                "Employee successfully added to the database", NotificationType.SUCCESSFUL));
+        Session.notificationObservableList.add(new Notification(10, "Patient deleted",
+                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL));
+        Session.notificationObservableList.add(new Notification(11, "Error",
+                "Cannot connect with the server", NotificationType.ERROR));
+        Session.notificationObservableList.add(new Notification(12, "Incorrect input",
+                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING));
+        Session.notificationObservableList.add(new Notification(13, "Incorrect input",
+                "Please select a gender", NotificationType.ERROR));
+        Session.notificationObservableList.add(new Notification(14, "Assistive options",
+                "Hover over the options to see tooltips", NotificationType.INFORMATION));
+
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
-        SystemFunction.exit();
+        SystemServices.exit();
     }
 
     public void minimizeButtonOnAction(ActionEvent actionEvent) {
@@ -219,6 +256,6 @@ public class DashboardController implements Controller {
 
     public void signOutButtonOnAction(ActionEvent actionEvent) {
         Stage primaryStage = (Stage) signOutButton.getScene().getWindow();
-        SystemFunction.loadLogin(primaryStage, new SimpleBooleanProperty(Boolean.TRUE));
+        SystemServices.loadLogin(primaryStage, new SimpleBooleanProperty(Boolean.TRUE));
     }
 }

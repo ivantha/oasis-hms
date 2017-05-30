@@ -18,7 +18,7 @@
          <children>
             <TableView fx:id="admissionTableView" layoutX="50.0" layoutY="50.0" prefHeight="370.0" prefWidth="324.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                <columns>
-                  <TableColumn fx:id="admissionIdTableColumn" prefWidth="108.0" text="Admission id" />
+                  <TableColumn fx:id="admissioidTableColumn" prefWidth="108.0" text="Admission id" />
                   <TableColumn fx:id="admissionDateTableColumn" prefWidth="108.0" text="Admission date" />
                   <TableColumn fx:id="releaseDateTableColumn" prefWidth="108.0" text="Release date" />
                </columns>

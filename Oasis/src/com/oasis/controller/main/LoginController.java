@@ -4,19 +4,13 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.oasis.common.Session;
 import com.oasis.controller.Controller;
-import com.oasis.factory.UIFactory;
 import com.oasis.model.Employee;
 import com.oasis.services.UserServices;
-import com.oasis.ui.UI;
-import com.oasis.ui.UIName;
-import com.oasis.utils.SystemFunction;
+import com.oasis.services.SystemServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -51,7 +45,7 @@ public class LoginController implements Controller{
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
-        SystemFunction.exit();
+        SystemServices.exit();
     }
 
     public void minimizeButtonOnAction(ActionEvent actionEvent) {
@@ -74,7 +68,7 @@ public class LoginController implements Controller{
             Session.currentUser = employee;
 
             Stage primaryStage = (Stage) signInButton.getScene().getWindow();
-            SystemFunction.loadDashboard(primaryStage);
+            SystemServices.loadDashboard(primaryStage);
         }
     }
 }

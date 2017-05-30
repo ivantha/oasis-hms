@@ -34,7 +34,7 @@
             <Label text="Result" GridPane.rowIndex="3" />
             <Label text="Given date" GridPane.rowIndex="4" />
             <TextField fx:id="patientTextField" editable="false" maxWidth="250.0" prefWidth="250.0" GridPane.columnIndex="1" />
-            <TextField fx:id="admissionIdTextField" editable="false" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="admissioidTextField" editable="false" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextArea fx:id="treatmentDescriptionTextArea" maxHeight="125.0" maxWidth="250.0" prefHeight="125.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextArea fx:id="resultTextArea" maxHeight="125.0" maxWidth="250.0" prefHeight="125.0" prefWidth="250.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <JFXDatePicker fx:id="givenDateDatePicker" prefWidth="120.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />

@@ -83,7 +83,7 @@ public class ChargeConnector extends Connect{
         }
     }
 
-    public int newChargeWithReturnId(Charge charge) {
+    public int newChargeWithReturid(Charge charge) {
         int chardeId = 0;
 
         try {

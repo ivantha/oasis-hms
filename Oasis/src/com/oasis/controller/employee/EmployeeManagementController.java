@@ -14,7 +14,7 @@ import com.oasis.services.EmployeeServices;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.SearchFXC;
-import com.oasis.utils.SystemFunction;
+import com.oasis.services.SystemServices;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -209,7 +209,7 @@ public class EmployeeManagementController implements Controller{
         dobTableColumn.setCellValueFactory(param -> param.getValue().dobProperty());
         roleTableColumn.setCellValueFactory(param -> param.getValue().employeeRoleProperty());
 
-        SystemFunction.cleanTemp("pp_changed_");
+        SystemServices.cleanTemp("pp_changed_");
     }
 
     public void deleteButtonOnAction(ActionEvent actionEvent) {

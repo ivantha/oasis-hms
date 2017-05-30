@@ -39,9 +39,9 @@ public class TreatmentConnector extends Connect{
         return treatmentHashMap;
     }
 
-    public void newTreatment(Treatment treatment, int admissionId) {
+    public void newTreatment(Treatment treatment, int admissioid) {
         if(null != treatment.getChargeObjectProperty()){
-            int chargeId = ChargeServices.newChargeWithReturnId(treatment.getChargeObjectProperty());
+            int chargeId = ChargeServices.newChargeWithReturid(treatment.getChargeObjectProperty());
             treatment.getChargeObjectProperty().setId(chargeId);
         }
 
@@ -49,7 +49,7 @@ public class TreatmentConnector extends Connect{
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "treatment(admission_id, description, result, given_date, charge_id) " +
                     "VALUES(?, ?, ?, ?, ?)");
-            preparedStatement.setInt(1, admissionId);
+            preparedStatement.setInt(1, admissioid);
             preparedStatement.setString(2, treatment.getDescription());
             preparedStatement.setString(3, treatment.getResult());
             preparedStatement.setDate(4, new java.sql.Date(treatment.getGivenDateObjectProperty().getTime()));

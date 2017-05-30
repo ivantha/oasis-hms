@@ -42,7 +42,7 @@ public class PaymentConnector extends Connect {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "payment(admission_id, amount, payment_date) " +
                     "VALUES(?, ?, ?)");
-            preparedStatement.setInt(1, payment.getAdmissionId());
+            preparedStatement.setInt(1, payment.getAdmissioid());
             preparedStatement.setDouble(2, payment.getAmount());
             preparedStatement.setObject(3, payment.getPaymentDate());
 

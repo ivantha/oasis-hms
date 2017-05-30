@@ -2,6 +2,7 @@
 @import "control_pane.css";
 @import "login_pane.css";
 @import "navigation_pane.css";
+@import "notification_pane.css";
 
 @font-face {
     src: url('../../fonts/Roboto-Regular.ttf');
@@ -14,15 +15,3 @@
 #workspaceAnchorPane {
     -fx-background-color: -default-background-color;
 }
-/*--------------------------------------------------------------------------------------------------------------------*/
-#statisticsAnchorPane{
-    /*-fx-border-width: 0px 0px 1px 0px;*/
-    /*-fx-border-color: -default-border-color;*/
-    /*-fx-background-color: -default-primary-color;*/
-}
-
-#notificationAnchorPane{
-    /*-fx-background-color: -default-primary-color;*/
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
-

@@ -7,19 +7,19 @@ import java.util.Date;
 
 public class Payment implements Model<Payment>{
     private int id;
-    private IntegerProperty admissionId = new SimpleIntegerProperty();
+    private IntegerProperty admissioid = new SimpleIntegerProperty();
     private DoubleProperty amount = new SimpleDoubleProperty();
     private ObjectProperty<Date> paymentDate = new SimpleObjectProperty<>();
 
-    public Payment(int admissionId, double amount, Date paymentDate) {
-        this.admissionId.setValue(admissionId);
+    public Payment(int admissioid, double amount, Date paymentDate) {
+        this.admissioid.setValue(admissioid);
         this.amount.setValue(amount);
         this.paymentDate.setValue(paymentDate);
     }
 
-    public Payment(int id, int admissionId, double amount, Date paymentDate) {
+    public Payment(int id, int admissioid, double amount, Date paymentDate) {
         this.id = id;
-        this.admissionId.setValue(admissionId);
+        this.admissioid.setValue(admissioid);
         this.amount.setValue(amount);
         this.paymentDate.setValue(paymentDate);
     }
@@ -52,16 +52,16 @@ public class Payment implements Model<Payment>{
         this.id = id;
     }
 
-    public int getAdmissionId() {
-        return admissionId.get();
+    public int getAdmissioid() {
+        return admissioid.get();
     }
 
-    public IntegerProperty admissionIdProperty() {
-        return admissionId;
+    public IntegerProperty admissioidProperty() {
+        return admissioid;
     }
 
-    public void setAdmissionId(int admissionId) {
-        this.admissionId.set(admissionId);
+    public void setAdmissioid(int admissioid) {
+        this.admissioid.set(admissioid);
     }
 
     public double getAmount() {

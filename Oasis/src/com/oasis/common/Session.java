@@ -3,8 +3,10 @@ package com.oasis.common;
 import com.oasis.configuration.ConfigurationFile;
 import com.oasis.database.connector.*;
 import com.oasis.model.*;
+import com.oasis.ui.component.Notification;
 import com.oasis.utils.Cache;
 import com.rits.cloning.Cloner;
+import javafx.collections.ObservableList;
 
 public class Session {
     public static ConfigurationFile APP_CONFIG;
@@ -39,4 +41,6 @@ public class Session {
     public static Cloner cloner;
 
     public static Employee currentUser;
+
+    public static ObservableList<Notification> notificationObservableList;
 }

@@ -32,7 +32,7 @@ public class NewEditTreatmentController implements Controller{
     @FXML
     private TextField patientTextField;
     @FXML
-    private TextField admissionIdTextField;
+    private TextField admissioidTextField;
     @FXML
     private TextArea treatmentDescriptionTextArea;
     @FXML
@@ -86,7 +86,7 @@ public class NewEditTreatmentController implements Controller{
         bindFields(tempTreatment);
 
         patientTextField.setText(admission.getPatientObjectProperty().toString());
-        admissionIdTextField.setText(String.valueOf(admission.getId()));
+        admissioidTextField.setText(String.valueOf(admission.getId()));
         chargedCheckBox.setSelected(false);
     }
 

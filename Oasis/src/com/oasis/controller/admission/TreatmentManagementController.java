@@ -40,7 +40,7 @@ public class TreatmentManagementController implements Controller{
     @FXML
     private TableView<Admission> admissionTableView;
     @FXML
-    private TableColumn<Admission, Integer> admissionIdTableColumn;
+    private TableColumn<Admission, Integer> admissioidTableColumn;
     @FXML
     private TableColumn<Admission, Date> admissionDateTableColumn;
     @FXML
@@ -143,7 +143,7 @@ public class TreatmentManagementController implements Controller{
         };
         currentAdmissionObjectProperty.addListener(currentAdmissionChangeListener);
 
-        admissionIdTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        admissioidTableColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         admissionDateTableColumn.setCellValueFactory(param -> param.getValue().admissionDateObjectPropertyProperty());
         releaseDateTableColumn.setCellValueFactory(param -> param.getValue().releaseDateObjectPropertyProperty());
 
