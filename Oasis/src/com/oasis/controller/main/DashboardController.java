@@ -10,6 +10,8 @@ import com.oasis.ui.component.Notification;
 import com.oasis.ui.component.NotificationType;
 import com.oasis.ui.utils.ImageScaler;
 import com.oasis.services.SystemServices;
+import com.sun.javafx.scene.control.skin.VirtualFlow;
+import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
@@ -35,6 +37,7 @@ import javafx.util.Duration;
 
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
@@ -113,9 +116,8 @@ public class DashboardController implements Controller {
     public void refreshView() {
         setLoginDetails();
 
-
         notificationListView.setItems(Session.notificationObservableList);
-//        notificationListView.setSelectionModel(null);
+
 
         Session.notificationObservableList.add(new Notification(1, "One",
                 "This is the first notification", NotificationType.DEFAULT));
@@ -145,7 +147,10 @@ public class DashboardController implements Controller {
                 "Please select a gender", NotificationType.ERROR));
         Session.notificationObservableList.add(new Notification(14, "Assistive options",
                 "Hover over the options to see tooltips", NotificationType.INFORMATION));
+    }
 
+    public ListView<Notification> getNotificationListView() {
+        return notificationListView;
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
@@ -257,5 +262,10 @@ public class DashboardController implements Controller {
     public void signOutButtonOnAction(ActionEvent actionEvent) {
         Stage primaryStage = (Stage) signOutButton.getScene().getWindow();
         SystemServices.loadLogin(primaryStage, new SimpleBooleanProperty(Boolean.TRUE));
+    }
+
+    public IndexedCell<Notification> getNotificationCell(int cellIndex){
+        VirtualFlow virtualFlow = (VirtualFlow) notificationListView.lookup(".virtual-flow");
+        return virtualFlow.getCell(cellIndex);
     }
 }

@@ -56,18 +56,18 @@
     -fx-background-image: url("../../icons/notification/clear_one_light.png");
 }
 
-.list-cell{
+#notificationAnchorPane .list-cell{
     -fx-border-color: null;
 
     -fx-padding: 1px 0px 1px 0px;
     -fx-background-color: null;
 }
 
-.list-cell:filled:focused {
+#notificationAnchorPane .list-cell:filled:focused {
     -fx-background-color: null;
 }
 
-.scroll-bar:vertical {
+#notificationAnchorPane .scroll-bar:vertical {
     -fx-opacity: 0;
 }
 
