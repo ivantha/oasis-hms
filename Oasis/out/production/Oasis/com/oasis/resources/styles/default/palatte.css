@@ -1,6 +1,6 @@
 * {
-    /*-very-dark-primary-color: #0097A7;*/
-    /*-dark-primary-color: #0097A7;*/
+    -very-dark-primary-color: #01579B;
+    -dark-primary-color: #0288D1;
     -default-primary-color: #03A9F4;
     -light-primary-color: #4FC3F7;
     /*-very-light-primary-color: #0097A7;*/
@@ -8,6 +8,7 @@
     -default-accent-color: #C0CA33;
 
     -default-font-color: #3c3c3c;
+    -default-border-color: #3c3c3c;
     -default-background-color: #FFFFFF;
 
     -white-smoke-color: #F5F5F5;

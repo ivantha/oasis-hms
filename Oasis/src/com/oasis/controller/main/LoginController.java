@@ -73,19 +73,8 @@ public class LoginController implements Controller{
         }else{
             Session.currentUser = employee;
 
-            UI ui = UIFactory.getUI(UIName.DASHBOARD);
-            Parent parent = ui.getParent();
-            Scene scene = new Scene(parent, 1300, 700);
-            scene.setOnKeyReleased(event -> {
-                if (event.getCode() == KeyCode.ESCAPE) {
-                    SystemFunction.showLauncher();
-                } else if (event.getCode() == KeyCode.Q) {
-                    SystemFunction.exit();
-                }
-            });
-
             Stage primaryStage = (Stage) signInButton.getScene().getWindow();
-            primaryStage.setScene(scene);
+            SystemFunction.loadDashboard(primaryStage);
         }
     }
 }

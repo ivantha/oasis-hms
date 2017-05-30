@@ -4,42 +4,59 @@ import com.oasis.common.Session;
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
 import com.oasis.listener.*;
+import com.oasis.main.Main;
 import com.oasis.ui.UIName;
 import com.oasis.utils.SystemFunction;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
     @FXML
-    public AnchorPane mainSideButton1AnchorPane;
+    private Circle profilePictureCircle;
     @FXML
-    public AnchorPane mainSideButton2AnchorPane;
+    private Label nameLabel;
     @FXML
-    public AnchorPane mainSideButton3AnchorPane;
+    private Label roleLabel;
+
     @FXML
-    public AnchorPane mainSideButton4AnchorPane;
+    private AnchorPane mainSideButton1AnchorPane;
     @FXML
-    public AnchorPane mainSideButton5AnchorPane;
+    private AnchorPane mainSideButton2AnchorPane;
     @FXML
-    public AnchorPane mainSideButton6AnchorPane;
+    private AnchorPane mainSideButton3AnchorPane;
     @FXML
-    public AnchorPane mainSideButton7AnchorPane;
+    private AnchorPane mainSideButton4AnchorPane;
+    @FXML
+    private AnchorPane mainSideButton5AnchorPane;
+    @FXML
+    private AnchorPane mainSideButton6AnchorPane;
+    @FXML
+    private AnchorPane mainSideButton7AnchorPane;
+
+    @FXML
+    private Button signOutButton;
 
     private boolean isLauncherVisible = false;
     private Parent launcherParent;
@@ -84,7 +101,7 @@ public class DashboardController implements Controller {
 
     @Override
     public void refreshView() {
-
+        setLoginDetails();
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
@@ -177,5 +194,23 @@ public class DashboardController implements Controller {
             this.workspaceAnchorPane.getChildren().clear();
             this.workspaceAnchorPane.getChildren().add(parent);
         }
+    }
+
+    private void setLoginDetails(){
+        nameLabel.setText(Session.currentUser.getFirstName() + " " + Session.currentUser.getLastName());
+        roleLabel.setText(Session.currentUser.getEmployeeRole().getRole());
+
+        Image profilePictureImage = new Image(Main.class.getResourceAsStream("/com/oasis/resources/images/default_profile_picture.png"));
+        File savedImage = new File(System.getProperty("user.dir") + "/profile_pictures/",  "pp_" + Session.currentUser.getId() + ".jpg");
+        if(savedImage.exists()){
+            profilePictureImage = new Image(savedImage.toURI().toString());
+        }
+
+        profilePictureCircle.setFill(new ImagePattern(profilePictureImage));
+    }
+
+    public void signOutButtonOnAction(ActionEvent actionEvent) {
+        Stage primaryStage = (Stage) signOutButton.getScene().getWindow();
+        SystemFunction.loadLogin(primaryStage, new SimpleBooleanProperty(Boolean.TRUE));
     }
 }

@@ -1,0 +1,24 @@
+#loginAnchorPane{
+    /*-fx-border-width: 0px 0px 1px 0px;*/
+    /*-fx-border-color: -default-border-color;*/
+    /*-fx-background-color: -default-primary-color;*/
+}
+
+#loginAnchorPane .label{
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: -default-font-color;
+    -fx-font-size: 12px;
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+#profilePictureCircle{
+    -fx-stroke: null;
+}
+
+#profilePictureCircle:hover{
+    -fx-opacity: 50%;
+
+    -fx-cursor: hand;
+}

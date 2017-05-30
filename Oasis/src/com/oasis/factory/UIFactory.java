@@ -28,6 +28,15 @@ public class UIFactory {
         }
     }
 
+    public static UI getNewUI(UIName uiName) {
+        try {
+            return loadUI(uiName, uiName.getLocation());
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static void initializeAllUIs() {
         for (UIName uiName : UIName.values()) {
             try {

@@ -30,45 +30,12 @@ public class OasisApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
-
-
         SystemFunction.start();
 
         Session.currentUser = UserServices.getUser("ivantha");
 
-        UI ui = UIFactory.getUI(UIName.DASHBOARD);
-        Parent parent = ui.getParent();
-        Scene scene = new Scene(parent, 1300, 700);
-        scene.setOnKeyReleased(event -> {
-            if (event.getCode() == KeyCode.ESCAPE) {
-                SystemFunction.showLauncher();
-            } else if (event.getCode() == KeyCode.Q) {
-                SystemFunction.exit();
-            }
-        });
-
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(scene);
-
-        Platform.runLater(() -> primaryStage.show());
-
-
-        ////////////////////////////////////////////////////////////
-//        SystemFunction.start();
-//
-//        UI ui = UIFactory.getUI(UIName.LOGIN);
-//        Parent parent = ui.getParent();
-//        Scene scene = new Scene(parent, 1300, 700);
-//
-//        primaryStage.initStyle(StageStyle.UNDECORATED);
-//        primaryStage.setScene(scene);
-//
-//        ready.addListener((observable, oldValue, newValue) -> {
-//            if (Boolean.TRUE.equals(newValue)) {
-//                Platform.runLater(() -> primaryStage.show());
-//            }
-//        });
+        SystemFunction.loadDashboard(primaryStage);
     }
 
     public static void main(String[] args) {
