@@ -15,8 +15,13 @@ import javafx.util.Callback;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class NotificationFXC extends ListView<Notification> {
+    private static final int ANIMATE_DURATION = 400;
+
     private ObservableList<Notification> notificationObservableList;
     private int lastNId = 0;
 
@@ -52,12 +57,12 @@ public class NotificationFXC extends ListView<Notification> {
                                         }
 
                                         FadeTransition fadeTransition = new FadeTransition();
-                                        fadeTransition.setDuration(Duration.millis(300));
+                                        fadeTransition.setDuration(Duration.millis(ANIMATE_DURATION));
                                         fadeTransition.setFromValue(0.0);
                                         fadeTransition.setToValue(1.0);
                                         fadeTransition.setNode(this);
 
-                                        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(300));
+                                        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(ANIMATE_DURATION));
                                         translateTransition.setFromX(175);
                                         translateTransition.setToX(0);
                                         translateTransition.setNode(this);
@@ -83,6 +88,23 @@ public class NotificationFXC extends ListView<Notification> {
                 return cell;
             }
         });
+
+        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        Runnable notificationWorker = () -> {
+            ArrayList<Notification> expiredNotificationArrayList = new ArrayList<>();
+            for(Notification notification: notificationObservableList){
+                if(notification.isExpired()){
+                    expiredNotificationArrayList.add(notification);
+                }
+            }
+
+            for(Notification notification: expiredNotificationArrayList){
+                if(notification.isContract()) {
+                    NotificationFXC.this.removeNotification(notification);
+                }
+            }
+        };
+        scheduledExecutorService.scheduleWithFixedDelay(notificationWorker, 1, 1, TimeUnit.SECONDS);
     }
 
     public void addNotification(Notification notification){
@@ -97,12 +119,12 @@ public class NotificationFXC extends ListView<Notification> {
                 notificationObservableList.indexOf(notification));
 
         FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(300));
+        fadeTransition.setDuration(Duration.millis(ANIMATE_DURATION));
         fadeTransition.setFromValue(1.0);
         fadeTransition.setToValue(0.0);
         fadeTransition.setNode(indexedCell);
 
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(300));
+        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(ANIMATE_DURATION));
         translateTransition.setFromX(0);
         translateTransition.setToX(175);
         translateTransition.setNode(indexedCell);

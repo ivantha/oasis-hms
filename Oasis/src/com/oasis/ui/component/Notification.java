@@ -1,10 +1,7 @@
 package com.oasis.ui.component;
 
-import com.oasis.services.SystemServices;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import com.oasis.services.NotificationServices;
+import javafx.beans.property.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -15,7 +12,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-import java.util.Date;
+import java.time.Duration;
+import java.time.Instant;
 
 
 public class Notification extends Pane{
@@ -38,22 +36,20 @@ public class Notification extends Pane{
     private StringProperty heading = new SimpleStringProperty();
     private StringProperty content = new SimpleStringProperty();
     private NotificationType type = NotificationType.DEFAULT;
-    private IntegerProperty timeout = new SimpleIntegerProperty(-1);
+    private LongProperty timeout = new SimpleLongProperty(-1);
     private EventHandler<ActionEvent> eventHandler = null;
-    private Date timestamp;
+    private Instant timestamp = Instant.now();
 
     private Label headingLabel;
     private Label contentLabel;
 
     private int animationCount = 0;
     private boolean isContract = true;
-    private int tempCellIndex = 0;
 
     public Notification(String heading, String content, NotificationType type) {
         this.heading.setValue(heading);
         this.content.setValue(content);
         this.type = type;
-        this.timestamp = new Date();
 
         this.headingLabel = new Label();
         this.contentLabel = new Label();
@@ -72,6 +68,13 @@ public class Notification extends Pane{
                 contract();
             }
         });
+    }
+
+    public Notification(String heading, String content, NotificationType type, long timeout) {
+        this(heading, content, type);
+        this.timeout.setValue(timeout);
+
+
     }
 
     public int getnId() {
@@ -114,12 +117,16 @@ public class Notification extends Pane{
         this.type = type;
     }
 
-    public int getTimeout() {
+    public long getTimeout() {
         return timeout.get();
     }
 
-    public IntegerProperty timeoutProperty() {
+    public LongProperty timeoutProperty() {
         return timeout;
+    }
+
+    public void setTimeout(long timeout) {
+        this.timeout.set(timeout);
     }
 
     public void setTimeout(int timeout) {
@@ -134,12 +141,8 @@ public class Notification extends Pane{
         this.eventHandler = eventHandler;
     }
 
-    public Date getTimestamp() {
+    public Instant getTimestamp() {
         return timestamp;
-    }
-
-    public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
     }
 
     public int getAnimationCount() {
@@ -150,12 +153,12 @@ public class Notification extends Pane{
         this.animationCount = animationCount;
     }
 
-    public int getTempCellIndex() {
-        return tempCellIndex;
+    public boolean isContract() {
+        return isContract;
     }
 
-    public void setTempCellIndex(int tempCellIndex) {
-        this.tempCellIndex = tempCellIndex;
+    public void setContract(boolean contract) {
+        isContract = contract;
     }
 
     public void expand(){
@@ -174,7 +177,7 @@ public class Notification extends Pane{
 
         Button closeButton = new Button();
         closeButton.getStyleClass().add("notification-close-button");
-        closeButton.setOnAction(event -> SystemServices.removeNotification(Notification.this));
+        closeButton.setOnAction(event -> NotificationServices.removeNotification(Notification.this));
 
         HBox closeHBox = new HBox();
         closeHBox.setAlignment(Pos.BOTTOM_RIGHT);
@@ -221,5 +224,16 @@ public class Notification extends Pane{
         this.setMinWidth(width);
         this.setMaxWidth(width);
         this.setPrefWidth(width);
+    }
+
+    public boolean isExpired(){
+        Duration duration = Duration.between(getTimestamp(), Instant.now());
+        long milliDuration = duration.toMillis();
+
+        if(getTimeout() == -1){
+            return false;
+        }else{
+            return milliDuration > getTimeout();
+        }
     }
 }

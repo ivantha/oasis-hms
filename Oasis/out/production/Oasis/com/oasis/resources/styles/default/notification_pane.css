@@ -2,7 +2,12 @@
 
 #notificationAnchorPane{
     -fx-padding: 20px 0px 0px 10px;
-    -fx-background-color: #01579B;
+
+    -fx-background-size: 75px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50% 50%;
+    -fx-background-color: -very-dark-primary-color;
+    -fx-background-image: url("../../images/logo_without_name_light.png");
 }
 
 #notificationListView{

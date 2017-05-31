@@ -212,16 +212,4 @@ public class SystemServices {
 
         Platform.runLater(() -> primaryStage.show());
     }
-
-    public static void addNotification(String heading, String content, Notification.NotificationType notificationType) {
-        Notification notification = new Notification(heading, content, notificationType);
-
-        DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
-        dashboardController.getNotificationFXC().addNotification(notification);
-    }
-
-    public static void removeNotification(Notification notification) {
-        DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
-        dashboardController.getNotificationFXC().removeNotification(notification);
-    }
 }

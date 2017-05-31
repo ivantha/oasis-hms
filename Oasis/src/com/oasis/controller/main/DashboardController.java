@@ -8,13 +8,14 @@ import com.oasis.listener.DynamicPaneDragEnteredEventHandler;
 import com.oasis.listener.DynamicPaneDragExitedEventHandler;
 import com.oasis.listener.DynamicPaneDragOverEventHandler;
 import com.oasis.main.Main;
+import com.oasis.services.NotificationServices;
 import com.oasis.services.SystemServices;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.Notification;
 import com.oasis.ui.component.NotificationFXC;
 import com.oasis.ui.utils.ImageScaler;
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import javafx.animation.ParallelTransition;
+import javafx.animation.PauseTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.ObjectProperty;
@@ -23,9 +24,9 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.IndexedCell;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
@@ -33,14 +34,20 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Iterator;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
+    private static final Duration LAUNCHER_AIMATE_TIME = Duration.millis(300);
+    private static final Duration WORKSPACE_ANIMATE_TIME = Duration.millis(400);
+
     @FXML
     private Circle profilePictureCircle;
     @FXML
@@ -107,7 +114,6 @@ public class DashboardController implements Controller {
             }
 
             newValue.setStyle("-fx-font-family: 'Roboto';\n" +
-//                    "-fx-text-fill: #FFFFFF;\n" +
                     "-fx-font-size: 13;\n" +
                     "-fx-background-radius: 0px;\n" +
                     "-fx-background-color: #03A9F4;");
@@ -115,6 +121,9 @@ public class DashboardController implements Controller {
 
         notificationFXC = new NotificationFXC(200, ListView.USE_COMPUTED_SIZE);
         notificationVBox.getChildren().add(notificationFXC);
+
+        Rectangle clipRectangle = new Rectangle(1100, 700);
+        workspaceAnchorPane.setClip(clipRectangle);
     }
 
     @Override
@@ -133,8 +142,10 @@ public class DashboardController implements Controller {
     public void minimizeButtonOnAction(ActionEvent actionEvent) {
 //        ((Stage) ((Button) (actionEvent.getSource())).getScene().getWindow()).setIconified(true);
 
-        SystemServices.addNotification("My custom notification",
-                "I just want to test out how things are working. That is all", Notification.NotificationType.INFORMATION);
+        Random random = new Random();
+        long randLong = (long) (random.nextDouble() * 1000 * 10);
+        NotificationServices.addNotification("My custom notification",
+                "I just want to test out how things are working. That is all", Notification.NotificationType.INFORMATION, randLong);
 //        SystemServices.addNotification("One",
 //                "This is the first notification", NotificationType.DEFAULT);
 //        SystemServices.addNotification("Successful insertion",
@@ -163,6 +174,8 @@ public class DashboardController implements Controller {
 //                "Please select a gender", NotificationType.ERROR);
 //        SystemServices.addNotification("Assistive options",
 //                "Hover over the options to see tooltips", NotificationType.INFORMATION);
+
+        slideOutChildren();
     }
 
     public boolean isLauncherVisible() {
@@ -177,25 +190,28 @@ public class DashboardController implements Controller {
         if (!isLauncherVisible()) {
             slideInLauncher();
         } else {
-            slideOutLauncher(event -> {
-                this.workspaceAnchorPane.getChildren().remove(launcherParent);
-            });
+            slideOutLauncher(event -> workspaceAnchorPane.getChildren().remove(launcherParent));
         }
+    }
+
+    private void setAsDynamic(AnchorPane anchorPane) {
+        anchorPane.setOnDragOver(new DynamicPaneDragOverEventHandler());
+        anchorPane.setOnDragEntered(new DynamicPaneDragEnteredEventHandler());
+        anchorPane.setOnDragExited(new DynamicPaneDragExitedEventHandler());
+        anchorPane.setOnDragDropped(new DynamicPaneDragDroppedEventHandler(lastPressedMainSideButton));
     }
 
     private void slideInLauncher() {
         launcherParent = UIFactory.getUI(UIName.LAUNCHER).getParent();
         this.workspaceAnchorPane.getChildren().add(launcherParent);
 
-        final Duration TIME_SEC = Duration.millis(300);
-
-        TranslateTransition translateTransition = new TranslateTransition(TIME_SEC);
+        TranslateTransition translateTransition = new TranslateTransition(LAUNCHER_AIMATE_TIME);
         translateTransition.setFromX(0 - 450);
         translateTransition.setFromY(700 - 300);
         translateTransition.setToX(100);
         translateTransition.setToY(50);
 
-        ScaleTransition scaleTransition = new ScaleTransition(TIME_SEC);
+        ScaleTransition scaleTransition = new ScaleTransition(LAUNCHER_AIMATE_TIME);
         scaleTransition.setFromX(0);
         scaleTransition.setFromY(0);
         scaleTransition.setToX(1);
@@ -208,15 +224,13 @@ public class DashboardController implements Controller {
     }
 
     private void slideOutLauncher(EventHandler<ActionEvent> eventEventHandler) {
-        final Duration TIME_SEC = Duration.millis(300);
-
-        TranslateTransition translateTransition = new TranslateTransition(TIME_SEC);
+        TranslateTransition translateTransition = new TranslateTransition(LAUNCHER_AIMATE_TIME);
         translateTransition.setFromX(100);
         translateTransition.setFromY(50);
         translateTransition.setToX(0 - 450);
         translateTransition.setToY(700 - 300);
 
-        ScaleTransition scaleTransition = new ScaleTransition(TIME_SEC);
+        ScaleTransition scaleTransition = new ScaleTransition(LAUNCHER_AIMATE_TIME);
         scaleTransition.setFromX(1);
         scaleTransition.setFromY(1);
         scaleTransition.setToX(0);
@@ -229,23 +243,59 @@ public class DashboardController implements Controller {
         setLauncherVisible(false);
     }
 
-    private void setAsDynamic(AnchorPane anchorPane) {
-        anchorPane.setOnDragOver(new DynamicPaneDragOverEventHandler());
-        anchorPane.setOnDragEntered(new DynamicPaneDragEnteredEventHandler());
-        anchorPane.setOnDragExited(new DynamicPaneDragExitedEventHandler());
-        anchorPane.setOnDragDropped(new DynamicPaneDragDroppedEventHandler(lastPressedMainSideButton));
+    private void slideInParent(Parent parent) {
+        TranslateTransition parentInTranslation = new TranslateTransition(WORKSPACE_ANIMATE_TIME);
+        parentInTranslation.setFromX(1100);
+        parentInTranslation.setToX(0);
+        parentInTranslation.setNode(parent);
+
+        if (workspaceAnchorPane.getChildren().size() == 0) {
+            workspaceAnchorPane.getChildren().add(parent);
+            parentInTranslation.play();
+        } else {
+            Node childNode = workspaceAnchorPane.getChildren().get(0);
+            workspaceAnchorPane.getChildren().add(parent);
+
+            TranslateTransition childOutTranslation = new TranslateTransition(WORKSPACE_ANIMATE_TIME);
+            childOutTranslation.setFromX(0);
+            childOutTranslation.setToX(-1100);
+            childOutTranslation.setNode(childNode);
+
+            ParallelTransition parallelTransition = new ParallelTransition(parentInTranslation, childOutTranslation);
+            parallelTransition.setOnFinished(event -> {
+                Iterator<Node> nodeIterator = workspaceAnchorPane.getChildren().iterator();
+                while (nodeIterator.hasNext()) {
+                    nodeIterator.next();
+                    if (nodeIterator.hasNext()) {
+                        nodeIterator.remove();
+                    }
+                }
+            });
+            parallelTransition.play();
+        }
+    }
+
+    private void slideOutChildren() {
+        Iterator<Node> nodeIterator = this.workspaceAnchorPane.getChildren().iterator();
+        while (nodeIterator.hasNext()) {
+            TranslateTransition translateTransition = new TranslateTransition(WORKSPACE_ANIMATE_TIME);
+            translateTransition.setFromX(0);
+            translateTransition.setToX(1100);
+            translateTransition.setNode(nodeIterator.next());
+            translateTransition.setOnFinished(event -> nodeIterator.remove());
+            translateTransition.play();
+        }
     }
 
     public void setWorkspace(Parent parent) {
         if (isLauncherVisible()) {
             EventHandler<ActionEvent> eventEventHandler = event -> {
-                this.workspaceAnchorPane.getChildren().clear();
-                this.workspaceAnchorPane.getChildren().add(parent);
+                workspaceAnchorPane.getChildren().remove(launcherParent);
+                slideInParent(parent);
             };
             slideOutLauncher(eventEventHandler);
         } else {
-            this.workspaceAnchorPane.getChildren().clear();
-            this.workspaceAnchorPane.getChildren().add(parent);
+            slideInParent(parent);
         }
     }
 
