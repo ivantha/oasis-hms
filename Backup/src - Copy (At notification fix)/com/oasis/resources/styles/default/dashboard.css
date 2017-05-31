@@ -1,0 +1,17 @@
+@import "palatte.css";
+@import "control_pane.css";
+@import "login_pane.css";
+@import "navigation_pane.css";
+@import "notification_pane.css";
+
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#sideBarAnchorPane{
+    -fx-background-color: -white-smoke-color;
+}
+
+#workspaceAnchorPane {
+    -fx-background-color: -default-background-color;
+}

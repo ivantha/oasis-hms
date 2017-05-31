@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller.admission.NewEditAdmissionController">
+   <children>
+      <GridPane layoutX="150.0" layoutY="150.0" prefHeight="450.0" prefWidth="440.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="274.0" minWidth="10.0" prefWidth="247.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Patient" />
+            <Label text="Physician" GridPane.rowIndex="1" />
+            <Label text="Admission consultant" GridPane.rowIndex="2" />
+            <Label text="Leading consultant" GridPane.rowIndex="3" />
+            <Label text="Cause" GridPane.rowIndex="4" />
+            <Label text="Admission date" GridPane.rowIndex="5" />
+            <TextArea fx:id="causeTextArea" maxHeight="120.0" maxWidth="250.0" minHeight="120.0" prefHeight="120.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <HBox spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <JFXDatePicker fx:id="admissionDateDatePicker" layoutY="11.0" prefWidth="120.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="todayButton" layoutY="13.0" mnemonicParsing="false" onAction="#todayButtonOnAction" text="Today" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="patientAnchorPane" maxHeight="25.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.vgrow="NEVER" />
+            <AnchorPane fx:id="physicianAnchorPane" maxHeight="25.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <AnchorPane fx:id="admissionConsultantAnchorPane" maxHeight="25.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <AnchorPane fx:id="leadingConsultantAnchorPane" maxHeight="25.0" prefHeight="25.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Button fx:id="okButton" layoutX="816.0" layoutY="589.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>

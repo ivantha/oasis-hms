@@ -19,10 +19,20 @@ import java.util.Date;
 
 
 public class Notification extends Pane{
+    public enum NotificationType {
+        DEFAULT,
+        SUCCESSFUL,
+        INFORMATION,
+        WARNING,
+        ERROR,
+
+        ADD,
+        EDIT,
+        DELETE
+    }
+
     private static final int DEFAULT_HEIGHT = 35;
     private static final int DEFAULT_WIDTH = 175;
-
-    private boolean isContract = true;
 
     private int nId = 0;
     private StringProperty heading = new SimpleStringProperty();
@@ -32,12 +42,24 @@ public class Notification extends Pane{
     private EventHandler<ActionEvent> eventHandler = null;
     private Date timestamp;
 
-    public Notification(int nId, String heading, String content, NotificationType type) {
-        this.nId = nId;
+    private Label headingLabel;
+    private Label contentLabel;
+
+    private int animationCount = 0;
+    private boolean isContract = true;
+    private int tempCellIndex = 0;
+
+    public Notification(String heading, String content, NotificationType type) {
         this.heading.setValue(heading);
         this.content.setValue(content);
         this.type = type;
         this.timestamp = new Date();
+
+        this.headingLabel = new Label();
+        this.contentLabel = new Label();
+
+        headingLabel.textProperty().bind(headingProperty());
+        contentLabel.textProperty().bind(contentProperty());
 
         this.getStyleClass().add("notification");
 
@@ -120,6 +142,22 @@ public class Notification extends Pane{
         this.timestamp = timestamp;
     }
 
+    public int getAnimationCount() {
+        return animationCount;
+    }
+
+    public void setAnimationCount(int animationCount) {
+        this.animationCount = animationCount;
+    }
+
+    public int getTempCellIndex() {
+        return tempCellIndex;
+    }
+
+    public void setTempCellIndex(int tempCellIndex) {
+        this.tempCellIndex = tempCellIndex;
+    }
+
     public void expand(){
         isContract = false;
 
@@ -130,7 +168,6 @@ public class Notification extends Pane{
         this.setPrefHeight(USE_COMPUTED_SIZE);
         setWidth(DEFAULT_WIDTH);
 
-        Label contentLabel = new Label(getContent());
         contentLabel.setWrapText(true);
         contentLabel.setMaxWidth(170);
         contentLabel.setStyle("-fx-text-fill: #FFFFFF");
@@ -167,7 +204,6 @@ public class Notification extends Pane{
         this.setPrefHeight(DEFAULT_HEIGHT);
         setWidth(DEFAULT_WIDTH);
 
-        Label headingLabel = new Label(getHeading());
         headingLabel.setWrapText(true);
         headingLabel.setMaxWidth(170);
 

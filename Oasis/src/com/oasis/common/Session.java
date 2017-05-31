@@ -41,6 +41,4 @@ public class Session {
     public static Cloner cloner;
 
     public static Employee currentUser;
-
-    public static ObservableList<Notification> notificationObservableList;
 }

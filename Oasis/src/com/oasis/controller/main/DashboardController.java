@@ -3,41 +3,41 @@ package com.oasis.controller.main;
 import com.oasis.common.Session;
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
-import com.oasis.listener.*;
+import com.oasis.listener.DynamicPaneDragDroppedEventHandler;
+import com.oasis.listener.DynamicPaneDragEnteredEventHandler;
+import com.oasis.listener.DynamicPaneDragExitedEventHandler;
+import com.oasis.listener.DynamicPaneDragOverEventHandler;
 import com.oasis.main.Main;
+import com.oasis.services.SystemServices;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.Notification;
-import com.oasis.ui.component.NotificationType;
+import com.oasis.ui.component.NotificationFXC;
 import com.oasis.ui.utils.ImageScaler;
-import com.oasis.services.SystemServices;
 import com.sun.javafx.scene.control.skin.VirtualFlow;
-import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.IndexedCell;
+import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 import javafx.util.Duration;
 
 import java.io.File;
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {
@@ -66,18 +66,20 @@ public class DashboardController implements Controller {
     @FXML
     private AnchorPane notificationAnchorPane;
     @FXML
-    private ListView<Notification> notificationListView;
+    private VBox notificationVBox;
 
     @FXML
     private Button signOutButton;
-
-    private boolean isLauncherVisible = false;
-    private Parent launcherParent;
 
     @FXML
     private AnchorPane sideBarAnchorPane;
     @FXML
     private AnchorPane workspaceAnchorPane;
+
+    private NotificationFXC notificationFXC;
+
+    private boolean isLauncherVisible = false;
+    private Parent launcherParent;
 
     private ObjectProperty<Button> lastPressedMainSideButton = new SimpleObjectProperty<>();
 
@@ -100,7 +102,7 @@ public class DashboardController implements Controller {
         SystemServices.loadDynamicButton(mainSideButton7AnchorPane, Session.APP_CONFIG.getTabButton7(), lastPressedMainSideButton);
 
         lastPressedMainSideButton.addListener((observable, oldValue, newValue) -> {
-            if(oldValue != null) {
+            if (oldValue != null) {
                 oldValue.setStyle(null);
             }
 
@@ -110,47 +112,18 @@ public class DashboardController implements Controller {
                     "-fx-background-radius: 0px;\n" +
                     "-fx-background-color: #03A9F4;");
         });
+
+        notificationFXC = new NotificationFXC(200, ListView.USE_COMPUTED_SIZE);
+        notificationVBox.getChildren().add(notificationFXC);
     }
 
     @Override
     public void refreshView() {
         setLoginDetails();
-
-        notificationListView.setItems(Session.notificationObservableList);
-
-
-        Session.notificationObservableList.add(new Notification(1, "One",
-                "This is the first notification", NotificationType.DEFAULT));
-        Session.notificationObservableList.add(new Notification(2, "Successful insertion",
-                "Employee successfully added to the database", NotificationType.SUCCESSFUL));
-        Session.notificationObservableList.add(new Notification(3, "Patient deleted",
-                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL));
-        Session.notificationObservableList.add(new Notification(4, "Error",
-                "Cannot connect with the server", NotificationType.ERROR));
-        Session.notificationObservableList.add(new Notification(5, "Incorrect input",
-                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING));
-        Session.notificationObservableList.add(new Notification(6, "Incorrect input",
-                "Please select a gender", NotificationType.ERROR));
-        Session.notificationObservableList.add(new Notification(7, "Assistive options",
-                "Hover over the options to see tooltips", NotificationType.INFORMATION));
-        Session.notificationObservableList.add(new Notification(8, "One",
-                "This is the first notification", NotificationType.DEFAULT));
-        Session.notificationObservableList.add(new Notification(9, "Successful insertion",
-                "Employee successfully added to the database", NotificationType.SUCCESSFUL));
-        Session.notificationObservableList.add(new Notification(10, "Patient deleted",
-                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL));
-        Session.notificationObservableList.add(new Notification(11, "Error",
-                "Cannot connect with the server", NotificationType.ERROR));
-        Session.notificationObservableList.add(new Notification(12, "Incorrect input",
-                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING));
-        Session.notificationObservableList.add(new Notification(13, "Incorrect input",
-                "Please select a gender", NotificationType.ERROR));
-        Session.notificationObservableList.add(new Notification(14, "Assistive options",
-                "Hover over the options to see tooltips", NotificationType.INFORMATION));
     }
 
-    public ListView<Notification> getNotificationListView() {
-        return notificationListView;
+    public NotificationFXC getNotificationFXC() {
+        return notificationFXC;
     }
 
     public void closeButtonOnAction(ActionEvent actionEvent) {
@@ -158,7 +131,38 @@ public class DashboardController implements Controller {
     }
 
     public void minimizeButtonOnAction(ActionEvent actionEvent) {
-        ((Stage) ((Button) (actionEvent.getSource())).getScene().getWindow()).setIconified(true);
+//        ((Stage) ((Button) (actionEvent.getSource())).getScene().getWindow()).setIconified(true);
+
+        SystemServices.addNotification("My custom notification",
+                "I just want to test out how things are working. That is all", Notification.NotificationType.INFORMATION);
+//        SystemServices.addNotification("One",
+//                "This is the first notification", NotificationType.DEFAULT);
+//        SystemServices.addNotification("Successful insertion",
+//                "Employee successfully added to the database", NotificationType.SUCCESSFUL);
+//        SystemServices.addNotification("Patient deleted",
+//                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL);
+//        SystemServices.addNotification("Incorrect input",
+//                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING);
+//        SystemServices.addNotification("Error",
+//                "Cannot connect with the server", NotificationType.ERROR);
+//        SystemServices.addNotification("Incorrect input",
+//                "Please select a gender", NotificationType.ERROR);
+//        SystemServices.addNotification("Assistive options",
+//                "Hover over the options to see tooltips", NotificationType.INFORMATION);
+//        SystemServices.addNotification("One",
+//                "This is the first notification", NotificationType.DEFAULT);
+//        SystemServices.addNotification("Successful insertion",
+//                "Employee successfully added to the database", NotificationType.SUCCESSFUL);
+//        SystemServices.addNotification("Patient deleted",
+//                "Patient record 53984 successfully deleted", NotificationType.SUCCESSFUL);
+//        SystemServices.addNotification("Error",
+//                "Cannot connect with the server", NotificationType.ERROR);
+//        SystemServices.addNotification("Incorrect input",
+//                "Please enter a correct phone number in the form os xxxxxxxxxx", NotificationType.WARNING);
+//        SystemServices.addNotification("Incorrect input",
+//                "Please select a gender", NotificationType.ERROR);
+//        SystemServices.addNotification("Assistive options",
+//                "Hover over the options to see tooltips", NotificationType.INFORMATION);
     }
 
     public boolean isLauncherVisible() {
@@ -225,7 +229,7 @@ public class DashboardController implements Controller {
         setLauncherVisible(false);
     }
 
-    private void setAsDynamic(AnchorPane anchorPane){
+    private void setAsDynamic(AnchorPane anchorPane) {
         anchorPane.setOnDragOver(new DynamicPaneDragOverEventHandler());
         anchorPane.setOnDragEntered(new DynamicPaneDragEnteredEventHandler());
         anchorPane.setOnDragExited(new DynamicPaneDragExitedEventHandler());
@@ -245,13 +249,13 @@ public class DashboardController implements Controller {
         }
     }
 
-    private void setLoginDetails(){
+    private void setLoginDetails() {
         nameLabel.setText(Session.currentUser.getFirstName() + " " + Session.currentUser.getLastName());
         roleLabel.setText(Session.currentUser.getEmployeeRole().getRole());
 
         Image profilePictureImage = new Image(Main.class.getResourceAsStream("/com/oasis/resources/images/default_profile_picture.png"));
-        File savedImage = new File(System.getProperty("user.dir") + "/profile_pictures/",  "pp_" + Session.currentUser.getId() + ".jpg");
-        if(savedImage.exists()){
+        File savedImage = new File(System.getProperty("user.dir") + "/profile_pictures/", "pp_" + Session.currentUser.getId() + ".jpg");
+        if (savedImage.exists()) {
             profilePictureImage = new Image(savedImage.toURI().toString());
         }
         Image resizedImage = ImageScaler.resizeImage(profilePictureImage, 30);
@@ -262,10 +266,5 @@ public class DashboardController implements Controller {
     public void signOutButtonOnAction(ActionEvent actionEvent) {
         Stage primaryStage = (Stage) signOutButton.getScene().getWindow();
         SystemServices.loadLogin(primaryStage, new SimpleBooleanProperty(Boolean.TRUE));
-    }
-
-    public IndexedCell<Notification> getNotificationCell(int cellIndex){
-        VirtualFlow virtualFlow = (VirtualFlow) notificationListView.lookup(".virtual-flow");
-        return virtualFlow.getCell(cellIndex);
     }
 }

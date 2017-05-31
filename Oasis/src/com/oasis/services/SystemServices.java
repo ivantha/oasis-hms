@@ -10,31 +10,19 @@ import com.oasis.model.*;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.Notification;
-import com.oasis.ui.component.NotificationType;
 import com.oasis.ui.utils.UIUtils;
 import com.oasis.utils.Cache;
 import com.rits.cloning.Cloner;
-import javafx.animation.FadeTransition;
-import javafx.animation.ParallelTransition;
-import javafx.animation.PathTransition;
-import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.IndexedCell;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.CubicCurveTo;
-import javafx.scene.shape.MoveTo;
-import javafx.scene.shape.Path;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -144,8 +132,6 @@ public class SystemServices {
         };
 
         Session.cloner = new Cloner();
-
-        Session.notificationObservableList = FXCollections.observableList(new ArrayList<>());
     }
 
     private static void createDefaultDirectories() {
@@ -194,7 +180,7 @@ public class SystemServices {
         }
     }
 
-    public static void loadLogin(Stage primaryStage, BooleanProperty ready){
+    public static void loadLogin(Stage primaryStage, BooleanProperty ready) {
         Session.currentUser = null;
 
         UI ui = UIFactory.getNewUI(UIName.LOGIN);
@@ -210,7 +196,7 @@ public class SystemServices {
         });
     }
 
-    public static void loadDashboard(Stage primaryStage){
+    public static void loadDashboard(Stage primaryStage) {
         UI ui = UIFactory.getNewUI(UIName.DASHBOARD);
         ui.getController().refreshView();
         Scene scene = new Scene(ui.getParent(), 1300, 700);
@@ -227,34 +213,15 @@ public class SystemServices {
         Platform.runLater(() -> primaryStage.show());
     }
 
-    public static void addNotification(String heading, String content, NotificationType notificationType){
+    public static void addNotification(String heading, String content, Notification.NotificationType notificationType) {
+        Notification notification = new Notification(heading, content, notificationType);
 
+        DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
+        dashboardController.getNotificationFXC().addNotification(notification);
     }
 
-    public static void removeNotification(Notification notification){
-        int cellIndex = Session.notificationObservableList.indexOf(notification);
-
-        DashboardController controller = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
-        IndexedCell<Notification> indexedCell = controller.getNotificationCell(cellIndex);
-
-        FadeTransition fadeTransition = new FadeTransition();
-        fadeTransition.setDuration(Duration.millis(300));
-        fadeTransition.setFromValue(1.0);
-        fadeTransition.setToValue(0.0);
-        fadeTransition.setNode(indexedCell);
-
-        TranslateTransition translateTransition = new TranslateTransition(Duration.millis(300));
-        translateTransition.setFromX(0);
-        translateTransition.setToX(175);
-        translateTransition.setNode(indexedCell);
-
-        ParallelTransition parallelTransition = new ParallelTransition();
-        parallelTransition.getChildren().addAll(fadeTransition, translateTransition);
-        parallelTransition.setOnFinished(event -> {
-            Session.notificationObservableList.remove(notification);
-            indexedCell.setOpacity(1.0);
-            indexedCell.setTranslateX(0.0);
-        });
-        parallelTransition.play();
+    public static void removeNotification(Notification notification) {
+        DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
+        dashboardController.getNotificationFXC().removeNotification(notification);
     }
 }
