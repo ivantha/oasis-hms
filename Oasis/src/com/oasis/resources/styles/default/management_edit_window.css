@@ -1,4 +1,5 @@
 @import "palatte.css";
+@import "common.css";
 
 #backgroundAnchorPane{
     -fx-background-color: -default-background-color;
@@ -24,21 +25,10 @@
     -fx-font-family: 'Calibri';
 }
 
-#searchPane .button {
+#searchPane #clearButton {
     -fx-background-image: url("../../icons/close_dark.png");
-    -fx-background-size: 16px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: 50% 50%;
-
-    -fx-min-width: 16px;
-    -fx-min-height: 16px;
-    -fx-max-width: 16px;
-    -fx-max-height: 16px;
-    -fx-border-color: transparent;
-    -fx-background-radius: 8px;
-    -fx-background-insets: 0px;
 }
 
-#searchPane .button:hover {
+#searchPane #clearButton:hover {
     -fx-background-image: url("../../icons/close_light.png");
 }

@@ -1,0 +1,155 @@
+@import "palatte.css";
+
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
+}
+
+#backgroundAnchorPane {
+    -fx-background-color: -default-background-color;
+    -fx-padding: 30px;
+}
+
+.text-field, .text-area {
+    -fx-border-width: 1px;
+    -fx-border-radius: 1px;
+    -fx-border-color: -default-border-color;
+
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 13px;
+
+}
+
+.text-area{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.label {
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 13px;
+    -fx-text-fill: -default-font-color;
+}
+
+.combo-box {
+    -fx-border-width: 1px;
+    -fx-border-radius: 1px;
+    -fx-border-color: -default-border-color;
+
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 13px;
+}
+
+.check-box {
+    -fx-border-insets: null;
+    -fx-border-width: 1px;
+    -fx-border-radius: 1px;
+    -fx-border-color: -default-border-color;
+
+    -fx-background-insets: 0px;
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+
+    -fx-padding: 0px 0px 0px 0px;
+    -fx-label-padding: 0px 0px 0px 0px;
+
+    -fx-effect: null;
+}
+
+.check-box .box {
+    -fx-background-color: transparent;
+}
+
+.jfx-date-picker .text-field, .jfx-time-picker .text-field {
+    -fx-border-color: transparent;
+}
+
+/*.list-view {*/
+    /*-fx-border-width: 1px;*/
+    /*-fx-border-radius: 1px;*/
+    /*-fx-border-color: -default-border-color;*/
+
+    /*-fx-background-radius: 0px;*/
+    /*-fx-background-color: transparent;*/
+/*}*/
+
+/*.list-cell:hover {*/
+    /*-fx-background-color: -default-primary-color;*/
+/*}*/
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+    -fx-background-color: -very-dark-primary-color;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 0px;
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 1px;
+
+}
+
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+.button {
+    -fx-border-width: 1px;
+    -fx-border-radius: 1px;
+    -fx-border-color: -very-dark-primary-color;
+
+    -fx-background-radius: 0px;
+    -fx-background-color: transparent;
+
+    -fx-font-family: 'Roboto';
+    -fx-font-size: 13px;
+    -fx-text-fill: -very-dark-primary-color;
+}
+
+.button:hover {
+    -fx-border-color: -default-primary-color;
+
+    -fx-text-fill: -default-primary-color;
+}
+
+.mini-button {
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+    -fx-border-color: transparent;
+
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 50% 50%;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 0px;
+}
+
+.mini-button:hover {
+    -fx-border-color: transparent;
+}

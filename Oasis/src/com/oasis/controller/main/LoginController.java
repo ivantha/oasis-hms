@@ -1,16 +1,16 @@
 package com.oasis.controller.main;
 
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import com.oasis.common.Session;
 import com.oasis.controller.Controller;
 import com.oasis.model.Employee;
-import com.oasis.services.UserServices;
 import com.oasis.services.SystemServices;
+import com.oasis.services.UserServices;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -18,9 +18,9 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Controller{
     @FXML
-    private JFXTextField usernameTextField;
+    private TextField usernameTextField;
     @FXML
-    private JFXPasswordField passwordPasswordField;
+    private PasswordField passwordPasswordField;
     @FXML
     private Label messageLabel;
 

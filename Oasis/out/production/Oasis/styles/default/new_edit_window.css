@@ -1,23 +1,12 @@
 @import "palatte.css";
+@import "common.css";
 
-#backgroundAnchorPane{
-    -fx-background-color: -default-background-color;
-    -fx-padding: 30px;
+@font-face {
+    src: url('../../fonts/Roboto-Regular.ttf');
 }
 
 #addCircleButton {
     -fx-background-image: url("../../icons/plus_dark.png");
-    -fx-background-size: 20px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: 50% 50%;
-
-    -fx-min-width: 20px;
-    -fx-min-height: 20px;
-    -fx-max-width: 20px;
-    -fx-max-height: 20px;
-    -fx-border-color: transparent;
-    -fx-background-radius: 10px;
-    -fx-background-insets: 0px;
 }
 
 #addCircleButton:hover {
@@ -26,19 +15,9 @@
 
 #removeCircleButton {
     -fx-background-image: url("../../icons/minus_dark.png");
-    -fx-background-size: 20px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: 50% 50%;
-
-    -fx-min-width: 20px;
-    -fx-min-height: 20px;
-    -fx-max-width: 20px;
-    -fx-max-height: 20px;
-    -fx-border-color: transparent;
-    -fx-background-radius: 10px;
-    -fx-background-insets: 0px;
 }
 
 #removeCircleButton:hover {
     -fx-background-image: url("../../icons/minus_light.png");
 }
+

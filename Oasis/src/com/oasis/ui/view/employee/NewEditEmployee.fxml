@@ -56,8 +56,8 @@
             <TextField fx:id="middleNameTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="lastNameTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <ComboBox fx:id="genderComboBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <JFXDatePicker fx:id="dobDatePicker" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <JFXDatePicker fx:id="startDateDatePicker" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXDatePicker fx:id="dobDatePicker" prefWidth="150.0" styleClass="date-picker" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXDatePicker fx:id="startDateDatePicker" prefWidth="150.0" styleClass="date-picker" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <JFXDatePicker fx:id="endDateDatePicker" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <ComboBox fx:id="employeeRoleComboBox" onAction="#employeeRoleComboBoxOnAction" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <JFXTimePicker fx:id="shiftStartTimeTimePicker" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
@@ -145,7 +145,7 @@
                   <Rectangle2D />
                </viewport>
             </ImageView>
-            <Button fx:id="browseButton" layoutX="48.0" layoutY="161.0" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse" />
+            <Button fx:id="browseButton" layoutX="42.0" layoutY="157.0" mnemonicParsing="false" onAction="#browseButtonOnAction" text="Browse" />
          </children>
       </AnchorPane>
       <GridPane layoutX="469.0" layoutY="395.0" prefHeight="38.0" prefWidth="341.0">
@@ -166,8 +166,8 @@
             <ListView fx:id="degreeListView" prefHeight="100.0" prefWidth="200.0" />
             <AnchorPane prefHeight="30.0" prefWidth="200.0">
                <children>
-                  <Button fx:id="removeCircleButton" layoutX="176.0" layoutY="6.0" mnemonicParsing="false" onAction="#removeCircleButtonOnAction" />
-                  <Button fx:id="addCircleButton" layoutX="149.0" layoutY="7.0" mnemonicParsing="false" onAction="#addCircleButtonOnAction" />
+                  <Button fx:id="removeCircleButton" layoutX="176.0" layoutY="6.0" mnemonicParsing="false" onAction="#removeCircleButtonOnAction" styleClass="mini-button" />
+                  <Button fx:id="addCircleButton" layoutX="149.0" layoutY="7.0" mnemonicParsing="false" onAction="#addCircleButtonOnAction" styleClass="mini-button" />
                </children>
             </AnchorPane>
          </children>

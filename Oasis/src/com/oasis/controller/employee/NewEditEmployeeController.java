@@ -19,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import org.apache.commons.io.FileUtils;
 import org.controlsfx.control.PopOver;
@@ -105,7 +106,10 @@ public class NewEditEmployeeController implements Controller {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        Circle circleClip = new Circle(75);
+        circleClip.setCenterX(profilePictureImageView.getX() + 75);
+        circleClip.setCenterY(profilePictureImageView.getY() + 75);
+        profilePictureImageView.setClip(circleClip);
     }
 
     @Override

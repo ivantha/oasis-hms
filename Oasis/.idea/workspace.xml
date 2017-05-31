@@ -8,27 +8,361 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/services/NotificationServices.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/NotificationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/factory/NotificationFactory.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/SystemServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/SystemServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification$NotificationType.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification$NotificationType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC$1$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/NotificationFXC.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/common.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/adapter/SearchAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/common/Session.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/common/Temp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/configuration/ConfigurationFile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/configuration/ConfigurationHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/Controller.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/PopOverController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/administration/AdministrationSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/administration/NewWardController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/administration/WardManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/admission/AdmissionManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/admission/AdmissionSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/admission/NewEditAdmissionController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/admission/NewEditTreatmentController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/admission/TreatmentManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/AttendanceManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/DegreeListPopOverController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/EmployeeDetailsPopOverController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/EmployeeManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/EmployeeSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/NewEditEmployeeController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/NewSpecialityController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/SpecialityManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/employee/SubmitAttendanceController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/main/DashboardController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/main/LauncherController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/main/LoginController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/medical/MedicalSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/medical/NewTestController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/medical/TestManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/EditPatientController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/EthnicityManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/NewEditPatientController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/NewEthnicityController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/PatientDetailsPopOverController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/PatientManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/patient/PatientSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/payment/PaymentManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/payment/PaymentSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/physician/NewPhysicianController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/physician/PhysicianDetailsPopOverController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/physician/PhysicianManagementController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/physician/PhysicianSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/reports/ReportsSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/controller/settings/SettingsSideBarController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/Connect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/AdmissionConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/BloodGroupConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/ChargeConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/DegreeConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/EmployeeConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/EmployeeRoleConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/EthnicityConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/PatientConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/PaymentConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/PhysicianConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/SpecialityConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/TestConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/TreatmentConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/UserConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/database/connector/WardConnector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/factory/NotificationFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/factory/UIFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicButtonDragDetectedEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicButtonDragDoneEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicPaneDragDroppedEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicPaneDragEnteredEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicPaneDragExitedEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/listener/DynamicPaneDragOverEventHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/main/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/main/OasisApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Address.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Admission.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/BloodGroup.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Charge.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/ChargeType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Degree.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Doctor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Email.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/EmergencyContact.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Employee.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/EmployeeRole.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Ethnicity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Gender.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Janitor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Model.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Nurse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Patient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Payment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Physician.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/PhysicianDesignation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Speciality.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Telephone.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Test.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Treatment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/Ward.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/model/WorkingDays.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/fonts/Roboto-Black.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/fonts/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/administration_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/administration_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/administration_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/admission_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/admission_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/admission_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/close_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/close_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/minus_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/minus_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/shutdown_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/control_pane/shutdown_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/employee_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/employee_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/employee_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/medical_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/medical_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/medical_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/add_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/add_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/clear_one_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/clear_one_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/default_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/default_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/delete_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/delete_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/edit_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/edit_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/error_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/error_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/information_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/information_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/successful_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/successful_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/warning_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/notification/warning_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/patient_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/patient_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/patient_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/payment_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/payment_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/payment_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/physician_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/physician_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/physician_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/plus_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/plus_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/reports_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/reports_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/reports_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/settings_black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/settings_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/settings_light.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/admission.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/admission_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/attendance.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/attendance_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/employee_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/ethnicity.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/ethnicity_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_admission.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_admission_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_employee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_employee_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_ethnicity.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_ethnicity_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_patient.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_patient_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_physician.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_physician_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_speciality.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_speciality_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_test.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_test_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_treatment.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_treatment_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_ward.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/new_ward_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/patients.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/patients_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/payments.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/payments_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/physicians.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/physicians_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/reports.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/reports_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/settings.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/settings_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/specialities.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/specialities_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/submit_attendance.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/submit_attendance_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/tests.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/tests_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/treatments.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/treatments_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/wards.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/icons/sidebar/wards_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/images/default_profile_picture.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/images/oasis_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/images/oasis_logo_500.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/attendance_management.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/auto_complete_fxc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/control_pane.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/details_popover.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/launcher.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/launcher_sidebar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/list_popover.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/login_pane.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/management_edit_window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/navigation_pane.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/new_edit_window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/notification_pane.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/palatte.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/default/submit_attendance.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/attendance_management.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/auto_complete_fxc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/dashboard.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/details_popover.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/launcher.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/launcher_sidebar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/list_popover.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/login.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/management_edit_window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/new_edit_window.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/resources/styles/panda/submit_attendance.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/AdmissionServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/BloodGroupServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/ChargeServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/CommonServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/DegreeServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/EmployeeRoleServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/EmployeeServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/EthnicityServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/GenderServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/PatientServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/PaymentServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/PhysicianServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/SpecialityServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/SystemServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/TestServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/TreatmentServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/UserServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/services/WardServices.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/UI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/UIName.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/component/AutoCompleteFXC.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/component/Notification.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/component/NotificationType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/component/SearchFXC.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/utils/ImageScaler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/utils/UIUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/administration/AdministrationSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/administration/NewWard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/admission/AdmissionSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/admission/NewEditAdmission.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/admission/NewEditTreatment.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/admission/TreatmentManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/AttendanceManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/DegreeListPopOver.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/EmployeeDetailsPopOver.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/EmployeeSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/NewEditEmployee.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/NewSpeciality.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/employee/SubmitAttendance.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/main/Dashboard.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/main/Launcher.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/main/Login.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/medical/MedicalSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/medical/NewTest.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/EditPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/NewEditPatient.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/NewEthnicity.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/NewRace.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/PatientDetailsPopOver.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/PatientSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/patient/RaceManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/payment/PaymentSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/physician/NewPhysician.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/physician/PhysicianDetailsPopOver.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/physician/PhysicianManagement.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/physician/PhysicianSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/reports/ReportsSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/ui/view/settings/SettingsSideBar.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/utils/Cache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/utils/Compare.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/utils/DateTimeFormatter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Backup/src - Copy (At notification fix)/com/oasis/utils/KeyHook.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/images/ps392B.tmp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/profile_pictures/pp_5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/pp_new_0.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/EmployeeManagementController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/NewEditEmployeeController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/NewEditEmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/plus_dark.png" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/plus_dark.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/plus_light.png" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/icons/plus_light.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/plus_dark.png" afterPath="$PROJECT_DIR$/out/production/Oasis/icons/plus_dark.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/icons/plus_light.png" afterPath="$PROJECT_DIR$/out/production/Oasis/icons/plus_light.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile_pictures/pp_7.jpg" afterPath="$PROJECT_DIR$/profile_pictures/pp_7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/plus_dark.png" afterPath="$PROJECT_DIR$/src/com/oasis/resources/icons/plus_dark.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/icons/plus_light.png" afterPath="$PROJECT_DIR$/src/com/oasis/resources/icons/plus_light.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.properties" afterPath="$PROJECT_DIR$/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/notification_pane.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/notification_pane.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/login.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/management_edit_window.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/management_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/new_edit_window.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/new_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/administration/WardManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/AdmissionManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/TreatmentManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/admission/TreatmentManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/EmployeeManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewEditEmployee.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewEditEmployee.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/SpecialityManagement.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Dashboard.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Dashboard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/notification_pane.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/notification_pane.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/notification_pane.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/notification_pane.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/SystemServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/SystemServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/component/Notification.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/component/Notification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/component/NotificationFXC.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/component/NotificationFXC.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Login.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/main/Login.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/medical/TestManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/EthnicityManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/payment/PaymentManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/physician/PhysicianManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/physician/PhysicianManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/login.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/management_edit_window.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/management_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/new_edit_window.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/new_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/TreatmentManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/TreatmentManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Login.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/main/Login.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianManagement.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -126,9 +460,9 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="CSS File" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -159,6 +493,7 @@
       <find>n</find>
       <find>nI</find>
       <find>nId</find>
+      <find>date-pic</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -184,33 +519,25 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/palette.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/login.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/main_sidebar.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/main.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LauncherController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/launcher_sidebar.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/main_sidebar.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/main.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/attendance_management.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/configuration/ConfigurationHandler.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/configuration/ConfigurationFile.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/main/Main.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/UIName.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/listener/DynamicPaneDragDroppedEventHandler.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/services/CommonServices.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/submit_attendance.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/list_popover.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/launcher_sidebar.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/launcher.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/auto_complete_fxc.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/details_popover.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/navigation_pane.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/control_pane.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/factory/UIFactory.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/utils/ImgScaler.java" />
@@ -232,9 +559,17 @@
         <option value="$PROJECT_DIR$/src/com/oasis/services/NotificationServices.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/component/Notification.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/ui/component/NotificationFXC.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css" />
-        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/attendance_management.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/login.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/common.css" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java" />
       </list>
     </option>
   </component>
@@ -281,7 +616,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -400,7 +734,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="employee" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,6 +882,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oasis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -602,8 +958,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1288,41 +1645,41 @@
       <workItem from="1496023627949" duration="9585000" />
       <workItem from="1496039745654" duration="13246000" />
       <workItem from="1496056481649" duration="948000" />
-      <workItem from="1496063859934" duration="86113000" />
+      <workItem from="1496063859934" duration="87011000" />
+      <workItem from="1496234141167" duration="12255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="767261000" />
+    <option name="totallyTimeSpent" value="780414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34150326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32189542" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34150326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32189542" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26701966" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869282" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1334,6 +1691,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1357,104 +1715,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/login_pane.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imgscalr/src/org/imgscalr/Scalr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1452">
-          <caret line="332" column="34" lean-forward="false" selection-start-line="332" selection-start-column="34" selection-end-line="332" selection-end-column="34" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/ImageScaler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/Notification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/utils/UIUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/main/Dashboard.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="71" column="61" lean-forward="false" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/DegreeListPopOverController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NotificationTab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/AutoCompleteFXC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1465,7 +1729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-561">
           <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,7 +1736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
           <caret line="94" column="13" lean-forward="false" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1489,10 +1751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="362" column="22" lean-forward="false" selection-start-line="362" selection-start-column="22" selection-end-line="362" selection-end-column="22" />
-          <folding>
-            <element signature="e#12578#12579#0" expanded="false" />
-            <element signature="e#12625#12626#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1500,15 +1758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" lean-forward="false" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1516,7 +1765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1524,7 +1772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1532,7 +1779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="622" column="22" lean-forward="false" selection-start-line="622" selection-start-column="22" selection-end-line="622" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1540,7 +1786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="253" column="22" lean-forward="false" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1548,7 +1793,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="1747" column="13" lean-forward="false" selection-start-line="1747" selection-start-column="13" selection-end-line="1747" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,7 +1800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="43" column="23" lean-forward="false" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1564,10 +1807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="897" column="31" lean-forward="true" selection-start-line="897" selection-start-column="31" selection-end-line="897" selection-end-column="31" />
-          <folding>
-            <element signature="e#35578#35579#0" expanded="false" />
-            <element signature="e#35633#35634#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1575,18 +1814,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1547">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NotificationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NotificationType.java" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/SearchFXC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1599,18 +1830,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="133" column="16" lean-forward="true" selection-start-line="133" selection-start-column="16" selection-end-line="133" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NotificationObservableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/component/NotificationObservableList.java" />
     <entry file="file://$PROJECT_DIR$/src/com/oasis/common/Session.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1628,15 +1851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/palatte.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1644,7 +1858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1652,7 +1865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="270" column="82" lean-forward="false" selection-start-line="270" selection-start-column="82" selection-end-line="270" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1660,10 +1872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding>
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2607#2608#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1671,7 +1879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="39" column="13" lean-forward="false" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1679,7 +1886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2643">
           <caret line="422" column="12" lean-forward="false" selection-start-line="422" selection-start-column="12" selection-end-line="422" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1687,31 +1893,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="1169" column="16" lean-forward="false" selection-start-line="1169" selection-start-column="16" selection-end-line="1169" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/NotificationFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/SystemServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="213" column="5" lean-forward="false" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/NotificationFactory.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/Random.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="421" column="16" lean-forward="false" selection-start-line="421" selection-start-column="16" selection-end-line="421" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1719,13 +1908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3683#3684#0" expanded="true" />
-            <element signature="e#3716#3717#0" expanded="true" />
-            <element signature="e#3765#3766#0" expanded="true" />
-            <element signature="e#3802#3803#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1733,9 +1915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="96" lean-forward="false" selection-start-line="20" selection-start-column="96" selection-end-line="20" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1751,26 +1930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
           <caret line="274" column="11" lean-forward="false" selection-start-line="274" selection-start-column="11" selection-end-line="274" selection-end-column="11" />
-          <folding>
-            <element signature="e#9062#9063#0" expanded="true" />
-            <element signature="e#9098#9099#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1792,9 +1951,140 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="70" column="63" lean-forward="false" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="58" column="83" lean-forward="false" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/attendance_management.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/auto_complete_fxc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jfoenix.jar!/com/jfoenix/controls/JFXTimePicker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="48" column="55" lean-forward="false" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/jfoenix.jar!/com/jfoenix/controls/JFXDatePicker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/services/SystemServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/main/OasisApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/NewEditEmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/employee/EmployeeManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="118" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/management_edit_window.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/resources/styles/default/palatte.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
