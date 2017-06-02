@@ -8,8 +8,9 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="backgroundAnchorPane" prefHeight="700.0"
             prefWidth="1100.0"
-            stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._employee.NewEditEmployeeController">
+            stylesheets="@../../../resources/styles/default/new_edit_window.css"
+            xmlns="http://javafx.com/javafx/8.0.111"
+            fx:controller="com.oasis.controller._A.NewEditEmployeeController">
     <children>
         <GridPane layoutX="60.0" layoutY="60.0" prefHeight="635.0" prefWidth="385.0" AnchorPane.leftAnchor="0.0"
                   AnchorPane.topAnchor="0.0">

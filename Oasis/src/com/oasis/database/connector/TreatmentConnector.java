@@ -41,7 +41,7 @@ public class TreatmentConnector extends Connector {
 
     public void newTreatment(Treatment treatment, int admissioid) {
         if (null != treatment.getChargeObjectProperty()) {
-            int chargeId = ChargeServices.newChargeWithReturid(null, treatment.getChargeObjectProperty());
+            int chargeId = ChargeServices.newChargeWithReturid(treatment.getChargeObjectProperty());
             treatment.getChargeObjectProperty().setId(chargeId);
         }
 

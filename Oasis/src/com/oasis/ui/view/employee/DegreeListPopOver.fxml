@@ -2,10 +2,11 @@
 
 <?import com.jfoenix.controls.JFXListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
             prefHeight="200.0" prefWidth="300.0"
             stylesheets="@../../../resources/styles/default/list_popover.css" xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._employee.DegreeListPopOverController">
+            fx:controller="com.oasis.controller.employee.DegreeListPopOverController">
     <children>
         <JFXListView fx:id="degreeListView" onMouseClicked="#degreeListViewOnMouseClicked" prefHeight="200.0"
                      prefWidth="300.0"/>

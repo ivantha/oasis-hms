@@ -3,7 +3,8 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="300.0"
             styleClass="sideBarPane"
-            stylesheets="@../../../resources/styles/default/launcher_sidebar.css" xmlns="http://javafx.com/javafx/8.0.111"
+            stylesheets="@../../../resources/styles/default/launcher_sidebar.css"
+            xmlns="http://javafx.com/javafx/8.0.111"
             fx:controller="com.oasis.controller.reports.ReportsSideBarController">
     <children>
         <VBox layoutX="130.0" layoutY="126.0" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="200.0"

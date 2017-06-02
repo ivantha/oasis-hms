@@ -57,20 +57,7 @@ public class Address implements Model<Address> {
     }
 
     public boolean isEmpty() {
-        if (!"".equals(getStreet())) {
-            return false;
-        }
-        if (!"".equals(getTown())) {
-            return false;
-        }
-        if (!"".equals(getProvince())) {
-            return false;
-        }
-        if (!"".equals(getPostalCode())) {
-            return false;
-        }
-
-        return true;
+        return null == getStreet() || getStreet().isEmpty();
     }
 
     public int getId() {

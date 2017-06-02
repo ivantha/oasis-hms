@@ -1,6 +1,5 @@
 package com.oasis.ui.component;
 
-import com.oasis.services.NotificationServices;
 import javafx.beans.property.LongProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -110,16 +109,16 @@ public class Notification extends Pane {
         return timeout.get();
     }
 
+    public void setTimeout(long timeout) {
+        this.timeout.set(timeout);
+    }
+
     public void setTimeout(int timeout) {
         this.timeout.set(timeout);
     }
 
     public LongProperty timeoutProperty() {
         return timeout;
-    }
-
-    public void setTimeout(long timeout) {
-        this.timeout.set(timeout);
     }
 
     public EventHandler<ActionEvent> getEventHandler() {

@@ -2,7 +2,7 @@ package com.oasis.factory;
 
 import com.oasis.common.Session;
 import com.oasis.controller.Controller;
-import com.oasis.controller._main.DashboardController;
+import com.oasis.controller.main.DashboardController;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import javafx.fxml.FXMLLoader;

@@ -29,7 +29,7 @@ public class OasisApplication extends Application {
     public void start(Stage primaryStage) throws Exception {
         SystemServices.start();
 
-        Session.currentUser = UserServices.getUser(null, "ivantha");
+        Session.currentUser = UserServices.getUser("ivantha");
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
         SystemServices.loadDashboard(primaryStage);

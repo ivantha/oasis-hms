@@ -2,18 +2,17 @@ package com.oasis.services;
 
 import com.oasis.factory.CacheFactory;
 import com.oasis.model.Gender;
-import com.oasis.ui.UIName;
 
 import java.util.ArrayList;
 
 public class GenderServices {
-    public static ArrayList<Gender> getGenderArrayList(UIName uiName) {
+    public static ArrayList<Gender> getGenderArrayList() {
         ArrayList<Gender> genderArrayList = new ArrayList<>();
         genderArrayList.addAll(CacheFactory.getGenderCache().getItemHashMap().values());
         return genderArrayList;
     }
 
-    public static Gender getGenderByTag(UIName uiName, String tag) {
+    public static Gender getGenderByTag(String tag) {
         if (tag.equals("f")) {
             return CacheFactory.getGenderCache().getItemHashMap().get(2);
         } else {

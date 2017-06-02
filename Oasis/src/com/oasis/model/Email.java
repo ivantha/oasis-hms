@@ -42,11 +42,7 @@ public class Email implements Model<Email> {
     }
 
     public boolean isEmpty() {
-        if (!"".equals(getEmail())) {
-            return false;
-        }
-
-        return true;
+        return null == getEmail() || getEmail().isEmpty();
     }
 
     public int getId() {

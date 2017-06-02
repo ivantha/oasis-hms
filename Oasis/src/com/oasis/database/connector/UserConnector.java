@@ -21,7 +21,7 @@ public class UserConnector extends Connector {
                 int employeeId = resultSet.getInt("employee_login.employee_id");
                 String password = resultSet.getString("employee_login.password");
 
-                employee = EmployeeServices.getEmployeeById(null, employeeId);
+                employee = EmployeeServices.getEmployeeById(employeeId);
                 employee.setUsername(username);
                 employee.setPassword(password);
             }

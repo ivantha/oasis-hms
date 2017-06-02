@@ -42,11 +42,7 @@ public class Telephone implements Model<Telephone> {
     }
 
     public boolean isEmpty() {
-        if (!"".equals(getTelephone())) {
-            return false;
-        }
-
-        return true;
+        return null == getTelephone() || getTelephone().isEmpty();
     }
 
     public int getId() {

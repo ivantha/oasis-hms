@@ -5,8 +5,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="1100.0"
-            stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._patient.NewRaceController">
+            stylesheets="@../../../resources/styles/default/new_edit_window.css"
+            xmlns="http://javafx.com/javafx/8.0.111"
+            fx:controller="com.oasis.controller.patient.NewRaceController">
     <children>
         <GridPane layoutX="14.0" layoutY="14.0" prefHeight="65.0" prefWidth="393.0" AnchorPane.leftAnchor="50.0"
                   AnchorPane.topAnchor="50.0">

@@ -38,7 +38,7 @@ public class PhysicianConnector extends Connector {
                 String middleName = resultSet.getString("physician.middle_name");
                 String lastName = resultSet.getString("physician.last_name");
                 PhysicianDesignation physicianDesignation = PhysicianServices.getPhysicianDesignationById(
-                        null, resultSet.getInt("physician.physician_designation_id"));
+                        resultSet.getInt("physician.physician_designation_id"));
 
                 if (!physicianHashMap.containsKey(id)) {
                     Physician physician = new Physician(id, firstName, middleName, lastName, physicianDesignation);
@@ -177,13 +177,13 @@ public class PhysicianConnector extends Connector {
     }
 
     private void newPhysicianTelephone(int physiciaid, Telephone telephone) throws SQLException {
-        PreparedStatement preparedStatement1 = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
+        PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "physician_telephone(physician_id, telephone) " +
-                "VALUES(?, ?, ?)");
-        preparedStatement1.setInt(1, physiciaid);
-        preparedStatement1.setString(2, telephone.getTelephone());
+                "VALUES(?, ?)");
+        preparedStatement.setInt(1, physiciaid);
+        preparedStatement.setString(2, telephone.getTelephone());
 
-        preparedStatement1.execute();
+        preparedStatement.execute();
     }
 
     private void updatePhysicianTelephone(Telephone telephone) throws SQLException {

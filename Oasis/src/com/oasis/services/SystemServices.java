@@ -3,7 +3,7 @@ package com.oasis.services;
 import com.oasis.common.Session;
 import com.oasis.configuration.ConfigurationFile;
 import com.oasis.configuration.ConfigurationHandler;
-import com.oasis.controller._main.DashboardController;
+import com.oasis.controller.main.DashboardController;
 import com.oasis.database.connector.*;
 import com.oasis.factory.CacheFactory;
 import com.oasis.factory.UIFactory;

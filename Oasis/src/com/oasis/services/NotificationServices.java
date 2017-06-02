@@ -1,20 +1,14 @@
 package com.oasis.services;
 
-import com.oasis.controller._main.DashboardController;
+import com.oasis.controller.main.DashboardController;
 import com.oasis.factory.UIFactory;
 import com.oasis.ui.UIName;
 import com.oasis.ui.component.Notification;
 
 public class NotificationServices {
-
-    public static void addNotification(Notification notification) {
+    private static void addNotification(Notification notification) {
         DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
         dashboardController.getNotificationFXC().addNotification(notification);
-    }
-
-    public static void addNotification(String heading, String content, Notification.NotificationType notificationType) {
-        Notification notification = new Notification(heading, content, notificationType);
-        NotificationServices.addNotification(notification);
     }
 
     public static void addNotification(String heading, String content, Notification.NotificationType notificationType, long timeout) {
@@ -25,5 +19,13 @@ public class NotificationServices {
     public static void removeNotification(Notification notification) {
         DashboardController dashboardController = (DashboardController) UIFactory.getUI(UIName.DASHBOARD).getController();
         dashboardController.getNotificationFXC().removeNotification(notification);
+    }
+
+    public static void defaultSuccessfullyAddedNotification(String heading, String content) {
+        NotificationServices.addNotification(heading, content, Notification.NotificationType.SUCCESSFUL, 10000);
+    }
+
+    public static void defaultInvalidArguementNotification(String heading, String content) {
+        NotificationServices.addNotification(heading, content, Notification.NotificationType.ERROR, -1);
     }
 }

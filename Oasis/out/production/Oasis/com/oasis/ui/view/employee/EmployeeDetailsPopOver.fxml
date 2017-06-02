@@ -4,8 +4,9 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="backgroundAnchorPane" prefHeight="225.0"
             prefWidth="300.0"
-            stylesheets="@../../../resources/styles/default/details_popover.css" xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._employee.EmployeeDetailsPopOverController">
+            stylesheets="@../../../resources/styles/default/details_popover.css"
+            xmlns="http://javafx.com/javafx/8.0.111"
+            fx:controller="com.oasis.controller.employee.EmployeeDetailsPopOverController">
     <children>
         <GridPane layoutX="75.0" layoutY="75.0" prefHeight="175.0" prefWidth="251.0" AnchorPane.leftAnchor="0.0"
                   AnchorPane.topAnchor="0.0">

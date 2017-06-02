@@ -45,7 +45,7 @@ public class EmployeeConnector extends Connector {
                 String firstName = resultSet.getString("employee.first_name");
                 String middleName = resultSet.getString("employee.middle_name");
                 String lastName = resultSet.getString("employee.last_name");
-                Gender gender = GenderServices.getGenderByTag(null, resultSet.getString("employee.gender"));
+                Gender gender = GenderServices.getGenderByTag(resultSet.getString("employee.gender"));
                 LocalDate dob = resultSet.getDate("employee.dob").toLocalDate();
                 LocalDate startDate = resultSet.getDate("employee.start_date").toLocalDate();
 
@@ -55,7 +55,7 @@ public class EmployeeConnector extends Connector {
                     endDate = endDateDate.toLocalDate();
                 }
 
-                EmployeeRole employeeRole = EmployeeRoleServices.getEmployeeRoleById(null, resultSet.getInt("employee.employee_role_id"));
+                EmployeeRole employeeRole = EmployeeRoleServices.getEmployeeRoleById(resultSet.getInt("employee.employee_role_id"));
                 LocalTime defaultShiftStart = resultSet.getTime("employee.default_shift_start").toLocalTime();
                 LocalTime defaultShiftEnd = resultSet.getTime("employee.default_shift_end").toLocalTime();
                 WorkingDays workingDays = WorkingDays.valueOf(resultSet.getString("employee.working_days"));
@@ -262,7 +262,7 @@ public class EmployeeConnector extends Connector {
                 }
             }
 
-            Employee originalEmployee = EmployeeServices.getEmployeeById(null, employee.getId());
+            Employee originalEmployee = EmployeeServices.getEmployeeById(employee.getId());
             for (Degree degree : employee.getDegreeListProperty()) {
                 replaceEmployeeDegree(employee.getId(), degree);
             }

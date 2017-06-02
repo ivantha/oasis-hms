@@ -25,7 +25,7 @@ public class WardConnector extends Connector {
                 int maxPatientCount = resultSet.getInt("ward.max_patient_count");
                 int currentPatientCount = resultSet.getInt("ward.current_patient_count");
                 String genderAcceptance = resultSet.getString("ward.gender_acceptance");
-                Gender gender = GenderServices.getGenderByTag(null, genderAcceptance);
+                Gender gender = GenderServices.getGenderByTag(genderAcceptance);
                 int supervisorId = resultSet.getInt("ward.supervisor_id");
 
                 Ward ward = new Ward(id, name, description, maxPatientCount, currentPatientCount, gender, supervisorId);

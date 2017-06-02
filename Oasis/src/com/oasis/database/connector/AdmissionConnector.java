@@ -27,11 +27,11 @@ public class AdmissionConnector extends Connector {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("admission.id");
-                Physician physician = PhysicianServices.getPhysicianById(null, resultSet.getInt("admission.physician_id"));
+                Physician physician = PhysicianServices.getPhysicianById(resultSet.getInt("admission.physician_id"));
                 Doctor admissionConsultant = new Doctor(EmployeeServices.getEmployeeById(
-                        null, resultSet.getInt("admission.admission_consultant_id")));
+                        resultSet.getInt("admission.admission_consultant_id")));
                 Doctor leadingConsultant = new Doctor(EmployeeServices.getEmployeeById(
-                        null, resultSet.getInt("admission.leading_consultant_id")));
+                        resultSet.getInt("admission.leading_consultant_id")));
                 String cause = resultSet.getString("admission.cause");
                 Date admissionDate = resultSet.getDate("admission.admission_date");
 
