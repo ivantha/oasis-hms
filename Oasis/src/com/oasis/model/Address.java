@@ -4,7 +4,7 @@ import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Address implements Model<Address>{
+public class Address implements Model<Address> {
     private int id = 0;
     private StringProperty street = new SimpleStringProperty();
     private StringProperty town = new SimpleStringProperty();
@@ -56,17 +56,17 @@ public class Address implements Model<Address>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
-        if (!"".equals(getStreet())){
+    public boolean isEmpty() {
+        if (!"".equals(getStreet())) {
             return false;
         }
-        if (!"".equals(getTown())){
+        if (!"".equals(getTown())) {
             return false;
         }
-        if (!"".equals(getProvince())){
+        if (!"".equals(getProvince())) {
             return false;
         }
-        if (!"".equals(getPostalCode())){
+        if (!"".equals(getPostalCode())) {
             return false;
         }
 
@@ -85,47 +85,47 @@ public class Address implements Model<Address>{
         return street.get();
     }
 
-    public StringProperty streetProperty() {
-        return street;
-    }
-
     public void setStreet(String street) {
         this.street.set(street);
+    }
+
+    public StringProperty streetProperty() {
+        return street;
     }
 
     public String getTown() {
         return town.get();
     }
 
-    public StringProperty townProperty() {
-        return town;
-    }
-
     public void setTown(String town) {
         this.town.set(town);
+    }
+
+    public StringProperty townProperty() {
+        return town;
     }
 
     public String getProvince() {
         return province.get();
     }
 
-    public StringProperty provinceProperty() {
-        return province;
-    }
-
     public void setProvince(String province) {
         this.province.set(province);
+    }
+
+    public StringProperty provinceProperty() {
+        return province;
     }
 
     public String getPostalCode() {
         return postalCode.get();
     }
 
-    public StringProperty postalCodeProperty() {
-        return postalCode;
-    }
-
     public void setPostalCode(String postalCode) {
         this.postalCode.set(postalCode);
+    }
+
+    public StringProperty postalCodeProperty() {
+        return postalCode;
     }
 }

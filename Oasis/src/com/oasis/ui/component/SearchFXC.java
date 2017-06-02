@@ -21,12 +21,12 @@ public class SearchFXC<T> {
 
             String lowerCaseFilter = newValue.toLowerCase();
 
-            for(int i = 0; i < getterArgs.length; i++){
+            for (int i = 0; i < getterArgs.length; i++) {
                 try {
-                    Method method = t.getClass().getDeclaredMethod (getterArgs[i]);
-                    Object returnObject = method.invoke (t);
+                    Method method = t.getClass().getDeclaredMethod(getterArgs[i]);
+                    Object returnObject = method.invoke(t);
 
-                    if(null != returnObject && returnObject.toString().toLowerCase().contains(lowerCaseFilter)){
+                    if (null != returnObject && returnObject.toString().toLowerCase().contains(lowerCaseFilter)) {
                         return true;
                     }
                 } catch (NoSuchMethodException e) {

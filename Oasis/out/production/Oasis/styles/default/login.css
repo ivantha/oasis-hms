@@ -6,6 +6,6 @@
     src: url('../../fonts/Roboto-Regular.ttf');
 }
 
-#messageLabel{
+#messageLabel {
     -fx-text-fill: #F44336;
 }

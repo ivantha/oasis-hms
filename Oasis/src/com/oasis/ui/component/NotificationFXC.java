@@ -8,6 +8,8 @@ import javafx.animation.PauseTransition;
 import javafx.animation.TranslateTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.IndexedCell;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -92,14 +94,14 @@ public class NotificationFXC extends ListView<Notification> {
         ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         Runnable notificationWorker = () -> {
             ArrayList<Notification> expiredNotificationArrayList = new ArrayList<>();
-            for(Notification notification: notificationObservableList){
-                if(notification.isExpired()){
+            for (Notification notification : notificationObservableList) {
+                if (notification.isExpired()) {
                     expiredNotificationArrayList.add(notification);
                 }
             }
 
-            for(Notification notification: expiredNotificationArrayList){
-                if(notification.isContract()) {
+            for (Notification notification : expiredNotificationArrayList) {
+                if (notification.isContract()) {
                     NotificationFXC.this.removeNotification(notification);
                 }
             }
@@ -107,14 +109,15 @@ public class NotificationFXC extends ListView<Notification> {
         scheduledExecutorService.scheduleWithFixedDelay(notificationWorker, 1, 1, TimeUnit.SECONDS);
     }
 
-    public void addNotification(Notification notification){
+    public void addNotification(Notification notification) {
         int nId = ++lastNId;
         notification.setnId(nId);
+        notification.setCloseButtonEventHandler(event -> removeNotification(notification));
 
         notificationObservableList.add(notification);
     }
 
-    public void removeNotification(Notification notification){
+    public void removeNotification(Notification notification) {
         IndexedCell<Notification> indexedCell = NotificationFXC.this.getNotificationCell(
                 notificationObservableList.indexOf(notification));
 
@@ -140,7 +143,7 @@ public class NotificationFXC extends ListView<Notification> {
 
     }
 
-    public boolean isNotificationScrollVisible(){
+    public boolean isNotificationScrollVisible() {
         return this.lookup(".scroll-bar").isVisible();
     }
 

@@ -5,11 +5,14 @@ import com.oasis.ui.UIName;
 import javafx.event.EventHandler;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Button;
-import javafx.scene.input.*;
+import javafx.scene.input.ClipboardContent;
+import javafx.scene.input.Dragboard;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.transform.Transform;
 
 
-public class DynamicButtonDragDetectedEventHandler implements EventHandler<MouseEvent>{
+public class DynamicButtonDragDetectedEventHandler implements EventHandler<MouseEvent> {
     private UIName uiName;
 
     public DynamicButtonDragDetectedEventHandler(UIName uiName) {

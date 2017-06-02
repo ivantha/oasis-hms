@@ -1,22 +1,22 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Speciality;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
-public class SpecialityConnector extends Connect {
-    public HashMap<Integer, Speciality> getSpecialityHashMap(){
+public class SpecialityConnector extends Connector {
+    public HashMap<Integer, Speciality> getSpecialityHashMap() {
         HashMap<Integer, Speciality> specialityHashMap = new HashMap<>();
 
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM speciality");
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("speciality.id");
                 String name = resultSet.getString("speciality.name");
                 String description = resultSet.getString("speciality.description");

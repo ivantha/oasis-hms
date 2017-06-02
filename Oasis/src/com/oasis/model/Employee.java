@@ -160,26 +160,26 @@ public class Employee implements Model<Employee> {
 
     @Override
     public Employee clone() {
-        Employee clonedEmployee =  new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
+        Employee clonedEmployee = new Employee(getId(), getNic(), getFirstName(), getMiddleName(), getLastName(), getGender(), getDob(),
                 getStartDate(), getEndDate(), getEmployeeRole(), getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays());
 
-        for(Telephone telephone: getTelephoneArrayList()){
+        for (Telephone telephone : getTelephoneArrayList()) {
             clonedEmployee.getTelephoneArrayList().add(telephone.clone());
         }
-        for(Address address: getAddressArrayList()){
+        for (Address address : getAddressArrayList()) {
             clonedEmployee.getAddressArrayList().add(address.clone());
         }
-        for(Email email: getEmailArrayList()){
+        for (Email email : getEmailArrayList()) {
             clonedEmployee.getEmailArrayList().add(email.clone());
         }
-        for(Degree degree: getDegreeListProperty()){
+        for (Degree degree : getDegreeListProperty()) {
             clonedEmployee.getDegreeListProperty().add(degree);
         }
 
         return clonedEmployee;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -195,132 +195,132 @@ public class Employee implements Model<Employee> {
         return nic.get();
     }
 
-    public StringProperty nicProperty() {
-        return nic;
-    }
-
     public void setNic(String nic) {
         this.nic.set(nic);
+    }
+
+    public StringProperty nicProperty() {
+        return nic;
     }
 
     public String getFirstName() {
         return firstName.get();
     }
 
-    public StringProperty firstNameProperty() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);
+    }
+
+    public StringProperty firstNameProperty() {
+        return firstName;
     }
 
     public String getMiddleName() {
         return middleName.get();
     }
 
-    public StringProperty middleNameProperty() {
-        return middleName;
-    }
-
     public void setMiddleName(String middleName) {
         this.middleName.set(middleName);
+    }
+
+    public StringProperty middleNameProperty() {
+        return middleName;
     }
 
     public String getLastName() {
         return lastName.get();
     }
 
-    public StringProperty lastNameProperty() {
-        return lastName;
-    }
-
     public void setLastName(String lastName) {
         this.lastName.set(lastName);
+    }
+
+    public StringProperty lastNameProperty() {
+        return lastName;
     }
 
     public Gender getGender() {
         return gender.get();
     }
 
-    public ObjectProperty<Gender> genderProperty() {
-        return gender;
-    }
-
     public void setGender(Gender gender) {
         this.gender.set(gender);
+    }
+
+    public ObjectProperty<Gender> genderProperty() {
+        return gender;
     }
 
     public LocalDate getDob() {
         return dob.get();
     }
 
-    public ObjectProperty<LocalDate> dobProperty() {
-        return dob;
-    }
-
     public void setDob(LocalDate dob) {
         this.dob.set(dob);
+    }
+
+    public ObjectProperty<LocalDate> dobProperty() {
+        return dob;
     }
 
     public LocalDate getStartDate() {
         return startDate.get();
     }
 
-    public ObjectProperty<LocalDate> startDateProperty() {
-        return startDate;
-    }
-
     public void setStartDate(LocalDate startDate) {
         this.startDate.set(startDate);
+    }
+
+    public ObjectProperty<LocalDate> startDateProperty() {
+        return startDate;
     }
 
     public LocalDate getEndDate() {
         return endDate.get();
     }
 
-    public ObjectProperty<LocalDate> endDateProperty() {
-        return endDate;
-    }
-
     public void setEndDate(LocalDate endDate) {
         this.endDate.set(endDate);
+    }
+
+    public ObjectProperty<LocalDate> endDateProperty() {
+        return endDate;
     }
 
     public EmployeeRole getEmployeeRole() {
         return employeeRole.get();
     }
 
-    public ObjectProperty<EmployeeRole> employeeRoleProperty() {
-        return employeeRole;
-    }
-
     public void setEmployeeRole(EmployeeRole employeeRole) {
         this.employeeRole.set(employeeRole);
+    }
+
+    public ObjectProperty<EmployeeRole> employeeRoleProperty() {
+        return employeeRole;
     }
 
     public LocalTime getDefaultShiftStart() {
         return defaultShiftStart.get();
     }
 
-    public ObjectProperty<LocalTime> defaultShiftStartProperty() {
-        return defaultShiftStart;
-    }
-
     public void setDefaultShiftStart(LocalTime defaultShiftStart) {
         this.defaultShiftStart.set(defaultShiftStart);
+    }
+
+    public ObjectProperty<LocalTime> defaultShiftStartProperty() {
+        return defaultShiftStart;
     }
 
     public LocalTime getDefaultShiftEnd() {
         return defaultShiftEnd.get();
     }
 
-    public ObjectProperty<LocalTime> defaultShiftEndProperty() {
-        return defaultShiftEnd;
-    }
-
     public void setDefaultShiftEnd(LocalTime defaultShiftEnd) {
         this.defaultShiftEnd.set(defaultShiftEnd);
+    }
+
+    public ObjectProperty<LocalTime> defaultShiftEndProperty() {
+        return defaultShiftEnd;
     }
 
     public WorkingDays getWorkingDays() {
@@ -359,99 +359,106 @@ public class Employee implements Model<Employee> {
         return degreeListProperty.get();
     }
 
-    public ListProperty<Degree> degreeListPropertyProperty() {
-        return degreeListProperty;
-    }
-
     public void setDegreeListProperty(ObservableList<Degree> degreeListProperty) {
         this.degreeListProperty.set(degreeListProperty);
+    }
+
+    public ListProperty<Degree> degreeListPropertyProperty() {
+        return degreeListProperty;
     }
 
     public String getUsername() {
         return username.get();
     }
 
-    public StringProperty usernameProperty() {
-        return username;
-    }
-
     public void setUsername(String username) {
         this.username.set(username);
+    }
+
+    public StringProperty usernameProperty() {
+        return username;
     }
 
     public String getPassword() {
         return password.get();
     }
 
-    public StringProperty passwordProperty() {
-        return password;
-    }
-
     public void setPassword(String password) {
         this.password.set(password);
     }
 
-    public boolean isDoctor(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Doctor");
-        }else {
+    public StringProperty passwordProperty() {
+        return password;
+    }
+
+    public boolean isDoctor() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Doctor");
+        } else {
             return false;
         }
     }
 
-    public boolean isNurse(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Nurse");
-        }else {
+    public boolean isNurse() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Nurse");
+        } else {
             return false;
         }
     }
-    public boolean isTech(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Tech");
-        }else {
+
+    public boolean isTech() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Tech");
+        } else {
             return false;
         }
     }
-    public boolean isTheraphist(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Theraphist");
-        }else {
+
+    public boolean isTheraphist() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Theraphist");
+        } else {
             return false;
         }
     }
-    public boolean isPharmacist(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Pharmacist");
-        }else {
+
+    public boolean isPharmacist() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Pharmacist");
+        } else {
             return false;
         }
     }
-    public boolean isMedicalAssistant(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Medical Assistant");
-        }else {
+
+    public boolean isMedicalAssistant() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Medical Assistant");
+        } else {
             return false;
         }
     }
-    public boolean isMedicalLabTechnologist(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Medical Lab Technologist");
-        }else {
+
+    public boolean isMedicalLabTechnologist() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Medical Lab Technologist");
+        } else {
             return false;
         }
     }
-    public boolean isDiatician(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Diatician");
-        }else {
+
+    public boolean isDiatician() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Diatician");
+        } else {
             return false;
         }
     }
-    public boolean isJanitor(){
-        if(employeeRole != null){
-            return  getEmployeeRole().getRole().equals("Janitor");
-        }else {
+
+    public boolean isJanitor() {
+        if (employeeRole != null) {
+            return getEmployeeRole().getRole().equals("Janitor");
+        } else {
             return false;
         }
     }

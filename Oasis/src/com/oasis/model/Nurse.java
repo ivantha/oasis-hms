@@ -2,7 +2,7 @@ package com.oasis.model;
 
 import com.oasis.common.Session;
 
-public class Nurse extends Employee{
+public class Nurse extends Employee {
     public Nurse(Employee employee) {
         super(employee.getId(), employee.getNic(), employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
                 employee.getGender(), employee.getDob(), employee.getStartDate(), employee.getEndDate(), employee.getEmployeeRole(),

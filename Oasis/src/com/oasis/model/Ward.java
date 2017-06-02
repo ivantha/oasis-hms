@@ -3,7 +3,7 @@ package com.oasis.model;
 import com.oasis.common.Session;
 import javafx.beans.property.*;
 
-public class Ward implements Model<Ward>{
+public class Ward implements Model<Ward> {
     private int id = 0;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -35,25 +35,25 @@ public class Ward implements Model<Ward>{
         }
 
         Ward w = (Ward) obj;
-        if(w.getId() != getId()){
+        if (w.getId() != getId()) {
             return false;
         }
-        if(w.getName() != getName()){
+        if (w.getName() != getName()) {
             return false;
         }
-        if(w.getDescription() != getDescription()){
+        if (w.getDescription() != getDescription()) {
             return false;
         }
-        if(w.getMaxPatientCount() != getMaxPatientCount()){
+        if (w.getMaxPatientCount() != getMaxPatientCount()) {
             return false;
         }
-        if(w.getCurrentPatientCount() != getCurrentPatientCount()){
+        if (w.getCurrentPatientCount() != getCurrentPatientCount()) {
             return false;
         }
-        if(!w.getGenderAcceptance().equals(getGenderAcceptance())){
+        if (!w.getGenderAcceptance().equals(getGenderAcceptance())) {
             return false;
         }
-        if(w.getSupervisorId() != getSupervisorId()){
+        if (w.getSupervisorId() != getSupervisorId()) {
             return false;
         }
 
@@ -61,11 +61,11 @@ public class Ward implements Model<Ward>{
     }
 
     @Override
-    public Ward clone(){
+    public Ward clone() {
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -81,71 +81,71 @@ public class Ward implements Model<Ward>{
         return name.get();
     }
 
-    public StringProperty nameProperty() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 
     public String getDescription() {
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
     public int getMaxPatientCount() {
         return maxPatientCount.get();
     }
 
-    public IntegerProperty maxPatientCountProperty() {
-        return maxPatientCount;
-    }
-
     public void setMaxPatientCount(int maxPatientCount) {
         this.maxPatientCount.set(maxPatientCount);
+    }
+
+    public IntegerProperty maxPatientCountProperty() {
+        return maxPatientCount;
     }
 
     public int getCurrentPatientCount() {
         return currentPatientCount.get();
     }
 
-    public IntegerProperty currentPatientCountProperty() {
-        return currentPatientCount;
-    }
-
     public void setCurrentPatientCount(int currentPatientCount) {
         this.currentPatientCount.set(currentPatientCount);
+    }
+
+    public IntegerProperty currentPatientCountProperty() {
+        return currentPatientCount;
     }
 
     public Gender getGenderAcceptance() {
         return genderAcceptance.get();
     }
 
-    public ObjectProperty<Gender> genderAcceptanceProperty() {
-        return genderAcceptance;
-    }
-
     public void setGenderAcceptance(Gender genderAcceptance) {
         this.genderAcceptance.set(genderAcceptance);
+    }
+
+    public ObjectProperty<Gender> genderAcceptanceProperty() {
+        return genderAcceptance;
     }
 
     public int getSupervisorId() {
         return supervisorId.get();
     }
 
-    public IntegerProperty supervisorIdProperty() {
-        return supervisorId;
-    }
-
     public void setSupervisorId(int supervisorId) {
         this.supervisorId.set(supervisorId);
+    }
+
+    public IntegerProperty supervisorIdProperty() {
+        return supervisorId;
     }
 }

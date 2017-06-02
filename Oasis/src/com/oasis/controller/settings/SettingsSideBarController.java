@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SettingsSideBarController implements Controller{
+public class SettingsSideBarController implements Controller {
     public Button resetDefaultButton;
 
     @Override
@@ -27,7 +27,7 @@ public class SettingsSideBarController implements Controller{
     public void resetDefaultButtonOnAction(ActionEvent actionEvent) {
         Session.APP_CONFIG.setDefaultConfig();
 
-        Stage primaryStage = (Stage) ((Button)(actionEvent.getSource())).getScene().getWindow();
+        Stage primaryStage = (Stage) ((Button) (actionEvent.getSource())).getScene().getWindow();
         primaryStage.close();
         Platform.runLater(() -> {
             try {

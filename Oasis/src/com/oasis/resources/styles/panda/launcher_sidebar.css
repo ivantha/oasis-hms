@@ -2,12 +2,12 @@
     src: url('../../fonts/Roboto-Regular.ttf');
 }
 
-.sideBarPane{
-   	-fx-background-color: transparent;
+.sideBarPane {
+    -fx-background-color: transparent;
     -fx-border-color: #153346;
 }
 
-.launcherSideButton{
+.launcherSideButton {
     -fx-background-color: #153346;
     -fx-background-radius: 0px;
 
@@ -18,10 +18,10 @@
     -fx-alignment: center-left;
 }
 
-.launcherSideButton:hover{
+.launcherSideButton:hover {
     -fx-background-color: #ef7875;
 }
 
-.launcherSideDetailsPanel{
-	-fx-border-color: #153346;
+.launcherSideDetailsPanel {
+    -fx-border-color: #153346;
 }

@@ -159,7 +159,7 @@ public class ConfigurationFile {
         configurationHandler.setProperty("tab_button_7", tabButton7);
     }
 
-    public void setDefaultConfig(){
+    public void setDefaultConfig() {
         configurationHandler.setDefaultConfigurations();
     }
 }

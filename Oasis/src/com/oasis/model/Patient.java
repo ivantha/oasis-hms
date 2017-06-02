@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Patient implements Model<Patient>{
+public class Patient implements Model<Patient> {
     private int id = 0;
     private StringProperty nic = new SimpleStringProperty();
     private StringProperty firstName = new SimpleStringProperty();
@@ -138,7 +138,7 @@ public class Patient implements Model<Patient>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -154,120 +154,120 @@ public class Patient implements Model<Patient>{
         return nic.get();
     }
 
-    public StringProperty nicProperty() {
-        return nic;
-    }
-
     public void setNic(String nic) {
         this.nic.set(nic);
+    }
+
+    public StringProperty nicProperty() {
+        return nic;
     }
 
     public String getFirstName() {
         return firstName.get();
     }
 
-    public StringProperty firstNameProperty() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);
+    }
+
+    public StringProperty firstNameProperty() {
+        return firstName;
     }
 
     public String getMiddleName() {
         return middleName.get();
     }
 
-    public StringProperty middleNameProperty() {
-        return middleName;
-    }
-
     public void setMiddleName(String middleName) {
         this.middleName.set(middleName);
+    }
+
+    public StringProperty middleNameProperty() {
+        return middleName;
     }
 
     public String getLastName() {
         return lastName.get();
     }
 
-    public StringProperty lastNameProperty() {
-        return lastName;
-    }
-
     public void setLastName(String lastName) {
         this.lastName.set(lastName);
+    }
+
+    public StringProperty lastNameProperty() {
+        return lastName;
     }
 
     public Gender getGender() {
         return gender.get();
     }
 
-    public ObjectProperty<Gender> genderProperty() {
-        return gender;
-    }
-
     public void setGender(Gender gender) {
         this.gender.set(gender);
+    }
+
+    public ObjectProperty<Gender> genderProperty() {
+        return gender;
     }
 
     public LocalDate getDob() {
         return dob.get();
     }
 
-    public ObjectProperty<LocalDate> dobProperty() {
-        return dob;
-    }
-
     public void setDob(LocalDate dob) {
         this.dob.set(dob);
+    }
+
+    public ObjectProperty<LocalDate> dobProperty() {
+        return dob;
     }
 
     public BloodGroup getBloodGroupObjectProperty() {
         return bloodGroupObjectProperty.get();
     }
 
-    public ObjectProperty<BloodGroup> bloodGroupObjectPropertyProperty() {
-        return bloodGroupObjectProperty;
-    }
-
     public void setBloodGroupObjectProperty(BloodGroup bloodGroupObjectProperty) {
         this.bloodGroupObjectProperty.set(bloodGroupObjectProperty);
+    }
+
+    public ObjectProperty<BloodGroup> bloodGroupObjectPropertyProperty() {
+        return bloodGroupObjectProperty;
     }
 
     public Ethnicity getEthnicityObjectProperty() {
         return ethnicityObjectProperty.get();
     }
 
-    public ObjectProperty<Ethnicity> ethnicityObjectPropertyProperty() {
-        return ethnicityObjectProperty;
-    }
-
     public void setEthnicityObjectProperty(Ethnicity ethnicityObjectProperty) {
         this.ethnicityObjectProperty.set(ethnicityObjectProperty);
+    }
+
+    public ObjectProperty<Ethnicity> ethnicityObjectPropertyProperty() {
+        return ethnicityObjectProperty;
     }
 
     public Date getAddedDateObjectProperty() {
         return addedDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> addedDateObjectPropertyProperty() {
-        return addedDateObjectProperty;
-    }
-
     public void setAddedDateObjectProperty(Date addedDateObjectProperty) {
         this.addedDateObjectProperty.set(addedDateObjectProperty);
+    }
+
+    public ObjectProperty<Date> addedDateObjectPropertyProperty() {
+        return addedDateObjectProperty;
     }
 
     public String getDescription() {
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
     public ArrayList<Telephone> getTelephoneArrayList() {

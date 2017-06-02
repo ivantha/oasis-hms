@@ -3,30 +3,24 @@ package com.oasis.services;
 import com.oasis.common.Session;
 import com.oasis.configuration.ConfigurationFile;
 import com.oasis.configuration.ConfigurationHandler;
-import com.oasis.controller.main.DashboardController;
+import com.oasis.controller._main.DashboardController;
 import com.oasis.database.connector.*;
+import com.oasis.factory.CacheFactory;
 import com.oasis.factory.UIFactory;
-import com.oasis.model.*;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
-import com.oasis.ui.component.Notification;
-import com.oasis.ui.utils.UIUtils;
-import com.oasis.utils.Cache;
 import com.rits.cloning.Cloner;
 import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
-import javafx.collections.FXCollections;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class SystemServices {
     public static void start() {
@@ -60,76 +54,7 @@ public class SystemServices {
         Session.treatmentConnector = new TreatmentConnector();
         Session.userConnector = new UserConnector();
 
-        Session.bloodGroupCache = new Cache<BloodGroup>() {
-            @Override
-            public void itemAdder(HashMap<Integer, BloodGroup> itemHashMap) {
-                itemHashMap.putAll(Session.bloodGroupConnector.getBloodGroupHashMap());
-            }
-        };
-
-        Session.degreeCache = new Cache<Degree>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Degree> itemHashMap) {
-                itemHashMap.putAll(Session.degreeConnector.getDegreeHashMap());
-            }
-        };
-
-        Session.employeeCache = new Cache<Employee>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Employee> itemHashMap) {
-                itemHashMap.putAll(Session.employeeConnector.getEmployeeHashMap());
-            }
-        };
-
-        Session.employeeRoleCache = new Cache<EmployeeRole>() {
-            @Override
-            public void itemAdder(HashMap<Integer, EmployeeRole> itemHashMap) {
-                itemHashMap.putAll(Session.employeeRoleConnector.getEmployeeRoleHashMap());
-            }
-        };
-
-        Session.ethnicityCache = new Cache<Ethnicity>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Ethnicity> itemHashMap) {
-                itemHashMap.putAll(Session.ethnicityConnector.getEthnicityHashMap());
-            }
-        };
-
-        Session.genderCache = new Cache<Gender>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Gender> itemHashMap) {
-            }
-        };
-        Session.genderCache.getItemHashMap().put(1, new Gender(1, "m"));
-        Session.genderCache.getItemHashMap().put(2, new Gender(2, "f"));
-
-        Session.physicianDesignationCache = new Cache<PhysicianDesignation>() {
-            @Override
-            public void itemAdder(HashMap<Integer, PhysicianDesignation> itemHashMap) {
-                itemHashMap.putAll(Session.physicianConnector.getPhysicianDesignationhashMap());
-            }
-        };
-
-        Session.specialityCache = new Cache<Speciality>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Speciality> itemHashMap) {
-                itemHashMap.putAll(Session.specialityConnector.getSpecialityHashMap());
-            }
-        };
-
-        Session.testCache = new Cache<Test>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Test> itemHashMap) {
-                itemHashMap.putAll(Session.testConnector.getTestHashMap());
-            }
-        };
-
-        Session.wardCache = new Cache<Ward>() {
-            @Override
-            public void itemAdder(HashMap<Integer, Ward> itemHashMap) {
-                itemHashMap.putAll(Session.wardConnector.getWardHashMap());
-            }
-        };
+        CacheFactory.initializeAllCaches();
 
         Session.cloner = new Cloner();
     }
@@ -154,7 +79,7 @@ public class SystemServices {
             sideButton.getStyleClass().add("tabButton");
 
             UIName uiName = UIName.valueOf(name);
-            sideButton.setText("                " + UIUtils.getUIName(uiName));
+            sideButton.setText("                " + UIFactory.getUIName(uiName));
             sideButton.getStyleClass().add(uiName.name());
             sideButton.setOnAction(event1 -> {
                 UIFactory.launchUI(uiName, true);

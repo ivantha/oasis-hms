@@ -1,7 +1,7 @@
 @import "palatte.css";
 @import "common.css";
 
-#backgroundAnchorPane{
+#backgroundAnchorPane {
     -fx-background-color: -default-background-color;
     -fx-padding: 30px;
 }

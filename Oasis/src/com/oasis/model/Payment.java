@@ -5,7 +5,7 @@ import javafx.beans.property.*;
 
 import java.util.Date;
 
-public class Payment implements Model<Payment>{
+public class Payment implements Model<Payment> {
     private int id;
     private IntegerProperty admissioid = new SimpleIntegerProperty();
     private DoubleProperty amount = new SimpleDoubleProperty();
@@ -56,35 +56,35 @@ public class Payment implements Model<Payment>{
         return admissioid.get();
     }
 
-    public IntegerProperty admissioidProperty() {
-        return admissioid;
-    }
-
     public void setAdmissioid(int admissioid) {
         this.admissioid.set(admissioid);
+    }
+
+    public IntegerProperty admissioidProperty() {
+        return admissioid;
     }
 
     public double getAmount() {
         return amount.get();
     }
 
-    public DoubleProperty amountProperty() {
-        return amount;
-    }
-
     public void setAmount(double amount) {
         this.amount.set(amount);
+    }
+
+    public DoubleProperty amountProperty() {
+        return amount;
     }
 
     public Date getPaymentDate() {
         return paymentDate.get();
     }
 
-    public ObjectProperty<Date> paymentDateProperty() {
-        return paymentDate;
-    }
-
     public void setPaymentDate(Date paymentDate) {
         this.paymentDate.set(paymentDate);
+    }
+
+    public ObjectProperty<Date> paymentDateProperty() {
+        return paymentDate;
     }
 }

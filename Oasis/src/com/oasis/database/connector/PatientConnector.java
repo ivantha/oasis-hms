@@ -2,7 +2,7 @@ package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.*;
 import com.oasis.services.BloodGroupServices;
 import com.oasis.services.EthnicityServices;
@@ -14,7 +14,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 
-public class PatientConnector extends Connect {
+public class PatientConnector extends Connector {
     public HashMap<Integer, Patient> getPatientHashMap() {
         HashMap<Integer, Patient> patientHashMap = new HashMap<>();
 
@@ -43,10 +43,10 @@ public class PatientConnector extends Connect {
                 String firstName = resultSet.getString("patient.first_name");
                 String middleName = resultSet.getString("patient.middle_name");
                 String lastName = resultSet.getString("patient.last_name");
-                Gender gender = GenderServices.getGenderByTag(resultSet.getString("patient.gender"));
+                Gender gender = GenderServices.getGenderByTag(null, resultSet.getString("patient.gender"));
                 LocalDate dob = resultSet.getDate("patient.dob").toLocalDate();
-                BloodGroup bloodGroup = BloodGroupServices.getBloodGroupById(resultSet.getInt("patient.blood_group_id"));
-                Ethnicity ethnicity = EthnicityServices.getEthnicityById(resultSet.getInt("patient.ethnicity_id"));
+                BloodGroup bloodGroup = BloodGroupServices.getBloodGroupById(null, resultSet.getInt("patient.blood_group_id"));
+                Ethnicity ethnicity = EthnicityServices.getEthnicityById(null, resultSet.getInt("patient.ethnicity_id"));
                 Date addedDate = resultSet.getTimestamp("patient.added_date");
                 String description = resultSet.getString("patient.description");
 

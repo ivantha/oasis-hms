@@ -2,7 +2,7 @@ package com.oasis.model;
 
 import com.oasis.common.Session;
 
-public class Degree implements Model<Degree>{
+public class Degree implements Model<Degree> {
     private int id = 0;
     private String name;
     private String acronym;

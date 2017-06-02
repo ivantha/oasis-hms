@@ -1,7 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Admission;
 import com.oasis.model.Charge;
 import com.oasis.model.ChargeType;
@@ -13,7 +13,7 @@ import java.sql.Types;
 import java.util.Date;
 import java.util.HashMap;
 
-public class ChargeConnector extends Connect{
+public class ChargeConnector extends Connector {
 
     public HashMap<Integer, Charge> getChargeHashMapByAdmission(Admission admission) {
         HashMap<Integer, Charge> chargeHashMap = new HashMap<>();
@@ -46,7 +46,7 @@ public class ChargeConnector extends Connect{
         return chargeHashMap;
     }
 
-    public void getChargeDetails(PreparedStatement preparedStatement, HashMap<Integer, Charge> chargeHashMap, ChargeType chargeType){
+    public void getChargeDetails(PreparedStatement preparedStatement, HashMap<Integer, Charge> chargeHashMap, ChargeType chargeType) {
         try {
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -70,9 +70,9 @@ public class ChargeConnector extends Connect{
                     "charge(amount, description, charged_date) " +
                     "VALUES(?, ?, ?)");
             preparedStatement.setDouble(1, charge.getAmount());
-            if(null == charge.getDescription()){
+            if (null == charge.getDescription()) {
                 preparedStatement.setNull(2, Types.VARCHAR);
-            }else {
+            } else {
                 preparedStatement.setString(2, charge.getDescription());
             }
             preparedStatement.setDate(3, new java.sql.Date(charge.getChargedDate().getTime()));
@@ -91,9 +91,9 @@ public class ChargeConnector extends Connect{
                     "charge(amount, description, charged_date) " +
                     "VALUES(?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setDouble(1, charge.getAmount());
-            if(null == charge.getDescription()){
+            if (null == charge.getDescription()) {
                 preparedStatement.setNull(2, Types.VARCHAR);
-            }else {
+            } else {
                 preparedStatement.setString(2, charge.getDescription());
             }
             preparedStatement.setDate(3, new java.sql.Date(charge.getChargedDate().getTime()));

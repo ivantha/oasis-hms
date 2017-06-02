@@ -1,15 +1,13 @@
 package com.oasis.model;
 
-import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-import java.time.LocalDate;
 import java.util.Date;
 
-public class Admission implements Model<Admission>{
+public class Admission implements Model<Admission> {
     private int id = 0;
     private ObjectProperty<Patient> patientObjectProperty = new SimpleObjectProperty<>();
     private ObjectProperty<Physician> physicianObjectProperty = new SimpleObjectProperty<>();
@@ -69,84 +67,84 @@ public class Admission implements Model<Admission>{
         return patientObjectProperty.get();
     }
 
-    public ObjectProperty<Patient> patientObjectPropertyProperty() {
-        return patientObjectProperty;
-    }
-
     public void setPatientObjectProperty(Patient patientObjectProperty) {
         this.patientObjectProperty.set(patientObjectProperty);
+    }
+
+    public ObjectProperty<Patient> patientObjectPropertyProperty() {
+        return patientObjectProperty;
     }
 
     public Physician getPhysicianObjectProperty() {
         return physicianObjectProperty.get();
     }
 
-    public ObjectProperty<Physician> physicianObjectPropertyProperty() {
-        return physicianObjectProperty;
-    }
-
     public void setPhysicianObjectProperty(Physician physicianObjectProperty) {
         this.physicianObjectProperty.set(physicianObjectProperty);
+    }
+
+    public ObjectProperty<Physician> physicianObjectPropertyProperty() {
+        return physicianObjectProperty;
     }
 
     public Doctor getAdmissionConsultantObjectProperty() {
         return admissionConsultantObjectProperty.get();
     }
 
-    public ObjectProperty<Doctor> admissionConsultantObjectPropertyProperty() {
-        return admissionConsultantObjectProperty;
-    }
-
     public void setAdmissionConsultantObjectProperty(Doctor admissionConsultantObjectProperty) {
         this.admissionConsultantObjectProperty.set(admissionConsultantObjectProperty);
+    }
+
+    public ObjectProperty<Doctor> admissionConsultantObjectPropertyProperty() {
+        return admissionConsultantObjectProperty;
     }
 
     public Doctor getLeadingConsultantObjectProperty() {
         return leadingConsultantObjectProperty.get();
     }
 
-    public ObjectProperty<Doctor> leadingConsultantObjectPropertyProperty() {
-        return leadingConsultantObjectProperty;
-    }
-
     public void setLeadingConsultantObjectProperty(Doctor leadingConsultantObjectProperty) {
         this.leadingConsultantObjectProperty.set(leadingConsultantObjectProperty);
+    }
+
+    public ObjectProperty<Doctor> leadingConsultantObjectPropertyProperty() {
+        return leadingConsultantObjectProperty;
     }
 
     public String getCause() {
         return cause.get();
     }
 
-    public StringProperty causeProperty() {
-        return cause;
-    }
-
     public void setCause(String cause) {
         this.cause.set(cause);
+    }
+
+    public StringProperty causeProperty() {
+        return cause;
     }
 
     public Date getAdmissionDateObjectProperty() {
         return admissionDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> admissionDateObjectPropertyProperty() {
-        return admissionDateObjectProperty;
-    }
-
     public void setAdmissionDateObjectProperty(Date admissionDateObjectProperty) {
         this.admissionDateObjectProperty.set(admissionDateObjectProperty);
+    }
+
+    public ObjectProperty<Date> admissionDateObjectPropertyProperty() {
+        return admissionDateObjectProperty;
     }
 
     public Date getReleaseDateObjectProperty() {
         return releaseDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> releaseDateObjectPropertyProperty() {
-        return releaseDateObjectProperty;
-    }
-
     public void setReleaseDateObjectProperty(Date releaseDateObjectProperty) {
         this.releaseDateObjectProperty.set(releaseDateObjectProperty);
+    }
+
+    public ObjectProperty<Date> releaseDateObjectPropertyProperty() {
+        return releaseDateObjectProperty;
     }
 }
 

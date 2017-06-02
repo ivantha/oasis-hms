@@ -2,7 +2,7 @@ package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.*;
 import com.oasis.services.EmployeeRoleServices;
 import com.oasis.services.EmployeeServices;
@@ -15,9 +15,8 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
-import java.util.Map;
 
-public class EmployeeConnector extends Connect {
+public class EmployeeConnector extends Connector {
     public HashMap<Integer, Employee> getEmployeeHashMap() {
         HashMap<Integer, Employee> employeeHashMap = new HashMap<>();
 
@@ -46,7 +45,7 @@ public class EmployeeConnector extends Connect {
                 String firstName = resultSet.getString("employee.first_name");
                 String middleName = resultSet.getString("employee.middle_name");
                 String lastName = resultSet.getString("employee.last_name");
-                Gender gender = GenderServices.getGenderByTag(resultSet.getString("employee.gender"));
+                Gender gender = GenderServices.getGenderByTag(null, resultSet.getString("employee.gender"));
                 LocalDate dob = resultSet.getDate("employee.dob").toLocalDate();
                 LocalDate startDate = resultSet.getDate("employee.start_date").toLocalDate();
 
@@ -56,7 +55,7 @@ public class EmployeeConnector extends Connect {
                     endDate = endDateDate.toLocalDate();
                 }
 
-                EmployeeRole employeeRole = EmployeeRoleServices.getEmployeeRoleById(resultSet.getInt("employee.employee_role_id"));
+                EmployeeRole employeeRole = EmployeeRoleServices.getEmployeeRoleById(null, resultSet.getInt("employee.employee_role_id"));
                 LocalTime defaultShiftStart = resultSet.getTime("employee.default_shift_start").toLocalTime();
                 LocalTime defaultShiftEnd = resultSet.getTime("employee.default_shift_end").toLocalTime();
                 WorkingDays workingDays = WorkingDays.valueOf(resultSet.getString("employee.working_days"));
@@ -263,7 +262,7 @@ public class EmployeeConnector extends Connect {
                 }
             }
 
-            Employee originalEmployee = EmployeeServices.getEmployeeById(employee.getId());
+            Employee originalEmployee = EmployeeServices.getEmployeeById(null, employee.getId());
             for (Degree degree : employee.getDegreeListProperty()) {
                 replaceEmployeeDegree(employee.getId(), degree);
             }

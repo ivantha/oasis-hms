@@ -3,10 +3,9 @@ package com.oasis.model;
 import com.oasis.common.Session;
 import javafx.beans.property.*;
 
-import java.time.LocalDate;
 import java.util.Date;
 
-public class Charge implements Model<Charge>{
+public class Charge implements Model<Charge> {
     private int id;
     private DoubleProperty amount = new SimpleDoubleProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -44,19 +43,19 @@ public class Charge implements Model<Charge>{
         }
 
         Charge c = (Charge) obj;
-        if(c.getId() != getId()){
+        if (c.getId() != getId()) {
             return false;
         }
-        if(c.getAmount() != getAmount()){
+        if (c.getAmount() != getAmount()) {
             return false;
         }
-        if(c.getDescription() != getDescription()){
+        if (c.getDescription() != getDescription()) {
             return false;
         }
-        if(c.getChargedDate() != getChargedDate()){
+        if (c.getChargedDate() != getChargedDate()) {
             return false;
         }
-        if(c.getChargeType() != getChargeType()){
+        if (c.getChargeType() != getChargeType()) {
             return false;
         }
 
@@ -75,47 +74,47 @@ public class Charge implements Model<Charge>{
         return amount.get();
     }
 
-    public DoubleProperty amountProperty() {
-        return amount;
-    }
-
     public void setAmount(double amount) {
         this.amount.set(amount);
+    }
+
+    public DoubleProperty amountProperty() {
+        return amount;
     }
 
     public String getDescription() {
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
     public Date getChargedDate() {
         return chargedDate.get();
     }
 
-    public ObjectProperty<Date> chargedDateProperty() {
-        return chargedDate;
-    }
-
     public void setChargedDate(Date chargedDate) {
         this.chargedDate.set(chargedDate);
+    }
+
+    public ObjectProperty<Date> chargedDateProperty() {
+        return chargedDate;
     }
 
     public ChargeType getChargeType() {
         return chargeType.get();
     }
 
-    public ObjectProperty<ChargeType> chargeTypeProperty() {
-        return chargeType;
-    }
-
     public void setChargeType(ChargeType chargeType) {
         this.chargeType.set(chargeType);
+    }
+
+    public ObjectProperty<ChargeType> chargeTypeProperty() {
+        return chargeType;
     }
 }

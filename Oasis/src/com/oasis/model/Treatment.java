@@ -1,11 +1,14 @@
 package com.oasis.model;
 
 import com.oasis.common.Session;
-import javafx.beans.property.*;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 import java.util.Date;
 
-public class Treatment implements Model<Treatment>{
+public class Treatment implements Model<Treatment> {
     private int id;
     private StringProperty description = new SimpleStringProperty();
     private StringProperty result = new SimpleStringProperty();
@@ -37,16 +40,16 @@ public class Treatment implements Model<Treatment>{
         }
 
         Treatment t = (Treatment) obj;
-        if(t.getId() != getId()){
+        if (t.getId() != getId()) {
             return false;
         }
-        if(t.getDescription() != getDescription()){
+        if (t.getDescription() != getDescription()) {
             return false;
         }
-        if(t.getResult() != getResult()){
+        if (t.getResult() != getResult()) {
             return false;
         }
-        if(t.getGivenDateObjectProperty() != getGivenDateObjectProperty()){
+        if (t.getGivenDateObjectProperty() != getGivenDateObjectProperty()) {
             return false;
         }
 
@@ -75,47 +78,47 @@ public class Treatment implements Model<Treatment>{
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
     public String getResult() {
         return result.get();
     }
 
-    public StringProperty resultProperty() {
-        return result;
-    }
-
     public void setResult(String result) {
         this.result.set(result);
+    }
+
+    public StringProperty resultProperty() {
+        return result;
     }
 
     public Date getGivenDateObjectProperty() {
         return givenDateObjectProperty.get();
     }
 
-    public ObjectProperty<Date> givenDateObjectPropertyProperty() {
-        return givenDateObjectProperty;
-    }
-
     public void setGivenDateObjectProperty(Date givenDateObjectProperty) {
         this.givenDateObjectProperty.set(givenDateObjectProperty);
+    }
+
+    public ObjectProperty<Date> givenDateObjectPropertyProperty() {
+        return givenDateObjectProperty;
     }
 
     public Charge getChargeObjectProperty() {
         return chargeObjectProperty.get();
     }
 
-    public ObjectProperty<Charge> chargeObjectPropertyProperty() {
-        return chargeObjectProperty;
-    }
-
     public void setChargeObjectProperty(Charge chargeObjectProperty) {
         this.chargeObjectProperty.set(chargeObjectProperty);
+    }
+
+    public ObjectProperty<Charge> chargeObjectPropertyProperty() {
+        return chargeObjectProperty;
     }
 }

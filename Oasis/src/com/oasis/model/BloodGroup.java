@@ -2,7 +2,7 @@ package com.oasis.model;
 
 import com.oasis.common.Session;
 
-public class BloodGroup implements Model<BloodGroup>{
+public class BloodGroup implements Model<BloodGroup> {
     private int id = 0;
     private String name;
 
@@ -26,10 +26,10 @@ public class BloodGroup implements Model<BloodGroup>{
         }
 
         BloodGroup bg = (BloodGroup) obj;
-        if(bg.getId() != getId()){
+        if (bg.getId() != getId()) {
             return false;
         }
-        if(bg.getName() != getName()){
+        if (bg.getName() != getName()) {
             return false;
         }
 
@@ -41,7 +41,7 @@ public class BloodGroup implements Model<BloodGroup>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 

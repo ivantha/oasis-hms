@@ -1,7 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Admission;
 import com.oasis.model.Treatment;
 import com.oasis.services.ChargeServices;
@@ -12,7 +12,7 @@ import java.sql.Types;
 import java.util.Date;
 import java.util.HashMap;
 
-public class TreatmentConnector extends Connect{
+public class TreatmentConnector extends Connector {
 
     public HashMap<Integer, Treatment> getTreatmentArrayListByAdmission(Admission admission) {
         HashMap<Integer, Treatment> treatmentHashMap = new HashMap<>();
@@ -40,8 +40,8 @@ public class TreatmentConnector extends Connect{
     }
 
     public void newTreatment(Treatment treatment, int admissioid) {
-        if(null != treatment.getChargeObjectProperty()){
-            int chargeId = ChargeServices.newChargeWithReturid(treatment.getChargeObjectProperty());
+        if (null != treatment.getChargeObjectProperty()) {
+            int chargeId = ChargeServices.newChargeWithReturid(null, treatment.getChargeObjectProperty());
             treatment.getChargeObjectProperty().setId(chargeId);
         }
 
@@ -53,9 +53,9 @@ public class TreatmentConnector extends Connect{
             preparedStatement.setString(2, treatment.getDescription());
             preparedStatement.setString(3, treatment.getResult());
             preparedStatement.setDate(4, new java.sql.Date(treatment.getGivenDateObjectProperty().getTime()));
-            if(null == treatment.getChargeObjectProperty()){
+            if (null == treatment.getChargeObjectProperty()) {
                 preparedStatement.setNull(5, Types.INTEGER);
-            }else {
+            } else {
                 preparedStatement.setInt(5, treatment.getChargeObjectProperty().getId());
             }
 
@@ -76,9 +76,9 @@ public class TreatmentConnector extends Connect{
             preparedStatement.setString(1, treatment.getDescription());
             preparedStatement.setString(2, treatment.getResult());
             preparedStatement.setDate(3, new java.sql.Date(treatment.getGivenDateObjectProperty().getTime()));
-            if(null == treatment.getChargeObjectProperty()){
+            if (null == treatment.getChargeObjectProperty()) {
                 preparedStatement.setNull(4, Types.INTEGER);
-            }else {
+            } else {
                 preparedStatement.setInt(4, treatment.getChargeObjectProperty().getId());
             }
             preparedStatement.setInt(5, treatment.getId());

@@ -4,7 +4,7 @@ import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Email implements Model<Email>{
+public class Email implements Model<Email> {
     private int id = 0;
     private StringProperty email = new SimpleStringProperty();
 
@@ -41,8 +41,8 @@ public class Email implements Model<Email>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
-        if (!"".equals(getEmail())){
+    public boolean isEmpty() {
+        if (!"".equals(getEmail())) {
             return false;
         }
 
@@ -61,11 +61,11 @@ public class Email implements Model<Email>{
         return email.get();
     }
 
-    public StringProperty emailProperty() {
-        return email;
-    }
-
     public void setEmail(String email) {
         this.email.set(email);
+    }
+
+    public StringProperty emailProperty() {
+        return email;
     }
 }

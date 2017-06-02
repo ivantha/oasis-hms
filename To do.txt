@@ -1,0 +1,31 @@
+
+Validators and prompts
+
+
+----------------------------------------------------------------------
+
+Submit attendance
+Attendance management
+
+----------------------------------------------------------------------
+
+Search clear button
+
+User account management
+
+Reports
+
+----------------------------------------------------------------------
+
+Update and delete Charges
+
+Delete employee and patient attributes (telephone, address etc)
+
+----------------------------------------------------------------------
+
+
+Duplicate workspace container issue
+
+
+Complete CacheFactory class
+Complete ConnectorFactory class

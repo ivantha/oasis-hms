@@ -1,7 +1,10 @@
 package com.oasis.ui.component;
 
 import com.oasis.services.NotificationServices;
-import javafx.beans.property.*;
+import javafx.beans.property.LongProperty;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -16,19 +19,7 @@ import java.time.Duration;
 import java.time.Instant;
 
 
-public class Notification extends Pane{
-    public enum NotificationType {
-        DEFAULT,
-        SUCCESSFUL,
-        INFORMATION,
-        WARNING,
-        ERROR,
-
-        ADD,
-        EDIT,
-        DELETE
-    }
-
+public class Notification extends Pane {
     private static final int DEFAULT_HEIGHT = 35;
     private static final int DEFAULT_WIDTH = 175;
 
@@ -42,9 +33,9 @@ public class Notification extends Pane{
 
     private Label headingLabel;
     private Label contentLabel;
-
     private int animationCount = 0;
     private boolean isContract = true;
+    private EventHandler<ActionEvent> closeButtonEventHandler;
 
     public Notification(String heading, String content, NotificationType type) {
         this.heading.setValue(heading);
@@ -62,9 +53,9 @@ public class Notification extends Pane{
         contract();
 
         this.setOnMouseClicked(event -> {
-            if(isContract){
+            if (isContract) {
                 expand();
-            }else {
+            } else {
                 contract();
             }
         });
@@ -73,8 +64,6 @@ public class Notification extends Pane{
     public Notification(String heading, String content, NotificationType type, long timeout) {
         this(heading, content, type);
         this.timeout.setValue(timeout);
-
-
     }
 
     public int getnId() {
@@ -89,24 +78,24 @@ public class Notification extends Pane{
         return heading.get();
     }
 
-    public StringProperty headingProperty() {
-        return heading;
-    }
-
     public void setHeading(String heading) {
         this.heading.set(heading);
+    }
+
+    public StringProperty headingProperty() {
+        return heading;
     }
 
     public String getContent() {
         return content.get();
     }
 
-    public StringProperty contentProperty() {
-        return content;
-    }
-
     public void setContent(String content) {
         this.content.set(content);
+    }
+
+    public StringProperty contentProperty() {
+        return content;
     }
 
     public NotificationType getType() {
@@ -121,15 +110,15 @@ public class Notification extends Pane{
         return timeout.get();
     }
 
+    public void setTimeout(int timeout) {
+        this.timeout.set(timeout);
+    }
+
     public LongProperty timeoutProperty() {
         return timeout;
     }
 
     public void setTimeout(long timeout) {
-        this.timeout.set(timeout);
-    }
-
-    public void setTimeout(int timeout) {
         this.timeout.set(timeout);
     }
 
@@ -161,7 +150,15 @@ public class Notification extends Pane{
         isContract = contract;
     }
 
-    public void expand(){
+    public EventHandler<ActionEvent> getCloseButtonEventHandler() {
+        return closeButtonEventHandler;
+    }
+
+    public void setCloseButtonEventHandler(EventHandler<ActionEvent> closeButtonEventHandler) {
+        this.closeButtonEventHandler = closeButtonEventHandler;
+    }
+
+    public void expand() {
         isContract = false;
 
         this.setStyle(null);
@@ -177,7 +174,7 @@ public class Notification extends Pane{
 
         Button closeButton = new Button();
         closeButton.getStyleClass().add("notification-close-button");
-        closeButton.setOnAction(event -> NotificationServices.removeNotification(Notification.this));
+        closeButton.setOnAction(closeButtonEventHandler);
 
         HBox closeHBox = new HBox();
         closeHBox.setAlignment(Pos.BOTTOM_RIGHT);
@@ -198,7 +195,7 @@ public class Notification extends Pane{
         this.getChildren().add(vBox);
     }
 
-    public void contract(){
+    public void contract() {
         isContract = true;
 
         this.setStyle(null);
@@ -220,20 +217,32 @@ public class Notification extends Pane{
         this.getChildren().add(vBox);
     }
 
-    private void setWidth(int width){
+    private void setWidth(int width) {
         this.setMinWidth(width);
         this.setMaxWidth(width);
         this.setPrefWidth(width);
     }
 
-    public boolean isExpired(){
+    public boolean isExpired() {
         Duration duration = Duration.between(getTimestamp(), Instant.now());
         long milliDuration = duration.toMillis();
 
-        if(getTimeout() == -1){
+        if (getTimeout() == -1) {
             return false;
-        }else{
+        } else {
             return milliDuration > getTimeout();
         }
+    }
+
+    public enum NotificationType {
+        DEFAULT,
+        SUCCESSFUL,
+        INFORMATION,
+        WARNING,
+        ERROR,
+
+        ADD,
+        EDIT,
+        DELETE
     }
 }

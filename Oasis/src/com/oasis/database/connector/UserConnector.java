@@ -1,15 +1,15 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Employee;
 import com.oasis.services.EmployeeServices;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UserConnector extends Connect{
-    public Employee getUser(String username){
+public class UserConnector extends Connector {
+    public Employee getUser(String username) {
         Employee employee = null;
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("SELECT * FROM employee_login " +
@@ -17,11 +17,11 @@ public class UserConnector extends Connect{
             preparedStatement.setString(1, username);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int employeeId = resultSet.getInt("employee_login.employee_id");
                 String password = resultSet.getString("employee_login.password");
 
-                employee = EmployeeServices.getEmployeeById(employeeId);
+                employee = EmployeeServices.getEmployeeById(null, employeeId);
                 employee.setUsername(username);
                 employee.setPassword(password);
             }

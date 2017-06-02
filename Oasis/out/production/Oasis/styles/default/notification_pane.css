@@ -1,6 +1,6 @@
 @import "palatte.css";
 
-#notificationAnchorPane{
+#notificationAnchorPane {
     -fx-padding: 20px 0px 0px 10px;
 
     -fx-background-size: 75px;
@@ -10,17 +10,17 @@
     -fx-background-image: url("../../images/logo_without_name_light.png");
 }
 
-#notificationListView{
+#notificationListView {
     -fx-background-color: transparent;
 }
 
-#notificationLabel{
+#notificationLabel {
     -fx-font-family: 'Roboto';
     -fx-text-fill: #000000;
     -fx-font-size: 13;
 }
 
-.notification{
+.notification {
     -fx-background-radius: 1px;
     -fx-background-color: transparent;
 
@@ -32,24 +32,24 @@
     -fx-border-color: #0288D1;
 }
 
-.notification:hover{
+.notification:hover {
     -fx-border-color: #FFFFFF;
     /*-fx-effect: dropshadow(gaussian, rgba(0, 151, 167, 0.1), 1, 1.0, 0, 0);*/
 
     -fx-cursor: hand;
 }
 
-.notification .label{
+.notification .label {
     -fx-font-family: 'Roboto';
     -fx-text-fill: #000000;
     -fx-font-size: 12;
 }
 
-.notification:hover .label{
+.notification:hover .label {
     -fx-text-fill: #FFFFFF;
 }
 
-.notification-close-button{
+.notification-close-button {
     -fx-background-size: 15px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: 50% 50%;
@@ -57,11 +57,11 @@
     -fx-background-image: url("../../icons/notification/clear_one_dark.png");
 }
 
-.notification-close-button:hover{
+.notification-close-button:hover {
     -fx-background-image: url("../../icons/notification/clear_one_light.png");
 }
 
-#notificationAnchorPane .list-cell{
+#notificationAnchorPane .list-cell {
     -fx-border-color: null;
 
     -fx-padding: 1px 0px 1px 0px;
@@ -76,58 +76,66 @@
     -fx-opacity: 0;
 }
 
-.DEFAULT{
+.DEFAULT {
     -fx-background-image: url("../../icons/notification/default_dark.png");
 }
-.DEFAULT:hover{
+
+.DEFAULT:hover {
     -fx-background-image: url("../../icons/notification/default_light.png");
 }
 
-.SUCCESSFUL{
+.SUCCESSFUL {
     -fx-background-image: url("../../icons/notification/successful_dark.png");
 }
-.SUCCESSFUL:hover{
+
+.SUCCESSFUL:hover {
     -fx-background-image: url("../../icons/notification/successful_light.png");
 }
 
-.INFORMATION{
+.INFORMATION {
     -fx-background-image: url("../../icons/notification/information_dark.png");
 }
-.INFORMATION:hover{
+
+.INFORMATION:hover {
     -fx-background-image: url("../../icons/notification/information_light.png");
 }
 
-.WARNING{
+.WARNING {
     -fx-background-image: url("../../icons/notification/warning_dark.png");
 }
-.WARNING:hover{
+
+.WARNING:hover {
     -fx-background-image: url("../../icons/notification/warning_light.png");
 }
 
-.ERROR{
+.ERROR {
     -fx-background-image: url("../../icons/notification/error_dark.png");
 }
-.ERROR:hover{
+
+.ERROR:hover {
     -fx-background-image: url("../../icons/notification/error_light.png");
 }
 
-.ADD{
+.ADD {
     -fx-background-image: url("../../icons/notification/add_dark.png");
 }
-.ADD:hover{
+
+.ADD:hover {
     -fx-background-image: url("../../icons/notification/add_light.png");
 }
 
-.EDIT{
+.EDIT {
     -fx-background-image: url("../../icons/notification/edit_dark.png");
 }
-.EDIT:hover{
+
+.EDIT:hover {
     -fx-background-image: url("../../icons/notification/edit_light.png");
 }
 
-.DELETE{
+.DELETE {
     -fx-background-image: url("../../icons/notification/delete_dark.png");
 }
-.DELETE:hover{
+
+.DELETE:hover {
     -fx-background-image: url("../../icons/notification/delete_light.png");
 }

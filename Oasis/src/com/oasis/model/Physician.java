@@ -8,7 +8,7 @@ import javafx.beans.property.StringProperty;
 
 import java.util.ArrayList;
 
-public class Physician implements Model<Physician>{
+public class Physician implements Model<Physician> {
     private int id = 0;
     private StringProperty firstName = new SimpleStringProperty();
     private StringProperty middleName = new SimpleStringProperty();
@@ -42,19 +42,19 @@ public class Physician implements Model<Physician>{
         }
 
         Physician p = (Physician) obj;
-        if(p.getId() != getId()){
+        if (p.getId() != getId()) {
             return false;
         }
-        if(p.getFirstName() != getFirstName()){
+        if (p.getFirstName() != getFirstName()) {
             return false;
         }
-        if(p.getMiddleName() != getMiddleName()){
+        if (p.getMiddleName() != getMiddleName()) {
             return false;
         }
-        if(p.getLastName() != getLastName()){
+        if (p.getLastName() != getLastName()) {
             return false;
         }
-        if(!p.getPhysicianDesignationObjectProperty().equals(getPhysicianDesignationObjectProperty())){
+        if (!p.getPhysicianDesignationObjectProperty().equals(getPhysicianDesignationObjectProperty())) {
             return false;
         }
         if (!(p.getTelephoneArrayList().isEmpty() ? getTelephoneArrayList().isEmpty() :
@@ -66,11 +66,11 @@ public class Physician implements Model<Physician>{
     }
 
     @Override
-    public Physician clone(){
+    public Physician clone() {
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -86,48 +86,48 @@ public class Physician implements Model<Physician>{
         return firstName.get();
     }
 
-    public StringProperty firstNameProperty() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName.set(firstName);
+    }
+
+    public StringProperty firstNameProperty() {
+        return firstName;
     }
 
     public String getMiddleName() {
         return middleName.get();
     }
 
-    public StringProperty middleNameProperty() {
-        return middleName;
-    }
-
     public void setMiddleName(String middleName) {
         this.middleName.set(middleName);
+    }
+
+    public StringProperty middleNameProperty() {
+        return middleName;
     }
 
     public String getLastName() {
         return lastName.get();
     }
 
-    public StringProperty lastNameProperty() {
-        return lastName;
-    }
-
     public void setLastName(String lastName) {
         this.lastName.set(lastName);
+    }
+
+    public StringProperty lastNameProperty() {
+        return lastName;
     }
 
     public PhysicianDesignation getPhysicianDesignationObjectProperty() {
         return physicianDesignationObjectProperty.get();
     }
 
-    public ObjectProperty<PhysicianDesignation> physicianDesignationObjectPropertyProperty() {
-        return physicianDesignationObjectProperty;
-    }
-
     public void setPhysicianDesignationObjectProperty(PhysicianDesignation physicianDesignationObjectProperty) {
         this.physicianDesignationObjectProperty.set(physicianDesignationObjectProperty);
+    }
+
+    public ObjectProperty<PhysicianDesignation> physicianDesignationObjectPropertyProperty() {
+        return physicianDesignationObjectProperty;
     }
 
     public ArrayList<Telephone> getTelephoneArrayList() {

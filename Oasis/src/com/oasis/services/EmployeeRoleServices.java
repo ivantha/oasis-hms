@@ -1,18 +1,19 @@
 package com.oasis.services;
 
-import com.oasis.common.Session;
+import com.oasis.factory.CacheFactory;
 import com.oasis.model.EmployeeRole;
+import com.oasis.ui.UIName;
 
 import java.util.ArrayList;
 
 public class EmployeeRoleServices {
-    public static EmployeeRole getEmployeeRoleById(int id){
-        return Session.employeeRoleCache.getItemHashMap().get(id);
+    public static EmployeeRole getEmployeeRoleById(UIName uiName, int id) {
+        return CacheFactory.getEmployeeRoleCache().getItemHashMap().get(id);
     }
 
-    public static ArrayList<EmployeeRole> getEmployeeRoleArrayList(){
+    public static ArrayList<EmployeeRole> getEmployeeRoleArrayList(UIName uiName) {
         ArrayList<EmployeeRole> employeeRoleArrayList = new ArrayList<>();
-        employeeRoleArrayList.addAll(Session.employeeRoleCache.getItemHashMap().values());
+        employeeRoleArrayList.addAll(CacheFactory.getEmployeeRoleCache().getItemHashMap().values());
         return employeeRoleArrayList;
     }
 }

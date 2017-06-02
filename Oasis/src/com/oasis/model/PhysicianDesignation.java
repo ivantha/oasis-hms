@@ -43,7 +43,7 @@ public class PhysicianDesignation implements Model<PhysicianDesignation> {
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -59,11 +59,11 @@ public class PhysicianDesignation implements Model<PhysicianDesignation> {
         return name.get();
     }
 
-    public StringProperty nameProperty() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 }

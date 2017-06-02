@@ -4,7 +4,7 @@ import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Speciality implements Model<Speciality>{
+public class Speciality implements Model<Speciality> {
     private int id = 0;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -33,13 +33,13 @@ public class Speciality implements Model<Speciality>{
         }
 
         Speciality s = (Speciality) obj;
-        if(s.getId() != getId()){
+        if (s.getId() != getId()) {
             return false;
         }
-        if(s.getName() != getName()){
+        if (s.getName() != getName()) {
             return false;
         }
-        if(s.getDescription() != getDescription()){
+        if (s.getDescription() != getDescription()) {
             return false;
         }
 
@@ -51,7 +51,7 @@ public class Speciality implements Model<Speciality>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -67,23 +67,23 @@ public class Speciality implements Model<Speciality>{
         return name.get();
     }
 
-    public StringProperty nameProperty() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 
     public String getDescription() {
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 }

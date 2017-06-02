@@ -2,11 +2,8 @@ package com.oasis.common;
 
 import com.oasis.configuration.ConfigurationFile;
 import com.oasis.database.connector.*;
-import com.oasis.model.*;
-import com.oasis.ui.component.Notification;
-import com.oasis.utils.Cache;
+import com.oasis.model.Employee;
 import com.rits.cloning.Cloner;
-import javafx.collections.ObservableList;
 
 public class Session {
     public static ConfigurationFile APP_CONFIG;
@@ -26,17 +23,6 @@ public class Session {
     public static PaymentConnector paymentConnector;
     public static TreatmentConnector treatmentConnector;
     public static UserConnector userConnector;
-
-    public static Cache<BloodGroup> bloodGroupCache;
-    public static Cache<Degree> degreeCache;
-    public static Cache<Employee> employeeCache;
-    public static Cache<EmployeeRole> employeeRoleCache;
-    public static Cache<Ethnicity> ethnicityCache;
-    public static Cache<Gender> genderCache;
-    public static Cache<PhysicianDesignation> physicianDesignationCache;
-    public static Cache<Speciality> specialityCache;
-    public static Cache<Test> testCache;
-    public static Cache<Ward> wardCache;
 
     public static Cloner cloner;
 

@@ -1,13 +1,12 @@
 package com.oasis.model;
 
-import com.oasis.common.Session;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Doctor extends Employee{
+public class Doctor extends Employee {
     private ObjectProperty<Speciality> specialityObjectProperty = new SimpleObjectProperty();
 
     public Doctor(Employee employee) {
@@ -19,7 +18,7 @@ public class Doctor extends Employee{
 
     public Doctor(int id, String nic, String firstName, String middleName, String lastName,
                   Gender gender, LocalDate dob, LocalDate startDate, LocalDate endDate, EmployeeRole employeeRole,
-                  LocalTime defaultShiftStart, LocalTime defaultShiftEnd, WorkingDays workingDays ) {
+                  LocalTime defaultShiftStart, LocalTime defaultShiftEnd, WorkingDays workingDays) {
         super(id, nic, firstName, middleName, lastName, gender, dob, startDate, endDate, employeeRole, defaultShiftStart, defaultShiftEnd, workingDays);
     }
 
@@ -35,16 +34,16 @@ public class Doctor extends Employee{
                 getGender(), getDob(), getStartDate(), getEndDate(), getEmployeeRole(),
                 getDefaultShiftStart(), getDefaultShiftEnd(), getWorkingDays().clone());
 
-        for(Telephone telephone: getTelephoneArrayList()){
+        for (Telephone telephone : getTelephoneArrayList()) {
             clonedDoctor.getTelephoneArrayList().add(telephone.clone());
         }
-        for(Address address: getAddressArrayList()){
+        for (Address address : getAddressArrayList()) {
             clonedDoctor.getAddressArrayList().add(address.clone());
         }
-        for(Email email: getEmailArrayList()){
+        for (Email email : getEmailArrayList()) {
             clonedDoctor.getEmailArrayList().add(email.clone());
         }
-        for(Degree degree: getDegreeListProperty()){
+        for (Degree degree : getDegreeListProperty()) {
             clonedDoctor.getDegreeListProperty().add(degree);
         }
 
@@ -57,11 +56,11 @@ public class Doctor extends Employee{
         return specialityObjectProperty.get();
     }
 
-    public ObjectProperty<Speciality> specialityObjectPropertyProperty() {
-        return specialityObjectProperty;
-    }
-
     public void setSpecialityObjectProperty(Speciality specialityObjectProperty) {
         this.specialityObjectProperty.set(specialityObjectProperty);
+    }
+
+    public ObjectProperty<Speciality> specialityObjectPropertyProperty() {
+        return specialityObjectProperty;
     }
 }

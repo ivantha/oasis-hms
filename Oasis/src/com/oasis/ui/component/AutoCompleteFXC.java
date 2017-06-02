@@ -6,7 +6,10 @@ import com.oasis.factory.UIFactory;
 import com.oasis.ui.UI;
 import com.oasis.ui.UIName;
 import javafx.application.Platform;
-import javafx.beans.property.*;
+import javafx.beans.property.ListProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ListCell;
@@ -156,15 +159,15 @@ public class AutoCompleteFXC<T> extends Pane {
         return listItemListProperty;
     }
 
-    public void bindList(ObjectProperty objectProperty){
+    public void bindList(ObjectProperty objectProperty) {
         this.objectProperty = objectProperty;
     }
 
-    public void unBindList(){
+    public void unBindList() {
         this.objectProperty = new SimpleObjectProperty();
     }
 
-    public void updateText(){
+    public void updateText() {
         textField.setText(objectProperty.getValue().toString());
     }
 }

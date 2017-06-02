@@ -12,7 +12,7 @@
     -border-color: transparent;
 }
 
-#closeButton{
+#closeButton {
     -fx-min-width: 14px;
     -fx-min-height: 14px;
     -fx-max-width: 14px;
@@ -22,11 +22,11 @@
     -fx-background-color: #D32F2F;
 }
 
-#closeButton:hover{
+#closeButton:hover {
     -fx-background-color: #F44336;
 }
 
-#minimizeButton{
+#minimizeButton {
     -fx-min-width: 14px;
     -fx-min-height: 14px;
     -fx-max-width: 14px;
@@ -36,35 +36,35 @@
     -fx-background-color: #FFA000;
 }
 
-#minimizeButton:hover{
+#minimizeButton:hover {
     -fx-background-color: #FFC107;
 }
 
-#controlAnchorPane{
+#controlAnchorPane {
     -fx-border-width: 0px 0px 1px 0px;
     -fx-border-color: -border-color;
     -fx-background-color: #122f42;
 }
 
-#loginAnchorPane{
+#loginAnchorPane {
     -fx-border-width: 0px 0px 1px 0px;
     -fx-border-color: -border-color;
     -fx-background-color: #122f42;
 }
 
-#navigationAnchorPane{
+#navigationAnchorPane {
     -fx-border-width: 0px 0px 1px 0px;
     -fx-border-color: -border-color;
     -fx-background-color: #183447;
 }
 
-#statisticsAnchorPane{
+#statisticsAnchorPane {
     -fx-border-width: 0px 0px 1px 0px;
     -fx-border-color: -border-color;
     -fx-background-color: #183447;
 }
 
-#notificationAnchorPane{
+#notificationAnchorPane {
     -fx-background-color: #183447;
 }
 
@@ -90,67 +90,87 @@
     -fx-background-color: transparent;
 }
 
-.NEW_PHYSICIAN{
+.NEW_PHYSICIAN {
     -fx-background-image: url("../../icons/sidebar/New physician.png");
 }
-.PHYSICIAN_MANAGEMENT{
+
+.PHYSICIAN_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Physicians.png");
 }
-.NEW_EDIT_ADMISSION{
+
+.NEW_EDIT_ADMISSION {
     -fx-background-image: url("../../icons/sidebar/New admission.png");
 }
-.ADMISSION_MANAGEMENT{
+
+.ADMISSION_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Admission.png");
 }
-.NEW_EDIT_TREATMENT{
+
+.NEW_EDIT_TREATMENT {
     -fx-background-image: url("../../icons/sidebar/New treatment.png");
 }
-.TREATMENT_MANAGEMENT{
+
+.TREATMENT_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Treatments.png");
 }
-.PAYMENT_MANAGEMENT{
+
+.PAYMENT_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Payments.png");
 }
-.NEW_ETHNICITY{
+
+.NEW_ETHNICITY {
     -fx-background-image: url("../../icons/sidebar/New ethnicity.png");
 }
-.ETHNICITY_MANAGEMENT{
+
+.ETHNICITY_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Ethnicity.png");
 }
-.NEW_EDIT_PATIENT{
+
+.NEW_EDIT_PATIENT {
     -fx-background-image: url("../../icons/sidebar/New patient.png");
 }
-.PATIENT_MANAGEMENT{
+
+.PATIENT_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Patients.png");
 }
-.NEW_SPECIALITY{
+
+.NEW_SPECIALITY {
     -fx-background-image: url("../../icons/sidebar/New speciality.png");
 }
-.SPECIALITY_MANAGEMENT{
+
+.SPECIALITY_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Specialities.png");
 }
-.NEW_EDIT_EMPLOYEE{
+
+.NEW_EDIT_EMPLOYEE {
     -fx-background-image: url("../../icons/sidebar/New employee.png");
 }
-.EMPLOYEE_MANAGEMENT{
+
+.EMPLOYEE_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Employee.png");
 }
-.SUBMIT_ATTENDANCE{
+
+.SUBMIT_ATTENDANCE {
     -fx-background-image: url("../../icons/sidebar/Submit attendance.png");
 }
-.ATTENDANCE_MANAGEMENT{
+
+.ATTENDANCE_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Attendance.png");
 }
-.NEW_TEST{
+
+.NEW_TEST {
     -fx-background-image: url("../../icons/sidebar/New test.png");
 }
-.TEST_MANAGEMENT{
+
+.TEST_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Tests.png");
 }
-.NEW_WARD{
+
+.NEW_WARD {
     -fx-background-image: url("../../icons/sidebar/New ward.png");
 }
-.WARD_MANAGEMENT{
+
+.WARD_MANAGEMENT {
     -fx-background-image: url("../../icons/sidebar/Wards.png");
 }
 

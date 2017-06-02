@@ -1,18 +1,19 @@
 package com.oasis.services;
 
-import com.oasis.common.Session;
+import com.oasis.factory.CacheFactory;
 import com.oasis.model.Degree;
+import com.oasis.ui.UIName;
 
 import java.util.ArrayList;
 
 public class DegreeServices {
-    public static Degree getDegreeById(int id){
-        return Session.degreeCache.getItemHashMap().get(id);
+    public static Degree getDegreeById(UIName uiName, int id) {
+        return CacheFactory.getDegreeCache().getItemHashMap().get(id);
     }
 
-    public static ArrayList<Degree> getDegreeArrayList(){
+    public static ArrayList<Degree> getDegreeArrayList(UIName uiName) {
         ArrayList<Degree> ethnicityArrayList = new ArrayList<>();
-        ethnicityArrayList.addAll(Session.degreeCache.getItemHashMap().values());
+        ethnicityArrayList.addAll(CacheFactory.getDegreeCache().getItemHashMap().values());
         return ethnicityArrayList;
     }
 }

@@ -1,12 +1,12 @@
 @import "palatte.css";
 
-#controlAnchorPane{
+#controlAnchorPane {
     /*-fx-border-width: 0px 0px 1px 0px;*/
     /*-fx-border-color: -default-border-color;*/
     /*-fx-background-color: -default-primary-color;*/
 }
 
-.controlButton{
+.controlButton {
     -fx-min-width: 25px;
     -fx-min-height: 25px;
     -fx-max-width: 25px;
@@ -23,30 +23,30 @@
     -fx-border-colore: transparent;
 }
 
-.controlButton:hover{
+.controlButton:hover {
     -fx-cursor: hand;
 }
 
-#closeButton{
+#closeButton {
     -fx-background-image: url("../../icons/control_pane/close_dark.png");
 }
 
-#closeButton:hover{
+#closeButton:hover {
     -fx-background-image: url("../../icons/control_pane/close_light.png");
 }
 
-#minimizeButton{
+#minimizeButton {
     -fx-background-image: url("../../icons/control_pane/minus_dark.png");
 }
 
-#minimizeButton:hover{
+#minimizeButton:hover {
     -fx-background-image: url("../../icons/control_pane/minus_light.png");
 }
 
-#signOutButton{
+#signOutButton {
     -fx-background-image: url("../../icons/control_pane/shutdown_dark.png");
 }
 
-#signOutButton:hover{
+#signOutButton:hover {
     -fx-background-image: url("../../icons/control_pane/shutdown_light.png");
 }

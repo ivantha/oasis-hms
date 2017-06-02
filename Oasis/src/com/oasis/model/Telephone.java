@@ -4,7 +4,7 @@ import com.oasis.common.Session;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Telephone implements Model<Telephone>{
+public class Telephone implements Model<Telephone> {
     private int id = 0;
     private StringProperty telephone = new SimpleStringProperty();
 
@@ -41,8 +41,8 @@ public class Telephone implements Model<Telephone>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
-        if (!"".equals(getTelephone())){
+    public boolean isEmpty() {
+        if (!"".equals(getTelephone())) {
             return false;
         }
 
@@ -61,11 +61,11 @@ public class Telephone implements Model<Telephone>{
         return telephone.get();
     }
 
-    public StringProperty telephoneProperty() {
-        return telephone;
-    }
-
     public void setTelephone(String telephone) {
         this.telephone.set(telephone);
+    }
+
+    public StringProperty telephoneProperty() {
+        return telephone;
     }
 }

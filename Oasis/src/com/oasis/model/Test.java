@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Test implements Model<Test>{
+public class Test implements Model<Test> {
     private int id = 0;
     private StringProperty name = new SimpleStringProperty();
     private StringProperty description = new SimpleStringProperty();
@@ -32,16 +32,16 @@ public class Test implements Model<Test>{
         }
 
         Test t = (Test) obj;
-        if(t.getId() != getId()){
+        if (t.getId() != getId()) {
             return false;
         }
-        if(t.getName() != getName()){
+        if (t.getName() != getName()) {
             return false;
         }
-        if(t.getDescription() != getDescription()){
+        if (t.getDescription() != getDescription()) {
             return false;
         }
-        if(t.getBasePrice() != getBasePrice()){
+        if (t.getBasePrice() != getBasePrice()) {
             return false;
         }
 
@@ -53,7 +53,7 @@ public class Test implements Model<Test>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -69,35 +69,35 @@ public class Test implements Model<Test>{
         return name.get();
     }
 
-    public StringProperty nameProperty() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 
     public String getDescription() {
         return description.get();
     }
 
-    public StringProperty descriptionProperty() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description.set(description);
+    }
+
+    public StringProperty descriptionProperty() {
+        return description;
     }
 
     public double getBasePrice() {
         return basePrice.get();
     }
 
-    public DoubleProperty basePriceProperty() {
-        return basePrice;
-    }
-
     public void setBasePrice(double basePrice) {
         this.basePrice.set(basePrice);
+    }
+
+    public DoubleProperty basePriceProperty() {
+        return basePrice;
     }
 }

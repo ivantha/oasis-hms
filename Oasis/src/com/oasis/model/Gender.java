@@ -2,17 +2,17 @@ package com.oasis.model;
 
 import com.oasis.common.Session;
 
-public class Gender implements Model<Gender>{
+public class Gender implements Model<Gender> {
     private int id = 0;
     private String tag;
     private String name;
 
-    public Gender(int id, String tag){
+    public Gender(int id, String tag) {
         this.id = id;
         this.tag = tag;
-        if(tag.equals("f")){
+        if (tag.equals("f")) {
             this.name = "Female";
-        }else {
+        } else {
             this.name = "Male";
         }
     }
@@ -27,13 +27,13 @@ public class Gender implements Model<Gender>{
         }
 
         Gender g = (Gender) obj;
-        if(g.getId() != getId()){
+        if (g.getId() != getId()) {
             return false;
         }
-        if(g.getTag() != getTag()){
+        if (g.getTag() != getTag()) {
             return false;
         }
-        if(g.getName() != getName()){
+        if (g.getName() != getName()) {
             return false;
         }
 
@@ -50,7 +50,7 @@ public class Gender implements Model<Gender>{
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 

@@ -3,7 +3,6 @@ package com.oasis.listener;
 import com.oasis.common.Temp;
 import com.oasis.factory.UIFactory;
 import com.oasis.ui.UIName;
-import com.oasis.ui.utils.UIUtils;
 import javafx.beans.property.ObjectProperty;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
@@ -34,7 +33,7 @@ public class DynamicPaneDragDroppedEventHandler implements EventHandler<DragEven
             sideButton.getStyleClass().add("tabButton");
 
             UIName uiName = UIName.valueOf(String.valueOf(dragboard.getContent(Temp.BUTTON_NAME_DATA_FORMAT)));
-            sideButton.setText("                " + UIUtils.getUIName(uiName));
+            sideButton.setText("                " + UIFactory.getUIName(uiName));
             sideButton.getStyleClass().add(uiName.name());
 
             sideButton.setOnAction(event1 -> {

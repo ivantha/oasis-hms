@@ -1,8 +1,7 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.common.Session;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Admission;
 import com.oasis.model.Doctor;
 import com.oasis.model.Patient;
@@ -14,11 +13,10 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-import java.time.LocalDate;
 import java.util.HashMap;
 
-public class AdmissionConnector extends Connect {
-    public HashMap<Integer, Admission> getAdmissionHashMapByPatient(Patient patient){
+public class AdmissionConnector extends Connector {
+    public HashMap<Integer, Admission> getAdmissionHashMapByPatient(Patient patient) {
         HashMap<Integer, Admission> admissionHashMap = new HashMap<>();
 
         try {
@@ -29,11 +27,11 @@ public class AdmissionConnector extends Connect {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("admission.id");
-                Physician physician = PhysicianServices.getPhysicianById(resultSet.getInt("admission.physician_id"));
+                Physician physician = PhysicianServices.getPhysicianById(null, resultSet.getInt("admission.physician_id"));
                 Doctor admissionConsultant = new Doctor(EmployeeServices.getEmployeeById(
-                        resultSet.getInt("admission.admission_consultant_id")));
+                        null, resultSet.getInt("admission.admission_consultant_id")));
                 Doctor leadingConsultant = new Doctor(EmployeeServices.getEmployeeById(
-                        resultSet.getInt("admission.leading_consultant_id")));
+                        null, resultSet.getInt("admission.leading_consultant_id")));
                 String cause = resultSet.getString("admission.cause");
                 Date admissionDate = resultSet.getDate("admission.admission_date");
 
@@ -49,7 +47,7 @@ public class AdmissionConnector extends Connect {
         return admissionHashMap;
     }
 
-    public void newAdmission(Admission admission){
+    public void newAdmission(Admission admission) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                     "admission(patient_id, physician_id, admission_consultant_id, leading_consultant_id, cause, admission_date, release_date) " +
@@ -60,9 +58,9 @@ public class AdmissionConnector extends Connect {
             preparedStatement.setInt(4, admission.getLeadingConsultantObjectProperty().getId());
             preparedStatement.setString(5, admission.getCause());
             preparedStatement.setDate(6, new Date(admission.getAdmissionDateObjectProperty().getTime()));
-            if(admission.getReleaseDateObjectProperty() == null){
+            if (admission.getReleaseDateObjectProperty() == null) {
                 preparedStatement.setNull(7, Types.DATE);
-            }else {
+            } else {
                 preparedStatement.setDate(7, new Date(admission.getReleaseDateObjectProperty().getTime()));
             }
 
@@ -72,7 +70,7 @@ public class AdmissionConnector extends Connect {
         }
     }
 
-    public void updateAdmission(Admission admission){
+    public void updateAdmission(Admission admission) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("UPDATE admission SET " +
                     "patient_id = ?, " +
@@ -89,9 +87,9 @@ public class AdmissionConnector extends Connect {
             preparedStatement.setInt(4, admission.getLeadingConsultantObjectProperty().getId());
             preparedStatement.setString(5, admission.getCause());
             preparedStatement.setDate(6, new Date(admission.getAdmissionDateObjectProperty().getTime()));
-            if(null == admission.getReleaseDateObjectProperty()){
+            if (null == admission.getReleaseDateObjectProperty()) {
                 preparedStatement.setNull(7, Types.DATE);
-            }else {
+            } else {
                 preparedStatement.setDate(7, new Date(admission.getReleaseDateObjectProperty().getTime()));
             }
             preparedStatement.setInt(8, admission.getId());
@@ -102,7 +100,7 @@ public class AdmissionConnector extends Connect {
         }
     }
 
-    public void deleteAdmission(Admission admission){
+    public void deleteAdmission(Admission admission) {
         try {
             PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("DELETE FROM admission " +
                     "WHERE id = ?");

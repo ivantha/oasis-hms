@@ -1,18 +1,16 @@
 package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
-import com.oasis.database.Connect;
+import com.oasis.database.Connector;
 import com.oasis.model.Admission;
 import com.oasis.model.Payment;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.chrono.JapaneseEra;
 import java.util.Date;
 import java.util.HashMap;
 
-public class PaymentConnector extends Connect {
+public class PaymentConnector extends Connector {
     public HashMap<Integer, Payment> getPaymentArrayListByAdmission(Admission admission) {
         HashMap<Integer, Payment> paymentHashMap = new HashMap<>();
 

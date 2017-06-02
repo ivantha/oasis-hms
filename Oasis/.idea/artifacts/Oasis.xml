@@ -37,9 +37,11 @@
         <element id="archive" name="cloner.jar">
           <element id="module-output" name="DeepClone" />
         </element>
+        <element id="archive" name="imgscalr.jar">
+          <element id="module-output" name="imgscalr" />
+        </element>
       </element>
       <element id="artifact" artifact-name="Oasis_preloader" />
-      <element id="module-output" name="imgscalr" />
     </root>
   </artifact>
 </component>

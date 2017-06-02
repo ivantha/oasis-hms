@@ -31,10 +31,10 @@ public class Ethnicity implements Model<Ethnicity> {
         }
 
         Ethnicity e = (Ethnicity) obj;
-        if(e.getId() != getId()){
+        if (e.getId() != getId()) {
             return false;
         }
-        if(e.getName() != getName()){
+        if (e.getName() != getName()) {
             return false;
         }
 
@@ -46,7 +46,7 @@ public class Ethnicity implements Model<Ethnicity> {
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
@@ -62,11 +62,11 @@ public class Ethnicity implements Model<Ethnicity> {
         return name.get();
     }
 
-    public StringProperty nameProperty() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name.set(name);
+    }
+
+    public StringProperty nameProperty() {
+        return name;
     }
 }

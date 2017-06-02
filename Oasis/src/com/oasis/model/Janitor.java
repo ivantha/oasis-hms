@@ -3,7 +3,7 @@ package com.oasis.model;
 
 import com.oasis.common.Session;
 
-public class Janitor extends Employee{
+public class Janitor extends Employee {
     public Janitor(Employee employee) {
         super(employee.getId(), employee.getNic(), employee.getFirstName(), employee.getMiddleName(), employee.getLastName(),
                 employee.getGender(), employee.getDob(), employee.getStartDate(), employee.getEndDate(), employee.getEmployeeRole(),

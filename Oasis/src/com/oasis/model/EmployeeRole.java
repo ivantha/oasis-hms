@@ -41,7 +41,7 @@ public class EmployeeRole implements Model<EmployeeRole> {
         return Session.cloner.deepClone(this);
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return false;
     }
 
