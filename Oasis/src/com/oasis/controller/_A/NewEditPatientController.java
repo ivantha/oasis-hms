@@ -3,6 +3,7 @@ package com.oasis.controller._A;
 import com.jfoenix.controls.JFXDatePicker;
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.factory.ValidationFactory;
 import com.oasis.model.*;
 import com.oasis.services.BloodGroupServices;
 import com.oasis.services.EthnicityServices;
@@ -71,6 +72,8 @@ public class NewEditPatientController implements Controller {
     private Patient tempPatient;
     private boolean isEditingMode = false;
 
+    private ValidationFactory validationFactory;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -89,6 +92,8 @@ public class NewEditPatientController implements Controller {
 
         isEditingMode = false;
         bindFields(tempPatient);
+
+        addValidators();
     }
 
     public void showPatient(Patient patient) {
@@ -102,17 +107,25 @@ public class NewEditPatientController implements Controller {
 
         isEditingMode = true;
         bindFields(tempPatient);
+
+        addValidators();
     }
 
     public void okButtonOnAction(ActionEvent actionEvent) {
         ArrayList<Patient> patientArrayList = new ArrayList<>();
         patientArrayList.add(tempPatient);
-        if (!isEditingMode) {
-            PatientServices.newPatient(patientArrayList);
+
+        if (validationFactory.isValid()) {
+            if (!isEditingMode) {
+                PatientServices.newPatient(patientArrayList);
+            } else {
+                PatientServices.updatePatient(patientArrayList);
+            }
+
+            UIFactory.launchUI(UIName.PATIENT_MANAGEMENT, true);
         } else {
-            PatientServices.updatePatient(patientArrayList);
+
         }
-        UIFactory.launchUI(UIName.PATIENT_MANAGEMENT, true);
     }
 
     private void unBindFields(Patient patient) {
@@ -188,5 +201,20 @@ public class NewEditPatientController implements Controller {
         ObservableList<Ethnicity> ethnicityObservableList = FXCollections
                 .observableList(EthnicityServices.getEthnicityArrayList());
         ethnicityComboBox.setItems(ethnicityObservableList);
+    }
+
+    private void addValidators() {
+        validationFactory = new ValidationFactory();
+        validationFactory.addNICValidator(nicTextField);
+        validationFactory.addNameValidator(firstNameTextField);
+        validationFactory.addNameValidator(lastNameTextField);
+        validationFactory.addComboBoxValidator(genderComboBox);
+        validationFactory.addDatePickerValidator(dobDatePicker);
+        validationFactory.addComboBoxValidator(bloodGroupComboBox);
+        validationFactory.addComboBoxValidator(ethnicityComboBox);
+        validationFactory.addTelephoneValidator(telephoneTextField);
+        validationFactory.addEmailValidator(emailTextField);
+        validationFactory.addAddressValidator(streetTextField, townTextField, provinceTextField, postalCodeTextField);
+        validationFactory.addEmergencyContactValidator(ecNameTextField, ecRelationshipTextField, ecTelephoneTextField, ecAddressTextField);
     }
 }

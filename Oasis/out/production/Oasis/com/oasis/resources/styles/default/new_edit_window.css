@@ -1,5 +1,6 @@
 @import "palatte.css";
 @import "common.css";
+@import "validation.css";
 
 @font-face {
     src: url('../../fonts/Roboto-Regular.ttf');

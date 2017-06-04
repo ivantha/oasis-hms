@@ -1,0 +1,17 @@
+@import "palatte.css";
+
+.text-field-invalid{
+    -fx-border-color: #d32f2f;
+}
+
+.combo-box-invalid{
+    -fx-border-color: #d32f2f;
+}
+
+.date-picker-invalid{
+    -fx-border-color: #d32f2f;
+}
+
+.time-picker-invalid{
+    -fx-border-color: #d32f2f;
+}

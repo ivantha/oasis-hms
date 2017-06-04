@@ -1,5 +1,6 @@
 @import "palatte.css";
 @import "common.css";
+@import "validation.css";
 
 #backgroundAnchorPane {
     -fx-background-color: -default-background-color;
