@@ -8,84 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/factory/NotificationFactory.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEditPatientController.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" afterPath="$PROJECT_DIR$/../EER Diagram/EER diagram.mwb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/NewEditPatientController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/NewEditPatientController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/DegreeListPopOverController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/employee/DegreeListPopOverController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/DashboardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/main/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PatientConnector.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/database/connector/PatientConnector.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oasis/validation/EthnicityValidator.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/NewEditPatientController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/PatientManagementController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/EthnicityManagementController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/EthnicityManagementController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/NewEthnicityController.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/controller/_A/NewEthnicityController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/ValidationFactory.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/factory/ValidationFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Address.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/Address.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmergencyContact.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/model/EmergencyContact.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/NotificationServices.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/services/NotificationServices.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/component/Notification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/AddressValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/AddressValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/ComboBoxValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/ComboBoxValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/CurrencyValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/CurrencyValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/DateValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/DateValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/EmailValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/EmailValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/EmergencyContactValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/EmergencyContactValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/NICValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/NICValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/NameValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/NameValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/TelephoneValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/TelephoneValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/TimeValidator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/TimeValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/Validator.class" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/validation/Validator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/033d1c17-a0af-450c-9277-eed108241947.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/033d1c17-a0af-450c-9277-eed108241947.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.properties" afterPath="$PROJECT_DIR$/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/validation.css" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/resources/styles/default/validation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewEditEmployee.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/employee/NewEditEmployee.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewEditPatient.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewEditPatient.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewEthnicity.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/NewEthnicity.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/out/production/Oasis/com/oasis/ui/view/patient/PatientManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Oasis/styles/default/validation.css" afterPath="$PROJECT_DIR$/out/production/Oasis/styles/default/validation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/employee/DegreeListPopOverController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/employee/DegreeListPopOverController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/DashboardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/main/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" afterPath="$PROJECT_DIR$/src/com/oasis/database/connector/PatientConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java" afterPath="$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/Address.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/Address.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/model/EmergencyContact.java" afterPath="$PROJECT_DIR$/src/com/oasis/model/EmergencyContact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/validation.css" afterPath="$PROJECT_DIR$/src/com/oasis/resources/styles/default/validation.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/services/NotificationServices.java" afterPath="$PROJECT_DIR$/src/com/oasis/services/NotificationServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/component/Notification.java" afterPath="$PROJECT_DIR$/src/com/oasis/ui/component/Notification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/NewWard.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/NewWard.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/administration/WardManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/AdmissionManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/TreatmentManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/admission/TreatmentManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/EmployeeManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewEditEmployee.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewSpeciality.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/NewSpeciality.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/employee/SpecialityManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/NewTest.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/NewTest.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/medical/TestManagement.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/EthnicityManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEditPatient.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEditPatient.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEthnicity.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewEthnicity.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewRace.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/NewRace.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/PatientManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/RaceManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/patient/RaceManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/payment/PaymentManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/NewPhysician.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/NewPhysician.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianManagement.fxml" afterPath="$PROJECT_DIR$/src/com/oasis/ui/view/physician/PhysicianManagement.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/AddressValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/AddressValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/ComboBoxValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/ComboBoxValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/CurrencyValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/CurrencyValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/DateValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/DateValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/EmailValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/EmailValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/EmergencyContactValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/EmergencyContactValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/NICValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/NICValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/NameValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/NameValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/TelephoneValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/TelephoneValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/TimeValidator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/TimeValidator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oasis/validation/Validator.java" afterPath="$PROJECT_DIR$/src/com/oasis/validation/Validator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEditPatientController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/_A/PatientManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/_A/EthnicityManagementController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/EthnicityManagementController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEthnicityController.java" afterPath="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEthnicityController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -194,18 +133,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EthnicityManagementController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/_A/EthnicityManagementController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -277,10 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewSpecialityController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewPhysicianController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEthnicityController.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEditTreatmentController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/PhysicianManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/PaymentManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewWardController.java" />
@@ -321,13 +245,17 @@
         <option value="$PROJECT_DIR$/src/com/oasis/validation/NICValidator.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/validation/NameValidator.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/validation/AddressValidator.java" />
-        <option value="$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/Address.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/model/EmergencyContact.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/PatientManagementController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/resources/styles/default/new_edit_window.css" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java" />
         <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/EthnicityManagementController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/_A/NewEthnicityController.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/validation/EthnicityValidator.java" />
+        <option value="$PROJECT_DIR$/src/com/oasis/controller/patient/NewEthnicityController.java" />
       </list>
     </option>
   </component>
@@ -1434,16 +1362,15 @@
       <workItem from="1496490360111" duration="614000" />
       <workItem from="1496502247771" duration="8748000" />
       <workItem from="1496541019438" duration="31344000" />
-      <workItem from="1496627484606" duration="4570000" />
+      <workItem from="1496627484606" duration="5594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="880929000" />
+    <option name="totallyTimeSpent" value="881953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1455,13 +1382,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34150326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32189542" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32189542" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2934947" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2934947" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1504,20 +1431,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/_A/NewWardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="63" column="29" lean-forward="false" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/_A/NewTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/_A/WardManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -1814,26 +1727,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/validation/NameValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/validation/AddressValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="58" column="58" lean-forward="false" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1897,14 +1794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/PatientManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1913,10 +1802,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/_A/EthnicityManagementController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/validation/NameValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="60" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/factory/ValidationFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/validation/EthnicityValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="57" column="89" lean-forward="false" selection-start-line="57" selection-start-column="89" selection-end-line="57" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEditPatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="205" column="4" lean-forward="false" selection-start-line="205" selection-start-column="4" selection-end-line="218" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/EthnicityManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oasis/controller/patient/NewEthnicityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>

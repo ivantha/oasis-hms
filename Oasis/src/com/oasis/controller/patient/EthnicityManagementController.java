@@ -1,4 +1,4 @@
-package com.oasis.controller._A;
+package com.oasis.controller.patient;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
@@ -49,6 +49,7 @@ public class EthnicityManagementController implements Controller {
     private HashMap<Integer, Ethnicity> deletedEthnicityHashMap = new HashMap<>();
 
     private SearchFXC<Ethnicity> ethnicitySearchFXC;
+    private ObservableList<Ethnicity> ethnicityObservableList;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -81,7 +82,7 @@ public class EthnicityManagementController implements Controller {
         }
 
         searchTextField.setText(null);
-        ObservableList<Ethnicity> ethnicityObservableList = FXCollections.observableList(ethnicityArrayList);
+        ethnicityObservableList = FXCollections.observableList(ethnicityArrayList);
         ethnicitySearchFXC = new SearchFXC<>(searchTextField, ethnicityTableView, ethnicityObservableList,
                 "getName");
 
@@ -92,7 +93,7 @@ public class EthnicityManagementController implements Controller {
     public void deleteButtonOnAction(ActionEvent actionEvent) {
         Ethnicity selectedEthnicity = ethnicityTableView.getSelectionModel().getSelectedItem();
         if (selectedEthnicity != null) {
-            ethnicityTableView.getItems().remove(selectedEthnicity);
+            ethnicityObservableList.remove(selectedEthnicity);
             deletedEthnicityHashMap.put(selectedEthnicity.getId(), selectedEthnicity);
         }
     }

@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller._A.NewEthnicityController">
     <children>
-        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="89.0" prefWidth="405.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+        <GridPane layoutX="110.0" layoutY="110.0" prefHeight="46.0" prefWidth="313.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="80.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
@@ -20,11 +20,7 @@
             </rowConstraints>
             <children>
                 <Label text="Ethnicity" />
-                <AnchorPane GridPane.columnIndex="1">
-                    <children>
-                        <TextField fx:id="ethnicityTextField" layoutY="32.0" prefWidth="150.0" />
-                    </children>
-                </AnchorPane>
+                  <TextField fx:id="ethnicityTextField" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
             </children>
         </GridPane>
         <Button fx:id="okButton" layoutX="986.0" layoutY="651.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />

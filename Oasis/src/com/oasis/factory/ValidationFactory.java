@@ -48,6 +48,11 @@ public class ValidationFactory {
         validatorArrayList.add(nameValidator);
     }
 
+    public void addEthnicityValidator(TextField textField) {
+        EthnicityValidator ethnicityValidator = new EthnicityValidator(textField);
+        validatorArrayList.add(ethnicityValidator);
+    }
+
     public void addAddressValidator(TextField nameTextField, TextField relationshipTextField, TextField telephoneTextField,
                                     TextField addressTextField) {
         AddressValidator addressValidator = new AddressValidator(nameTextField, relationshipTextField, telephoneTextField,

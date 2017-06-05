@@ -1,7 +1,8 @@
-package com.oasis.controller._A;
+package com.oasis.controller.patient;
 
 import com.oasis.controller.Controller;
 import com.oasis.factory.UIFactory;
+import com.oasis.factory.ValidationFactory;
 import com.oasis.model.Ethnicity;
 import com.oasis.services.EthnicityServices;
 import com.oasis.ui.UIName;
@@ -23,6 +24,8 @@ public class NewEthnicityController implements Controller {
 
     private Ethnicity tempEthnicity;
 
+    private ValidationFactory validationFactory;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -32,14 +35,25 @@ public class NewEthnicityController implements Controller {
     public void refreshView() {
         tempEthnicity = new Ethnicity();
         ethnicityTextField.textProperty().bindBidirectional(tempEthnicity.nameProperty());
+
+        addValidators();
     }
 
     public void okButtonOnAction(ActionEvent actionEvent) {
-        ArrayList<Ethnicity> ethnicityArrayList = new ArrayList<>();
-        ethnicityArrayList.add(tempEthnicity);
+        if(validationFactory.isValid()){
+            ArrayList<Ethnicity> ethnicityArrayList = new ArrayList<>();
+            ethnicityArrayList.add(tempEthnicity);
 
-        EthnicityServices.addEthnicity(ethnicityArrayList);
+            EthnicityServices.addEthnicity(ethnicityArrayList);
 
-        UIFactory.launchUI(UIName.ETHNICITY_MANAGEMENT, true);
+            UIFactory.launchUI(UIName.ETHNICITY_MANAGEMENT, true);
+        }else {
+            validationFactory.generateErrorNotifications();
+        }
+    }
+
+    private void addValidators() {
+        validationFactory = new ValidationFactory();
+        validationFactory.addEthnicityValidator(ethnicityTextField);
     }
 }
