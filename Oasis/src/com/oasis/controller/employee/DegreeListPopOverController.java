@@ -3,7 +3,6 @@ package com.oasis.controller.employee;
 import com.oasis.controller.PopOverController;
 import com.oasis.model.Degree;
 import com.oasis.services.DegreeServices;
-import com.oasis.ui.UIName;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

@@ -35,16 +35,16 @@ public class Address implements Model<Address> {
         if (ea.getId() != getId()) {
             return false;
         }
-        if (ea.getStreet() != getStreet()) {
+        if (!(ea.getStreet() == null ? getStreet() == null : !ea.getStreet().equals(getStreet()))) {
             return false;
         }
-        if (ea.getTown() != getTown()) {
+        if (!(ea.getTown() == null ? getTown() == null : !ea.getTown().equals(getTown()))) {
             return false;
         }
-        if (ea.getProvince() != getProvince()) {
+        if (!(ea.getProvince() == null ? getProvince() == null : !ea.getProvince().equals(getProvince()))) {
             return false;
         }
-        if (ea.getPostalCode() != getPostalCode()) {
+        if (!(ea.getPostalCode() == null ? getPostalCode() == null : !ea.getPostalCode().equals(getPostalCode()))) {
             return false;
         }
 

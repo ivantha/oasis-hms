@@ -1,5 +1,7 @@
 package com.oasis.validation;
 
+import com.oasis.factory.NotificationFactory;
+import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -9,7 +11,7 @@ import javafx.scene.control.TextField;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AddressValidator implements Validator{
+public class AddressValidator implements Validator {
     private final TextField streetTextField;
     private final TextField townTextField;
     private final TextField provinceTextField;
@@ -31,7 +33,7 @@ public class AddressValidator implements Validator{
     private boolean postalCodeValid = false;
 
     public AddressValidator(TextField streetTextField, TextField townTextField, TextField provinceTextField,
-                             TextField postalCodeTextField) {
+                            TextField postalCodeTextField) {
         this.streetTextField = streetTextField;
         this.townTextField = townTextField;
         this.provinceTextField = provinceTextField;
@@ -43,25 +45,25 @@ public class AddressValidator implements Validator{
         postalCodeValue.bind(postalCodeTextField.textProperty());
 
         Platform.runLater(() -> {
-            streetTextField.getStyleClass().remove( "text-field-invalid");
+            streetTextField.getStyleClass().remove("text-field-invalid");
             townTextField.getStyleClass().remove("text-field-invalid");
             provinceTextField.getStyleClass().remove("text-field-invalid");
             postalCodeTextField.getStyleClass().remove("text-field-invalid");
         });
 
         streetChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
-                Pattern pattern = Pattern.compile("\\S+");
+            streetValid = true;
+            streetTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
+                Pattern pattern = Pattern.compile(".*\\S.*");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    streetValid = true;
-                    streetTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     streetValid = false;
                     streetTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else {
+            } else {
                 streetValid = false;
                 streetTextField.getStyleClass().add("text-field-invalid");
             }
@@ -69,18 +71,18 @@ public class AddressValidator implements Validator{
         streetValue.addListener(streetChangeListener);
 
         townChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
-                Pattern pattern = Pattern.compile("\\S+");
+            townValid = true;
+            townTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
+                Pattern pattern = Pattern.compile(".*\\S.*");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    townValid = true;
-                    townTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     townValid = false;
                     townTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else {
+            } else {
                 townValid = false;
                 townTextField.getStyleClass().add("text-field-invalid");
             }
@@ -88,18 +90,18 @@ public class AddressValidator implements Validator{
         townValue.addListener(townChangeListener);
 
         provinceChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
-                Pattern pattern = Pattern.compile("\\S+");
+            provinceValid = true;
+            provinceTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
+                Pattern pattern = Pattern.compile(".*\\S.*");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    provinceValid = true;
-                    provinceTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     provinceValid = false;
                     provinceTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else{
+            } else {
                 provinceValid = false;
                 provinceTextField.getStyleClass().add("text-field-invalid");
             }
@@ -107,18 +109,18 @@ public class AddressValidator implements Validator{
         provinceValue.addListener(provinceChangeListener);
 
         postalCodeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
+            postalCodeValid = true;
+            postalCodeTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
                 Pattern pattern = Pattern.compile("\\d{5}");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    postalCodeValid = true;
-                    postalCodeTextField.getStyleClass().remove("text-field-invalid");
-                }else {
+                if (!matcher.matches()) {
                     postalCodeValid = false;
                     postalCodeTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else{
+            } else {
                 postalCodeValid = false;
                 postalCodeTextField.getStyleClass().add("text-field-invalid");
             }
@@ -133,10 +135,16 @@ public class AddressValidator implements Validator{
     }
 
     @Override
-    public void setStateForce() {
+    public void refreshState() {
         streetChangeListener.changed(null, null, streetTextField.getText());
         townChangeListener.changed(null, null, townTextField.getText());
         provinceChangeListener.changed(null, null, provinceTextField.getText());
         postalCodeListener.changed(null, null, postalCodeTextField.getText());
+    }
+
+    @Override
+    public Notification getInvalidArgumentNotification() {
+        return NotificationFactory.defaultInvalidArguementNotification("Incorrect address",
+                "Please enter a correct address");
     }
 }

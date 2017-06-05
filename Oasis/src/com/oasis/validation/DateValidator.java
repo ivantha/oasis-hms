@@ -1,23 +1,31 @@
 package com.oasis.validation;
 
 import com.jfoenix.controls.JFXDatePicker;
+import com.oasis.factory.NotificationFactory;
+import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 
-public class DateValidator implements Validator{
+import java.time.LocalDate;
+import java.util.Date;
+
+public class DateValidator implements Validator {
     private final JFXDatePicker datePicker;
+    private ChangeListener<LocalDate> valueChangeListener;
 
     public DateValidator(JFXDatePicker datePicker) {
         this.datePicker = datePicker;
 
-        Platform.runLater(() ->  datePicker.getStyleClass().remove("date-picker-invalid"));
+        Platform.runLater(() -> datePicker.getStyleClass().remove("date-picker-invalid"));
 
-        datePicker.valueProperty().addListener((observable, oldValue, newValue) -> {
-            if(null == newValue){
+        valueChangeListener = (observable, oldValue, newValue) -> {
+            datePicker.getStyleClass().remove("date-picker-invalid");
+            if (null == newValue) {
                 datePicker.getStyleClass().add("date-picker-invalid");
-            }else {
-                datePicker.getStyleClass().remove("date-picker-invalid");
             }
-        });
+        };
+        datePicker.valueProperty().addListener(valueChangeListener);
     }
 
     @Override
@@ -26,7 +34,13 @@ public class DateValidator implements Validator{
     }
 
     @Override
-    public void setStateForce() {
-        datePicker.getStyleClass().add("date-picker-invalid");
+    public void refreshState() {
+        valueChangeListener.changed(null, null, datePicker.getValue());
+    }
+
+    @Override
+    public Notification getInvalidArgumentNotification() {
+        return NotificationFactory.defaultInvalidArguementNotification("Invalid date",
+                "Please choose a valid date");
     }
 }

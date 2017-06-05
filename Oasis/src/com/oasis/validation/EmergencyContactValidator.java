@@ -1,5 +1,7 @@
 package com.oasis.validation;
 
+import com.oasis.factory.NotificationFactory;
+import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -13,7 +15,7 @@ public class EmergencyContactValidator implements Validator {
     private final TextField nameTextField;
     private final TextField relationshipTextField;
     private final TextField telephoneTextField;
-    private final TextField addressTestField;
+    private final TextField addressTextField;
 
     private StringProperty nameValue = new SimpleStringProperty();
     private StringProperty relationshipValue = new SimpleStringProperty();
@@ -31,11 +33,11 @@ public class EmergencyContactValidator implements Validator {
     private boolean addressValid = false;
 
     public EmergencyContactValidator(TextField nameTextField, TextField relationshipTextField, TextField telephoneTextField,
-                            TextField addressTextField) {
+                                     TextField addressTextField) {
         this.nameTextField = nameTextField;
         this.relationshipTextField = relationshipTextField;
         this.telephoneTextField = telephoneTextField;
-        this.addressTestField = addressTextField;
+        this.addressTextField = addressTextField;
 
         nameValue.bind(nameTextField.textProperty());
         relationshipValue.bind(relationshipTextField.textProperty());
@@ -43,25 +45,25 @@ public class EmergencyContactValidator implements Validator {
         addressValue.bind(addressTextField.textProperty());
 
         Platform.runLater(() -> {
-            nameTextField.getStyleClass().remove( "text-field-invalid");
+            nameTextField.getStyleClass().remove("text-field-invalid");
             relationshipTextField.getStyleClass().remove("text-field-invalid");
             telephoneTextField.getStyleClass().remove("text-field-invalid");
             addressTextField.getStyleClass().remove("text-field-invalid");
         });
 
         nameChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
+            nameValid = true;
+            nameTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
                 Pattern pattern = Pattern.compile("\\S+");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    nameValid = true;
-                    nameTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     nameValid = false;
                     nameTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else {
+            } else {
                 nameValid = false;
                 nameTextField.getStyleClass().add("text-field-invalid");
             }
@@ -69,18 +71,18 @@ public class EmergencyContactValidator implements Validator {
         nameValue.addListener(nameChangeListener);
 
         relationshipChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
+            relationshipValid = true;
+            relationshipTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
                 Pattern pattern = Pattern.compile("\\S+");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    relationshipValid = true;
-                    relationshipTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     relationshipValid = false;
                     relationshipTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else {
+            } else {
                 relationshipValid = false;
                 relationshipTextField.getStyleClass().add("text-field-invalid");
             }
@@ -88,18 +90,18 @@ public class EmergencyContactValidator implements Validator {
         relationshipValue.addListener(relationshipChangeListener);
 
         telephoneChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
+            telephoneValid = true;
+            telephoneTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
                 Pattern pattern = Pattern.compile("\\d{10}");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    telephoneValid = true;
-                    telephoneTextField.getStyleClass().remove("text-field-invalid");
-                }else{
+                if (!matcher.matches()) {
                     telephoneValid = false;
                     telephoneTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else{
+            } else {
                 telephoneValid = false;
                 telephoneTextField.getStyleClass().add("text-field-invalid");
             }
@@ -107,18 +109,18 @@ public class EmergencyContactValidator implements Validator {
         telephoneValue.addListener(telephoneChangeListener);
 
         addressChangeListener = (observable, oldValue, newValue) -> {
-            if(null != newValue){
-                Pattern pattern = Pattern.compile("\\d{5}");
+            addressValid = true;
+            addressTextField.getStyleClass().remove("text-field-invalid");
+
+            if (null != newValue) {
+                Pattern pattern = Pattern.compile("\\S+");
                 Matcher matcher = pattern.matcher(newValue);
 
-                if (matcher.matches()){
-                    addressValid = true;
-                    addressTextField.getStyleClass().remove("text-field-invalid");
-                }else {
+                if (!matcher.matches()) {
                     addressValid = false;
                     addressTextField.getStyleClass().add("text-field-invalid");
                 }
-            }else{
+            } else {
                 addressValid = false;
                 addressTextField.getStyleClass().add("text-field-invalid");
             }
@@ -133,10 +135,16 @@ public class EmergencyContactValidator implements Validator {
     }
 
     @Override
-    public void setStateForce() {
+    public void refreshState() {
         nameChangeListener.changed(null, null, nameTextField.getText());
         relationshipChangeListener.changed(null, null, relationshipTextField.getText());
         telephoneChangeListener.changed(null, null, telephoneTextField.getText());
-        addressChangeListener.changed(null, null, addressTestField.getText());
+        addressChangeListener.changed(null, null, addressTextField.getText());
+    }
+
+    @Override
+    public Notification getInvalidArgumentNotification() {
+        return NotificationFactory.defaultInvalidArguementNotification("Incorrect emergency contact information",
+                "Please enter a correct set of emergency contact information");
     }
 }

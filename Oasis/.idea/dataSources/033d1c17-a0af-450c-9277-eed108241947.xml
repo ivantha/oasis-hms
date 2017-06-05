@@ -82,12 +82,12 @@
     </column>
     <column id="52" parent="12" name="admission_date">
       <Position>7</Position>
-      <DataType>date|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="53" parent="12" name="release_date">
       <Position>8</Position>
-      <DataType>date|0</DataType>
+      <DataType>datetime|0</DataType>
     </column>
     <column id="54" parent="12" name="charge_id">
       <Position>9</Position>
@@ -326,7 +326,7 @@ test_id</ColNames>
     </column>
     <column id="101" parent="17" name="charged_date">
       <Position>4</Position>
-      <DataType>date|0</DataType>
+      <DataType>datetime|0</DataType>
       <NotNull>1</NotNull>
     </column>
     <key id="102" parent="17" name="PRIMARY">
@@ -531,7 +531,6 @@ test_id</ColNames>
     <column id="142" parent="22" name="town">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="143" parent="22" name="province">
       <Position>5</Position>
@@ -540,7 +539,6 @@ test_id</ColNames>
     <column id="144" parent="22" name="postal_code">
       <Position>6</Position>
       <DataType>varchar(5)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <index id="145" parent="22" name="fk_employee_address_employee1_idx">
       <ColNames>employee_id</ColNames>
@@ -1187,7 +1185,6 @@ degree_id</ColNames>
     <column id="274" parent="41" name="charge_id">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
     </column>
     <index id="275" parent="41" name="fk_treatment_admission1_idx">
       <ColNames>admission_id</ColNames>

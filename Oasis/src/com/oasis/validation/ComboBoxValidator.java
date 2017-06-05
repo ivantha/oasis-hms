@@ -1,25 +1,28 @@
 package com.oasis.validation;
 
+import com.oasis.factory.NotificationFactory;
+import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ComboBox;
 
-public class ComboBoxValidator implements Validator{
-    private final ComboBox comboBox;
+public class ComboBoxValidator<T> implements Validator {
+    private final ComboBox<T> comboBox;
+    private ChangeListener<T> valueChangeListener;
 
     public ComboBoxValidator(ComboBox comboBox) {
         this.comboBox = comboBox;
 
         Platform.runLater(() -> comboBox.getStyleClass().remove("combo-box-invalid"));
 
-        comboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if(null == newValue){
+        valueChangeListener = (observable, oldValue, newValue) -> {
+            comboBox.getStyleClass().remove("combo-box-invalid");
+            if (null == newValue) {
                 comboBox.getStyleClass().add("combo-box-invalid");
-            }else {
-                comboBox.getStyleClass().remove("combo-box-invalid");
             }
-        });
+        };
+        comboBox.getSelectionModel().selectedItemProperty().addListener(valueChangeListener);
     }
 
     @Override
@@ -28,7 +31,13 @@ public class ComboBoxValidator implements Validator{
     }
 
     @Override
-    public void setStateForce() {
-        comboBox.getStyleClass().add("combo-box-invalid");
+    public void refreshState() {
+        valueChangeListener.changed(null, null, comboBox.getSelectionModel().selectedItemProperty().get());
+    }
+
+    @Override
+    public Notification getInvalidArgumentNotification() {
+        return NotificationFactory.defaultInvalidArguementNotification("Value not selected",
+                "Please choose a valid value from the drop down list");
     }
 }

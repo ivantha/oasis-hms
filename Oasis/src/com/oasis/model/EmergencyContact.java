@@ -29,16 +29,16 @@ public class EmergencyContact implements Model<EmergencyContact> {
         if (ec.getId() != getId()) {
             return false;
         }
-        if (!ec.getName().equals(getName())) {
+        if (!(ec.getName() == null ? getName() == null : !ec.getName().equals(getName()))) {
             return false;
         }
-        if (!ec.getRelationship().equals(getRelationship())) {
+        if (!(ec.getRelationship() == null ? getRelationship() == null : !ec.getRelationship().equals(getRelationship()))) {
             return false;
         }
-        if (!ec.getTelephone().equals(getTelephone())) {
+        if (!(ec.getTelephone() == null ? getTelephone() == null : !ec.getTelephone().equals(getTelephone()))) {
             return false;
         }
-        if (!ec.getAddress().equals(getAddress())) {
+        if (!(ec.getAddress() == null ? getAddress() == null : !ec.getAddress().equals(getAddress()))) {
             return false;
         }
 
@@ -51,16 +51,16 @@ public class EmergencyContact implements Model<EmergencyContact> {
     }
 
     public boolean isEmpty() {
-        if (!"".equals(getName())) {
+        if (null != getName() || !getName().isEmpty()) {
             return false;
         }
-        if (!"".equals(getRelationship())) {
+        if (null != getRelationship() || !getRelationship().isEmpty()) {
             return false;
         }
-        if (!"".equals(getTelephone())) {
+        if (null != getTelephone() || !getTelephone().isEmpty()) {
             return false;
         }
-        if (!"".equals(getAddress())) {
+        if (null != getAddress() || !getAddress().isEmpty()) {
             return false;
         }
 

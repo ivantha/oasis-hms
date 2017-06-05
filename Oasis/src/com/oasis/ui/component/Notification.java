@@ -109,11 +109,11 @@ public class Notification extends Pane {
         return timeout.get();
     }
 
-    public void setTimeout(long timeout) {
+    public void setTimeout(int timeout) {
         this.timeout.set(timeout);
     }
 
-    public void setTimeout(int timeout) {
+    public void setTimeout(long timeout) {
         this.timeout.set(timeout);
     }
 

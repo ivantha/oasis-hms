@@ -1,7 +1,11 @@
 package com.oasis.validation;
 
+import com.oasis.ui.component.Notification;
+
 public interface Validator {
     boolean isValid();
 
-    void setStateForce();
+    void refreshState();
+
+    Notification getInvalidArgumentNotification();
 }

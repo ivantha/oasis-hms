@@ -140,13 +140,13 @@
                 <Label text="Town" GridPane.rowIndex="2"/>
                 <Label text="Province" GridPane.rowIndex="3"/>
                 <Label text="Postal code" GridPane.rowIndex="4"/>
-                <TextField fx:id="streetTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                <TextField fx:id="nameTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
                            GridPane.rowIndex="1"/>
-                <TextField fx:id="townTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                <TextField fx:id="relationshipTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
                            GridPane.rowIndex="2"/>
-                <TextField fx:id="provinceTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
+                <TextField fx:id="telephoneTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
                            GridPane.rowIndex="3"/>
-                <TextField fx:id="postalCodeTextField" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1"
+                <TextField fx:id="addressTextField" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1"
                            GridPane.rowIndex="4"/>
             </children>
         </GridPane>

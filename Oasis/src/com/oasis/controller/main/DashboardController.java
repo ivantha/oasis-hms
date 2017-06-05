@@ -8,10 +8,8 @@ import com.oasis.listener.DynamicPaneDragEnteredEventHandler;
 import com.oasis.listener.DynamicPaneDragExitedEventHandler;
 import com.oasis.listener.DynamicPaneDragOverEventHandler;
 import com.oasis.main.Main;
-import com.oasis.services.NotificationServices;
 import com.oasis.services.SystemServices;
 import com.oasis.ui.UIName;
-import com.oasis.ui.component.Notification;
 import com.oasis.ui.component.NotificationFXC;
 import com.oasis.utils.ImageScaler;
 import javafx.animation.ParallelTransition;
@@ -40,7 +38,6 @@ import javafx.util.Duration;
 import java.io.File;
 import java.net.URL;
 import java.util.Iterator;
-import java.util.Random;
 import java.util.ResourceBundle;
 
 public class DashboardController implements Controller {

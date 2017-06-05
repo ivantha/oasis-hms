@@ -127,12 +127,12 @@ public class PatientConnector extends Connector {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                int patientId = resultSet.getInt("patient_email.patient_id");
-                int emergencyContactId = resultSet.getInt("patient_email.id");
-                String emergencyContactName = resultSet.getString("patient_email.email");
-                String emergencyContactRelationship = resultSet.getString("patient_email.email");
-                String emergencyContactTelephone = resultSet.getString("patient_email.email");
-                String emergencyContactAddress = resultSet.getString("patient_email.email");
+                int patientId = resultSet.getInt("emergency_contact.patient_id");
+                int emergencyContactId = resultSet.getInt("emergency_contact.id");
+                String emergencyContactName = resultSet.getString("emergency_contact.name");
+                String emergencyContactRelationship = resultSet.getString("emergency_contact.relationship");
+                String emergencyContactTelephone = resultSet.getString("emergency_contact.telephone");
+                String emergencyContactAddress = resultSet.getString("emergency_contact.address");
 
                 EmergencyContact emergencyContact = new EmergencyContact(emergencyContactId, emergencyContactName,
                         emergencyContactRelationship, emergencyContactTelephone, emergencyContactAddress);
@@ -342,7 +342,7 @@ public class PatientConnector extends Connector {
     private void newPatientEmergencyContact(int patientId, EmergencyContact emergencyContact) throws SQLException {
         PreparedStatement preparedStatement = (PreparedStatement) getConnection().prepareStatement("INSERT INTO " +
                 "emergency_contact(patient_id, name, relationship, telephone, address) " +
-                "VALUES(?, ?, ?, ?)");
+                "VALUES(?, ?, ?, ?, ?)");
         preparedStatement.setInt(1, patientId);
         preparedStatement.setString(2, emergencyContact.getName());
         preparedStatement.setString(3, emergencyContact.getRelationship());

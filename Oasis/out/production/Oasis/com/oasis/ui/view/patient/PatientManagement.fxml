@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="1100.0"
-            styleClass="backgroundPane"
-            stylesheets="@../../../resources/styles/default/management_edit_window.css"
-            xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._A.PatientManagementController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" styleClass="backgroundPane" stylesheets="@../../../resources/styles/default/management_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller._A.PatientManagementController">
     <children>
         <AnchorPane fx:id="navigationPane" prefHeight="50.0" prefWidth="1100.0">
             <children>
-                <HBox fx:id="searchPane" alignment="CENTER_LEFT" layoutY="3.0" prefHeight="45.0" prefWidth="350.0"
-                      spacing="20.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0"
-                      AnchorPane.topAnchor="3.0">
+                <HBox fx:id="searchPane" alignment="CENTER_LEFT" layoutY="3.0" prefHeight="45.0" prefWidth="350.0" spacing="20.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="3.0">
                     <children>
-                        <Label text="Search"/>
+                        <Label text="Search" />
                         <HBox alignment="CENTER_LEFT" spacing="5.0">
                             <children>
-                                <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="250.0"/>
-                                <Button fx:id="clearButton" mnemonicParsing="false" styleClass="mini-button"/>
+                                <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="250.0" />
+                                <Button fx:id="clearButton" mnemonicParsing="false" styleClass="mini-button" />
                             </children>
                         </HBox>
                     </children>
@@ -27,90 +31,71 @@
         </AnchorPane>
         <AnchorPane fx:id="managePane" layoutY="50.0" prefHeight="400.0" prefWidth="1100.0">
             <children>
-                <TableView fx:id="patientTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0"
-                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                           AnchorPane.topAnchor="0.0">
+                <TableView fx:id="patientTableView" layoutX="50.0" layoutY="50.0" prefHeight="410.0" prefWidth="1040.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                        <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id"/>
-                        <TableColumn fx:id="firstNameTableColumn" prefWidth="150.0" text="First name"/>
-                        <TableColumn fx:id="middleNameTableColumn" prefWidth="140.0" text="Middle name"/>
-                        <TableColumn fx:id="lastNameTableColumn" prefWidth="150.0" text="Last name"/>
-                        <TableColumn fx:id="nicTableColumn" prefWidth="100.0" text="NIC"/>
-                        <TableColumn fx:id="genderTableColumn" prefWidth="100.0" text="Gender"/>
-                        <TableColumn fx:id="dobTableColumn" prefWidth="150.0" text="DOB"/>
-                        <TableColumn fx:id="addedDateTableColumn" prefWidth="150.0" text="Added date"/>
+                        <TableColumn fx:id="idTableColumn" prefWidth="100.0" text="Id" />
+                        <TableColumn fx:id="firstNameTableColumn" prefWidth="150.0" text="First name" />
+                        <TableColumn fx:id="middleNameTableColumn" prefWidth="140.0" text="Middle name" />
+                        <TableColumn fx:id="lastNameTableColumn" prefWidth="150.0" text="Last name" />
+                        <TableColumn fx:id="nicTableColumn" prefWidth="100.0" text="NIC" />
+                        <TableColumn fx:id="genderTableColumn" prefWidth="100.0" text="Gender" />
+                        <TableColumn fx:id="dobTableColumn" prefWidth="150.0" text="DOB" />
+                        <TableColumn fx:id="addedDateTableColumn" prefWidth="150.0" text="Added date" />
                     </columns>
                 </TableView>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0"
-                    minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
+        <AnchorPane fx:id="editPane" layoutY="450.0" maxHeight="250.0" maxWidth="1100.0" minHeight="250.0" minWidth="1100.0" prefHeight="250.0" prefWidth="1100.0">
             <children>
-                <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false"
-                        onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save"
-                        AnchorPane.bottomAnchor="0.0"/>
-                <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false"
-                        onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New"
-                        AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0"/>
-                <Button fx:id="deleteButton" layoutX="970.0" layoutY="143.0" mnemonicParsing="false"
-                        onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete"/>
-                <GridPane layoutX="390.0" layoutY="10.0" prefHeight="200.0" prefWidth="341.0"
-                          AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="0.0">
+                <Button fx:id="saveButton" layoutX="854.0" layoutY="201.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Save" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="110.0" />
+                <Button fx:id="newButton" layoutX="1000.0" layoutY="211.0" mnemonicParsing="false" onAction="#newButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="New" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <Button fx:id="deleteButton" layoutX="970.0" layoutY="143.0" mnemonicParsing="false" onAction="#deleteButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Delete" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="0.0" />
+                <GridPane layoutX="390.0" layoutY="10.0" prefHeight="200.0" prefWidth="341.0" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="74.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="74.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES"/>
-                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Telephone"/>
-                        <Label text="Email" GridPane.rowIndex="1"/>
-                        <TextField fx:id="telephoneTextField" maxWidth="100.0" prefWidth="100.0"
-                                   GridPane.columnIndex="1"/>
-                        <TextField fx:id="emailTextField" maxWidth="220.0" prefWidth="220.0" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="1"/>
-                        <Label text="Ethnicity" GridPane.rowIndex="2"/>
-                        <Label text="Blood group" GridPane.rowIndex="3"/>
-                        <ComboBox fx:id="ethnicityComboBox" prefWidth="200.0" GridPane.columnIndex="1"
-                                  GridPane.rowIndex="2"/>
-                        <ComboBox fx:id="bloodGroupComboBox" prefWidth="100.0" GridPane.columnIndex="1"
-                                  GridPane.rowIndex="3"/>
+                        <Label text="Telephone" />
+                        <Label text="Email" GridPane.rowIndex="1" />
+                        <TextField fx:id="telephoneTextField" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" />
+                        <TextField fx:id="emailTextField" maxWidth="220.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Ethnicity" GridPane.rowIndex="2" />
+                        <Label text="Blood group" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="ethnicityComboBox" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="bloodGroupComboBox" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                     </children>
                 </GridPane>
-                <Button fx:id="editButton" layoutX="854.0" layoutY="143.0" mnemonicParsing="false"
-                        onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit"/>
-                <GridPane layoutX="53.0" layoutY="25.0" prefHeight="200.0" prefWidth="341.0" AnchorPane.leftAnchor="0.0"
-                          AnchorPane.topAnchor="0.0">
+                <Button fx:id="editButton" layoutX="854.0" layoutY="143.0" mnemonicParsing="false" onAction="#editButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="Edit" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="110.0" />
+                <GridPane layoutX="53.0" layoutY="25.0" prefHeight="200.0" prefWidth="341.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="121.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="220.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="121.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="220.0" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label text="Address"/>
-                        <Label text="Street" GridPane.rowIndex="1"/>
-                        <Label text="Town" GridPane.rowIndex="2"/>
-                        <Label text="Province" GridPane.rowIndex="3"/>
-                        <Label text="Postal code" GridPane.rowIndex="4"/>
-                        <TextField fx:id="streetTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="1"/>
-                        <TextField fx:id="townTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="2"/>
-                        <TextField fx:id="provinceTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1"
-                                   GridPane.rowIndex="3"/>
-                        <TextField fx:id="postalCodeTextField" maxWidth="100.0" prefWidth="100.0"
-                                   GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                        <Label text="Address" />
+                        <Label text="Street" GridPane.rowIndex="1" />
+                        <Label text="Town" GridPane.rowIndex="2" />
+                        <Label text="Province" GridPane.rowIndex="3" />
+                        <Label text="Postal code" GridPane.rowIndex="4" />
+                        <TextField fx:id="streetTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="townTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="provinceTextField" maxWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="postalCodeTextField" maxWidth="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                     </children>
                 </GridPane>
             </children>

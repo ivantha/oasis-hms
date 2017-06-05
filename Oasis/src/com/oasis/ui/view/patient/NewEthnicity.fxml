@@ -3,31 +3,30 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="1100.0"
-            stylesheets="@../../../resources/styles/default/new_edit_window.css"
-            xmlns="http://javafx.com/javafx/8.0.111"
-            fx:controller="com.oasis.controller._A.NewEthnicityController">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="backgroundAnchorPane" prefHeight="700.0" prefWidth="1100.0" stylesheets="@../../../resources/styles/default/new_edit_window.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.oasis.controller._A.NewEthnicityController">
     <children>
-        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="89.0" prefWidth="405.0" AnchorPane.leftAnchor="50.0"
-                  AnchorPane.topAnchor="50.0">
+        <GridPane layoutX="14.0" layoutY="14.0" prefHeight="89.0" prefWidth="405.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0"/>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="71.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="129.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Label text="Ethnicity"/>
+                <Label text="Ethnicity" />
                 <AnchorPane GridPane.columnIndex="1">
                     <children>
-                        <TextField fx:id="ethnicityTextField" layoutY="32.0" prefWidth="150.0"/>
+                        <TextField fx:id="ethnicityTextField" layoutY="32.0" prefWidth="150.0" />
                     </children>
                 </AnchorPane>
             </children>
         </GridPane>
-        <Button fx:id="okButton" layoutX="986.0" layoutY="651.0" mnemonicParsing="false" onAction="#okButtonOnAction"
-                prefHeight="35.0" prefWidth="100.0" text="OK"/>
+        <Button fx:id="okButton" layoutX="986.0" layoutY="651.0" mnemonicParsing="false" onAction="#okButtonOnAction" prefHeight="35.0" prefWidth="100.0" text="OK" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
     </children>
 </AnchorPane>

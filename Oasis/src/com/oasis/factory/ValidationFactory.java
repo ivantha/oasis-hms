@@ -2,6 +2,8 @@ package com.oasis.factory;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
+import com.oasis.services.NotificationServices;
+import com.oasis.ui.component.Notification;
 import com.oasis.validation.*;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -17,13 +19,23 @@ public class ValidationFactory {
     public boolean isValid() {
         boolean valid = true;
         for (Validator validator : validatorArrayList) {
+            validator.refreshState();
             if (!validator.isValid()) {
                 valid = false;
-                validator.setStateForce();
+                System.out.println("cat" + validator.getClass().getName());
             }
         }
 
         return valid;
+    }
+
+    public void generateErrorNotifications() {
+        for (Validator validator : validatorArrayList) {
+            if (!validator.isValid()) {
+                Notification notification = validator.getInvalidArgumentNotification();
+                NotificationServices.addNotification(notification);
+            }
+        }
     }
 
     public void addEmailValidator(TextField textField) {
@@ -44,7 +56,7 @@ public class ValidationFactory {
     }
 
     public void addEmergencyContactValidator(TextField streetTextField, TextField townTextField, TextField provinceTextField,
-                                    TextField postalCodeTextField) {
+                                             TextField postalCodeTextField) {
         EmergencyContactValidator emergencyContactValidator = new EmergencyContactValidator(streetTextField, townTextField,
                 provinceTextField, postalCodeTextField);
         validatorArrayList.add(emergencyContactValidator);

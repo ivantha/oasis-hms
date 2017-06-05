@@ -6,6 +6,11 @@
     src: url('../../fonts/Roboto-Regular.ttf');
 }
 
+#backgroundAnchorPane {
+    -fx-background-color: -default-background-color;
+    -fx-padding: 30px;
+}
+
 #addCircleButton {
     -fx-background-image: url("../../icons/plus_dark.png");
 }
