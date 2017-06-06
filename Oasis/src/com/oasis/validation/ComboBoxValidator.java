@@ -4,7 +4,6 @@ import com.oasis.factory.NotificationFactory;
 import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.ComboBox;
 
 public class ComboBoxValidator<T> implements Validator {

@@ -198,9 +198,9 @@ public class EmployeeConnector extends Connector {
                 replaceEmployeeDegree(employee.getId(), degree);
             }
 
-            if (employee.isDoctor()) {
-                newDoctorSpeciality(employee.getId(), ((Doctor) employee).getSpecialityObjectProperty());
-            }
+//            if (employee.isDoctor()) {
+//                newDoctorSpeciality(employee.getId(), ((Doctor) employee).getSpecialityObjectProperty());
+//            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -272,9 +272,9 @@ public class EmployeeConnector extends Connector {
                 }
             }
 
-            if (employee.isDoctor()) {
-                replaceDoctorSpeciality(employee.getId(), ((Doctor) employee).getSpecialityObjectProperty());
-            }
+//            if (employee.isDoctor()) {
+//                replaceDoctorSpeciality(employee.getId(), ((Doctor) employee).getSpecialityObjectProperty());
+//            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

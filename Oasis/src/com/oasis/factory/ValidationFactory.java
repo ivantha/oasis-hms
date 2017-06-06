@@ -3,9 +3,11 @@ package com.oasis.factory;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
 import com.oasis.services.NotificationServices;
+import com.oasis.ui.component.AutoCompleteFXC;
 import com.oasis.ui.component.Notification;
 import com.oasis.validation.*;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.util.ArrayList;
@@ -22,7 +24,6 @@ public class ValidationFactory {
             validator.refreshState();
             if (!validator.isValid()) {
                 valid = false;
-                System.out.println("cat" + validator.getClass().getName());
             }
         }
 
@@ -46,6 +47,21 @@ public class ValidationFactory {
     public void addNameValidator(TextField textField) {
         NameValidator nameValidator = new NameValidator(textField);
         validatorArrayList.add(nameValidator);
+    }
+
+    public void addAutoCompleteFXCValidator(AutoCompleteFXC autoCompleteFXC) {
+        AutoCompleteFXCValidator autoCompleteFXCValidator = new AutoCompleteFXCValidator(autoCompleteFXC);
+        validatorArrayList.add(autoCompleteFXCValidator);
+    }
+
+    public void addIntegerValidator(TextField textField) {
+        IntegerValidator integerValidator = new IntegerValidator(textField);
+        validatorArrayList.add(integerValidator);
+    }
+
+    public void addDescriptionValidator(TextArea textArea) {
+        DescriptionValidator descriptionValidator = new DescriptionValidator(textArea);
+        validatorArrayList.add(descriptionValidator);
     }
 
     public void addEthnicityValidator(TextField textField) {

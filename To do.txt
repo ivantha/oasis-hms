@@ -1,21 +1,11 @@
 
-Validators and prompts
+
+Discharge patients
 
 
-----------------------------------------------------------------------
+****Edit treatment
+
+
 
 Submit attendance
 Attendance management
-
-----------------------------------------------------------------------
-
-Search clear button
-
-User account management
-
-Reports
-
-----------------------------------------------------------------------
-
-
-Duplicate workspace container issue

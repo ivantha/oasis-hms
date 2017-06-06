@@ -1,6 +1,5 @@
 package com.oasis.model;
 
-import com.oasis.common.Session;
 import javafx.beans.property.*;
 
 public class Ward implements Model<Ward> {
@@ -10,19 +9,20 @@ public class Ward implements Model<Ward> {
     private IntegerProperty maxPatientCount = new SimpleIntegerProperty();
     private IntegerProperty currentPatientCount = new SimpleIntegerProperty();
     private ObjectProperty<Gender> genderAcceptance = new SimpleObjectProperty<>();
-    private IntegerProperty supervisorId = new SimpleIntegerProperty();
+    private ObjectProperty<Employee> supervisor = new SimpleObjectProperty<>();
 
     public Ward() {
     }
 
-    public Ward(int id, String name, String description, int maxPatientCount, int currentPatientCount, Gender genderAcceptance, int supervisorId) {
+    public Ward(int id, String name, String description, int maxPatientCount, int currentPatientCount,
+                Gender genderAcceptance, Employee supervisor) {
         this.id = id;
         this.name.setValue(name);
         this.description.setValue(description);
         this.maxPatientCount.setValue(maxPatientCount);
         this.currentPatientCount.setValue(currentPatientCount);
         this.genderAcceptance.setValue(genderAcceptance);
-        this.supervisorId.setValue(supervisorId);
+        this.supervisor.setValue(supervisor);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class Ward implements Model<Ward> {
         if (!w.getGenderAcceptance().equals(getGenderAcceptance())) {
             return false;
         }
-        if (w.getSupervisorId() != getSupervisorId()) {
+        if (w.getSupervisor() != getSupervisor()) {
             return false;
         }
 
@@ -62,7 +62,9 @@ public class Ward implements Model<Ward> {
 
     @Override
     public Ward clone() {
-        return Session.cloner.deepClone(this);
+        Ward clonedWard = new Ward(id, getName(), getDescription(), getMaxPatientCount(),
+                getCurrentPatientCount(), getGenderAcceptance(), getSupervisor().clone());
+        return clonedWard;
     }
 
     public boolean isEmpty() {
@@ -137,15 +139,15 @@ public class Ward implements Model<Ward> {
         return genderAcceptance;
     }
 
-    public int getSupervisorId() {
-        return supervisorId.get();
+    public Employee getSupervisor() {
+        return supervisor.get();
     }
 
-    public void setSupervisorId(int supervisorId) {
-        this.supervisorId.set(supervisorId);
+    public void setSupervisor(Employee supervisor) {
+        this.supervisor.set(supervisor);
     }
 
-    public IntegerProperty supervisorIdProperty() {
-        return supervisorId;
+    public ObjectProperty<Employee> supervisorProperty() {
+        return supervisor;
     }
 }

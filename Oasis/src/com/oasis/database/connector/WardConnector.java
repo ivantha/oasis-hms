@@ -2,8 +2,10 @@ package com.oasis.database.connector;
 
 import com.mysql.jdbc.PreparedStatement;
 import com.oasis.database.Connector;
+import com.oasis.model.Employee;
 import com.oasis.model.Gender;
 import com.oasis.model.Ward;
+import com.oasis.services.EmployeeServices;
 import com.oasis.services.GenderServices;
 
 import java.sql.ResultSet;
@@ -27,8 +29,9 @@ public class WardConnector extends Connector {
                 String genderAcceptance = resultSet.getString("ward.gender_acceptance");
                 Gender gender = GenderServices.getGenderByTag(genderAcceptance);
                 int supervisorId = resultSet.getInt("ward.supervisor_id");
+                Employee supervisor = EmployeeServices.getEmployeeById(supervisorId);
 
-                Ward ward = new Ward(id, name, description, maxPatientCount, currentPatientCount, gender, supervisorId);
+                Ward ward = new Ward(id, name, description, maxPatientCount, currentPatientCount, gender, supervisor);
                 wardHashMap.put(id, ward);
             }
         } catch (SQLException e) {
@@ -47,7 +50,7 @@ public class WardConnector extends Connector {
             preparedStatement.setString(2, ward.getDescription());
             preparedStatement.setInt(3, ward.getMaxPatientCount());
             preparedStatement.setString(4, ward.getGenderAcceptance().getTag());
-            preparedStatement.setInt(5, ward.getSupervisorId());
+            preparedStatement.setInt(5, ward.getSupervisor().getId());
 
             preparedStatement.execute();
         } catch (SQLException e) {
@@ -70,7 +73,7 @@ public class WardConnector extends Connector {
             preparedStatement.setInt(3, ward.getMaxPatientCount());
             preparedStatement.setInt(4, ward.getCurrentPatientCount());
             preparedStatement.setString(5, ward.getGenderAcceptance().getTag());
-            preparedStatement.setInt(6, ward.getSupervisorId());
+            preparedStatement.setInt(6, ward.getSupervisor().getId());
             preparedStatement.setInt(7, ward.getId());
 
             preparedStatement.execute();

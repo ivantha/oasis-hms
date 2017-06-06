@@ -6,24 +6,23 @@
 
 .sideBarPane {
     -fx-background-color: transparent;
-    -fx-border-color: #153346;
 }
 
 .launcherSideButton {
-    -fx-background-color: #153346;
+    -fx-background-color: transparent;
     -fx-background-radius: 0px;
 
     -fx-font-family: 'Roboto';
-    -fx-text-fill: #FFFFFF;
+    -fx-text-fill: -default-font-color;
     -fx-font-size: 13;
     -fx-wrap-text: true;
     -fx-alignment: center-left;
 }
 
 .launcherSideButton:hover {
-    -fx-background-color: #ef7875;
+    -fx-background-color: -default-primary-color;
+    -fx-text-fill: -white-smoke-color;
 }
 
 .launcherSideDetailsPanel {
-    -fx-border-color: #153346;
 }

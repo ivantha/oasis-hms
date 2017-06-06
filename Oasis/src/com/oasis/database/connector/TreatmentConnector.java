@@ -41,7 +41,7 @@ public class TreatmentConnector extends Connector {
 
     public void newTreatment(Treatment treatment, int admissioid) {
         if (null != treatment.getChargeObjectProperty()) {
-            int chargeId = ChargeServices.newChargeWithReturid(treatment.getChargeObjectProperty());
+            int chargeId = ChargeServices.newChargeWithReturnId(treatment.getChargeObjectProperty());
             treatment.getChargeObjectProperty().setId(chargeId);
         }
 
@@ -51,7 +51,11 @@ public class TreatmentConnector extends Connector {
                     "VALUES(?, ?, ?, ?, ?)");
             preparedStatement.setInt(1, admissioid);
             preparedStatement.setString(2, treatment.getDescription());
-            preparedStatement.setString(3, treatment.getResult());
+            if (null == treatment.getResult()) {
+                preparedStatement.setNull(3, Types.VARCHAR);
+            } else {
+                preparedStatement.setString(3, treatment.getResult());
+            }
             preparedStatement.setDate(4, new java.sql.Date(treatment.getGivenDateObjectProperty().getTime()));
             if (null == treatment.getChargeObjectProperty()) {
                 preparedStatement.setNull(5, Types.INTEGER);

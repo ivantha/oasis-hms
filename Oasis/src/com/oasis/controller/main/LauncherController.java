@@ -107,7 +107,7 @@ public class LauncherController implements Controller {
 //        lastPressedTile.getChildren().get(0).setStyle(null);
 //        lastPressedTile.getChildren().get(1).setStyle(null);
 
-        tile.setStyle("-fx-background-color: #f2bf4c;");
+        tile.setStyle("-fx-background-color: #01579B;");
 //        tile.getChildren().get(0).setStyle("-fx-background-image: url('" + blackIconPath + "');" +
 //                "-fx-background-size: 50px;" +
 //                "-fx-background-repeat: no-repeat;" +

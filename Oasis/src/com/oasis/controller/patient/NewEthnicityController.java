@@ -40,14 +40,14 @@ public class NewEthnicityController implements Controller {
     }
 
     public void okButtonOnAction(ActionEvent actionEvent) {
-        if(validationFactory.isValid()){
+        if (validationFactory.isValid()) {
             ArrayList<Ethnicity> ethnicityArrayList = new ArrayList<>();
             ethnicityArrayList.add(tempEthnicity);
 
             EthnicityServices.addEthnicity(ethnicityArrayList);
 
             UIFactory.launchUI(UIName.ETHNICITY_MANAGEMENT, true);
-        }else {
+        } else {
             validationFactory.generateErrorNotifications();
         }
     }

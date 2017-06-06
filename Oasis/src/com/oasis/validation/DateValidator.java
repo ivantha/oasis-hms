@@ -5,10 +5,8 @@ import com.oasis.factory.NotificationFactory;
 import com.oasis.ui.component.Notification;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class DateValidator implements Validator {
     private final JFXDatePicker datePicker;

@@ -159,6 +159,14 @@ public class AutoCompleteFXC<T> extends Pane {
         return listItemListProperty;
     }
 
+    public Object getObjectProperty() {
+        return objectProperty.get();
+    }
+
+    public ObjectProperty objectPropertyProperty() {
+        return objectProperty;
+    }
+
     public void bindList(ObjectProperty objectProperty) {
         this.objectProperty = objectProperty;
     }
@@ -168,6 +176,10 @@ public class AutoCompleteFXC<T> extends Pane {
     }
 
     public void updateText() {
-        textField.setText(objectProperty.getValue().toString());
+        if (null != objectPropertyProperty().getValue()) {
+            textField.setText(objectProperty.getValue().toString());
+        } else {
+            textField.setText(null);
+        }
     }
 }
