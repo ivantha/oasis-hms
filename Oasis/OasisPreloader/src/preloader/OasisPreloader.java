@@ -54,7 +54,9 @@ public class OasisPreloader extends Preloader {
         if (preloaderNotification instanceof ProgressNotification) {
             ProgressNotification pn = (ProgressNotification) preloaderNotification;
             bar.setProgress(pn.getProgress());
-//            System.out.println("Progress " + bar.getProgress());
+            if(pn.getProgress() == 1.0){
+                stage.hide();
+            }
         }
     }
 }
