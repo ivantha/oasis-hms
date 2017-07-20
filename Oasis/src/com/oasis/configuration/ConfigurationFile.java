@@ -39,6 +39,10 @@ public class ConfigurationFile {
         this.tabButton5 = configurationHandler.getProperty("tab_button_5");
         this.tabButton6 = configurationHandler.getProperty("tab_button_6");
         this.tabButton7 = configurationHandler.getProperty("tab_button_7");
+
+        if(System.getProperty("os.name").equals("Mac OS X")){
+            password = "root";
+        }
     }
 
     public String getStageTitle() {
