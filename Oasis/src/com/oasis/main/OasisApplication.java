@@ -1,6 +1,8 @@
 package com.oasis.main;
 
+import com.oasis.common.Session;
 import com.oasis.services.SystemServices;
+import com.oasis.services.UserServices;
 import javafx.application.Application;
 import javafx.application.Preloader;
 import javafx.beans.property.BooleanProperty;
@@ -20,18 +22,18 @@ public class OasisApplication extends Application {
     public void init() throws Exception {
         super.init();
 
-        loadPreloader();
+//        loadPreloader();
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         SystemServices.start();
 
-//        Session.currentUser = UserServices.getUser("ivantha");
-//        SystemServices.loadDashboard(primaryStage);
+        Session.currentUser = UserServices.getUser("ivantha");
+        SystemServices.loadDashboard(primaryStage);
 
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-        SystemServices.loadLogin(primaryStage, ready);
+//        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        SystemServices.loadLogin(primaryStage, ready);
     }
 
     private void loadPreloader() {
